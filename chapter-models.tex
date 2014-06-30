@@ -2,6 +2,41 @@
 \label{cha:models}
 
 
+
+
+\begin{table}[h]
+\small
+\centering
+\begin{tabular}{lcccccc} \hline
+Model          & Ensemble size & Lid/ km & Levels & dh/km & d$z_{1}$/km & d$z_{2}$/km \\ \hline
+CanESM2        & 5 & 48.1    & 35     & 268          & 1.48         & 2.30          \\
+CMCC-CESM      & 1 & 80.6    & 39     & 536          & 1.49         & 1.89          \\
+CMCC-CMS       & 1 & 80.6    & 95     & 268          & 0.65         & 0.68          \\
+GFDL-CM3       & 5 & 76.3    & 48     & 191          & 1.32         & 1.75           \\
+HadGEM2-CC     & 3 & 84.1    & 60     & 144          & 0.82         & 1.18          \\
+IPSL-CM5A-LR   & 5 & 70.4    & 39     & 254          & 1.21         & 1.75          \\
+IPSL-CM5A-MR   & 3 & 70.4    & 39     & 169          & 1.21         & 1.75          \\
+IPSL-CM5B-LR   & 1 & 70.4    & 39     & 254          & 1.21         & 1.75          \\
+MIROC-ESM-CHEM & 1 & 87.8    & 80     & 399          & 0.77         & 0.73          \\
+MPI-ESM-LR     & 3 & 80.6    & 47     & 268          & 0.87         & 1.70            \\
+MPI-ESM-MR     & 3 & 80.6    & 95     & 268          & 0.65         & 0.68          \\
+MRI-CGCM3      & 1 & 80.6    & 48     & 107          & 0.88         & 1.87          \\
+MRI-ESM1       & 1 & 80.6    & 48     & 107          & 0.88         & 1.87 \\ \hline 
+\end{tabular}
+\caption[CMIP5 model parameters.]{Parameters of the CMIP5 models studied in this
+  chapter. Where the model lid is defined in terms of a pressure, its height was
+  estimated using $z=-H\mathrm{log}(p/p_{0})$ with $H=7$~km and
+  $p_{0}=1000$~hPa. Horizontal resolution, d$h$, is estimated at 45$^{\circ}$N
+  and vertical resolution is shown averaged over two regions; 5-15~km (d$z_{1}$)
+  and 15-30~km (d$z_{2}$).} 
+\end{table}
+
+
+
+
+
+
+
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/moments_stats1.pdf}
