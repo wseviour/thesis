@@ -1,0 +1,40 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Apr 25 15:47:46 2014
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("/home/will/Documents/thesis/chapter-moments.tex"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/will/Documents/thesis/chapter-moments.tex"
+  "chapter-moments.tex"
+  'latex-mode
+  '(auto-fill-mode hi-lock-mode helm-mode TeX-PDF-mode reftex-mode)
+  2069
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines . t) (TeX-master . "thesis")))
+
+(desktop-create-buffer 206
+  "/home/will/Documents/thesis/thesis.tex"
+  "thesis.tex"
+  'latex-mode
+  '(auto-fill-mode hi-lock-mode helm-mode TeX-PDF-mode reftex-mode)
+  1
+  '(nil nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . 1) (truncate-lines . t)))
+
