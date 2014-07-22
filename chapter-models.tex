@@ -134,6 +134,7 @@ MRI-ESM1       & 1 & 80.6    & 48     & 107          & 0.88         & 1.87 \\ \h
 
 \section{Vortex mean state and variability}
 \subsection{Moment diagnostics}
+\label{sec:moment-diagnostics}
 
 \begin{figure}[htbp]
  \centering
@@ -227,35 +228,36 @@ Figure \ref{fig:cmip5_events_bar_stacked}.
  \label{fig:cmip5_events_bar_stacked}
 \end{figure}
 
-% Look at Charlton-Perez 2013 to see which models have lowest frequency
-
 The total frequency of displaced and split vortex events for each of the CMIP5
 models agrees well with the equivalent SSW frequency calculated by
 \citet{Charlton-Perez2013}, who identified events based on the reversal of
-zonal-mean zonal wind at 60$^{\circ}$N and 10~hPa. They also found that
-HadGEM2-CC to have the highest frequency of events within the CMIP5 ensemble,
-while ?? and ?? were the models with the lowest freqency of SSWs in their study
-(they did not analyze GFDL-CM3, which we find to have the lowest frequency of
-events). This similarlity between \citet{Charlton-Perez2013} and the present
-study indicates that the close relationship between moment diagnostics-defined
-events and SSWs defined by zonal-mean zonal wind, as described in Chapter
-\ref{cha:moments}, also holds for climate models (although this is not
-explicitly shown here).
+zonal-mean zonal wind at 60$^{\circ}$N and 10~hPa. They also found HadGEM2-CC to
+have the highest frequency of events within the CMIP5 ensemble, while MRI-CGCM3
+is the model with the lowest freqency of SSWs in their study (exluding GFDL-CM3
+and MRI-ESM1 which \citet{Charlton-Perez2013} did not analyse, MRI-CGCM3 is the
+second-lowest frequency in the present study). This similarlity between
+\citet{Charlton-Perez2013} and the present study indicates that the close
+relationship between moment diagnostics-defined events and SSWs defined by
+zonal-mean zonal wind, as described in Chapter \ref{cha:moments}, also holds for
+climate models (although this is not explicitly studied here).
 
-It can be seen in Figure \ref{fig:cmip5_events_bar_stacked} that the ratio of
-frequencies of displaced to split vortex events varies significantly between
+As well as the large differences in the total frequency of displaced and split
+vortex events, it can be seen in Figure \ref{fig:cmip5_events_bar_stacked} that
+the ratio of frequencies of these events varies significantly between
 models. For instance CanESM2 and CMCC-CESM simulate almost entirely displaced
 vortex events, while IPSL-CM5B-LR and GFDL-CM3 simulate almost entirely split
 vortex events. In the multi-model mean (MMM) these biases largely cancel, to
 give a approximately equal ratio of displaced to split vortex events, which is
-in agreement with reanalysis.  
+in agreement with reanalysis.
 
 The seasonal distribution of these displaced and split vortex events is
-illustrated in Figure \ref{fig:cmip5_events_seasonal}. Some models replicate the
-observed distribution, with split vortex events being more likely in early
-winter, and displaced vortex events in late winter; these models are CMCC-CMS,
-HadGEM2-CC and IPSL-CM5A-LR. Other models, however, have a very different
-distribution. % More description here
+illustrated in Figure \ref{fig:cmip5_events_seasonal}. Some models (CMCC-CMS,
+HadGEM2-CC and IPSL-CM5A-LR) replicate the observed distribution, with split
+vortex events being more likely in early winter, and displaced vortex events in
+late winter. Other models, however, have a very different
+distribution of events. CanESM2, CMCC-CESM and MPI-ESM-LR all show little
+seasonal variability in the frequency of events. 
+
 
 \begin{figure}
  \centering
@@ -266,28 +268,71 @@ distribution. % More description here
  \label{fig:cmip5_events_seasonal}
 \end{figure}
 
-It is noteworthy that the model with the largest equatorward bias in the mean
-centroid latitude, CanESM2, also has the highest frequency of displaced vortex
-events. Indeed, the relationship between model mean moment diagnostics and
-frequency of displaced and split vortex events is illustrated in Figure
-\ref{fig:cmip5_moments_scatter}. This indicates that there is a strong
-correlation between model mean values and frequency of events. The correlations
-shown indicate that mean biases in aspect ratio account for 85\% of the
-inter-model spread in the frequency of split vortex events, while mean biases in
-centroid latitude account for 77\% of the spread in frequency of displaced
-vortex events. This indicates that the largest improvements in model simulations
-of the frequency of displaced and split vortex events can come about through a
-more realistic mean climatology of the vortex, rather than changes in the model
-variability.
+\bigskip It is now considered how model biases in the climatology of the
+stratospheric polar vortex, discussed in Section \ref{sec:moment-diagnostics},
+affect the frequency of split and displaced vortex events. The climatological
+average state of the vortex is defined by the mode -- the peak of the
+probability distribution function -- of the aspect ratio and centroid
+latitude. Unlike the mean, this quantity is not affected by extreme values and
+it represents the average, undisturbed, state of the vortex. The peak can be
+estimated by the maximum value of a histogram, however this introduces
+significant random errors and is sensitive to the selection of bin size. A more
+accurate estimation of the mode can be made by fitting the aspect ratio and
+centroid latitude with a theoretical distribution and then finding the peak of
+that distribution. Following \citet{Mitchell2011}, we fit the aspect ratio with
+a generalized extreme value (GEV) distribution of the form
+\begin{equation}
+f(x;\mu,\sigma,\xi) = \frac{a^{(-1/\xi)-1}}{\sigma}\mathrm{e}^{{-a}^{-1/\xi}}
+\quad , 
+\end{equation}
+with
+\begin{equation} 
+a = 1 + \xi \frac{x-\mu}{\sigma} \quad ,
+\end{equation}
+where $\mu$ determines the position of the peak along the $x$-axis, $\sigma$
+determines the variance of the distribution and $\xi$ the skewness. These
+parameters are determined using the method of maximum-liklihood estimation
+\citep{Wilks}. This method is also used to fit a Gaussian distribution of the
+form
+\begin{equation}
+f(x;\mu,\sigma) = \frac{1}{\sigma\sqrt{2\pi}} \left(
+  -\frac{(x-\mu)^2}{2\sigma^{2}} \right) \quad ,
+\end{equation}
+where $\mu$ determines the position of the peak along the $x$-axis and $\sigma$
+is the standard deviation, to the cube of the centroid latitude, and then the
+cube root taken to return the original distribution. \citet{Mitchell2011} found
+that these distributions accurately fit the histograms of centroid latitude and
+aspect ratio in reanalysis data, apart from the extreme tails of the
+distribution. Qualitative inpsection of the distribution for each model confirms
+that they also provide a similarly good fit to each of the model's histograms.
 
-% REPEAT for mode??
+Figure \ref{fig:cmip5_moments_scatter} shows the relationship between the modal
+aspect ratio and cetroid latitude and frequency of split and displaced vortex
+events. It can be seen that strong linear relationships exist, with the modal
+aspect ratio accounting for 79\% of the spread in the frequency of split vortex
+events and the modal centroid latitude accounting for 76\% of the spread in the
+frequency of displaced vortex events. This demonstrates that biases in the
+average undisturbed state of the vortex account for the vast majority of
+inter-model spread in the representation of extremes. An implication of this is
+that the models accurately represent the variability of aspect ratio and
+centroid latitude, relative to the model climatology. 
+
+It can also be seen in Figure \ref{fig:cmip5_moments_scatter} that the values for
+ERA lie very close to the best fit lines of the CMIP5 models. This implies that
+the accuracy of a model's representation of the frequency of displaced and split
+vortex events can be significantly improved by a more accurate average
+undisturbed vortex state. Furthermore, while the ERA value for modal centroid
+latitude lies approximately in the middle of that for the CMIP5 models, only two
+models have a larger modal aspect ratio than ERA, indicating that a too circular
+vortex is a common bias among models. 
+
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/CMIP5_moments_scatter.pdf}
  \caption[Comparison of moment diagnostics and frequency of split and displaced
  vortex events.]{Comparison of the DJFM mean aspect ratio with frequency of
    split vortex events (a) and DJFM mean centroid latitude with frequency of
-   displaced vortex events (b) in the CMIP5 ensemble and ERA. A linear best fit
+   displaced vortex events (b) in the CMIP5 ensemble and ERA. Linear best fits
    and the correlation coefficients for all the models are also shown.}
  \label{fig:cmip5_moments_scatter}
 \end{figure}
@@ -299,11 +344,20 @@ at the onset date of the events for each model. The absolute values of the
 contours are different for each model due to differences in climatology,
 although the spacing between contours remains constant. It can be seen that the
 majority of models accurately reproduce splitting events occuring along the
-$90^{\circ}$W-$90^{\circ}$E line, and displacement events with a vortex shifted
+$90^{\circ}$W-$90^{\circ}$E axis, and displacement events with a vortex shifted
 towards Scandinavia and Siberia. CanESM2 is an exception to this, with split
-vortex events which are centred quite far from the pole. The IPSL-CM5B-LR model
-also has a very different appearance of
-
+vortex events which are elliptical but centred quite far from the pole. The
+IPSL-CM5B-LR model also has a very different appearance of displaced vortex
+events, although this composite only consists of three events so differences are
+unlikely to be statistically significant. There is also significant inter-model
+spread in the relative strengths of the Aleutian and Azores highs during split
+vortex events. Several models (GFDL-CM3, IPSL-CM5A-LR, IPSL-CM5B-LR, MRI-ESM1)
+show an approximately equal strength Aleutian and Azores highs, while others
+(CMCC-CMS, HadGEM2-CC, IPSL-CM5A-MR, MPI-ESM-LR, MPI-ESM-MR, MRI-CGCM2) show a
+weaker Azores high, which is more in agreement with reanalysis. The more
+symmetrical Aleutian and Azores highs indicate a greater dominance of wave-2
+activity in split vortex events than is found in observations, where not all
+split vortex events are dominated by wave-2 activity \citep{Mitchell2013}. 
 
 \begin{figure}
  \centering
@@ -320,6 +374,64 @@ also has a very different appearance of
 
 
 \section{Stratosphere-troposphere coupling}
+\subsection{Zonal-mean response to displaced and split vortex events}
+
+The time-height evolution of the atmosphere around split and displaced vortex
+events in each of the CMIP5 models is displayed in Figure
+\ref{fig:cmip5_dripping_paint}. This shows composites of polar cap
+($60^{\circ}$-$90^{\circ}$N) geopotential height ($Z$) anomalies from 90 days
+before to 90 days following events. The anomalies are calculated from the
+climatology of each day for each model. The figures extend downwards only to
+500~hPa (rather than 1000~hPa). This is because models differ in their
+representation of geopotential height which is below ground level; some allow
+negative values, while others set this as an undefined value. This introduces
+significant errors in the calculation of a climatology and anomalies at levels
+where the geopotential height is occasionally below ground level. It should be
+noted that polar cap $Z$ is highly correlated with the NAM over the levels shown
+in Figure \ref{fig:cmip5_dripping_paint}. Indeed, comparing Figures
+\ref{fig:cmip5_dripping_paint} (a) and (b) with Figure \ref{fig:dripping_paint}
+shows that the ERA composites for polar cap $Z$ and the NAM are very similar. In
+Figure \ref{fig:cmip5_dripping_paint} the number of events entering each
+composite is shown in the upper right-hand corner, and it should be noted that
+composites of a small number of events are likely to be subject to significant
+statistical uncertainty.
+
+It can be seen that there are large inter-model differences in the evolution of
+polar cap $Z$ following split and displaced vortex events. For some models
+(e.g. CanESM2, CMCC-CMS) lower stratospheric anomalies persist for about 45
+days, similar to reanalysis, while for others (e.g. IPSL-CM5A-LR, GFDL-CM3)
+these persist for much longer, beyond 60 days. There are also differences in the
+stratospheric precursors to events; while some models (e.g. CanESM2, GFDL-CM3,
+MRI-CGCM3) simulate a stronger negative anomaly prior to displacement events,
+simular to reanalysis, others (HadGEM2-CC, IPSL-CM5A-MR, MRI-ESM1), show more
+negative anomalies prior to split vortex events. 
+
+Most significantly, there is a large spread in the tropospheric anomalies over
+the 10-90 days following split and displaced vortex events. Several models
+(e.g. IPSL-CM5A-LR, IPSL-CM5A-MR, MPI-ESM-LR) show only very weak anomalies
+below approximately 200~hPa, while others (e.g., CMCC-CESM, GFDL-CM3, MRI-ESM1)
+show stronger anomalies. Among those models which do show stronger tropospheric
+anomalies, there are also differences in the relative magnitude following split
+and displaced vortex events. For instance, for GFDL-CM3, and MRI-ESM1
+tropospheric anomalies following displaced vortex events are stronger, while for
+MIROC-ESM-CHEM and MPI-ESM-MR anomalies following split vortex events are
+stronger, which is more in agreement with reanalysis. 
+
+As well as these large inter-model differences, there are also some consistent
+features among models. Almost all models show a barotropic onset to split vortex
+events, with anomalies occuring at the same time throughout the depth of the
+atmosphere. In contrast, displaced vortex events apprear more baroclinic, with
+onset occuring first near 10~hPa. This is consistent with the difference found
+in reanalysis, indicating that this is likley to be a robust difference between
+the response to split and displaced vortex events. These features are apparent
+in the multi-model mean (MMM) (Figures \ref{fig:cmip5_dripping_paint}
+C and D). This mean is calculated so as to give each event an equal weight (rather
+than each model), and so does not give undue weight to models with only a small
+number of events. On the other hand this does mean that greater weight is given
+to models with more ensemble members and more events (almost one third of all
+displaced vortex events come from CanESM2), but the difference in baroclinicity
+of split and displaced vortex events is observed to be very consistent among
+models.
 
 \begin{figure}
  \centering
@@ -329,7 +441,7 @@ also has a very different appearance of
    split and displaced vortex events in ERA (a,b), the CMIP5 models, and the
    multi-model mean (C,D). Numbers in the upper right of each plot represent the
    number of events entering the composite.}
- \label{Fig2}
+ \label{fig:cmip5_dripping_paint}
 \end{figure}
 
 \begin{figure}
@@ -337,7 +449,64 @@ also has a very different appearance of
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/dripping_paint2.pdf}
  \caption[]{(Continued)}
- \label{Fig2}
+\end{figure}
+
+
+
+\subsection{Spatial response to displaced and split vortex events}
+
+Mean sea-level pressure (MSLP) anomalies averaged over the 30 days following
+split and displaced vortex events for each of the CMIP5 models are displayed in
+Figure \ref{fig:cmip5_mslp_comp}. Also shown are the anomalies for ERA (a,b)
+(the same as Figure \ref{fig:mslp_composites}) as well as the multi-model mean
+(c,d), again calculated so as to give each event an equal weight. The
+climatology from which anomalies are calculated is determined by a 10-day
+running mean of the average for each day of the year at each spatial
+location. The number of events entering each composite is shown, and again, care
+must be taken interpreting composites of a small number of events due to
+statistical uncertainty.
+
+Following both split and displaced vortex events, all models show a positive
+MSLP anomaly near the North Pole, and a negative anomaly centred over Western
+Europe and the North Atlantic. This pattern is consistent with a negative
+projection onto the North Atlantic Oscillation. Less consistent among models are
+anomalies over the North Pacific; many models (e.g. MRI-CGCM3, IPSL-CM5A) show
+positive anomalies, while MPI-ESM-LR a MPI-ESM-MR have negative anomalies
+following both split and displaced vortex events. MIROC-ESM-CHEM has different
+sign anomalies in the North Pacific following split (negative) and displaced
+(positive) vortex events. In the multi-model mean, a weakly positive North
+Pacific anomaly is seen. 
+
+This inconsistency in the Pacific anomalies has important consequences for the
+interpretation of zonal mean anomalies following split and displaced vortex
+events. For instance, the IPSL-CM5A-LR model shows weak tropospheric anomalies
+(relative to other models) of polar cap averaged $Z$ following split and
+displaced vortex events (Figure \ref{fig:cmip5_dripping_paint} (m,n)), but a
+relatively strong NAO signal (Figure \ref{fig:cmip5_mslp_comp} (m,n)),
+particularly following split vortex events. This is because the model also shows
+relatively stong positive North Pacific anomalies, that to some extent cancel
+the North Atlantic anomalies in the polar cap average. Such an effect would also
+be seen in the NAM, since the surface NAM pattern (the leading EOF of MSLP) has
+the same sign and simular magnitude in the North Atlantic and North Pacific
+\citep[e.g.,][]{Ambaum2001}. 
+
+A robust difference found between anomalies following split and displaced vortex
+events in the vast majority of models and the multi-model mean is that anomalies
+over Russia and Eastern Europe are more strongly negative following displaced
+vortex events. In the multi-model mean, this difference has a magnitude of about
+2-3~hPa across most of Russia. In order to understand this difference,
+composites of 100~hPa $Z$ averaged 
+
+
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=\textwidth]{figures/chapter-models/mslp_composites.pdf}
+ \caption[MSLP composites following splits and displacements in the CMIP5
+ models]{Composites of mean sea-level pressure averaged 0-30 days following
+   split (S) and displaced (D) vortex events in the CMIP5 ensemble. Also shown
+   are the ERA composite (a,b) and the multi-model mean (C,D). The multi-model
+   mean is calculated as to give each event an equal weighting.}
+ \label{fig:cmip5_mslp_comp}
 \end{figure}
 
 
@@ -361,16 +530,6 @@ also has a very different appearance of
  \label{Fig2}
 \end{figure}
 
-\begin{figure}
- \centering
- \noindent\includegraphics[width=\textwidth]{figures/chapter-models/mslp_composites.pdf}
- \caption[MSLP composites following splits and displacements in the CMIP5
- models]{Composites of mean sea-level pressure averaged 0-30 days following
-   split (S) and displaced (D) vortex events in the CMIP5 ensemble. Also shown
-   are the ERA composite (a,b) and the multi-model mean (C,D). The multi-model
-   mean is calculated as to give each event an equal weighting.}
- \label{Fig2}
-\end{figure}
 
 \begin{figure}
  \centering
@@ -387,7 +546,12 @@ also has a very different appearance of
 \end{figure}
 
 
+
+
+
 \section{Discussion}
+
+%Discuss NAO vs NAM
 
 \begin{figure}
  \centering
@@ -405,6 +569,8 @@ also has a very different appearance of
 \end{figure}
 
 \section{Conclusions}
+
+% Re-address aims from introduction
 
 %%% Local Variables:
 %%% mode: latex
