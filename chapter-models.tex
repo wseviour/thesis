@@ -452,8 +452,19 @@ models.
 \end{figure}
 
 
-
 \subsection{Spatial response to displaced and split vortex events}
+
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=\textwidth]{figures/chapter-models/mslp_composites.pdf}
+ \caption[MSLP composites following splits and displacements in the CMIP5
+ models]{Composites of mean sea-level pressure anomalies averaged 0-30 days
+   following split (S) and displaced (D) vortex events in the CMIP5
+   ensemble. Also shown are the ERA composite (a,b) and the multi-model mean
+   (C,D). The multi-model mean is calculated as to give each event an equal
+   weighting.}
+ \label{fig:cmip5_mslp_comp}
+\end{figure}
 
 Mean sea-level pressure (MSLP) anomalies averaged over the 30 days following
 split and displaced vortex events for each of the CMIP5 models are displayed in
@@ -470,12 +481,12 @@ Following both split and displaced vortex events, all models show a positive
 MSLP anomaly near the North Pole, and a negative anomaly centred over Western
 Europe and the North Atlantic. This pattern is consistent with a negative
 projection onto the North Atlantic Oscillation. Less consistent among models are
-anomalies over the North Pacific; many models (e.g. MRI-CGCM3, IPSL-CM5A) show
-positive anomalies, while MPI-ESM-LR a MPI-ESM-MR have negative anomalies
+anomalies over the North Pacific; many models (e.g. MRI-CGCM3, IPSL-CM5A-LR)
+show positive anomalies, while MPI-ESM-LR a MPI-ESM-MR have negative anomalies
 following both split and displaced vortex events. MIROC-ESM-CHEM has different
 sign anomalies in the North Pacific following split (negative) and displaced
 (positive) vortex events. In the multi-model mean, a weakly positive North
-Pacific anomaly is seen. 
+Pacific anomaly is seen.
 
 This inconsistency in the Pacific anomalies has important consequences for the
 interpretation of zonal mean anomalies following split and displaced vortex
@@ -490,25 +501,51 @@ be seen in the NAM, since the surface NAM pattern (the leading EOF of MSLP) has
 the same sign and simular magnitude in the North Atlantic and North Pacific
 \citep[e.g.,][]{Ambaum2001}. 
 
-A robust difference found between anomalies following split and displaced vortex
-events in the vast majority of models and the multi-model mean is that anomalies
+A robust difference found between MSLP anomalies following split and displaced
+vortex events in almost all models and the multi-model mean is that anomalies
 over Russia and Eastern Europe are more strongly negative following displaced
 vortex events. In the multi-model mean, this difference has a magnitude of about
-2-3~hPa across most of Russia. In order to understand this difference,
-composites of 100~hPa $Z$ averaged 
+2-3~hPa across most of Russia. In order to understand the possible stratospheric
+influence on this difference, lower stratospheric anomalies are studied. Figure
+\ref{fig:cmip5_100hPa_comp} shows composites of 100~hPa $Z$ averaged over the 10
+days following the onset of split and displaced vortex events. This shorter time
+period (rather than the 30 days used for the MSLP composites) is chosen to
+represent the typical time scale of a split or displacement of the vortex, which
+is shorter than the time scale taken for the re-formation of the vortex and
+return towards the climatological mean. However, it should be noted that
+composites taken over the 30 days show similar structure, but with reduced
+magnitude (not shown). 
 
+As well as the composite for each model, and the split minus displaced vortex
+difference, a multi-model mean is also shown in Figure
+\ref{fig:cmip5_100hPa_comp} (Q,R,S). Because this is a mean of model absolute
+values, and models have different climatologies, the MMMs for split and
+displaced vortices are scaled to have the same hemispheric mean magnitude. This
+avoids introducing a bias in the climatology of any particular model into the
+MMM difference. 
 
-\begin{figure}
- \centering
- \noindent\includegraphics[width=\textwidth]{figures/chapter-models/mslp_composites.pdf}
- \caption[MSLP composites following splits and displacements in the CMIP5
- models]{Composites of mean sea-level pressure averaged 0-30 days following
-   split (S) and displaced (D) vortex events in the CMIP5 ensemble. Also shown
-   are the ERA composite (a,b) and the multi-model mean (C,D). The multi-model
-   mean is calculated as to give each event an equal weighting.}
- \label{fig:cmip5_mslp_comp}
-\end{figure}
+For all models (with the exception of CanESM2), the 100~hPa $Z$ split vortex
+composite shows an elliptical vortex with the major axis aligned along the
+$90^{\circ}$W-$90^{\circ}$E line which is similar to the composite at 10~hPa
+(Figure \ref{fig:10hPa_GPH_comp}). For the displaced vortex composite the
+100~hPa vortex is centred over Siberia for almost all models, eastward of the
+10~hPa composite which is centred over Scandinavia. This again highlights the
+more baroclinic nature of displaced vortex events compared to split vortex
+events.
 
+In the split minus displaced vortex difference, the majority of models show a
+large positive region over Russia and Eastern Europe and a negative region
+centred over northern Canada. The positive region over Siberia has a minumum,
+which is negative in some cases, located near $90^{\circ}$E, which is consistent
+with the position of minimum in the split vortex composite. It can be seen that
+the multi-model mean difference (Figure \ref{fig:cmip5_100hPa_comp} (S)) is
+remarkably similar to the reanalysis difference (Figure
+\ref{fig:cmip5_100hPa_comp}), both in terms of the location and magnitude of
+anomalies. This suggests that the CMIP5 models, on average, realistically
+represent the evolution of split and displaced vortex events through the depth
+of the stratosphere. Again, this result is consistent among the majority of
+models, and so not highly sensitive to the exlusion or inclusion of any
+particular model. 
 
 \begin{figure}
  \centering
@@ -519,7 +556,7 @@ composites of 100~hPa $Z$ averaged
    of the CMIP5 models, and the multi-model mean (MMM). The right hand column
    displays the difference of splits minus displacements. The multi-model mean
    is calculated so as to give each event an equal weighting.}
- \label{Fig2}
+ \label{fig:cmip5_100hPa_comp}
 \end{figure}
 
 \begin{figure}
@@ -527,22 +564,82 @@ composites of 100~hPa $Z$ averaged
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/100hPa_GPH2.pdf}
  \caption[]{(Continued)}
- \label{Fig2}
 \end{figure}
+
+
+\bigskip Figure \ref{fig:cmip5_mslp_diff} shows the split minus displaced vortex
+composite difference for MSLP averaged 0-30 days following onset and the 100~hPa
+$Z$ composite difference averaged 0-10 days following onset, for both ERA and
+the CMIP5 MMM. Statistical significance in the MSLP difference is calculated by
+a two-tailed bootstrap test, using the following procedure:
+\begin{enumerate}
+\item Group all events together and select from them, with replacement, two
+  random subsets which are equal in size to the total number of split and
+  displaced vortex events respectively. 
+\item Take the difference of the averages of these two subsets. 
+\item Repeat the above 5000 times to form a distribution of random composite
+  differences. 
+\item If the actual composite difference lies lower than the 2.5\% or
+  higher than the 97.5\% levels of this distribution then it can be said there
+  is a less than 95\% chance that the actual difference arises from random
+  variability. 
+\end{enumerate}
+For the case of ERA, very little statistical significance in the
+composite difference is seen, while in the CMIP5 MMM there are large
+statistically significant regions. This is due to the greatly increased sample
+size in CMIP5; a total of 943 events compared to just 35 in ERA. 
+
+In the CMIP5 MMM difference the largest feature is the large positive anomaly (a
+result of a more negative anomaly following displaced vortex events) over
+Scandinavia, Eastern Europe and Russia. There is also a significant negative
+anomaly over northern Canada and a positive anomaly in the western
+Atlantic. This pattern is zonally assymetric and so does not project strongly
+onto the polar cap average, therefore explaining the small difference in polar
+cap averaged $Z$ (Figure \ref{fig:cmip5_dripping_paint} (C,D)). The CMIP5
+difference pattern also does not strongly project onto the NAO as there is a
+similarly negative NAO following both split and displaced vortex events (Figure
+\ref{fig:cmip5_mslp_comp} (C,D)). For the ERA MSLP difference there are stronger
+negative anomalies over Europe (although not statistically significant) and
+positive anomalies over the North Pole, which does project more strongly onto
+the NAO, as discussed in Section \ref{sec:moments_analysis}. 
+
+The CMIP5 difference of Figure \ref{fig:cmip5_mslp_diff} shows the positive
+100~hPa $Z$ anomalies over Siberia over-lie the positive MSLP anomalies, while
+the negative 100~hPa $Z$ over northern Canada over-lies negative MSLP
+anomalies. A somewhat similar, but not statistically significant pattern is seen
+in ERA, although the Siberian anomaly is more polewards and the negative anomaly
+over Canada is much weaker. Significantly, the 100~hPa pressure surface lies
+close to the tropopause, and 100~hPa $Z$ can therefore give an indication of
+tropopause height. Indeed, comparing the 100~hPa $Z$ and tropopause height
+anomalies for ERA (Figures \ref{fig:cmip5_100hPa_comp} (a,b) and
+\ref{fig:tropopause_height} (c,d)) shows that anomalous negative $Z$ is
+approximately co-located with an anomalously high tropopause, although the
+tropopause height field is much noisier. 
+
+The fact that anomalous MSLP differences are co-located wih 100~hPa $Z$ (which
+is in turn related to tropopause height) lends weight to the idea that the
+mechanism behind the \emph{differences} in the surface response to split and
+displaced vortex events is a localised geostrophic and hydrostatic adjustment to
+stretching caused by changes in tropopause height. This is the mechanism
+discussed by \citet{Ambaum2002} and in Section ??. It is important to note that
+this does not imply that this is the dominant mechanism in the \emph{individual}
+response to split and displaced vortex events, which share many similarites, for
+instance in their influence on the NAO. This result is discussed in more detail
+in Section \ref{sec:cmip5_discuss_split_displ}.
 
 
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/mslp_diff.png}
  \caption[Difference of MSLP following split and displaced vortex
- events.]{Difference (S-D) of composites of mean sea-level pressure averaged 0-30 days
-   following split (S) and displaced (D) vortex events in ERA and the CMIP5
-   ensemble. Stippling indicates regions that are $>$95\% significant according
-   to a two-tailed bootstrap test. Grey contours represent the difference in
-   100~hPa geopotential height averaged 10 days following events the contour
-   interval is 40~m, dashed contours represent negative values and the lowest
-   magnitude contours are $\pm$20~m. }
- \label{Fig2}
+ events.]{Difference (S-D) of composites of mean sea-level pressure averaged
+   0-30 days following split (S) and displaced (D) vortex events in ERA and the
+   CMIP5 ensemble. Stippling indicates regions that are $>$95\% significant
+   according to a two-tailed bootstrap test. Grey contours represent the
+   difference in 100~hPa geopotential height averaged 0-10 days following events
+   the contour interval is 40~m, dashed contours represent negative values and
+   the lowest magnitude contours are $\pm$20~m. }
+ \label{fig:cmip5_mslp_diff}
 \end{figure}
 
 
@@ -550,7 +647,10 @@ composites of 100~hPa $Z$ averaged
 
 
 \section{Discussion}
+\subsection{Inter-model differences}
 
+\subsection{Difference between split and displaced vortex events}
+\label{sec:cmip5_discuss_split_displ}
 %Discuss NAO vs NAM
 
 \begin{figure}
