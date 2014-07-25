@@ -81,15 +81,15 @@ displaced vortex events, which was described in Chapter \ref{cha:moments}.
 
 \subsection{CMIP5 model simulations}
 
-For this analysis, only climate models with a lid height above the stratopause
+For this analysis only climate models with a lid height above the stratopause
 are selected from the CMIP5 ensemble. In total, 13 such models were available
 from 8 different modelling centres, although another two (CESM1-WACCM and
 MIROC-ESM) are listed in the CMIP5 ensemble, appropriate data was not found to
-be available for these models in the CMIP5 archive
-(http://pcmdi3.llnl.gov/esgcet/home.htm). These models are listed in Table
-\ref{tab:models}. It can be seen that 12 of the 13 models have an uppermost
-level which is in the upper mesosphere (70-80~km), but CanESM2 has a
-significantly lower lid which is very close to the stratopause.
+be available for these models in the CMIP5 archive (http://pcmdi3.llnl.gov/
+esgcet/home.htm). These models are listed in Table \ref{tab:models}. It can be
+seen that 12 of the 13 models have an uppermost level which is in the upper
+mesosphere (70-80~km), but CanESM2 has a significantly lower lid which is very
+close to the stratopause.
 
 Historical simulations have been used throughout this analysis. These include
 observed climate forcings, such as from greenhouse gasses, ozone depletion,
@@ -571,7 +571,9 @@ particular model.
 composite difference for MSLP averaged 0-30 days following onset and the 100~hPa
 $Z$ composite difference averaged 0-10 days following onset, for both ERA and
 the CMIP5 MMM. Statistical significance in the MSLP difference is calculated by
-a two-tailed bootstrap test, using the following procedure:
+a two-tailed bootstrap test with the null hypothesis that the anomalies
+following split and displaced vortex events are populations from the same
+probability distribution. The following procedure is used:
 \begin{enumerate}
 \item Group all events together and select from them, with replacement, two
   random subsets which are equal in size to the total number of split and
@@ -579,10 +581,11 @@ a two-tailed bootstrap test, using the following procedure:
 \item Take the difference of the averages of these two subsets. 
 \item Repeat the above 5000 times to form a distribution of random composite
   differences. 
-\item If the actual composite difference lies lower than the 2.5\% or
-  higher than the 97.5\% levels of this distribution then it can be said there
-  is a less than 95\% chance that the actual difference arises from random
-  variability. 
+\item If the actual composite difference lies lower than the 2.5\% or higher
+  than the 97.5\% levels of this distribution then it can be said there is a
+  less than 95\% chance that an anomaly at least this large would arise if
+  anomalies following split and displaced vortex events are populations from the
+  same distribution. Hence the null hypothesis can be rejected.
 \end{enumerate}
 For the case of ERA, very little statistical significance in the
 composite difference is seen, while in the CMIP5 MMM there are large
@@ -623,7 +626,7 @@ displaced vortex events is a localised geostrophic and hydrostatic adjustment to
 stretching caused by changes in tropopause height. This is the mechanism
 discussed by \citet{Ambaum2002} and in Section ??. It is important to note that
 this does not imply that this is the dominant mechanism in the \emph{individual}
-response to split and displaced vortex events, which share many similarites, for
+responses to split and displaced vortex events, which share many similarites, for
 instance in their influence on the NAO. This result is discussed in more detail
 in Section \ref{sec:cmip5_discuss_split_displ}.
 
@@ -649,9 +652,21 @@ in Section \ref{sec:cmip5_discuss_split_displ}.
 \section{Discussion}
 \subsection{Inter-model differences}
 
-\subsection{Difference between split and displaced vortex events}
-\label{sec:cmip5_discuss_split_displ}
-%Discuss NAO vs NAM
+We have demonstrated that there is significant variability in the representation
+of the average undisturbed state of the stratospheric polar vortex among high-top
+CMIP5 models. This amounts to a range in the modal centroid latitude of more
+that 5$^{\circ}$ and in the aspect ratio of 0.12, which corresponds to (?\% and
+?\% of the ERA standard deviation respectively). Because a similar number of
+models have a poleward as an equatorward centroid latitude bias, the multi-model
+mean is approximately accurate. In contrast, only two of 14 models have higher
+modal aspect ratio than reanalysis. 
+
+Importantly, we have shown that these biases in the undisturbed state of the
+vortex are closely related to biases in the fequency of split and displaced
+vortex events. As a corrolory, models must therefore have a realistic
+representation of variability relative to the average state. In order to
+understand the origin of these biases we now consider whether any of the model
+resolution properties listed in Table \ref{tab:models}
 
 \begin{figure}
  \centering
@@ -667,6 +682,19 @@ in Section \ref{sec:cmip5_discuss_split_displ}.
    are shown along the leading diagonal.}
  \label{Fig2}
 \end{figure}
+
+%Discuss NAO vs NAM
+
+
+
+\subsection{Difference between split and displaced vortex events}
+\label{sec:cmip5_discuss_split_displ}
+
+
+
+
+
+
 
 \section{Conclusions}
 
