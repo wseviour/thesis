@@ -652,36 +652,58 @@ in Section \ref{sec:cmip5_discuss_split_displ}.
 \section{Discussion}
 \subsection{Inter-model differences}
 
-We have demonstrated that there is significant variability in the representation
-of the average undisturbed state of the stratospheric polar vortex among high-top
+We have demonstrated that there are large differences in the representation of
+the average undisturbed state of the stratospheric polar vortex among high-top
 CMIP5 models. This amounts to a range in the modal centroid latitude of more
 that 5$^{\circ}$ and in the aspect ratio of 0.12, which corresponds to (?\% and
 ?\% of the ERA standard deviation respectively). Because a similar number of
 models have a poleward as an equatorward centroid latitude bias, the multi-model
 mean is approximately accurate. In contrast, only two of 14 models have higher
-modal aspect ratio than reanalysis. 
+modal aspect ratio than reanalysis.
 
 Importantly, we have shown that these biases in the undisturbed state of the
 vortex are closely related to biases in the fequency of split and displaced
-vortex events. As a corrolory, models must therefore have a realistic
+vortex events. As a corrolory, models therefore have a relatively realistic
 representation of variability relative to the average state. In order to
 understand the origin of these biases we now consider whether any of the model
-resolution properties listed in Table \ref{tab:models}
+horizontal and vertical resolution properties listed in Table \ref{tab:models}
+are related to models' polar vortex climatology. Figure \ref{fig:scatter_matrix}
+shows the correlations between model resolution and modal aspect ratio and
+centroid latitude. 
+
+There are no statistically significant correlations between modal aspect ratio
+or centroid latitude and model horizontal resolution or aspect
+ratio. Furthermore, there is no significant correlation between measures of
+vertical resolution and modal centroid latitude. 
+
+ 
 
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/scatter_matrix.pdf}
- \caption[Relationship between model resolution and split and displaced vortex
- events in the CMIP5 models.]{Relationship between model resolution and
-   representation of split and displaced vortex events in the CMIP5
-   models. Model resolution is shown as horizontal resolution ($\mathrm{d}h$),
-   vertical resolution ($\mathrm{d}z$) over 5-15~km and 15-30~km, and aspect
-   ratio ($\mathrm{d}z$(5-15~km)$ / \mathrm{d}h$. Also shown is the number of
-   SSWs per decade, the fraction of SSWs that are splits, and the average NAM at
-   500~hPa 0-30 days following SSWs. Histograms for the relevant quantities
-   are shown along the leading diagonal.}
+ \caption[Relationship between model resolution and moment diagnostics in the
+ CMIP5 models.]{Relationship between model resolution, moment diagnostics, and
+   stratosphere-troposphere coupling in the CMIP5 models. Model resolution is
+   shown as horizontal resolution ($\mathrm{d}h$), vertical resolution
+   ($\mathrm{d}z$) over 5-15~km and 15-30~km, and aspect ratio
+   ($\mathrm{d}z$(5-15~km)$ / \mathrm{d}h$. Also shown is the modal aspect ratio
+   and centroid latitude and the mean polar cap-averaged $Z$ at 500~hPa 0-30
+   days following split and displaced vortex events. Histograms for the relevant
+   quantities are shown along the leading diagonal.}
+ \label{fig:scatter_matrix}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=\textwidth]{figures/chapter-models/aspect_ratio_resolution.pdf}
+ \caption[Vertical resolution and modal aspect ratio.]{Expansion from Figure
+   \ref{fig:scatter_matrix} of the correlation between modal aspect ratio and
+   model vertical resolution over two regions (5-15~km and
+   15-30~km). Correlations, $r$, are shown along with the $p$-value calculated by a
+   bootstrap test with null hypothesis $r=0$.}
  \label{Fig2}
 \end{figure}
+
 
 %Discuss NAO vs NAM
 
