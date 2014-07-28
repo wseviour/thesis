@@ -650,16 +650,16 @@ in Section \ref{sec:cmip5_discuss_split_displ}.
 
 
 \section{Discussion}
-\subsection{Inter-model differences}
+\subsection{Effect of model resolution}
 
 We have demonstrated that there are large differences in the representation of
 the average undisturbed state of the stratospheric polar vortex among high-top
-CMIP5 models. This amounts to a range in the modal centroid latitude of more
-that 5$^{\circ}$ and in the aspect ratio of 0.12, which corresponds to (?\% and
-?\% of the ERA standard deviation respectively). Because a similar number of
-models have a poleward as an equatorward centroid latitude bias, the multi-model
-mean is approximately accurate. In contrast, only two of 14 models have higher
-modal aspect ratio than reanalysis.
+CMIP5 models. This amounts to an inter-model range in the modal centroid
+latitude of more that 5$^{\circ}$ and in the aspect ratio of 0.12, which
+corresponds to (?\% and ?\% of the ERA standard deviation respectively). Because
+a similar number of models have a poleward as an equatorward centroid latitude
+bias, the multi-model mean is approximately accurate. In contrast, only two of
+14 models have higher modal aspect ratio than reanalysis.
 
 Importantly, we have shown that these biases in the undisturbed state of the
 vortex are closely related to biases in the fequency of split and displaced
@@ -671,12 +671,100 @@ are related to models' polar vortex climatology. Figure \ref{fig:scatter_matrix}
 shows the correlations between model resolution and modal aspect ratio and
 centroid latitude. 
 
-There are no statistically significant correlations between modal aspect ratio
-or centroid latitude and model horizontal resolution or aspect
-ratio. Furthermore, there is no significant correlation between measures of
-vertical resolution and modal centroid latitude. 
+There are no statistically significant correlations between the modal aspect
+ratio or centroid latitude and horizontal resolution or between the centroid
+latitude and vertical resolution. However, a stronger relationship is found
+between vertical resolution and the modal aspect ratio and this is shown in more
+detail in Figure \ref{fig:aspect_vert_res}. The relatively wide scatter of
+points as well as the small correlation coefficient values indicate that vetical
+resolution fails to accound for a substantial fraction of inter-model
+variability in the modal aspect ratio. However, the $p$-values shown indicate a
+relatively high level of statistical significance for both correlations. It
+should be noted that these correlations are not highly influenced by
+outliers. This can be seen by the bootstrap test $p$-values, as well as the rank
+correlations which are $-0.60$ (96.9\%) and $-0.75$ (99.7\%) for vertical
+resolutions over 5-15~km and 15-30~km respectively.
 
- 
+The two measures of vertical resolution, $\mathrm{d}z$ (5-15~km) and
+$\mathrm{d}z$ (15-30~km), are themselves correlated (see Figure
+\ref{fig:scatter_matrix}), so it is difficult to interpret which region (if any)
+has the largest impact on the modal aspect ratio. It is interesting to note,
+however, that \citet{Anstey2013} found vertical resolution among CMIP5 models to
+correlate with increased NH winter blocking frequency. They also found that the
+strongest relationship to be with upper-troposphere/lower-stratosphere (UTLS)
+vertical resolution, which is where we also find the strongest correlation with
+modal aspect ratio (although slightly lower statistical significance; see Figure
+\ref{fig:aspect_vert_res}). Blocking events are known to influence upwards wave
+propagation into the stratosphere [??], as well as stratospheric anomalies
+influencing the frequency of blocking events [??]. Hence, the combination of the
+present study with \citet{Anstey2013} may suggest that UTLS vertical resolution
+is an important factor in the representation of stratosphere-troposphere
+coupling.
+
+An important caveat here is that comparing pairs of models from the same family
+but with different resolutions does not show a correlation between vertical
+resolution and aspect ratio. In the present ensemble this is limited to
+IPSL-CM5A-LR/IPSL-CM5A-MR and MPI-ESM-LR/MPI-ESM-MR. It can be seen from Figure
+\ref{fig:aspect_vert_res}(a) that the IPSL models have the same vertical
+resolution but different modal aspect ratios and the MPI models have different
+vertical resolutions but very similar modal aspect ratios. A similar effect is
+also seen in comparing vertical resolution and blocking frequency in
+\citet{Anstey2013}. While this is a very limited comparison of only two pairs of
+models, it may suggest that it is in fact other model differences which may give
+rise to the correlations shown in Figure \ref{fig:aspect_vert_res}. 
+
+On the other hand, there is some physical motivation for the importance of UTLS
+vertical resolution in the representation of stratosphere-troposphere coupling
+because of the sensitivity of planetary wave propagation to vertical gradients
+in this region. This sensitivity can be measured by the quasi-geostrophic
+refractive index, $n_{s}$ \citep{Matsuno1970}, with planetary waves tending to
+propagate towards regions of high $n_{s}$ and becoming evanescent in regions
+where $n_{s}<0$. It is given by
+\begin{equation}
+  n_{s}^{2} = \frac{\overline{q}_{\phi}}{a\overline{u}} -
+  \frac{s^{2}}{a^{2}\mathrm{cos}^{2}\phi} - \frac{f^{2}}{4N^{2}H^{2}} \, ,
+\end{equation}
+where $N^{2}$ is the static stability, $H$ scale height, $s$ wavenumber, and
+\begin{equation}
+  \overline{q}_{\phi} = 2\Omega\mathrm{cos}\phi - \left[
+    \frac{(\overline{u}\mathrm{cos}\phi)_{\phi}}{a\mathrm{cos}\phi} \right]_{\phi} -
+  \frac{a}{\rho_{0}}\left(\frac{\rho_{0}f^{2}}{N^{2}}\overline{u}_{z}\right)_{z}
+  \, .
+\end{equation}
+It is therefore apparent that $n_{s}$ is sensitive both to the vertical
+gradient in static stability and the vertical shear of zonal wind. Using a
+linear primitive equation numerical model, \citet{Chen1992} found a large
+vertical gradient in static stability near the tropopause as well as a strong
+vertical shear of the zonal flow. They found that small changes in these
+quantities have a large effect on $n_{s}$, and therefore that the tropopause
+acts as a ``valve'' for the propagation of planetary waves between the
+troposphere and stratosphere. In a more recent observational study,
+\citet{Grise2010} have confirmed the existence of fine-scale structure in static
+stability near the tropopause. It therefore may be the case that a higher model
+vertical resolution near the tropopause is necessary to capture this structure
+and hence more accurately represent planetary wave propagation from troposphere
+to stratosphere. 
+
+The fact that there is not a significant relationship between the modal centroid
+latitude and vertical resolution may suggest that wave-2 propagation is more
+sensitive to vertical resolution than wave-1. This is because aspect ratio is
+highly correlated with wave-2 activity and centroid latitude with wave-1
+\citep{Waugh1999}. It might be expected that wave-2 propagation is more
+sensitive to near-tropopause resolution because the `window' for permissible
+wave-2 propagation is narrower (e.g. Equation ??). Hence smaller differences in
+vertical gradients are required to exclude wave-2 propagation than wave-1
+propagation. 
+
+Overall, a more systematic study is necessary to understand the importance of
+UTLS vertical resolution in the representation of stratosphere-troposphere
+coupling by climate models. This should consist of a `clean comparison' of
+models in which only vertical resolution is varied, and which therefore avoids
+the difficulty of interpreting results when many parameters are varied at once
+as in the CMIP5 ensemble.
+
+
+% Models from same family
+% Z 500hPa
 
 \begin{figure}
  \centering
@@ -686,7 +774,7 @@ vertical resolution and modal centroid latitude.
    stratosphere-troposphere coupling in the CMIP5 models. Model resolution is
    shown as horizontal resolution ($\mathrm{d}h$), vertical resolution
    ($\mathrm{d}z$) over 5-15~km and 15-30~km, and aspect ratio
-   ($\mathrm{d}z$(5-15~km)$ / \mathrm{d}h$. Also shown is the modal aspect ratio
+   ($\mathrm{d}z$(5-15~km)$ / \mathrm{d}h$). Also shown is the modal aspect ratio
    and centroid latitude and the mean polar cap-averaged $Z$ at 500~hPa 0-30
    days following split and displaced vortex events. Histograms for the relevant
    quantities are shown along the leading diagonal.}
@@ -701,9 +789,22 @@ vertical resolution and modal centroid latitude.
    model vertical resolution over two regions (5-15~km and
    15-30~km). Correlations, $r$, are shown along with the $p$-value calculated by a
    bootstrap test with null hypothesis $r=0$.}
- \label{Fig2}
+ \label{fig:aspect_vert_res}
 \end{figure}
 
+
+\subsection{Measures of stratosphere-troposphere coupling}
+
+We have shown that zonally-averaged quantities such as polar cap $Z$ (and by
+implication the NAM) following split and displaced vortex events are much less
+consistent among models than the NAO. This inconsistency is dominated by
+differences in the North Pacific, with some models showing positive MSLP
+anomalies and others negative.
+
+Following \citet{Baldwin2001a}, many studies of stratosphere-troposphere
+coupling have focussed on the vertical propagation of the NAM. For instance the
+comparison of stratosphere-troposphere coupling high-top and low-top CMIP5
+models by \citet{Charlton-Perez2013} used only the NAM. Our results 
 
 %Discuss NAO vs NAM
 
