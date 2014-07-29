@@ -683,7 +683,7 @@ relatively high level of statistical significance for both correlations. It
 should be noted that these correlations are not highly influenced by
 outliers. This can be seen by the bootstrap test $p$-values, as well as the rank
 correlations which are $-0.60$ (96.9\%) and $-0.75$ (99.7\%) for vertical
-resolutions over 5-15~km and 15-30~km respectively.
+resolutions over 5-15~km and 15-30~km respectively.  
 
 The two measures of vertical resolution, $\mathrm{d}z$ (5-15~km) and
 $\mathrm{d}z$ (15-30~km), are themselves correlated (see Figure
@@ -701,17 +701,27 @@ present study with \citet{Anstey2013} may suggest that UTLS vertical resolution
 is an important factor in the representation of stratosphere-troposphere
 coupling.
 
-An important caveat here is that comparing pairs of models from the same family
-but with different resolutions does not show a correlation between vertical
-resolution and aspect ratio. In the present ensemble this is limited to
+Two important caveats should be noted in interpreting these correlations. First,
+comparing pairs of models from the same family but with different resolutions
+does not show a correlation between vertical resolution and modal aspect
+ratio. In the present ensemble this comparison is limited to
 IPSL-CM5A-LR/IPSL-CM5A-MR and MPI-ESM-LR/MPI-ESM-MR. It can be seen from Figure
 \ref{fig:aspect_vert_res}(a) that the IPSL models have the same vertical
 resolution but different modal aspect ratios and the MPI models have different
 vertical resolutions but very similar modal aspect ratios. A similar effect is
-also seen in comparing vertical resolution and blocking frequency in
-\citet{Anstey2013}. While this is a very limited comparison of only two pairs of
+also seen in comparing vertical resolution and blocking frequency
+\citep{Anstey2013}. While this is a very limited comparison of only two pairs of
 models, it may suggest that it is in fact other model differences which may give
-rise to the correlations shown in Figure \ref{fig:aspect_vert_res}. 
+rise to the correlations shown in Figure \ref{fig:aspect_vert_res}.
+
+A second caveat is that interpreting this significance, it should be noted that
+six different relationships between model resolution parameters and moment
+diagnostics have been tested in Figure \ref{fig:scatter_matrix} (treating the
+measures of vertical resolution as a single parameter since they are highly
+correlated). Assuming these parameters to be independent (i.e. a binomial
+distribution), there is an approximately 26\% chance of finding at least one
+95\% significant correlation among those tested if the data are sampled from an
+uncorrelated distribution. 
 
 On the other hand, there is some physical motivation for the importance of UTLS
 vertical resolution in the representation of stratosphere-troposphere coupling
@@ -763,7 +773,6 @@ the difficulty of interpreting results when many parameters are varied at once
 as in the CMIP5 ensemble.
 
 
-% Models from same family
 % Z 500hPa
 
 \begin{figure}
@@ -795,17 +804,51 @@ as in the CMIP5 ensemble.
 
 \subsection{Measures of stratosphere-troposphere coupling}
 
-We have shown that zonally-averaged quantities such as polar cap $Z$ (and by
-implication the NAM) following split and displaced vortex events are much less
-consistent among models than the NAO. This inconsistency is dominated by
-differences in the North Pacific, with some models showing positive MSLP
+We have shown that zonally-averaged quantities such as polar cap $Z$ (which is
+highly correlated with the NAM) following split and displaced vortex events are
+much less consistent among models than the NAO. This inconsistency is dominated
+by differences in the North Pacific, with some models showing positive MSLP
 anomalies and others negative.
 
 Following \citet{Baldwin2001a}, many studies of stratosphere-troposphere
-coupling have focussed on the vertical propagation of the NAM. For instance the
-comparison of stratosphere-troposphere coupling high-top and low-top CMIP5
-models by \citet{Charlton-Perez2013} used only the NAM. Our results 
+coupling have focussed on the lag-height behaviour the NAM. For instance the
+comparison of stratosphere-troposphere coupling in high-top and low-top CMIP5
+models by \citet{Charlton-Perez2013}. This and several other studies make
+further approximations as to the zonal nature of the coupling by calculating the
+NAM based on zonal-mean geopotential height, according to the method of
+\citet{Baldwin2009}. Our results suggest that because of the differnce in model
+consistency over the two ocean basins, zonal-mean diagnostics or the NAM alone
+are not a good descriptors of inter-model variability. Therefore, we suggest
+that the NAO index or the full two-dimensional surface fields should be shown
+alongside the NAM when making inter-model comparisons.
 
+This difference between the NAM and NAO signals in CMIP5 models may also give
+some insight into the physical relevance of these two modes of variability. Some
+studies have suggested that the NAO is in fact a regional manifestation of the
+planetary-scale annular structure of the NAM \citep[e.g.,][]{Thompson1998,
+  Wallace2002}. Furthermore, many observational studies have asserted that
+tropospheric anomalies following SSWs represent the NAM
+\citep[e.g.,][]{Baldwin1999,Baldwin2001a,Thompson2000}. 
+
+On the other hand, \citet{Ambaum2001} suggested that the NAO paradigm is a more
+physically relevant measure of NH variability than tha NAM. They found that MSLP
+anomalies over the North Atlantic and Pacific are not significantly correlated
+and argued that that the annular NAM pattern is a statistical
+artifact. \citet{Huth2006} also showed that principal component analysis favours
+the NAO as the more physically relevant mode of variability. Furthermore,
+\citet{Ambaum2002} found that changes in North Pacific tropospheric subtropical
+and polar jets are much less correlated with the strength of the stratospheric
+polar vortex than are the North Atlantic jets.
+
+Under the significant assumption that the CMIP5 models can accurately represent
+the physics underlying these modes of variability, our results tend to favour
+the NAO rather than the NAM as the more physically relevant mode, at least in
+terms of stratosphere-troposphere coupling. 
+
+
+
+
+% Fluctuation-dissipation
 %Discuss NAO vs NAM
 
 
