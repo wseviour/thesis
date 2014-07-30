@@ -3,7 +3,7 @@
 
 
 \section{Introduction}
-
+\label{sec:models_introduction}
 
 Over the past decade an increasing number of climate models have included a
 well-resolved stratosphere, with model lids above the stratopause. For example,
@@ -466,6 +466,19 @@ models.
  \label{fig:cmip5_mslp_comp}
 \end{figure}
 
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=0.7\textwidth]{figures/chapter-models/NAO_PNA_histogram.pdf}
+ \caption[Distribution of MSLP anomalies in North Pacific and Atlantic following
+ splits and displacements.]{Distribution of mean sea-level pressure anomalies in
+   the central North Atlantic ($38^{\circ}$N, $26^{\circ}$W) and central North
+   Pacific ($45^{\circ}$N, $165^{\circ}$W) averaged over the 30 days following
+   split and displacement events in all the CMIP5 models. These two locations
+   correspond to centres of action of the NAO and PNA patterns
+   respectively. Data are fitted with a Guassian distribution.}
+ \label{fig:cmip5_nao_pna}
+\end{figure}
+
 Mean sea-level pressure (MSLP) anomalies averaged over the 30 days following
 split and displaced vortex events for each of the CMIP5 models are displayed in
 Figure \ref{fig:cmip5_mslp_comp}. Also shown are the anomalies for ERA (a,b)
@@ -487,6 +500,19 @@ following both split and displaced vortex events. MIROC-ESM-CHEM has different
 sign anomalies in the North Pacific following split (negative) and displaced
 (positive) vortex events. In the multi-model mean, a weakly positive North
 Pacific anomaly is seen.
+
+Figure \ref{fig:cmip5_nao_pna} illustrates that this difference in consistency
+of the Atlantic and Pacific MSLP anomalies also exists in the multi-model
+ensemble of all events. It shows the distribution of MSLP anomalies averaged 30
+days following all modelled split and displaced vortex events at the approximate
+centres of action of the NAO (over the Azores at $38^{\circ}$N, $26^{\circ}$)
+and the Pacific-North American (PNA) pattern (central North Pacific at
+$45^{\circ}$N, $165^{\circ}$W). The North Atlantic distribution is centred
+further from zero and has a lower variance than the North Pacific distribution
+for both split and displaced vortex events. This is despite the fact that the
+standard deviation in monthly winter MSLP is approximately equal in the two
+regions \citep{Allan2006}, and so again indicates the more consistent North
+Atlantic response.
 
 This inconsistency in the Pacific anomalies has important consequences for the
 interpretation of zonal mean anomalies following split and displaced vortex
@@ -619,16 +645,6 @@ anomalies for ERA (Figures \ref{fig:cmip5_100hPa_comp} (a,b) and
 approximately co-located with an anomalously high tropopause, although the
 tropopause height field is much noisier. 
 
-The fact that anomalous MSLP differences are co-located wih 100~hPa $Z$ (which
-is in turn related to tropopause height) lends weight to the idea that the
-mechanism behind the \emph{differences} in the surface response to split and
-displaced vortex events is a localised geostrophic and hydrostatic adjustment to
-stretching caused by changes in tropopause height. This is the mechanism
-discussed by \citet{Ambaum2002} and in Section ??. It is important to note that
-this does not imply that this is the dominant mechanism in the \emph{individual}
-responses to split and displaced vortex events, which share many similarites, for
-instance in their influence on the NAO. This result is discussed in more detail
-in Section \ref{sec:cmip5_discuss_split_displ}.
 
 
 \begin{figure}
@@ -651,6 +667,20 @@ in Section \ref{sec:cmip5_discuss_split_displ}.
 
 \section{Discussion}
 \subsection{Effect of model resolution}
+
+
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=\textwidth]{figures/chapter-models/scatter_matrix.pdf}
+ \caption[Relationship between model resolution and moment diagnostics in the
+ CMIP5 models.]{Relationship between model resolution, moment diagnostics, and
+   stratosphere-troposphere coupling in the CMIP5 models. Model resolution is
+   shown as horizontal resolution ($\mathrm{d}h$), vertical resolution
+   ($\mathrm{d}z$) over 5-15~km and 15-30~km, and aspect ratio
+   ($\mathrm{d}z$(5-15~km)$ / \mathrm{d}h$). Histograms for the relevant
+   quantities are shown along the leading diagonal.}
+ \label{fig:scatter_matrix}
+\end{figure}
 
 We have demonstrated that there are large differences in the representation of
 the average undisturbed state of the stratospheric polar vortex among high-top
@@ -775,20 +805,6 @@ as in the CMIP5 ensemble.
 
 % Z 500hPa
 
-\begin{figure}
- \centering
- \noindent\includegraphics[width=\textwidth]{figures/chapter-models/scatter_matrix.pdf}
- \caption[Relationship between model resolution and moment diagnostics in the
- CMIP5 models.]{Relationship between model resolution, moment diagnostics, and
-   stratosphere-troposphere coupling in the CMIP5 models. Model resolution is
-   shown as horizontal resolution ($\mathrm{d}h$), vertical resolution
-   ($\mathrm{d}z$) over 5-15~km and 15-30~km, and aspect ratio
-   ($\mathrm{d}z$(5-15~km)$ / \mathrm{d}h$). Also shown is the modal aspect ratio
-   and centroid latitude and the mean polar cap-averaged $Z$ at 500~hPa 0-30
-   days following split and displaced vortex events. Histograms for the relevant
-   quantities are shown along the leading diagonal.}
- \label{fig:scatter_matrix}
-\end{figure}
 
 \begin{figure}
  \centering
@@ -846,8 +862,6 @@ the NAO rather than the NAM as the more physically relevant mode, at least in
 terms of stratosphere-troposphere coupling. 
 
 
-
-
 % Fluctuation-dissipation
 %Discuss NAO vs NAM
 
@@ -856,13 +870,103 @@ terms of stratosphere-troposphere coupling.
 \subsection{Difference between split and displaced vortex events}
 \label{sec:cmip5_discuss_split_displ}
 
+As well as the consistent NAO signal following split and displaced vortex
+events, we have found that there are also some consistent differences in
+anomalies following the two types of event. In particular, MSLP anomalies
+following displaced vortex events are more negative over Scandinavia and Siberia
+than following split vortex events. From the fact that these MSLP differences
+are co-located wih 100~hPa $Z$ (Figure \ref{fig:cmip5_mslp_diff}), which is in
+turn related to tropopause height, it may be possible to gain some understanding
+of the mechanism behind the difference in the surface response to split and
+displaced vortex events. 
 
+This co-location of surface anomalies and tropopause height is consistent a
+localised spinup/spindown caused by stretching/compression of the tropospheric
+column. Changes in tropopause height are, in turn, caused by the bending of
+isentropic surfaces towards PV anomalies resulting from the movement of the
+stratospheric polar vortex. Such a mechanism was discussed by
+\citet{Hartley1998}, \citet{Ambaum2002}, \citet{Black2002}, and (and in Section
+??). Although these studies focussed more on the influence on the NAO, the
+mechanism is also applicable to other regional responses. 
 
+Other mechanisms that have been proposed for stratosphere-troposphere coupling
+fail to account for these regional differences. For instance, the amplification
+of intrinsic modes of variability \citep{Robinson1991} can only explain
+differences which project onto these modes such as the NAO or NAM, unlike
+observed difference. Stratosphere-troposphere coupling by the reflection of
+planetary waves \citep{JudithPerlwitz2003,Shaw2010} also cannot explain the
+observed difference since it  does not project onto the dominant tropospheric
+planetary wave modes. 
 
+This argument relates only to the mechanism underlying the \emph{difference}
+between the surface responses to split and displaced vortex events, and not to
+the overall responses. It is important to note that there are many similarities
+in the responses, especially in the NAO region. All the mechanisms discussed in
+Section ?? can be used to explain a stratpospheric influence on the NAO, and
+since they are not physically inconsistent with one another, it is possible that
+a number may operate at the same time. 
 
-
+Unfortunately, the small number of observed split and displaced vortex events
+combined with large tropospheric noise means there is very little statistical
+significance in the observed difference of MSLP anomalies (see Figure
+\ref{fig:cmip5_mslp_diff}(a)). Hence it is not possible to compare our model and
+observational results for this difference, and there remains the
+possibility that CMIP5 models do not realistically represent the surface
+responses to split and displaced vortex events. Therefore, it is possible that
+stratosphere-troposphere coupling mechanisms in models are different to those in
+the real world. 
 
 \section{Conclusions}
+
+Applying the method developed in Chapter \ref{cha:moments}, the climatology of
+the stratospheric polar vortex and its coupling with the troposphere has been
+analysed in stratosphere-resolving CMIP5 simulations. Returning to the three
+main objectives of this chapter (Section \ref{sec:models_introduction}), the
+following conclusions have been reached:
+\begin{enumerate}
+
+\item \textbf{How do models represent the stratospheric polar vortex and
+    stratosphere-troposphere coupling?}
+
+  A wide range of biases among CMIP5 models has been found in the average state
+  of the stratospheric polar vortex. Some models have a vortex which is too
+  equatorward, while others too poleward. The majority of models have a vortex
+  which is too circularly symmetric. These biases have been shown to relate
+  closely to biases in the frequency of split and displaced vortex events. In
+  the multi-model mean, however, the frequency of these events is in agreement
+  with observations. 
+
+  Almost all models accurately simulate the more barotropic nature of split
+  vortex events compared to displaced vortex events. MSLP anomalies following
+  these events consistently show a negative NAO in line with observations, but
+  are much less consistent in the North Pacific, leading to a large spread when
+  zonal mean quantities are investigated.
+
+\item \textbf{Is model resolution related to vortex variability?}
+
+  There is a statistically significant correlation between near-tropopause
+  vertical resolution and modal aspect ratio among models. However, this
+  relationship is not seen among the two pairs of models from the same
+  family. On the other hand, the tropopause region is known to be important for
+  the propagation of planetary waves due to high vertical gradients of zonal
+  wind shear and static stability. This may be suggestive of the need for high
+  vertical resolution to accurately simulate stratospheric planetary wave
+  activity and hence vortex aspect ratio. No relationships have been found
+  between horizontal resolution and vortex variability.
+
+\item \textbf{Can models be used to understand mechanisms behind
+    stratosphere-troposphere coupling?}
+
+  Consistent differences in the MSLP anomalies following split and displaced
+  vortex events in the CMIP5 models have been found to be co-located with the
+  difference in near-tropopause $Z$ anomalies. This is consistent with a
+  localised tropospheric response to stretching or compression of the
+  tropospheric column being the mechanism behind the different responses to the
+  two events. It also excludes mechanisms which rely on projections onto major
+  modes of variability such as the NAO or NAM. This result only applies to the
+  difference between responses to split and displaced vortex events, not the
+  individual responses, which share many similarities.
+\end{enumerate}
 
 % Re-address aims from introduction
 
