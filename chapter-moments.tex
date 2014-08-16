@@ -1,7 +1,8 @@
 \chapter{A geometrical description of vortex variability}
 \begin{quotation}
-Much of the work contained in this chapter is based upon \citet{Seviour2013a},
-although the analysis here has been significantly extended and re-written.
+  Much of the work contained in this chapter is based upon the paper
+  \citet{Seviour2013a}, although the analysis presented here has been
+  significantly extended.
 \end{quotation}
 
 \label{cha:moments}
@@ -75,8 +76,9 @@ ERA-40 and ERA-Interim reanalysis datasets and demonstrate that the method
 captures a similar number of events which are in good agreement with, and at
 least as extreme as, those of M13.
 
+\section{Theoretical background: moment diagnostics}
 
-\section{The $Z_{10}$ method}
+\section{Methodology}
 \subsection{Vortex geometry calculation}
 \label{sec:vort-geom-calc}
 Northern Hemisphere winter daily-mean data for December-March (DJFM) were
@@ -135,6 +137,17 @@ diagnostics.]{Distributions of the December-March centroid latitude (a) and
 
 \subsection{Event definition}
 \label{sec:event-definition}
+
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=0.7\textwidth]{figures/chapter-moments/clustering.pdf}
+ \caption[Clustering algorithms applied to the moment diagnostics.]{Three
+   clustering algorithms and a threshold division applied to the moment
+   diagnostics in centroid latitude-aspect ratio space. For the $k$-means and
+   hierarchical algorithms three clusters were specified. The mean-shift
+   algorithm determined the number of clusters to be 4.}
+ \label{fig:clusters}
+\end{figure}
 
 In order to identify displaced and split vortex events, a threshold criterion is
 introduced and applied to the geopotential height derived diagnostics. A
@@ -305,16 +318,6 @@ only geopotential height at 10~hPa. The method is briefly summarised as follows:
 % ------------------- Copied from 2nd year report --------------%
 \pagebreak
 
-\begin{figure}
- \centering
- \noindent\includegraphics[width=0.7\textwidth]{figures/chapter-moments/clustering.pdf}
- \caption[Clustering algorithms applied to the moment diagnostics.]{Three
-   clustering algorithms and a threshold division applied to the moment
-   diagnostics in centroid latitude-aspect ratio space. For the $k$-means and
-   hierarchical algorithms three clusters were specified. The mean-shift
-   algorithm determined the number of clusters to be 4.}
- \label{fig:clusters}
-\end{figure}
 
 
 \begin{figure}
