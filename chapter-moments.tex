@@ -1061,26 +1061,31 @@ detailed analysis a greater number of events would be needed.
 
 \section{Conclusions}
 
-Recent research has demonstrated the need to distinguish between displaced and
-split stratospheric polar vortex events, due to their different impacts on
-surface weather patterns. However, current methods to identify these events are
-complex or require non-standard variables. In this chapter, a new, robust method
-has been developed to identify displaced and split vortex events, which requires
-only geopotential height at 10~hPa. The method is briefly summarised as follows:
- \begin{enumerate}
- \item To identify the vortex region, a single contour of 10~hPa geopotential
-   height is selected: the value of the zonal mean at $60^{\circ}$N.
- \item Using this contour and the geopotenial height field, the centroid
-   latitude and aspect ratio are calculated, following the methodology of
-   \cite{Matthewman2009}.
- \item Events are identified using a threshold criterion: Displaced events are
-   identified if the centroid latitude remains equatorward $66^{\circ}$N for 7
-   days or more. Split events are identified if the aspect ratio remains above
-   2.4 for 7 days or more. No two events may occur within 30 days.
- \end{enumerate}
+Recent research has demonstrated the need to distinguish between split and
+displaced stratospheric polar vortex events because of their different dynamical
+evolution and impacts on the troposphere. However, previous methods to identify
+these events are impractical for application to climate model simulations
+because they are highly sensitive to model climatology or rely on non-standard
+variables. In this chapter a new method has been developed to identify displaced
+and split vortex events, which can be easily applied to climate model
+simulations because it requires only geopotential height at 10~hPa. The method
+is briefly summarised as follows:
+\begin{enumerate}[i.]
+\item To identify the vortex region, a single contour of 10~hPa geopotential
+  height is selected. This is the value of the DJFM mean zonal-mean at
+  $60^{\circ}$N.
+\item Using this contour and the geopotenial height field, the centroid latitude
+  and aspect ratio moment diagnostics are calculated.
+\item Events are identified using a threshold criterion: Displaced events are
+  identified if the centroid latitude remains equatorward $66^{\circ}$N for 7
+  days or more. Split events are identified if the aspect ratio remains above
+  2.4 for 7 days or more. In order to ensure events are not counted twice, no
+  two events may occur within 30 days.
+\end{enumerate}
 
- Results using this method demonstrate that it is able to identify split and
- displaced vortex events at least as effectively as previous methods.
+Analysis of the stratosphere following events identified by this method
+demonstrates that it is able to identify split and displaced vortex events at
+least as effectively as previous methods.
 
 % ------------------- Copied from 2nd year report --------------%
 
