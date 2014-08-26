@@ -40,7 +40,7 @@ different simulation of SSW events in high- and low-top models
 
 Other studies have compared simulations of climate change with high- and low-top
 models. \citet{Huebener2007} linked a increased weakening of the stratospheric
-polar vortex in high-top similations to a more southward shift of the NH winter
+polar vortex in high-top simulations to a more southward shift of the NH winter
 storm track, which in turn affects trends in North Atlantic temperatures and
 precipitation. \citet{Manzini2014} investigated climate change simulations of
 high- and low-top models in the CMIP5 ensemble. They found that the inter-model
@@ -50,7 +50,7 @@ NAM under climate change. Interestingly, \citet{Manzini2014} also show that
 global surface temperature trends under climate change (and so climate
 sensitivity) are larger for high-top compared to low-top models. However, when
 comparing pairs of high- and low-top versions of the same (or similar) models,
-little in climate sensistivity difference is detected, and they conclude that
+little in climate sensitivity difference is detected, and they conclude that
 this difference is unlikely to have a physical basis.
 
 Despite these findings about the differences between high- and low-top models,
@@ -62,7 +62,7 @@ that the frequency of SSWs in high-top CMIP5 models varies widely, from about
 
 In this chapter we apply the methods developed in Chapter \ref{cha:moments} to
 evaluate the representation of stratospheric polar vortex variability in
-contemporary climate models. Motivated by these results which demonstate a more
+contemporary climate models. Motivated by these results which demonstrate a more
 realistic representation of tropospheric and stratospheric climate in high-top
 models, we select only models with a lid height above the stratopause. In doing
 this we extend the work of \citet{Charlton-Perez2013} to consider the
@@ -71,7 +71,7 @@ vortex events. We also consider the influence of these events on the troposphere
 in each model.
 
 There are three main objectives to this investigation. First, we wish to
-evaluate the current state of model's representation of the stratospheric polar
+evaluate the current state of models' representation of the stratospheric polar
 vortex and stratosphere-troposphere coupling, including whether there are any
 consistent biases among models. Second, we aim to determine if there is a
 relationship between model parameters (such as horizontal and vertical
@@ -79,7 +79,7 @@ resolution) and biases in their representation of vortex variability. This may
 motivate future model improvements to reduce these biases. Third, we investigate
 whether the increased sample size of the CMIP5 ensemble can be used to better
 understand the mechanism behind the different tropospheric response to split and
-displaced vortex events, which was described in Chapter \ref{cha:moments}. 
+displaced vortex events, which was described in Chapter \ref{cha:moments}.
 
 \subsection{CMIP5 model simulations}
 
@@ -87,11 +87,11 @@ For this analysis only climate models with a lid height above the stratopause
 are selected from the CMIP5 ensemble. In total, 13 such models were available
 from 8 different modelling centres. Although another two (CESM1-WACCM and
 MIROC-ESM) are listed in the CMIP5 ensemble, appropriate data was not found to
-be available for these models in the CMIP5 archive (http://pcmdi3.llnl.gov/
-esgcet/home.htm). These models are listed in Table \ref{tab:models}. It can be
-seen that 12 of the 13 models have an uppermost level which is in the upper
-mesosphere (70-80~km), but CanESM2 has a significantly lower lid which is very
-close to the stratopause.
+be available for these models in the CMIP5 archive
+(\url{http://pcmdi3.llnl.gov/esgcet/home.htm}). These models are listed in Table
+\ref{tab:models}. It can be seen that 12 of the 13 models have an uppermost
+level which is in the upper mesosphere (70-80~km), but CanESM2 has a
+significantly lower lid which is very close to the stratopause.
 
 Historical simulations have been used throughout this analysis. These include
 observed climate forcings, such as from greenhouse gasses, ozone depletion,
@@ -101,10 +101,11 @@ it coincides with the ERA-40/ERA-Interim reanalysis period (CMIP5 historical
 simulations end at 2005). Limiting the model simulation analysis to the same
 period as observations may be important becasue several studies have suggested
 that external forcing, such as volcanic eruptions and solar variability, has a
-significant impact on stratospheric variability \citep{Kodera1994,Gray2010}. In
-order to achieve the largest possible ensemble size, all available ensemble
-members have been used for each model, which leads to a differing number of
-years entering the ensemble from different models.
+significant impact on stratospheric variability
+\citep[e.g.,][]{Kodera1994,Gray2010}. In order to achieve the largest possible
+ensemble size, all available ensemble members have been used for each model,
+which leads to different numbers of years entering the ensemble from different
+models.
 
 \begin{table}[htbp]
 \small
@@ -238,9 +239,9 @@ models agrees well with the equivalent SSW frequency calculated by
 \citet{Charlton-Perez2013}, who identified events based on the reversal of
 zonal-mean zonal wind at 60$^{\circ}$N and 10~hPa. They also found HadGEM2-CC to
 have the highest frequency of events within the CMIP5 ensemble, while MRI-CGCM3
-is the model with the lowest freqency of SSWs in their study (exluding GFDL-CM3
+is the model with the lowest frequency of SSWs in their study (excluding GFDL-CM3
 and MRI-ESM1 which \citet{Charlton-Perez2013} did not analyse, MRI-CGCM3 is the
-second-lowest frequency in the present study). This similarlity between
+second-lowest frequency in the present study). This similarity between
 \citet{Charlton-Perez2013} and the present study indicates that the close
 relationship between moment diagnostics-defined events and SSWs defined by
 zonal-mean zonal wind, as described in Chapter \ref{cha:moments}, also holds for
@@ -285,7 +286,7 @@ significant random errors and is sensitive to the selection of bin size. A more
 accurate estimation of the mode can be made by fitting the aspect ratio and
 centroid latitude with a theoretical distribution and then finding the peak of
 that distribution. Following \citet{Mitchell2011}, we fit the aspect ratio with
-a generalized extreme value (GEV) distribution of the form
+a generalised extreme value (GEV) distribution of the form
 \begin{equation}
 f(x;\mu,\sigma,\xi) = \frac{a^{(-1/\xi)-1}}{\sigma}\mathrm{e}^{{-a}^{-1/\xi}}
 \quad , 
@@ -296,7 +297,7 @@ a = 1 + \xi \frac{x-\mu}{\sigma} \quad ,
 \end{equation}
 where $\mu$ determines the position of the peak along the $x$-axis, $\sigma$
 determines the variance of the distribution and $\xi$ the skewness. These
-parameters are determined using the method of maximum-liklihood estimation
+parameters are determined using the method of maximum-likelihood estimation
 \citep{Wilks}. This method is also used to fit a Gaussian distribution of the
 form
 \begin{equation}
@@ -308,11 +309,11 @@ is the standard deviation, to the cube of the centroid latitude, and then the
 cube root taken to return the original distribution. \citet{Mitchell2011} found
 that these distributions accurately fit the histograms of centroid latitude and
 aspect ratio in reanalysis data, apart from the extreme tails of the
-distribution. Qualitative inpsection of the distribution for each model confirms
+distribution. Qualitative inspection of the distribution for each model confirms
 that they also provide a similarly good fit to each of the model's histograms.
 
 Figure \ref{fig:cmip5_moments_scatter} shows the relationship between the modal
-aspect ratio and cetroid latitude and frequency of split and displaced vortex
+aspect ratio and centroid latitude and frequency of split and displaced vortex
 events. It can be seen that strong linear relationships exist; the modal aspect
 ratio accounts for 79\% of the spread in the frequency of split vortex events
 and the modal centroid latitude accounts for 76\% of the spread in the frequency
@@ -344,9 +345,9 @@ circularly-symmetric vortex is a common bias among models.
 
 The structure of the stratospheric polar vortex during split and displaced
 vortex events in the CMIP5 ensemble is shown in Figure
-\ref{fig:10hPa_GPH_comp}. This displays composites of 10~hPa geoopotential
+\ref{fig:10hPa_GPH_comp}. This displays composites of 10~hPa geopotential
 height at the onset date of the events for each model. It can be seen that the
-majority of models accurately reproduce splitting events as occuring along the
+majority of models accurately reproduce splitting events as occurring along the
 $90^{\circ}$W-$90^{\circ}$E axis, and displacement events with a vortex shifted
 towards Scandinavia and Siberia. CanESM2 is an exception to this, with split
 vortex events which are elliptical but centred quite far from the pole. The
@@ -423,9 +424,9 @@ stronger, in closer agreement with reanalysis.
 
 As well as these large inter-model differences, there are also some consistent
 features among models. Almost all models show a barotropic onset to split vortex
-events, with anomalies occuring at the same time throughout the depth of the
+events, with anomalies occurring at the same time throughout the depth of the
 atmosphere. In contrast, displaced vortex events apprear more baroclinic, with
-onset occuring first near 10~hPa. This is consistent with the difference found
+onset occurring first near 10~hPa. This is consistent with the difference found
 in reanalysis, indicating that this is likley to be a robust difference between
 the response to split and displaced vortex events. These features are apparent
 in the multi-model mean (MMM) (Figures \ref{fig:cmip5_dripping_paint}
@@ -479,7 +480,7 @@ models.
    Pacific ($45^{\circ}$N, $165^{\circ}$W) averaged over the 30 days following
    split and displacement events in all the CMIP5 models. These two locations
    correspond to centres of action of the NAO and PNA patterns
-   respectively. Data are fitted with a Guassian distribution.}
+   respectively. Data are fitted with a Gaussian distribution.}
  \label{fig:cmip5_nao_pna}
 \end{figure}
 
@@ -525,7 +526,7 @@ events. For instance, the IPSL-CM5A-LR model shows weak tropospheric anomalies
 displaced vortex events (Figure \ref{fig:cmip5_dripping_paint} (m,n)), but a
 relatively strong NAO signal (Figure \ref{fig:cmip5_mslp_comp} (m,n)),
 particularly following split vortex events. The reason for this difference is
-that the model also shows relatively stong positive North Pacific anomalies,
+that the model also shows relatively strong positive North Pacific anomalies,
 that to some extent cancel the North Atlantic anomalies in the polar cap
 average. Such an effect would also be seen in the NAM, even if calculated from
 non zonally-averaged $Z$, since the surface NAM pattern (the leading EOF of
@@ -566,7 +567,7 @@ events.
 
 In the split minus displaced vortex difference, the majority of models show a
 large positive region over Russia and Eastern Europe and a negative region
-centred over northern Canada. The positive region over Siberia has a minumum,
+centred over northern Canada. The positive region over Siberia has a minimum,
 which is negative in some cases, located near $90^{\circ}$E, which is consistent
 with the position of minimum in the split vortex composite. It can be seen that
 the multi-model mean difference (Figure \ref{fig:cmip5_100hPa_comp} (S)) is
@@ -575,7 +576,7 @@ remarkably similar to the reanalysis difference (Figure
 anomalies. This suggests that the CMIP5 models, on average, realistically
 represent the evolution of split and displaced vortex events through the depth
 of the stratosphere. Again, this result is consistent among the majority of
-models, and so not highly sensitive to the exlusion or inclusion of any
+models, and so not highly sensitive to the exclusion or inclusion of any
 particular model. 
 
 \begin{figure}
@@ -627,7 +628,7 @@ In the CMIP5 MMM difference the largest feature is the large positive anomaly (a
 result of a more negative anomaly following displaced vortex events) over
 Scandinavia, Eastern Europe and Russia. There is also a significant negative
 anomaly over northern Canada and a positive anomaly in the western
-Atlantic. This pattern is zonally assymetric and so does not project strongly
+Atlantic. This pattern is zonally asymmetric and so does not project strongly
 onto the polar cap average, therefore explaining the small difference in polar
 cap averaged $Z$ (Figure \ref{fig:cmip5_dripping_paint} (C,D)). The CMIP5
 difference pattern also does not strongly project onto the NAO as there is a
@@ -698,28 +699,27 @@ accurate. In contrast, only two of 14 models have higher modal aspect ratio than
 reanalysis.
 
 Importantly, we have shown that these biases in the undisturbed state of the
-vortex are closely related to biases in the fequency of split and displaced
-vortex events. As a corrolory, models therefore have a relatively realistic
-representation of variability relative to the average state. In order to
-understand the origin of these biases we now consider whether any of the model
-horizontal and vertical resolution properties listed in Table \ref{tab:models}
-are related to models' polar vortex climatology. Figure \ref{fig:scatter_matrix}
-shows the correlations between model resolution and modal aspect ratio and
-centroid latitude. 
+vortex are closely related to biases in the frequency of split and displaced
+vortex events. As a corollary, models therefore have a realistic representation
+of variability relative to the average state. In order to understand the origin
+of these biases we now consider whether any of the model horizontal and vertical
+resolution properties listed in Table \ref{tab:models} are related to models'
+polar vortex climatology. Figure \ref{fig:scatter_matrix} shows the correlations
+between model resolution and modal aspect ratio and centroid latitude.
 
 There are no statistically significant correlations between the modal aspect
 ratio or centroid latitude and horizontal resolution or between the centroid
 latitude and vertical resolution. However, a stronger relationship is found
 between vertical resolution and the modal aspect ratio and this is shown in more
 detail in Figure \ref{fig:aspect_vert_res}. The relatively wide scatter of
-points as well as the small correlation coefficient values indicate that vetical
-resolution fails to accound for a substantial fraction of inter-model
+points as well as the small correlation coefficient values indicate that
+vertical resolution fails to account for a substantial fraction of inter-model
 variability in the modal aspect ratio. However, the $p$-values shown indicate a
 relatively high level of statistical significance for both correlations. It
 should be noted that these correlations are not highly influenced by
 outliers. This can be seen by the bootstrap test $p$-values, as well as the rank
 correlations which are $-0.60$ (96.9\%) and $-0.75$ (99.7\%) for vertical
-resolutions over 5-15~km and 15-30~km respectively.  
+resolutions over 5-15~km and 15-30~km respectively.
 
 The two measures of vertical resolution, $\mathrm{d}z$ (5-15~km) and
 $\mathrm{d}z$ (15-30~km), are themselves correlated (see Figure
@@ -835,12 +835,12 @@ by differences in the North Pacific, with some models showing positive MSLP
 anomalies and others negative.
 
 Following \citet{Baldwin2001a}, many studies of stratosphere-troposphere
-coupling have focussed on the lag-height behaviour the NAM. For instance the
+coupling have focused on the lag-height behaviour the NAM. For instance the
 comparison of stratosphere-troposphere coupling in high-top and low-top CMIP5
 models by \citet{Charlton-Perez2013}. This and several other studies make
 further approximations as to the zonal nature of the coupling by calculating the
 NAM based on zonal-mean geopotential height, according to the method of
-\citet{Baldwin2009}. Our results suggest that because of the differnce in model
+\citet{Baldwin2009}. Our results suggest that because of the difference in model
 consistency over the two ocean basins, zonal-mean diagnostics or the NAM alone
 are not a good descriptors of inter-model variability. Therefore, we suggest
 that the NAO index or the full two-dimensional surface fields should be shown
@@ -855,7 +855,7 @@ tropospheric anomalies following SSWs represent the NAM
 \citep[e.g.,][]{Baldwin1999,Baldwin2001a,Thompson2000}. 
 
 On the other hand, \citet{Ambaum2001} suggested that the NAO paradigm is a more
-physically relevant measure of NH variability than tha NAM. They found that MSLP
+physically relevant measure of NH variability than the NAM. They found that MSLP
 anomalies over the North Atlantic and Pacific are not significantly correlated
 and argued that that the annular NAM pattern is a statistical
 artifact. \citet{Huth2006} also showed that principal component analysis favours
@@ -883,7 +883,7 @@ events, we have found that there are also some consistent differences in
 anomalies following the two types of event. In particular, MSLP anomalies
 following displaced vortex events are more negative over Scandinavia and Siberia
 than following split vortex events. From the fact that these MSLP differences
-are co-located wih 100~hPa $Z$ (Figure \ref{fig:cmip5_mslp_diff}), which is in
+are co-located with 100~hPa $Z$ (Figure \ref{fig:cmip5_mslp_diff}), which is in
 turn related to tropopause height, it may be possible to gain some understanding
 of the mechanism behind the difference in the surface response to split and
 displaced vortex events. 
@@ -894,7 +894,7 @@ column. Changes in tropopause height are, in turn, caused by the bending of
 isentropic surfaces towards PV anomalies resulting from the movement of the
 stratospheric polar vortex. Such a mechanism was discussed by
 \citet{Hartley1998}, \citet{Ambaum2002}, \citet{Black2002}, and in Section
-??.  
+\ref{sec:mechanisms}.  
 
 Other mechanisms that have been proposed for stratosphere-troposphere coupling
 fail to account for these regional differences. For instance, the amplification
@@ -909,7 +909,7 @@ This argument relates only to the mechanism underlying the \emph{difference}
 between the surface responses to split and displaced vortex events, and not to
 the overall responses. It is important to note that there are many similarities
 in the responses, especially in the NAO region. All the mechanisms discussed in
-Section ?? can be used to explain a stratpospheric influence on the NAO, and
+Section ?? can be used to explain a stratospheric influence on the NAO, and
 since they are not physically inconsistent with one another, it is possible that
 a number may operate at the same time. 
 
