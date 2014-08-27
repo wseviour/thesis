@@ -240,10 +240,11 @@ spherical data $q(\phi,\lambda)$ and $Z(\phi,\lambda)$, where $\phi$ is latitude
 and $\lambda$ longitude, to cartesian coordinates using the polar stereographic
 projection
 \begin{equation}
-x = \frac{\cos\lambda\cos\phi}{1 + \sin\phi}\, , \quad
-y = \frac{\sin\lambda\cos\phi}{1 + \sin\phi}\, .
+x = \frac{\cos\lambda\cos\phi}{1 \pm \sin\phi}\, , \quad
+y = \frac{\pm\sin\lambda\cos\phi}{1 \pm \sin\phi}\, , 
 \end{equation}  
-
+where the positive sign is used in the Northern Hemisphere and negative in the
+Southern Hemisphere.
 
 In order to calculate moment diagnostics for the stratospheric polar vortex we
 must first isolate the vortex region by defining the vortex edge. Different
@@ -267,9 +268,10 @@ transferable to geopotential height. Furthermore, the method of
 the moment diagnostics, so will not know their dates before
 calculation. Instead, we pick a simple definition; PV ($q_{b}$) or geopotential
 height ($Z_{b}$) on the vortex edge is defined as the value of the
-December-March (DJFM) mean at $60^{\circ}$N. This is seen to lie close to
-contours defined by the above methods, and results are insensitive to small
-changes in the latitude chosen. 
+December-March (DJFM) mean at $60^{\circ}$N for the Northern Hemisphere and the
+June-September (JJAS) mean at $60^{\circ}$S for the Southern Hemisphere. This is
+seen to lie close to contours defined by the above methods, and results are
+insensitive to small changes in the latitude chosen.
 
 Having defined the vortex edge, we extend the method \citet{Matthewman2009} to
 isolate the vortex region by introducing a transformed PV field, $\hat{q}$,
@@ -428,7 +430,7 @@ data is linearly interpolated to the lower resolution ERA-40
 from pressure levels to the 850~K isentropic surface (which lies close to
 10~hPa), as this quantity has the property of being conserved under adiabatic
 flow. In the calculation of the vortex edge. Both in the calculation of the
-vortex edge (climatological mean $q$ or $Z$ at $60^{\circ}$N) and the moment
+vortex edge (climatological mean $q$ or $Z$ at $60^{\circ}$N/S) and the moment
 diagnostics themselves, no clear jumps were seen between ERA-40 and ERA-Interim
 data sets. As such, the two are considered together with no bias
 corrections. For the remainder of this thesis, this combined ERA-40 and
@@ -440,12 +442,13 @@ ERA-Interim data set is referred to as `ERA'.
 
 In order to calculate the moment diagnostics, the values of PV and geopotential
 height on the vortex edge ($q_b$ and $Z_b$) must first be determined. These are
-the $60^{\circ}$N December-March mean values of PV at 850~K ($q_{850}$) and
-10~hPa geopotential height ($Z_{10}$) respectively. They are found to be
+the $60^{\circ}$N DJFM/$60^{\circ}$S JJAS mean values of PV at 850~K ($q_{850}$)
+and 10~hPa geopotential height ($Z_{10}$) respectively. They are found to be
 $q_b = 460$~PVU ($\mathrm{1~PVU = 10^{-6}Km^2kg^{-1}s^{-1}}$) and
-$Z_b = 30.2$~km. Using these values the moment diagnostics are calculated from
-ERA data for DJFM from 1979-2009 using the method described in Section
-\ref{sec:vort-moment-diagn}.
+$Z_b = 30.2$~km for the Northern Hemisphere, and $q_b = 618$~PVU and
+$Z_b = 29.0$~km for the Southern Hemisphere. Using these values the moment
+diagnostics are calculated from ERA data for 1958--2009 using the method
+described in Section \ref{sec:vort-moment-diagn}.
 
 As discussed in Section \ref{sec:vort-moment-diagn} the excess kurtosis
 diagnostic is not used in the present analysis. In the interests of simplicity,
@@ -457,24 +460,26 @@ expected during split vortex events, and a low aspect ratio and equatorward
 centroid latitude expected during displaced vortex events. 
 
 Figure \ref{fig:pv_z_moments_distribution} shows the distributions of these two
-quantities calculated from $q_{850}$ and $Z_{10}$. The centroid latitude
-distributions are almost identical, with a peak near $80^{\circ}$N which is in
-agreement with previous studies \citep{Mitchell2011,Waugh1999}. The aspect ratio
-distributions have a similar shape, with a peak at about 1.3, but the PV based
-diagnostic has a larger tail. This is because the PV field contains more
-small-scale filamentary structures than geopotential height (e.g. Figures
-\ref{fig:displaced_ellipse} and \ref{fig:split_ellipse}), making high aspect
-ratios more likely. As well as having similar distributions, the time series of
-the PV and geopotential height derived diagnostics (not shown) are significantly
-correlated, with correlation coefficients of 0.9 for daily centroid latitude and
-0.6 for aspect ratio. Overall, these results suggest that geopotential
-height-derived moment diagnostics are appropriate for the identification of
-split and displaced vortex events. 
+quantities calculated from $q_{850}$ and $Z_{10}$ for the Northern Hemisphere
+vortex. The centroid latitude distributions are almost identical, with a peak
+near $80^{\circ}$N which is in agreement with previous studies
+\citep{Mitchell2011,Waugh1999}. The aspect ratio distributions have a similar
+shape, with a peak at about 1.3, but the PV based diagnostic has a larger
+tail. This is because the PV field contains more small-scale filamentary
+structures than geopotential height (e.g. Figures \ref{fig:displaced_ellipse}
+and \ref{fig:split_ellipse}), making high aspect ratios more likely. As well as
+having similar distributions, the time series of the PV and geopotential height
+derived diagnostics (not shown) are significantly correlated, with correlation
+coefficients of 0.9 for daily centroid latitude and 0.6 for aspect
+ratio. Overall, these results suggest that geopotential height-derived moment
+diagnostics are appropriate for the identification of split and displaced vortex
+events.
+
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{figures/chapter-moments/moments_distribution_crop.pdf}
-  \caption[Distributions of $Z_{10}$ and PV-based moment
+  \caption[NH distributions of $Z_{10}$ and PV-based moment
   diagnostics.]{Distributions of the December-March centroid latitude (a) and
     aspect ratio (b), of the Northern Hemisphere stratospheric polar vortex over
     1958-2009. Diagnostics are calculated from geopotential height at 10~hPa
@@ -483,6 +488,36 @@ split and displaced vortex events.
     define events, and are indicated by the black vertical lines.}
   \label{fig:pv_z_moments_distribution}
 \end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{figures/chapter-moments/moments_distribution_crop_sh.pdf}
+  \caption[SH distributions of $Z_{10}$ and PV-based moment diagnostics.]{As
+    Figure \ref{fig:pv_z_moments_distribution} but for moment diagnostics
+    calculated for the Southern Hemisphere stratospheric polar vortex over
+    June-September.}
+  \label{fig:pv_z_moments_distribution_sh}
+\end{figure}
+
+Figure \ref{fig:pv_z_moments_distribution_sh} shows the same distribution as
+Figure \ref{fig:pv_z_moments_distribution}, but for the Southern Hemisphere
+vortex aspect ratio and centroid latitude. As in the case of the Northern
+Hemisphere, the geopotential height and PV-based distributions have very similar
+shapes, with the PV-based aspect ratio having a slightly larger tail. Comparing
+the Northern and Southern Hemisphere distributions it can be seen that there is
+much less variability in both aspect ratio and centroid latitude in the Southern
+Hemisphere. This is because of the reduced planetary wave propagation into the
+Southern Hemisphere stratosphere, in turn a result of lesser forcing from
+orography and land-sea temperature contrasts. The peak in the Southern
+Hemisphere centroid latitude is at about $86^{\circ}$S; the same as that found
+by \citet{Waugh1999}. 
+
+A result of this reduced Southern Hemisphere vortex variability is that only one
+SSW has been observed in the Southern Hemisphere (discussed further in Chapter
+\ref{cha:seas}). The rest of this chapter relates to the classification and
+impacts of split and displaced vortex events and so focusses only on the
+Northern Hemisphere. However, it should be noted that all the methods below can
+also be applied to the Southern Hemisphere.
 
 
 \subsection{Event identification}
@@ -1074,12 +1109,11 @@ detailed analysis a greater number of events would be needed.
 Recent research has demonstrated the need to distinguish between split and
 displaced stratospheric polar vortex events because of their different dynamics
 and impacts on the troposphere. However, previous methods to identify these
-events are impractical for application to climate model simulations because they
-are highly sensitive to model climatology or rely on non-standard variables. In
-this chapter a new method has been developed to identify displaced and split
-vortex events, which can be easily applied to climate model simulations because
-it requires only geopotential height at 10~hPa. The method is summarised as
-follows:
+events are impractical for application to climate model or seasonal prediction
+simulations because they are highly sensitive to model climatology or rely on
+non-standard variables. Motivated by this, we have developed a new method to
+identify displaced and split vortex events which requires only geopotential
+height at 10~hPa. The method is summarised as follows:
 \begin{enumerate}[i.]
 \item To identify the vortex region, a single contour of 10~hPa geopotential
   height is selected. This is the value of the DJFM mean zonal-mean at
@@ -1092,6 +1126,13 @@ follows:
   2.4 for 7 days or more. In order to ensure events are not counted twice, no
   two events may occur within 30 days.
 \end{enumerate}
+Vortex moment diagnostics derived from geopotential height are highly correlated
+with those derived from PV, although fewer high aspect ratio values are
+seen. The use of geopotential height here is motivated by the fact that it is
+commonly output by climate models, whereas PV is not. However, in cases where PV
+is available (such as in reanalyses) its use is preferable because of its
+quasi-conservative properies and smaller-scale features. The above method can be
+easily adapted to be used with PV-based vortex moments.
 
 Analysis of the stratosphere following events identified by this method
 demonstrates that it is able to accurately identify split and displaced vortex
@@ -1099,9 +1140,6 @@ events. Most of the events identified coincide with those of M13, and about
 half with events identified by CP07. Composite analysis indicates that the
 position of the stratospheric polar vortex following these events is at least as
 extreme as that from the previous methods. 
-
-This method is not intended to replace PV-based methods...
-
 
 Having identified these events, their impact on the troposphere is
 investigated. Composites of the NAM indicate a more negative surface NAM over
