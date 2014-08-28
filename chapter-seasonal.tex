@@ -8,7 +8,7 @@
 
 
 \section{Introduction}
-
+\label{sec:seas-introduction}
 
 Accurate prediction of the atmospheric circulation several months in advance
 relies on the presence of low-frequency predictable signals in the climate
@@ -116,26 +116,63 @@ lead times. By studying the variation of hindcast skill with time and height, we
 demonstrate that this skill is significantly influenced by the descent of
 predictable stratospheric circulation anomalies.
 
-
 \section{Seasonal forecast system}
+\label{sec:seas-forec-syst}
 
-The analysis in this paper is based on results from a set of hindcast
+The analysis in this chapter is based on results from a set of hindcast
 predictions produced by the Met Office Global Seasonal Forecast System 5
 (GloSea5) \citep{MacLachlan2014}. This system is based upon the HadGEM3 coupled
 general circulation model \citep{Hewitt2011}, with an atmospheric resolution of
 0.83$^{\circ}$ longitude by 0.56$^{\circ}$ latitude, 85 quasi-horizontal
 atmospheric levels and an upper boundary at 85~km. The ocean resolution is
-0.25$^{\circ}$ in longitude and latitude, with 75 quasi-horizontal levels. For
-the SON season used for the SH analysis, a 15-member ensemble of hindcasts was
-run for each year in the period 1996--2009. For the DJF season used for the NH
-analysis a longer 24-member ensemble is available for the winters
-1992/1993--2011/2012. The hindcast length is approximately four months from three
-separate start dates spaced two weeks apart and centered on 1st August (SON) or
-1st November (DJF), with an equal number of members initialised on each start
-date. Members initialised on the same start date differ only by stochastic
-parameterisation of model physics \citep{Tennant2011}. Details of the hindcast
-runs for these two seasons are summarised in Table \ref{tab:seas_runs}.
+0.25$^{\circ}$ in longitude and latitude, with 75 quasi-horizontal levels.
 
+Initial conditions for the atmosphere and land surface were taken from the
+ERA-Interim reanalysis \citep{Dee2011}, and initial ocean and sea-ice
+concentrations from the GloSea5 Ocean and Sea Ice Analysis, based on the FOAM
+data assimilation system \citep{Blockley2013}. The ERA-Interim data are linearly
+interpolated onto model levels between the surface and 64.56~km (near 0.1~hPa),
+and the 64.56~km values are then replicated onto the four subsequent levels up
+to 85~km. FOAM data are on the same grid as the ocean model. Beyond
+initialisation the model takes no further observational data, and contains no
+flux corrections or relaxations to climatology. The model lacks interactive
+chemistry and ozone concentrations are fixed to observed climatological values
+averaged over 1994--2005, including a seasonal cycle from the
+Stratosphere-troposphere Processes and their Role in Climate (SPARC) climatology
+\citep{Cionni2011}. Climate forcings such as CO$_2$ and CH$_4$ concentrations
+are set to observed values up to 2005 and then follow the IPCC RCP4.5 scenario. 
+
+\citet{Scaife2013} have shown that this seasonal forecast system produces highly
+skillful forecasts of the North Atlantic Oscillation (NAO) during the Northern
+Hemisphere winter. They found the correlation of the ensemble mean DJF average
+NAO with observed values to be $r=0.62$, which is statistically significant from
+zero at the 99\% level. They argue that the combined effects of ENSO, QBO and
+sea-ice teleconnections, as well as the increased ocean resolution which has
+improved the representation of Northern Hemisphere blocking events
+\citep{Scaife2011a}, contribute to this skill.
+
+Hindcast accuracy is verified by comparison to the ERA-Interim reanalysis
+\citep{Dee2011}. As discussed in Chapter \ref{cha:moments}, the ERA-Interim data
+set has been demonstrated to have realistic representation of the stratospheric
+meridional circulation \citep{Seviour2012, Monge-Sanz2013}. It also assimilates
+observations of ozone concentrations, and this assimilation has been
+demonstrated to be in close agreement with independent satellite data
+\citep{Dragani2011}
+
+In this chapter, hindcasts are anaysed for two seasons; December--February (DJF)
+for prediction of the Northern Hemisphere winter stratospheric polar vortex, and
+September--November (SON) for the Southern Hemisphere. The SON season is chosen
+because it represents the time of maximum SH ozone depletion and stratospheric
+polar vortex variability. For SON a 15-member ensemble of hindcasts was run for
+each year in the period 1996--2009, while for the DJF analysis a longer
+24-member ensemble is available for the winters 1992/1993--2011/2012. The
+hindcast length is approximately four months from three separate start dates
+spaced two weeks apart and centered on 1st August (SON) or 1st November (DJF),
+with an equal number of members initialised on each start date. Members
+initialised on the same start date differ only by stochastic parameterisation of
+model physics, using the Stochastic Kinetic Energy Backscatter v2
+\citep[SKEB;][]{Bowler2009} scheme. Details of the hindcast runs for these two
+seasons are summarised in Table \ref{tab:seas_runs}.
 \begin{table}[h]
 \centering
 \begin{tabular}{llll} \hline
@@ -149,47 +186,93 @@ runs for these two seasons are summarised in Table \ref{tab:seas_runs}.
 \label{tab:seas_runs}
 \end{table}
 
-Initial conditions for the atmosphere and land surface were taken from the
-ERA-Interim reanalysis \citep{Dee2011}, and initial ocean and sea-ice
-concentrations from the GloSea5 Ocean and Sea Ice Analysis, based on the FOAM
-data assimilation system \citep{Blockley2013}. The ERA-Interim data are linearly
-interpolated onto model levels between the surface and 64.56~km (near 0.1~hPa),
-and the 64.56~km values are then replicated onto the four subsequent levels up
-to 85~km. FOAM data are on the same grid as the ocean model. Beyond
-initialization the model takes no further observational data, and contains no
-flux corrections or relaxations to climatology. The model lacks interactive
-chemistry, and ozone concentrations are fixed to observed climatological values
-averaged over 1994--2005, including a seasonal cycle \citep{Cionni2011}.
+It should be noted that the 20-year, 20-member ensemble hindcasts of DJF were
+extended from a 14-year, 15-member ensemble, the same as as the SON
+hindcasts. These extended simulations are, however, slightly shorter than the
+original ensemble; ending at the beginning of March rather than the beginning of
+April. This therefore limits our analysis of the full ensemble so as not to
+include March. Furthermore, some variables were not produced by the extended DJF
+ensemble and so the original sorter ensemble must be used in some cases, which
+is made clear in the text where necessary.
 
-\citet{Scaife2013} have shown that this seasonal forecast system produces highly
-skillful forecasts of the North Atlantic Oscillation during the Northern
-Hemisphere winter. The combined effects of ENSO, QBO and sea-ice
-teleconnections, as well as the increased ocean resolution which has improved
-the representation of Northern Hemisphere blocking events \citep{Scaife2011a},
-contribute to this skill.
+\begin{figure}[p] \vspace*{-3cm} \centering
+   \noindent\includegraphics[width=\textwidth]{figures/chapter-seasonal/zm_winds_nh_poststamp.pdf}
+   \caption[Timeseries of $\overline{u}$ at 60$^{\circ}$N, 10~hPa, for all
+   GloSea5 ensemble members.]{Timeseries of zonal-mean zonal wind in the Arctic
+     polar vortex ($60^{\circ}$N, 10~hPa) in the ERA-Interim reanalysis (thick
+     black lines) and the GloSea5 ensemble hindcasts (thin coloured
+     lines). Individual ensemble members are initialised from dates centred on
+     November 1st. Years refer to the year of the initialisation date.}
+   \label{fig:nh_poststamp}
+\end{figure}
 
-Hindcast accuracy is verified by comparison to the ERA-Interim reanalysis
-\citep{Dee2011}. The ERA-Interim data set has been demonstrated to have
-realistic representation of the stratospheric meridional circulation
-\citep{Seviour2012, Monge-Sanz2013}. It also assimilates observations of ozone
-concentrations, and this assimilation has been demonstrated to be in close
-agreement with independent satellite data \citep{Dragani2011}.
+\begin{figure}[p] \vspace*{-3cm} \centering
+  \noindent\includegraphics[width=\textwidth]{figures/chapter-seasonal/zm_winds_sh_poststamp.pdf}
+  \caption[Timeseries of $\overline{u}$ at 60$^{\circ}$S, 10~hPa, for all
+  GloSea5 ensemble members.]{As figure \ref{fig:nh_poststamp} but for the
+    zonal-mean zonal wind in the Antarctic polar vortex ($60^{\circ}$S, 10~hPa),
+    and ensemble members initialised from dates centred on August 1st.}
+  \label{fig:sh_poststamp}
+\end{figure}
+
+In order to illustrate these hindcast simulations, timeseries of zonal-mean
+zonal wind $\overline{u}$ at 10~hPa are shown for $60^{\circ}$N from
+November--March (Figure \ref{fig:nh_poststamp}) and $60^{\circ}$S from
+August--December (Figure \ref{fig:sh_poststamp}). ERA-Interim values are also
+shown in both cases (black lines). These are the approximate positions of the
+centre of the mean position of the stratospheric polar vortex in the
+midstratosphere, and therefore indicate the strength of the stratospheric polar
+vortex. In order to make the figures comparable, the shorter 14-year, 15-member
+ensemble is shown for the NH. It can immediately be seen that there is a much
+greater ensemble spread in the NH, owing to the much greater dynamical
+variability of the NH stratospheric polar vortex. In both cases it can also be
+seen that the ensemble spread is initially small and increases rapidly after
+approximately 15-30 days. This demonstrates the initial constraint to
+ERA-Interim and the rapid growth of small differences in initial conditions,
+because of the chaotic nature of the atmosphere. The predictive skill of for the
+Northern Hemisphere (DJF) is analysed in the next section, and the Southern
+Hemisphere (SON) in Section \ref{sec:south-hemisph-result}.
+
 
 \section{Northern Hemisphere results}
-
+\label{sec:north-hemisph-result}
 % NH data
 % 8.5 events/decade - 3.5 splits, 5.0 displs 
 % min 47% (01/02) max 100% (97/98) (any event in winter)
+
+The climatology of Arctic stratospheric polar vortex winds in the GloSea5
+hindcasts is compared to the ERA-Interim reanalysis climatology in Figure
+\ref{fig:sh_zmzw_clim}. As in Figure \ref{fig:nh_poststamp}, the strength of the
+stratospheric polar vortex is measured by the zonal-mean zonal wind
+($\overline{u}$) at 60$^{\circ}$N and 10~hPa. The composite for the GloSea5
+hindcasts is formed from all the individual ensemble members over the winters
+1992/1993--2011/2012 (a total of 480), while that from ERA-Interim is a
+composite of the same 20 winters. It can be seen that the mean, interquartile
+range and 95th percentile range of the GloSea5 values agree well with the
+ERA-Interim values, although the ERA-Interim values are noisier as would be
+expected from a sample size consisting of fewer years.
 
 \begin{figure}[t]
   \noindent\includegraphics[width=\textwidth,angle=0]{figures/chapter-seasonal/zmzw_climatologies_nh.pdf}\\
   \caption[NH comparison of GloSea5 and ERA-Interim zonal-mean zonal wind
   climatologies.]{Time series of daily 10~hPa zonal-mean zonal wind
-    ($\overline{U}$) at 60$^{\circ}$N for all GloSea5 ensemble members (a) and
+    ($\overline{u}$) at 60$^{\circ}$N for all GloSea5 ensemble members (a) and
     ERA-Interim (b) from 1992--2011. The thick black line indicates the mean,
     dark grey shading the interquartile range and light grey the 95th percentile
     range.}\label{fig:nh_zmzw_clim}
 \end{figure}
+
+Figure \ref{fig:nh_moments_glosea} shows the joint distribution of the apsect
+ratio and centroid latitude moment diagnostics calculated over DJF from the
+GloSea5 hindcasts, along with the equivalent values from ERA-Interim. These
+diagnostics have been calculated from geopotential height following the method
+described in Chapter \ref{cha:moments}. Both aspect ratio and centroid latitude
+distributions closely match those of ERA-Interim, and the joint distribution
+shows the characteristic triangular shape which related to the occurrence of
+split and displaced vortex events. Together, Figures \ref{fig:nh_zmzw_clim} and
+\ref{fig:nh_moments_glosea} demonstrate that GloSea5 accurately simulates the
+mean state and variability of the stratospheric polar vortex in the
+midstratosphere.  
 
 \begin{figure}[t] \centering
   \noindent\includegraphics[width=0.7\textwidth,angle=0]{figures/chapter-seasonal/GloSea_moments_histogram.pdf}\\
@@ -201,22 +284,51 @@ agreement with independent satellite data \citep{Dragani2011}.
     represents the densest regions.}\label{fig:nh_moments_glosea}
 \end{figure}
 
+The GloSea5 hindcast predictions of interannual variability of the NH
+stratospheric polar vortex winds are shown in Figure
+\ref{fig:nh_zmzw_timeseries}. Anomalies are defined from the relevant
+climatology of either GloSea5 or ERA-Interim. For GloSea5, this climatology is
+calculated from the mean of each day across all ensemble members in all years,
+while for ERA-Interim the climatology is the mean of each day, smoothed with a
+30-day running mean (in order to account for its increased noise due to the
+reduced sample size). Results are shown for DJF averages, corresponding to a 1
+month average lead time. The correlation between the GloSea5 ensemble mean and
+ERA-Interim is $r=0.24$ which is not statistically significant at the 95\% level
+(under the null hypthesis that the two timeseries are
+uncorrelated). Significance is calculated using a two-tailed bootstrap test,
+whereby the percentile of the observed correlation is calculated from the
+distribution of correlations of a large number ($\sim 10~000$) of pairs of time
+series formed by re-sampling with replacement from the original time series. As
+elswhere in this thesis, these significance tests are used because they make
+fewer assumptions about the underlying structure of the data than parametric
+tests \citep{Wilks}.
 
 \begin{figure}[t]
   \noindent\includegraphics[width=\textwidth,angle=0]{figures/chapter-seasonal/DJF_ZMZW_NH.pdf}\\
-  \caption[DJF $\overline{U}$ anomalies for GloSea5.]{DJF mean anomalies of
-    $\overline{U}$ at $60^{\circ}$N and 10~hPa for the GloSea5 ensemble mean and
+  \caption[DJF $\overline{u}$ anomalies for GloSea5.]{DJF mean anomalies of
+    $\overline{u}$ at $60^{\circ}$N and 10~hPa for the GloSea5 ensemble mean and
     ERA-Interim. Black dots represent individual ensemble members. The
     correlation between the GloSea5 ensemble mean and ERA-Interim is $r=0.24$,
-    which is not statistically significant from zero.}\label{fig:nh_zmzw_timeseries}
+    which is not statistically significant from zero. Years refer to the year of
+    the initialisation date.}\label{fig:nh_zmzw_timeseries}
 \end{figure}
 
+Although no significant skill is found in the prediction of the seasonal mean
+strength of the stratospheric polar vortex, it is possible that skilful
+predictions of SSW events may be made. This is assessed using receiver operating
+characteristic (ROC) curves, a standard measure for the probabilistic forecast
+evaluation. In order to calculate the ROC curve, the following procedure is
+followed:
+\begin{enumerate}[i]
+\item
+
+\end{enumerate}
 
 \begin{figure}[t] \centering
   \noindent\includegraphics[width=0.7\textwidth,angle=0]{figures/chapter-seasonal/SSW_ROC.pdf}\\
   \caption[ROC curve for the prediction of SSWs.]{Receiver operating
     characteristic (ROC) curve for the prediction of SSW events during DJF for
-    1992--2011. SSWs are defined as a reversal to easterly $\overline{U}$ at
+    1992--2011. SSWs are defined as a reversal to easterly $\overline{u}$ at
     60$^{\circ}$N 10~hPa, and must be separated by at least 30
     days.}\label{fig:sh_zmzw_clim}
 \end{figure}
@@ -248,7 +360,7 @@ agreement with independent satellite data \citep{Dragani2011}.
 
 
 \section{Southern Hemisphere results}
-
+\label{sec:south-hemisph-result}
 
 \subsection{Stratospheric polar vortex}
 
@@ -256,7 +368,7 @@ agreement with independent satellite data \citep{Dragani2011}.
 The climatology of Antarctic stratospheric polar vortex winds in the GloSea5
 hindcasts is compared to the ERA-Interim reanalysis climatology in Figure
 \ref{fig:sh_zmzw_clim}. The strength of the stratospheric polar vortex is
-measured by the zonal-mean zonal wind ($\overline{U}$) at 60$^{\circ}$S and
+measured by the zonal-mean zonal wind ($\overline{u}$) at 60$^{\circ}$S and
 10~hPa, which is approximately the center of the mean position of the vortex in
 the mid-stratosphere. The composite for the GloSea5 hindcasts is formed from all
 the individual ensemble members over 1996--2009 (a total of 210), while that
@@ -272,7 +384,7 @@ years.
   \noindent\includegraphics[width=\textwidth,angle=0]{figures/chapter-seasonal/zmzw_climatologies_crop.pdf}\\
   \caption[Comparison of GloSea5 and ERA-Interim zonal-mean zonal wind
   climatologies.]{Time series of daily 10~hPa zonal-mean zonal wind
-    ($\overline{U}$) at 60$^{\circ}$S for all GloSea5 ensemble members from
+    ($\overline{u}$) at 60$^{\circ}$S for all GloSea5 ensemble members from
     1996--2009 (a) and ERA-Interim from 1979--2010 (b). The thick black line
     indicates the mean, dark gray shading the interquartile range and light gray
     the 95th percentile range. Individual time series of the ensemble member of
@@ -315,7 +427,7 @@ assumptions about the underlying structure of the data than parametric tests
 
 The skill shown in Figure \ref{fig:zmzw_ozone}(a) cannot be accounted for by
 persistence of initial anomalies. In fact, there is a negative correlation
-between $\overline{U}$ on 9th August, when the last ensemble member is
+between $\overline{u}$ on 9th August, when the last ensemble member is
 initialised, and the SON mean ($r=-0.54$). Hence, a persistence forecast would
 be negatively correlated with observed values. This relationship may be
 consistent with ideas of a pre-conditioning of the polar vortex
@@ -326,11 +438,11 @@ small. However, there are large uncertainties in these values due to the short
 hindcast period and the large 2002 anomaly.
 
 Following \citet{Charlton2007a}, SSWs are defined as a temporary reversal of
-$\overline{U}$ at 60$^{\circ}$S and 10~hPa, occurring before the final
+$\overline{u}$ at 60$^{\circ}$S and 10~hPa, occurring before the final
 transition to summer easterlies (final warming). Under this definition, one SSW
 event was simulated in the GloSea5 hindcasts, in 2002. A similar magnitude event
 (in terms of departure from climatology) occurred in a 1997 ensemble member,
-although $\overline{U}$ did not quite become easterly. Time series of
+although $\overline{u}$ did not quite become easterly. Time series of
 stratospheric polar vortex winds for these two events are shown in Figure
 \ref{fig:sh_zmzw_clim}(a) along with the observed 2002 SSW in Figure
 \ref{fig:sh_zmzw_clim}(b). It can also be seen in Figure
@@ -346,7 +458,7 @@ Both the SSW events simulated by GloSea5 were vortex displacement events, in
 contrast to the vortex splitting event which occurred in 2002
 \citep{Charlton2005a}. This is demonstrated in Figure \ref{fig:sh_ssws}, which
 shows geopotential height in the mid-stratosphere at the date of minimum
-$\overline{U}$ at 60$^{\circ}$S and 10~hPa, for the two simulated events in
+$\overline{u}$ at 60$^{\circ}$S and 10~hPa, for the two simulated events in
 GloSea5 and the observed event in ERA-Interim. The distinction between splitting
 and displacement SSW events is important because it has been observed that
 tropospheric anomalies are greater following vortex splitting events, at least
@@ -355,7 +467,7 @@ in the Northern Hemisphere \citep{Nakagawa2006, Mitchell2013}.
 \begin{figure}[t]
   \noindent\includegraphics[width=\textwidth,angle=0]{figures/chapter-seasonal/ssws_crop.pdf}\\
   \caption[Comparison of GloSea5 and observed SSWs.]{Geopotential height at
-    10~hPa on the date at which $\overline{U}$ at 60$^{\circ}$S and 10~hPa is at
+    10~hPa on the date at which $\overline{u}$ at 60$^{\circ}$S and 10~hPa is at
     its minimum value, for the two GloSea5 ensemble members which simulate a SSW
     (a,b), and for ERA-Interim at the central date of the 2002 SSW (c). Units
     are km and the contour interval is 0.3~km.}\label{fig:sh_ssws}
@@ -396,7 +508,7 @@ ozone-depleting substances, and largely unrelated to dynamical variability. On
 the other hand, shorter-term interannual changes are strongly related to
 dynamical variability. In Figure \ref{fig:zmzw_scatter}(b) anomalies of polar
 cap total column ozone from the long-term trend are plotted against anomalies of
-the SON mean $\overline{U}$ at 60$^{\circ}$S and 10~hPa. It can be seen that
+the SON mean $\overline{u}$ at 60$^{\circ}$S and 10~hPa. It can be seen that
 these two quantities are highly correlated ($r=-0.92$), meaning polar vortex
 variability explains approximately 85\% of the variance of polar cap total
 column ozone anomalies.
@@ -415,16 +527,16 @@ column ozone anomalies.
 This strong correlation makes it possible to use GloSea5 forecasts of polar
 vortex winds to produce inferred predictions of polar cap total column ozone
 quantities. This is carried out by a leave-one-out cross-validation procedure
-\citep{Wilks}; the linear regression of ERA-Interim ozone and $\overline{U}$
+\citep{Wilks}; the linear regression of ERA-Interim ozone and $\overline{u}$
 anomalies for all years 1979--2009 except the hindcast year is used to produce
 the hindcast for each ensemble member. Thus no information from the hindcast
-year enters the hindcast itself. Figure \ref{Fig2}(b) shows the GloSea5 ozone
-hindcasts along with the assimilated values from ERA-Interim. The correlation
-between the GloSea5 ensemble mean and ERA-Interim is 0.73, which is
+year enters the hindcast itself. Figure \ref{fig:zmzw_ozone}(b) shows the
+GloSea5 ozone hindcasts along with the assimilated values from ERA-Interim. The
+correlation between the GloSea5 ensemble mean and ERA-Interim is 0.73, which is
 statistically significant at the 99\% level, and has a 95\% confidence interval
-of $(0.38,0.91)$. Errors from the regression in Fig.\ \ref{Fig2}(b) for the
-inferred ozone quantities for each ensemble member are small compared to the
-spread between ensemble members, and so are not plotted in this figure.
+of $(0.38,0.91)$. Errors from the regression in Figure \ref{fig:zmzw_ozone}(b)
+for the inferred ozone quantities for each ensemble member are small compared to
+the spread between ensemble members, and so are not plotted in this figure.
 
 \subsection{Southern Annular Mode}
 
@@ -470,7 +582,7 @@ patterns associated with the SAM over the longer observational record of
     (dashed green curve) and ERA-Interim (solid green curve). The SAM is
     calculated from mean sea-level pressure data, and hindcasts initialized near
     1st August. The correlation of the ensemble mean and ERA-Interim values is
-    0.64, which is statistically significant at the 99\%
+    0.64, which is statistically significant at the 95\%
     level.}\label{fig:sam_ts}
 \end{figure}
 
@@ -610,7 +722,12 @@ importance of non-linearities or the influence of other external factors which
 can be captured by the full dynamical model.
 
 \section{Discussion}
+\label{sec:seas-discussion}
+\subsection{Northern Hemisphere}
+% Mention NH result surprising - perhaps less skill in Pacific?
 
+
+\subsection{Southern Hemisphere}
 We have demonstrated that Antarctic total column ozone amounts are predictable
 up to four months in advance during the austral spring, even with a model which
 lacks interactive chemistry. While using such a model has the advantage of being
@@ -645,7 +762,7 @@ found by \citet{Lim2013}. They report a correlation of 0.40 for the SON mean SAM
 from 1st August initialized forecasts over 1981--2010 using the Predictive Ocean
 and Atmosphere Model for Australia, version 2 (POAMA2). Over the comparable
 period of 1996--2009, they find a correlation of 0.54 (Harry Hendon, personal
-communication).  Significantly, POAMA2 has only two model levels in the
+communication, 2014).  Significantly, POAMA2 has only two model levels in the
 stratosphere, and so may be unable to simulate the stratosphere-troposphere
 coupling described here. \citet{Lim2013} attribute their results to the
 influence of ENSO through a tropospheric teleconnection. This is not
@@ -710,7 +827,7 @@ $r=0.39$ (95\% confidence interval: [0.15,0.63]).
   \noindent\includegraphics[width=0.6\textwidth,angle=0]{figures/chapter-seasonal/corr_ens_size_crop.pdf}\\
   \caption[Variation of GloSea5 forecast skill with ensemble size]{GloSea5
     ensemble mean correlation with ERA-Interim as a function of ensemble size
-    for the SON mean $\overline{U}$ at 10~hPa and 60$^{\circ}$S and SON mean SAM
+    for the SON mean $\overline{u}$ at 10~hPa and 60$^{\circ}$S and SON mean SAM
     (thick lines). A theoretical estimate of the variation of correlation with
     ensemble size is shown in each case (thin solid lines), along with its
     asymptote for an infinite sized ensemble (dashed lines). Error bars
@@ -721,7 +838,7 @@ $r=0.39$ (95\% confidence interval: [0.15,0.63]).
 
 
 \section{Conclusions}
-
+\label{sec:seas-conclusions}
 Using a set of seasonal hindcasts initialized at the start of the austral
 spring, we have demonstrated skillful prediction of the interannual variability
 of the Antarctic stratospheric polar vortex at seasonal lead times. This
@@ -744,24 +861,6 @@ these results suggest that it may now be possible to make skillful seasonal
 forecasts of interannual variations in springtime ozone depletion and large
 scale weather patterns across the Southern Hemisphere.
 
- \begin{figure}[p] \vspace*{-3cm} \centering
- \noindent\includegraphics[width=40pc]{figures/chapter-seasonal/zm_winds_nh_poststamp.pdf}
- \caption[Timeseries of $\overline{U}$ at 60$^{\circ}$N, 10~hPa, for all GloSea5
-ensemble members.]{Timeseries of zonal-mean zonal wind in the Arctic polar
-vortex ($60^{\circ}$N, 10~hPa) in the ERA-Interim reanalysis (thick black lines)
-and the GloSea5 ensemble hindcasts (thin coloured lines). Individual ensemble
-members are initialised from dates centred on November 1st. }
- \label{fig:nh_poststamp}
- \end{figure}
-
- \begin{figure}[p] \vspace*{-3cm} \centering
- \noindent\includegraphics[width=40pc]{figures/chapter-seasonal/zm_winds_sh_poststamp.pdf}
- \caption[Timeseries of $\overline{U}$ at 60$^{\circ}$S, 10~hPa, for all GloSea5
-ensemble members.]{As figure \ref{fig:nh_poststamp} but for the zonal-mean zonal
-wind in the Antarctic polar vortex ($60^{\circ}$S, 10~hPa), and ensemble members
-initialised from dates centred on August 1st.}
- \label{fig:sh_poststamp}
- \end{figure}
 
  \begin{figure}[p] \vspace*{-3cm} \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-seasonal/lag_height_corr_obs.pdf}
