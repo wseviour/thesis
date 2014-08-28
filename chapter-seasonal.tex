@@ -216,7 +216,7 @@ is made clear in the text where necessary.
 \end{figure}
 
 In order to illustrate these hindcast simulations, timeseries of zonal-mean
-zonal wind $\overline{u}$ at 10~hPa are shown for $60^{\circ}$N from
+zonal wind ($\overline{u}$) at 10~hPa are shown for $60^{\circ}$N from
 November--March (Figure \ref{fig:nh_poststamp}) and $60^{\circ}$S from
 August--December (Figure \ref{fig:sh_poststamp}). ERA-Interim values are also
 shown in both cases (black lines). These are the approximate positions of the
@@ -316,13 +316,22 @@ tests \citep{Wilks}.
 Although no significant skill is found in the prediction of the seasonal mean
 strength of the stratospheric polar vortex, it is possible that skilful
 predictions of SSW events may be made. This is assessed using receiver operating
-characteristic (ROC) curves, a standard measure for the probabilistic forecast
-evaluation. In order to calculate the ROC curve, the following procedure is
-followed:
-\begin{enumerate}[i]
-\item
-
+characteristic (ROC) curves, a standard method in forecast evaluation
+\citep[e.g.,][]{Wilks}. In order to calculate the ROC curve, the following
+procedure is followed:
+\begin{enumerate}[1.]
+\item For each ensemble member in each year, determine whether an SSW occurs
+  (winters with one SSW and two SSWs are treated the same). 
+\item Select a threshold for the prediction of an SSW (e.g., 60\% of ensemble
+  members forecast an SSW). 
+\item For the given threshold determine the fraction of years for which a SSW
+  was correctly predicted (``hit rate'') and the fraction for which a SSW was
+  predicted but none occurred (``false alarm rate''). 
+\item Repeat the steps 2-3 for a range of thresholds from 0-100\%.
 \end{enumerate}
+In a skilful system the ROC curve should indicate a higher hit rate than false
+alarm rate, bending towards the upper left corner of the graph, while a random
+forecast will pass along the 1-1 line. 
 
 \begin{figure}[t] \centering
   \noindent\includegraphics[width=0.7\textwidth,angle=0]{figures/chapter-seasonal/SSW_ROC.pdf}\\
@@ -330,8 +339,16 @@ followed:
     characteristic (ROC) curve for the prediction of SSW events during DJF for
     1992--2011. SSWs are defined as a reversal to easterly $\overline{u}$ at
     60$^{\circ}$N 10~hPa, and must be separated by at least 30
-    days.}\label{fig:sh_zmzw_clim}
+    days.}\label{fig:ssw_roc}
 \end{figure}
+
+Figure \ref{fig:ssw_roc} shows the ROC curve for SSWs during DJF, determined by
+the traditional reversal of $\overline{u}$ at 60$^\circ$N 10~hPa, with the
+additional criterion that events must be separated by at least 30 days. It can
+be seen that the calculated ROC curve lies close to the 1-1 line indicating
+little skill in these predictions. This is despite quite large variations in the
+fraction of ensemble members predicting SSWS; from 47\% (winter 2001/2002) to
+100\% (winter 1997/1998). 
 
 \begin{figure}[t] \centering
   \noindent\includegraphics[width=\textwidth,angle=0]{figures/chapter-seasonal/glosea_split_displ_ROC_any.pdf}\\
@@ -340,8 +357,19 @@ followed:
     split (a) and displaced (b) vortex events in all GloSea5 ensemble members
     over 1992--2011. Split and displaced vortex events are identified from
     geopotential height-derived moment diagnostics using the method described in
-    Chapter \ref{cha:moments}.}\label{fig:sh_zmzw_clim}
+    Chapter \ref{cha:moments}.}\label{fig:split_displ_roc}
 \end{figure}
+
+A similar analysis for the prediction of split and displaced vortex events is
+shown in Figure \ref{fig:split_displ_roc}. These events have been calculated
+from the geopotential height-derived moment diagnostics, using the same
+procedure as decribed in Chapter \ref{cha:moments}. Again, little skill can be
+seen in the predictions of these events, with both ROC curves lying close to the
+1-1 line. It should be noted that GloSea5 predicts a high frequency of split and
+displaced vortex events (8.5 events/decade; 3.5 split, 5.0 displaced), compared
+to the observed value of 7 events/decade. This is perhaps not surprising given
+the HadGEM3 model used in GloSea5 is of the same family as HadGEM2-CC, which was
+found to have the highest frequency of events in Chapter \ref{cha:models}.
 
 \begin{figure}[t] \centering
   \noindent\includegraphics[width=\textwidth,angle=0]{figures/chapter-seasonal/NH_lag_height_corr.pdf}\\
@@ -356,7 +384,45 @@ followed:
     \citep{Wilcox2012}.}\label{fig:nh_pc_gph_corr}
 \end{figure}
 
+\bigskip The evolution of NH hindcast skill as a function of lag and height is
+evaluated in Figure \ref{fig:nh_pc_gph_corr}. This shows the correlation of
+ERA-Interm and GloSea5 ensemble mean polar cap (60-90$^\circ$N) average
+geopotential height anomalies ($Z'$). Values of $Z'$ are smoothed with a 30-day
+running mean before correlations are calculated, and plotted such that values
+for the 15th December represent the correlation of the ERA-Interim and GloSea5
+ensemble mean December mean values (without this smoothing, a noisier but
+similar pattern of correlations is seen). Geopotential height data on several
+levels in the stratosphere is only available in the shorter 14-year, 15-member
+ensemble, and so the analysis in this figure is limited to these data. Between
+1st-9th November the ensemble mean is taken as the average of the 10 initialised
+ensemble members, and the average of all 15 ensemble members is used after this
+date.
 
+In mid-November, significant correlations are seen in Figure
+\ref{fig:nh_pc_gph_corr} in both the stratosphere and troposphere, as would be
+expected from the initialisation of the hindcasts from ERA-Interim data (skill
+is seen to rapidly decay in the tropopause region, however). This skill persists
+for longer in the stratosphere than the troposphere, owing to the longer
+timescales of stratospheric variability \citep[e.g.,][]{Simpson2011}, however,
+by mid-December no significant correlations are seen in the stratosphere or
+troposphere. 
+
+Significant correlations return in the troposphere in late Janurary/February,
+and to a lesser extent in the stratosphere. This result is similar to that for
+the NAO prediction in the same system, which has a greater skill in February
+than January (Adam Scaife, personal communication [2013]). A possible
+explanation for this behaviour is due to the influence of ENSO, which has been
+determined to have the greatest effect on the NH extratropics during late
+Janurary and February \citep{Bell2009}. If indeed the influence of ENSO is
+important, it is not clear whether this arises from a tropospheric or
+stratospheric pathway, although the fact that tropospheric skill is greater than
+stratospheric may suggest the tropospheric pathway is more important. 
+
+Detailed analysis of the mechanisms behind the NH surface skill is beyond the
+scope of this chapter which investigates the role of the stratosphere. Because
+skill in the prediction of the NH stratosphere has been demonstrated to be low,
+attention is now turned to the SH. However, the implications of these results
+are discussed further in Section \ref{sec:seas-discussion}. 
 
 
 \section{Southern Hemisphere results}
@@ -459,10 +525,9 @@ contrast to the vortex splitting event which occurred in 2002
 \citep{Charlton2005a}. This is demonstrated in Figure \ref{fig:sh_ssws}, which
 shows geopotential height in the mid-stratosphere at the date of minimum
 $\overline{u}$ at 60$^{\circ}$S and 10~hPa, for the two simulated events in
-GloSea5 and the observed event in ERA-Interim. The distinction between splitting
-and displacement SSW events is important because it has been observed that
-tropospheric anomalies are greater following vortex splitting events, at least
-in the Northern Hemisphere \citep{Nakagawa2006, Mitchell2013}.
+GloSea5 and the observed event in ERA-Interim. A detailed quantitative anaysis
+using moment diagnostics was not found necessary in this case because a
+qualitative inspection is possible with only two events.
 
 \begin{figure}[t]
   \noindent\includegraphics[width=\textwidth,angle=0]{figures/chapter-seasonal/ssws_crop.pdf}\\
@@ -726,6 +791,16 @@ can be captured by the full dynamical model.
 \subsection{Northern Hemisphere}
 % Mention NH result surprising - perhaps less skill in Pacific?
 
+The fact that hindcasts of the NH stratospheric polar vortex have been shown to
+be less skilful than those of the SH is not unexpected because of the much
+greater dynamical variability and chaotic nature of the NH. Indeed, previous
+studies have not found SSWs to be predictable beyond about two weeks
+\citep{Marshall2010,Taguchi2014}. However, given the fact that the GloSea5
+hindcasts have been shown to produce skilful predictions of the DJF NAO
+\citep{Scaife2013}, it is perhaps surprising that somewhat greater skill was not
+found in Section \ref{sec:north-hemisph-result}. Even if the vortex was to
+respond passively to extratropical surface anomalies within the model, a greater
+degree of skill might be expected.
 
 \subsection{Southern Hemisphere}
 We have demonstrated that Antarctic total column ozone amounts are predictable
@@ -762,7 +837,7 @@ found by \citet{Lim2013}. They report a correlation of 0.40 for the SON mean SAM
 from 1st August initialized forecasts over 1981--2010 using the Predictive Ocean
 and Atmosphere Model for Australia, version 2 (POAMA2). Over the comparable
 period of 1996--2009, they find a correlation of 0.54 (Harry Hendon, personal
-communication, 2014).  Significantly, POAMA2 has only two model levels in the
+communication [2014]).  Significantly, POAMA2 has only two model levels in the
 stratosphere, and so may be unable to simulate the stratosphere-troposphere
 coupling described here. \citet{Lim2013} attribute their results to the
 influence of ENSO through a tropospheric teleconnection. This is not
