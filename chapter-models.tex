@@ -436,17 +436,17 @@ As well as these large inter-model differences, there are also some consistent
 features among models. Almost all models show a barotropic onset to split vortex
 events, with anomalies occurring at the same time throughout the depth of the
 atmosphere. In contrast, displaced vortex events apprear more baroclinic, with
-onset occurring first near 10~hPa. This is consistent with the difference found
-in reanalysis, indicating that this is likley to be a robust difference between
-the response to split and displaced vortex events. These features are apparent
-in the multi-model mean (MMM) (Figures \ref{fig:cmip5_dripping_paint}
-C and D). This mean is calculated so as to give each event an equal weight (rather
-than each model), and so does not give undue weight to models with only a small
-number of events. On the other hand this does mean that greater weight is given
-to models with more ensemble members and more events (almost one third of all
-displaced vortex events come from CanESM2), but the difference in baroclinicity
-of split and displaced vortex events is observed to be very consistent among
-models.
+onset occurring first near the uppermost level. This is consistent with the
+difference found in reanalysis, indicating that this is likley to be a robust
+difference between the response to split and displaced vortex events. These
+features are also apparent in the multi-model mean (MMM) (Figures
+\ref{fig:cmip5_dripping_paint} C and D). This mean is calculated so as to give
+each event an equal weight (rather than each model), and so does not give undue
+weight to models with only a small number of events. On the other hand this does
+mean that greater weight is given to models with more ensemble members and more
+events (almost one third of all displaced vortex events come from CanESM2), but
+the difference in baroclinicity of split and displaced vortex events is observed
+to be very consistent among models.
 
 \begin{figure}
  \centering
@@ -618,7 +618,7 @@ a two-tailed bootstrap test with the null hypothesis that the anomalies
 following split and displaced vortex events are populations from the same
 probability distribution. The following procedure is used:
 \begin{enumerate}
-\item All events are grouped together and select from them, with replacement,
+\item All events are grouped together and selected from them, with replacement,
   are two random subsets which are equal in size to the total number of split
   and displaced vortex events respectively.
 \item The difference of the averages of these two subsets is taken.
@@ -782,6 +782,7 @@ where $n_{s}<0$. It is given by
 \begin{equation}
   n_{s}^{2} = \frac{\overline{q}_{\phi}}{a\overline{u}} -
   \frac{s^{2}}{a^{2}\mathrm{cos}^{2}\phi} - \frac{f^{2}}{4N^{2}H^{2}} \, ,
+\label{eq:refractive_index}
 \end{equation}
 where $N^{2}$ is the static stability, $H$ scale height, $s$ wavenumber, and
 \begin{equation}
@@ -899,13 +900,13 @@ turn related to tropopause height, it may be possible to gain some understanding
 of the mechanism behind the difference in the surface response to split and
 displaced vortex events. 
 
-This co-location of surface anomalies and tropopause height is consistent a
+This co-location of surface anomalies and tropopause height is consistent with a
 localised spinup/spindown caused by stretching/compression of the tropospheric
 column. Changes in tropopause height are, in turn, caused by the bending of
 isentropic surfaces towards PV anomalies resulting from the movement of the
 stratospheric polar vortex. Such a mechanism was discussed by
 \citet{Hartley1998}, \citet{Ambaum2002}, \citet{Black2002}, and in Section
-\ref{sec:mechanisms}.  
+\ref{sec:mechanisms}.
 
 Other mechanisms that have been proposed for stratosphere-troposphere coupling
 fail to account for these regional differences. For instance, the amplification

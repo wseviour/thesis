@@ -35,10 +35,10 @@ influence of these events on forecast skill. For instance, both
 predictability can be obtained if forecasts are initialised at the onset of SSW
 events. However, SSWs are highly nonlinear events which are not predictable
 beyond about two weeks in advance in current forecast systems
-\citep{Marshall2010}, limiting their usefulness in seasonal prediction. SSWs
-also occur almost exclusively in the Northern Hemisphere (NH), with only one
-event in the approximately 60 year record having been observed in the Southern
-Hemisphere (SH), in September 2002 \citep{Roscoe2005}.
+\citep{Marshall2010,Taguchi2014}, limiting their usefulness in seasonal
+prediction. SSWs also occur almost exclusively in the Northern Hemisphere (NH),
+with only one event in the approximately 60 year record having been observed in
+the Southern Hemisphere (SH), in September 2002 \citep{Roscoe2005}.
 
 The rarity of SSWs in the SH is a result of less dynamical forcing from
 vertically propagating planetary waves in the SH relative to the NH
@@ -733,12 +733,23 @@ studies \citep[e.g.,][]{Thompson2005, Simpson2011}.
 In order to determine the stratospheric influence on tropospheric skill, a
 simple statistical forecast model is formed, which has as its only input the
 initial conditions of the Antarctic stratosphere. A leave-one-out cross
-validation procedure is employed; ERA-Interim values are used to calculate the
-linear regression of $Z'$ at 10~hPa on 1st August with $Z'$ at all other times
-and heights from 31 of the 32 years from 1979--2009. This regression is then
-used to produce a hindcast of the 32nd year based on its $Z'$ at 10~hPa on 1st
-August. The method ensures that no information from the hindcast year enters the
-model. The process is then repeated to make hindcasts of all 32 years.
+validation (LOOCV) \citep{Wilks} procedure is employed as follows:
+\begin{enumerate}[i.]
+\item Remove the predictand year, $i$, from the set of all $N$ years, leaving
+  $N-1$ predictor years. 
+\item Calculate the linear regressions of $Z'$ at 10~hPa on 1st August with $Z'$
+  at all other times and heights using the $N-1$ predictor years.
+\item Given the value of $Z'$ at 10~hPa on 1st August for year $i$ (the
+  predictand year), use the linear regressions to produce a forecast for $Z'$ at
+  all other times and heights for this year. 
+\item Repeat the above steps for $i=1,2,\dots,N$ to produce $N$ forecasts, each
+  with slightly different regression coefficients.
+\end{enumerate}
+The method ensures that no information from the predictor year enters the
+regression, and provides an estimate of the predictability of an unknown year
+given the available observations. Here, ERA-Interim values are used from
+1979--2009; giving $N=32$ years.
+
 
 Figure \ref{fig:gph_lag_corr}(b) shows the correlation of 30-day running means
 of these statistical hindcasts with ERA-Interim values. As might be expected,
@@ -776,15 +787,17 @@ statistically significantly different during 1996--2009 compared with
 14 years from the (detrended) 32 years. Hence correlations found for the shorter
 period are deemed to be a marginal distribution of those over the longer period,
 so a more robust measure of sources of predictability can be obtained by
-studying the longer observational record.
+studying the longer observational record. A more detailed justification for this
+choice of analysis period in the statistical hindcasts is given in Appendix
+\ref{sec:app-choice-time-period}.
 
 Similar features are seen if the statistical hindcasts are repeated using the
 shorter period, although tropospheric skill from the polar vortex emerges later
-(in November), and that from Ni\~no-4 earlier in (in October; not shown). These
-statistical hindcasts also show lower skill than the GloSea5 hindcasts at almost
-all times in both the tropsophere and stratosphere, which may indicate the
-importance of non-linearities or the influence of other external factors which
-can be captured by the full dynamical model.
+(in November), and that from Ni\~no-4 earlier (in October). These statistical
+hindcasts also show lower skill than the GloSea5 hindcasts at almost all times
+in both the tropsophere and stratosphere, which may indicate the importance of
+non-linearities or the influence of other external factors which can be captured
+by the full dynamical model.
 
 \section{Discussion}
 \label{sec:seas-discussion}
@@ -794,15 +807,29 @@ can be captured by the full dynamical model.
 The fact that hindcasts of the NH stratospheric polar vortex have been shown to
 be less skilful than those of the SH is not unexpected because of the much
 greater dynamical variability and chaotic nature of the NH. Indeed, previous
-studies have not found SSWs to be predictable beyond about two weeks
-\citep{Marshall2010,Taguchi2014}. However, given the fact that the GloSea5
-hindcasts have been shown to produce skilful predictions of the DJF NAO
-\citep{Scaife2013}, it is perhaps surprising that somewhat greater skill was not
-found in Section \ref{sec:north-hemisph-result}. Even if the vortex was to
-respond passively to extratropical surface anomalies within the model, a greater
-degree of skill might be expected.
+studies have not found SSWs to be predictable (in a deterministic sense) beyond
+about two weeks \citep{Marshall2010,Taguchi2014}. However, given the fact that
+the GloSea5 hindcasts have been shown to produce skilful predictions of the DJF
+NAO \citep{Scaife2013}, it is perhaps surprising that somewhat greater skill was
+not found in Section \ref{sec:north-hemisph-result}. Even if the vortex was to
+respond passively to NAO variability, a greater degree of skill might be
+expected.
+
+A possible explanation for this may be that GloSea5 does not produce skilful
+forecasts of the North Pacific, so that the North Pacific and North Atlantic
+`destructively interfere' in their infuence on the stratosphere. However,
+\citet{MacLachlan2014} found GloSea forecasts of DJF surface temperatures to
+have similar skill in the North Atlantic and North Pacific, as well as the
+surface NAM to have similar skill as the NAO. Therefore, the reason for the
+relative lack of skill in hindcasts of the NH stratospheric polar vortex remains
+unknown. This does, however, suggest that the source of skilful DJF NAO
+hindcasts in GloSea5 is unlikely to be of tropospheric origin, and other model
+improvements such as the increased ocean resolution may be more important.
+
 
 \subsection{Southern Hemisphere}
+\subsubsection{Model limitations}
+
 We have demonstrated that Antarctic total column ozone amounts are predictable
 up to four months in advance during the austral spring, even with a model which
 lacks interactive chemistry. While using such a model has the advantage of being
@@ -831,6 +858,8 @@ case, we do not expect the relationship to break down soon, as concentrations of
 ozone-depleting substances are not projected to return to 1980 levels until the
 late 21st century \citep{WMO2010}.
 
+\subsubsection{Statistical significance and ensemble size}
+
 The correlation skill of 0.64 (95\% confidence interval: [0.18,0.92]) for the
 SON mean SAM in the GloSea5 hindcasts is greater but not inconsistent with that
 found by \citet{Lim2013}. They report a correlation of 0.40 for the SON mean SAM
@@ -854,48 +883,27 @@ from Figure \ref{fig:sam_ts} that the standard deviation of the GloSea5 ensemble
 mean SAM is much less than that of observations. The signal-to-noise ratio
 (ratio of the standard deviation of the ensemble mean to that of all ensemble
 members) is just 0.4. For a `perfect' forecast system (one in which observations
-are indistinguishable from an ensemble member), the signal-to-noise ratio and
-correlation are directly related \citep{Kumar2009}, so that the expected
-correlation would be just 0.3. The fact that it is greater than this is because
-the average correlation between ensemble members and observations is much
-greater than that between pairs of ensemble members. A similar but smaller
+are indistinguishable from an ensemble member), the signal-to-noise ratio, $s$,
+and correlation, $r$, are directly related by 
+\begin{equation}
+r = \frac{s^2}{\sqrt{(s^2+1)(s^2+n^{-1})}} \, , 
+\end{equation}
+where n is the ensemble size \citep{Sardeshmukh2000,Kumar2009}. Hence, given the
+value of $s=0.4$, the expected correlation would be just 0.3, rather than the
+0.64 found. This discrepancy can be explained from the fact that the average
+correlation between ensemble members and observations (0.27) is much greater
+than that between pairs of ensemble members (0.13). A similar but smaller
 difference is also found for the stratospheric polar vortex forecasts, and this
 is also observed by \citet{Scaife2013} for the NAO in the same system. These
 results mean that individual ensemble members have a smaller predictable signal
-than observations.
-
-Given this result, it might be expected that more skillful predictions could be
-obtained with a larger ensemble size. To illustrate the variation of hindcast
-skill with ensemble size we systematically sample smaller sets of forecasts from
-the full 15 members for each year, following the method of
-\citet{Scaife2013}. This is repeated many times and an average value for a given
-sample size calculated. This variation of correlation skill with ensemble size
-for both the SON mean SAM and stratospheric polar vortex winds is shown in
-Figure \ref{fig:corr_ens_size_sh}. These curves closely follow the theoretical
-relationship of \citet{Murphy1990}, which relies only on the mean correlation
-between pairs of ensemble members, $\langle r_{mm} \rangle$, and the mean
-correlation between individual ensemble members and observations,
-$\langle r_{mo} \rangle$, given by
-\begin{equation}
-r = \frac{\langle r_{mo} \rangle \sqrt{n}}{\sqrt{1+(n-1)\langle r_{mm} \rangle}}
-\end{equation} 
-where $r$ is the ensemble mean correlation, and $n$ is the ensemble size. These
-curves are shown in Figure \ref{fig:corr_ens_size_sh}, along with their
-asymptote for an infinite sized ensemble. Although the stratospheric forecasts
-cannot be greatly improved with a larger ensemble size in the current system,
-greater correlation scores of the SAM could be achieved with an ensemble size
-near 30. Although the large uncertainty range does not allow a strong statement
-about potential predictability, the asymptote near 0.8 is similar to that found
-by \citet{Scaife2013} using a longer hindcast and greater ensemble size for the
-DJF NAO.
-
-The dynamics of other seasons are different to those of the austral spring, so
-results presented here do not imply significant skill in prediction of the SAM
-at other times. For instance, \citet{Shaw2010} find that a favourable state for
-downward wave coupling between the stratosphere and troposphere is present only
-during September to December in the SH. Indeed, the 1-month lead time ensemble
-mean correlation of the DJF SAM with ERA-Interim is lower than that for SON at
-$r=0.39$ (95\% confidence interval: [0.15,0.63]).
+than observations. This effect was recently discussed by \citet{Eade2014}, who
+proposed a rescaling of the ensemble mean to have the same variance as the
+predictable component of the observed variance (which can be estimated by
+$\sigma^2_{obs}r^2$, where $\sigma^2_{obs}$ is the observed variance). However,
+this procedure is most applicable to forecasts where the scaling can be
+determined from hindcasts, so that information from the observations does not
+enter the forecasts themselves. Furthermore, this rescaling does not affect
+correlation skill scores, and so it is not applied in the current analysis.
 
 \begin{figure}[t]
   \centering
@@ -911,12 +919,138 @@ $r=0.39$ (95\% confidence interval: [0.15,0.63]).
     test.}\label{fig:corr_ens_size_sh}
 \end{figure}
 
+Given the above result, it might be expected that more skilful predictions could
+be obtained with a larger ensemble size. To illustrate the variation of hindcast
+skill with ensemble size we systematically sample smaller sets of forecasts from
+the full 15 members for each year, following the method of
+\citet{Scaife2013}. This is repeated many times ($\sim 10~000$) and an average
+value for a given sample size calculated. This variation of correlation skill
+with ensemble size for both the SON mean SAM and stratospheric polar vortex
+winds is shown in Figure \ref{fig:corr_ens_size_sh}. These curves closely follow
+the theoretical relationship of \citet{Murphy1990}, which relies only on the
+mean correlation between pairs of ensemble members, $\langle r_{mm} \rangle$,
+and the mean correlation between individual ensemble members and observations,
+$\langle r_{mo} \rangle$, given by
+\begin{equation}
+r = \frac{\langle r_{mo} \rangle \sqrt{n}}{\sqrt{1+(n-1)\langle r_{mm} \rangle}}
+\, .
+\end{equation} 
+These curves are shown in Figure \ref{fig:corr_ens_size_sh}, along with their
+asymptote for an infinite sized ensemble. This shows that the stratospheric
+forecasts cannot be greatly improved with a larger ensemble size in the current
+system, but greater correlation scores of the SAM could be achieved with an
+ensemble size near 30. Although the large uncertainty range does not allow a
+strong statement about potential predictability, the asymptote near 0.8 is
+similar to that found by \citet{Scaife2013} using a longer hindcast and greater
+ensemble size for the DJF NAO.
+
+\subsubsection{Application to other seasons}
+
+The dynamics of other seasons are different to those of the austral spring, so
+results presented here for SON do not imply significant skill in prediction of
+the SAM at other times. Indeed, the 1-month lead time ensemble mean correlation
+of the DJF SAM with ERA-Interim is lower than that for SON at $r=0.39$ (95\%
+confidence interval: [0.15,0.63]), as shown in Figure \ref{fig:djf_sam_ts}. The
+low signal-to-noise ratio found in Figure \ref{fig:sam_ts} for SON can also be
+seen in Figure \ref{fig:djf_sam_ts}. 
+
+\begin{figure}[t]
+  \noindent\includegraphics[width=\textwidth,angle=0]{figures/chapter-seasonal/DJF_SAM.pdf}\\
+  \caption[GloSea5 predictions of the SAM.]{DJF mean Southern Annular Mode (SAM)
+    index in individual GloSea5 hindcast ensemble members (dots), ensemble mean
+    (dashed green curve) and ERA-Interim (solid green curve). The SAM is
+    calculated from mean sea-level pressure data, and hindcasts initialised near
+    1st November. The correlation of the ensemble mean and ERA-Interim values is
+    0.39.}\label{fig:djf_sam_ts}
+\end{figure}
+
+\citet{Shaw2010} found that the strongest downward wave coupling between the
+stratosphere and troposphere is present during September to December in the
+SH. They attribute this to the fact that the lower stratospheric vortex is
+westerly during this time, but the mid-upper stratospheric vortex is easterly
+(because the final warming occurs first in the upper stratosphere) and acts as a
+relecting surface for planetary waves (due to a negative refractive index; see
+Equation \ref{eq:refractive_index}). Following the final warming in the lower
+stratosphere, \citet{Shaw2010} find wave coupling to be much
+weaker. \citet{Shaw2011} extended this analysis to also demonstrate that the
+dynamical influence of stratospheric ozone depletion on the troposphere through
+wave coupling is greatest during September-December. 
+
+On the other hand, separate studies have found that the largest tropospheric
+signals associated with stratospheric ozone depletion occur later, in DJF
+\citep{WMO2010}. This may seem to contradict the findings of \citet{Shaw2010},
+but the two results can be reconciled if a different mechanism is dominant at
+this later time. Indeed, as well as an effect on the dynamical coupling between
+the stratosphere and troposphere, \citet{Grise2009} proposed that stratospheric
+ozone depletion can perturb radiative heating rates in the troposphere which
+can, in turn, trigger changes in tropospheric dynamics. They used a radiative
+model to investigate this effect and, importantly, found the largest influence
+on polar tropospheric temperatures to occur during DJF. A possible physical
+explanation for this is that it is only after the final warming, when the ozone
+depleted polar stratospheric air is mixed with lower latitudes, that the
+radiative effect on the troposphere is significant. While this was only an
+idealised study which lacked tropospheric dynamics, it may suggest a
+reconciliation with dynamical coupling being strongest from September-December
+and radiative from December-February.
+
+\begin{figure}[p] \vspace*{-3cm} \centering
+   \noindent\includegraphics[width=\textwidth]{figures/chapter-seasonal/lag_height_corr_obs.pdf}
+ \caption[Lag-height correlation of $Z'$ at 10~hPa and 1000~hPa.]{Correlation of
+   ERA-Interim (1979--2010) Z' at 10~hPa, 70~hPa, and 1000~hPa with Z' at other
+   times and lags. Values are smoothed with a 30-day running mean before
+   correlations are calculated, and colours represent correlations that are 95\%
+   significant from zero according to a bootstrap test.}
+ \label{fig:lag_height_corr_obs}
+\end{figure}
+
+The time depedency of SH stratosphere-troposphere coupling is further
+investigated in Figure \ref{fig:lag_height_corr_obs}. This shows lag-height
+correlations of polar cap $Z'$ in the midstratosphere (10~hPa),
+lower-stratosphere (70~hPa) and surface (1000~hPa) at the first of each month
+from August--January using ERA-Interim data (1979--2010). As in Figure
+\ref{fig:gph_lag_corr}, values are smoothed with a 30-day running mean before
+correlations are calculated. Midstratosphere-leading significant correlations
+with the October-November troposphere are seen from 1st August (Figure
+\ref{fig:lag_height_corr_obs}(a)), as also shown in Figure
+\ref{fig:gph_lag_corr}. Furthermore the strongest negative lag correlations of
+the surface with the stratosphere occur at 1st November (Figure
+\ref{fig:lag_height_corr_obs}(l)). This supports the result of
+\citet{Shaw2010} that September-December is the time of strongest
+stratosphere-troposphere dynamical coupling. 
+
+Similar, but weaker lag correlations are seen at 1st Janurary (Figure
+\ref{fig:lag_height_corr_obs}(r)). This is unlikely to be due to dynamical
+coupling since it comes after the stratospheric final warming, and so may be a
+result of the radiative effect described above. It is important to note that
+GloSea5 does not contain interactive ozone chemistry, so the radiative effects
+of ozone variability will not be captured by the model. This may explain, to
+some extent, the reduced skill in the prediction of DJF SAM compared to the SON
+SAM, since the predictable effects of the stratosphere on the troposphere are
+not captured during DJF. Consequently, more skilful forecasts of the DJF SAM may
+be possible with a model including interactive ozone chemistry. 
+
+
 
 \section{Conclusions}
 \label{sec:seas-conclusions}
-Using a set of seasonal hindcasts initialized at the start of the austral
-spring, we have demonstrated skillful prediction of the interannual variability
-of the Antarctic stratospheric polar vortex at seasonal lead times. This
+
+Motivated by the results of Chapters \ref{cha:moments} and \ref{cha:models}, we
+have analysed the predictability of the polar stratosphere and its influence on
+the troposphere in a set of hindcasts produced by a stratosphere-resolving
+seasonal prediction system. Analsysis has focussed on the NH for the boreal
+winter (DJF) and SH for the austral spring (SON), with forcasts initialised at a
+1-month lead time.
+
+No statistically significant skill was found in the prediction of the seasonal
+mean strength of the NH stratospheric polar vortex, or the occurrence of SSWs,
+split or displaced vortex events. This result may be surprising given that the
+same system produces skilful hindcasts of the winter NAO, which is known to
+influence the polar stratosphere. It does, however, suggest that this NAO skill
+is unlikely to be influenced by the troposphere and may be attributable to other
+model improvements. 
+
+On the other hand, skillful prediction of the interannual variability of the
+spring Antarctic stratospheric polar vortex at seasonal lead times. This
 includes capturing an increased likelihood of the 2002 SSW which is the most
 extreme year in the ensemble mean and has the only ensemble member in 14 years
 which simulates a SSW (although another is close to simulating a SSW in
@@ -937,31 +1071,42 @@ forecasts of interannual variations in springtime ozone depletion and large
 scale weather patterns across the Southern Hemisphere.
 
 
- \begin{figure}[p] \vspace*{-3cm} \centering
- \noindent\includegraphics[width=\textwidth]{figures/chapter-seasonal/lag_height_corr_obs.pdf}
- \caption[Lag-height correlation of $Z'$ at 10~hPa and 1000~hPa.]{Correlation of
-   ERA-Interim (1979--2010) Z' at 10~hPa, 70~hPa, and 1000~hPa with Z' at other
-   times and lags. Values are smoothed with a 30-day running mean before
-   correlations are calculated, and colours represent correlations that are 95\%
-   significant from zero according to a bootstrap test.}
- \label{fig:lag_height_corr_obs}
- \end{figure}
 
-\begin{figure}[t]
-  \noindent\includegraphics[width=\textwidth,angle=0]{figures/chapter-seasonal/DJF_SAM.pdf}\\
-  \caption[GloSea5 predictions of the SAM.]{DJF mean Southern Annular Mode (SAM)
-    index in individual GloSea5 hindcast ensemble members (dots), ensemble mean
-    (dashed green curve) and ERA-Interim (solid green curve). The SAM is
-    calculated from mean sea-level pressure data, and hindcasts initialised near
-    1st November. The correlation of the ensemble mean and ERA-Interim values is
-    0.39}\label{fig:djf_sam_ts}
-\end{figure}
 
+\pagebreak
 
 \begin{subappendices}
 \section{Choice of time period for statistical forecast}
+\label{sec:app-choice-time-period}
+
+We have repeated the analysis of SAM and SOI correlations presented in the
+review, using data from BAS (SAM) and BOM (SOI). For the 1996-2009 hindcast
+period we find the correlation of June-July SOI with Oct-Nov SAM to be $r=0.63$
+which is broadly in agreement with the results stated in the review (the slight
+difference may be due to different data sources). For 1979-2013 (the ERA-Interim
+period) $r=0.32$ (and for the full 1957-2013 $r=0.01$). In order to justify
+using the shorter hindcast period (with higher correlation) in Fig. 7(c), it
+would need to be the case that the SAM/SOI correlation is statistically
+significantly stronger during the hindcast period than the ERA-Interim period,
+so that these different correlations are not a result of random variability.
+
+To test whether this is the case, we use a bootstrap test which randomly samples
+(with replacement) 14 years of detrended SAM and SOI from 1979-2013, and
+calculates the correlation. Figure \ref{fig:SAM_SOI} (of this document) shows a
+histogram of these correlations along with the 1996-2009 correlation. The
+1996-2009 value is not inconsistent with random variability at the 95\% level
+for either a one- or two-tailed test. Therefore we conclude that the SAM/SOI
+correlation is not statistically significantly greater for 1996-2009. As such
+the 1996-2009 correlation is a marginal distribution of 1979-2013 so we include
+the longer ERA-Interim period in our analysis to provide a more robust measure of
+sources of predictability. For completeness we include a figure with the same
+analysis limited to 1996--2009 in this document
+(Fig. \ref{fig:lag_height}). This is not shown in the paper but discussed in
+section 3(d).  
+
 
 \begin{figure}[t]
+  \centering
   \noindent\includegraphics[width=0.7\textwidth,angle=0]{figures/chapter-seasonal/SAM_SOI_corr.pdf}\\
   \caption[Correlation of the SOI with the SAM.]{Histogram of correlations of
     random 14-year samples of detrended June-July SOI with October-November
