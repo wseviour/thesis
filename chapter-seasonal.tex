@@ -678,6 +678,7 @@ with the SAM in these regions.
 
 
 \subsection{Stratosphere-troposphere coupling}
+\label{sec:seas-strat-trop-coupl}
 
 It is now investigated whether the statistically significant skill in hindcasts
 of the stratospheric polar vortex affects that of the surface SAM. Forecast
@@ -1079,31 +1080,47 @@ scale weather patterns across the Southern Hemisphere.
 \section{Choice of time period for statistical forecast}
 \label{sec:app-choice-time-period}
 
-We have repeated the analysis of SAM and SOI correlations presented in the
-review, using data from BAS (SAM) and BOM (SOI). For the 1996-2009 hindcast
-period we find the correlation of June-July SOI with Oct-Nov SAM to be $r=0.63$
-which is broadly in agreement with the results stated in the review (the slight
-difference may be due to different data sources). For 1979-2013 (the ERA-Interim
-period) $r=0.32$ (and for the full 1957-2013 $r=0.01$). In order to justify
-using the shorter hindcast period (with higher correlation) in Fig. 7(c), it
-would need to be the case that the SAM/SOI correlation is statistically
-significantly stronger during the hindcast period than the ERA-Interim period,
-so that these different correlations are not a result of random variability.
+The aim of the LOOCV statistical analysis presented in Section
+\ref{sec:seas-strat-trop-coupl} was to estimate the degree of predictability
+which arises from both the midstratosphere at the start of August and the
+July-mean Ni\~no-4 index. Importantly, this analysis used the longer ERA-Interim
+period of 1979-2009 rather than the same 1996-2010 period over which the
+hindcast simulations were run. A choice of the longer period would be
+justafiable (and, indeed, preferrable) if the relationships between these
+parameters and the forecast perameter ($Z'$) are not physically different over
+the shorter period. That is, if the shorter period is a marginal distribution of
+the longer period. This is shown to be the case below.
+
+We use the monthly Southern Oscillation Index (MSLP difference between Darwin
+and Tahiti, which is highly correlated with the Ni\~no-4 index) data obtained
+from the Australian Bureau of Meteorology
+\url{http://www.bom.gov.au/climate/current/soihtm1.shtml}, and a station-based
+SAM index from the British Antarctic Survey \citep{Marshall2003}. For the
+1996-2009 hindcast period we find the correlation of June-July SOI with Oct-Nov
+SAM to be $r=0.63$. For 1979-2010 (the ERA-Interim period) $r=0.32$. In order to
+justify using the shorter hindcast period (with higher correlation), it would
+need to be the case that the SAM/SOI correlation is statistically significantly
+stronger during the hindcast period than the ERA-Interim period, so that these
+different correlations are not a result of random variability.
 
 To test whether this is the case, we use a bootstrap test which randomly samples
 (with replacement) 14 years of detrended SAM and SOI from 1979-2013, and
-calculates the correlation. Figure \ref{fig:SAM_SOI} (of this document) shows a
-histogram of these correlations along with the 1996-2009 correlation. The
-1996-2009 value is not inconsistent with random variability at the 95\% level
-for either a one- or two-tailed test. Therefore we conclude that the SAM/SOI
-correlation is not statistically significantly greater for 1996-2009. As such
-the 1996-2009 correlation is a marginal distribution of 1979-2013 so we include
-the longer ERA-Interim period in our analysis to provide a more robust measure of
-sources of predictability. For completeness we include a figure with the same
-analysis limited to 1996--2009 in this document
-(Fig. \ref{fig:lag_height}). This is not shown in the paper but discussed in
-section 3(d).  
+calculates the correlation. Figure \ref{fig:sam_soi_corr} shows a histogram of
+these correlations along with the 1996-2009 correlation. The 1996-2009 value is
+not inconsistent with random variability at the 95\% level for either a one- or
+two-tailed test. Therefore we conclude that the SAM/SOI correlation is not
+statistically significantly greater for 1996-2009. As such the 1996-2009
+correlation is a marginal distribution of 1979-2013 so we include the longer
+ERA-Interim period in our analysis to provide a more robust measure of sources
+of predictability. 
 
+For completeness we include a figure with the same analysis limited to
+1996--2009 in this appendix (Figure \ref{fig:lag_height_short}). Similar
+features as Figure \ref{fig:gph_lag_corr} can be seen although tropospheric
+skill emerges later in Figure \ref{fig:lag_height_short}(b) and earlier in
+Figure \ref{fig:lag_height_short}(c).
+
+% (and for the full 1957-2013 extent of the SAM record, $r=0.01$)
 
 \begin{figure}[t]
   \centering
