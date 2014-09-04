@@ -3,30 +3,72 @@
 
 \section{Overview and aims}
 %original work
-The stratosphere is the second layer of the atmosphere above the Earth's
-surface, bounded by the tropopause below and the stratopause above. The height
-of the tropopause varies from about 15~km in altitude in the tropics to 7~km at
-high latitudes, while the stratopause lies at approximately 50~km. The defining
-feature of the stratosphere is a temperature gradient increasing with height (in
-contrast to the troposphere below), caused by the presence of ozone which
-absorbs ultraviolet radiation\footnote{For this reason, the region of the
-  stratosphere with the highest ozone concentrations is often called the ``ozone
-  layer''.}. This temperature gradient makes the stratosphere stable against
-vertical convection and results in very different dynamical behaviour to the
-troposphere.
+The stratosphere is the layer of the Earth's atmosphere bounded by the
+tropopause below and the stratopause above. The height of the tropopause varies
+from about 15~km in altitude in the tropics to 7~km at high latitudes, while the
+stratopause lies at approximately 50~km. The defining feature of the
+stratosphere is a temperature gradient increasing with height (in contrast to
+the troposphere below), caused by the presence of ozone which absorbs
+ultraviolet radiation\footnote{For this reason, the region of the stratosphere
+  with the highest ozone concentrations is often called the ``ozone layer''.}
+and thereby heats the surrounding atmosphere. This temperature gradient makes
+the stratosphere stable against vertical convection and results in very
+different dynamical behaviour to the troposphere.
 
-Traditionally, the stratosphere was thought to respond passively to tropospheric
+Traditionally the stratosphere was thought to respond passively to tropospheric
 forcing from below. However, modelling and observational evidence accrued over
-approximately the last two decades has suggested that the variability of the
-winter polar stratosphere can cause consistent circulation anomalies at the
-Earth's surface. Stratosphere-troposphere coupling has been found to be
-particularly strong following the rapid breakdown of the 
+approximately the last two decades has suggested that in some cases variability
+of the winter polar stratosphere can cause consistent circulation anomalies at
+the Earth's surface. This influence has been shown to be particularly strong
+following the rapid breakdown of the usual westerly winter stratospheric polar
+vortex; events known as sudden stratospheric warmings (SSWs). 
 
-Despite these advances, many questions remain as to the
-stratosphere's influence on the troposphere. Firstly, it is not understood why
-some types of stratospheric event appear to have a larger impact on the
-stratosphere than others
+Despite these advances, important issues remain as to the dynamics of SSWs
+and the stratosphere's influence on the troposphere. Most significantly:
+\begin{enumerate}[i.]
+\item The dynamics of SSWs are not fully understood, in particular whether
+  different mechanisms may be responsible for different types of event.
+\item A mechanism for the stratosphere's influence on the troposphere is not
+  well developed and is not understood why some types of stratospheric event
+  appear to have a larger or different impact on the troposphere than others.
+\end{enumerate}
+These are large and long-standing issues, and providing a comprehensive solution
+is not possible here, but it is hoped that this thesis will go at least some way
+to addressing them. A solution to these issues is not purely of theoretical
+interest, as it is necessary to understand the dynamics of these phenomena in
+order to model them and put them to use in weather and climate predictions. With
+an eye on this application, we also aim to assess the predictability of the
+stratosphere and its connection to the troposphere in these models.
 
+The main original contributions of this thesis to the scientific literature are
+outlined below:
+\begin{enumerate}[1.]
+\item In \textbf{Chapter \ref{cha:moments}} a new method to diagnose
+  stratospheric polar vortex variability and classify split and displaced vortex
+  events is introduced and tested. This is the first vortex-centric method that
+  can be easily and robustly applied to climate model simulations.
+
+\item In \textbf{Chapter \ref{cha:models}} this method is applied to carry out
+  the first multi-model comparison of split and displaced vortex events and
+  their influence on the troposphere. It is found that there are a wide range of
+  biases among models, at least some of which may be attributable to differences
+  in vertical resolution. Furthermore, the large number of events studies allows
+  some inference of the mechanisms behind the different surface response to
+  split and displaced vortex events. 
+
+\item In \textbf{Chapter \ref{cha:seas}} the preidctability of the stratospheric
+  polar vortex is assessed in a stratosphere-resolving seasonal prediction
+  system. Little skill is found in the prediction of the strength of Northern
+  Hemisphere stratospheric polar vortex or the occurrence of split or displaced
+  vortex events on seasonal timescales. However, sigificant skill is found in
+  the case of the Southern Hemisphere vortex, allowing for the prediction of
+  interannual variability in ozone depletion and with a significant influnce on
+  the surface beyond the lead time of previous forecasts. 
+\end{enumerate}
+
+In the remainder of this chapter, the necessary background to the dynamics of
+the polar stratosphere (Section \ref{sec:dynam-polar-strat}) and its influence
+on the troposphere (Section \ref{sec:strat-trop-coupl}) are discussed.
 
 \subsection{Relation to published work}
 Chapter \ref{cha:moments} is largely based on a paper written by myself, Daniel
@@ -46,6 +88,8 @@ Climate Research), and three of whom are anonymous.
 
 
 \section{Dynamics of the polar stratosphere}
+\label{sec:dynam-polar-strat}
+
 
 \subsection{Zonal mean flow}
 
@@ -120,19 +164,21 @@ the stratosphere, as described in the next section.
 \label{sec:plan-waves-strat}
 
 \subsubsection{Planetary waves}
+\label{sec:planetary-waves}
 
 Large-scale Rossby or planetary waves\footnote{Here, as is common in the
   stratospheric literature, ``wave'' is taken to mean any deviation from the
-  zonal-mean state which not necessarily a physical structure.} play a vital role
-in the dynamics of the extratropical stratosphere. They mostly enter the
+  zonal-mean state which not necessarily a physical structure.} play a vital
+role in the dynamics of the extratropical stratosphere. They mostly enter the
 stratosphere from the troposphere, where they are forced, for example, by air
-flow around large-scale orography or air-sea temperature contrasts. There
-large-scale waves approximately satisfy the quasi-geostropic (QG) approximation
-of hydrostatically balanced incompressible flow with low Rossby number,
-$\mathrm{Ro} = U/f_oL \ll 1$, where $U$ and $L$ are characteristic velocity and
-length scales respectively \citep{Andrews1987}. Under this approximation and in
-the absence of friction, the following relation, known as the
-\emph{quasi-geostrophic potential vorticity equation}, holds:
+flow around topography, latent heat release, or nonlinear evolution of
+tropospheric eddies \citep{Scinocca1998}. These large-scale waves approximately
+satisfy the quasi-geostropic (QG) approximation of hydrostatically balanced
+incompressible flow with low Rossby number, $\mathrm{Ro} = U/f_oL \ll 1$, where
+$U$ and $L$ are characteristic velocity and length scales respectively
+\citep{Andrews1987}. Under this approximation and in the absence of friction,
+the following relation, known as the \emph{quasi-geostrophic potential vorticity
+  equation}, holds:
 \begin{equation}
 D_gq_g = f_0\rho_0 \frac{\partial}{\partial z}
 \frac{\rho_0Q}{\partial\theta_{0}/\partial z} \, . 
@@ -159,6 +205,21 @@ departure from $\theta_0$, and is assumed to be small in the sense that
 $|\partial\theta_e/\partial z| \ll |\partial\theta_0/\partial z|$. An important
 consequence of Equation \ref{eq:qgpv} is that $q_g$ is conserved following the
 geostrophic wind for adiabatic flow ($Q=0$), and therefore acts as a tracer.
+\footnote{Throughout most of this thesis, Ertel's potential vorticity, $q$,
+  is used. This is defined by
+\begin{equation*}
+  q = \frac{1}{\rho}\zeta\cdot\nabla\theta \, , 
+\end{equation}
+where $\zeta$ is the absolute velocity. \citet{Charney1962} showed that when the
+quasi-geostrophic approximation is valid
+\begin{equation*}
+\left(\frac{\partial q}{\partial s}\right)_{\theta=\mathrm{const.}} \approx
+\frac{1}{\rho_0}\frac{\partial \theta_0}{\partial z}\left(\frac{\partial
+    q_g}{\partial s}\right)_{z=\mathrm{const.}} \, ,
+\end{equation}
+where $s = t$, $x$ or $y$. Hence, a similar conservation law as for
+$q_g$ applies to $q$, which is conserved on isentropic (constant
+$\theta$) surfaces.  }
 
 In the case of approximately zonal flow $[\overline{u}(y,z),0,0]$, Equation
 \ref{eq:qgpv} can be linearised to give
@@ -269,14 +330,21 @@ in the absence of wave driving ($\mathbf{\nabla\cdot F} = 0$) or friction
 $\overline{v}^*=0, \overline{w}^*=0$.  However, in the presence of these forcing
 terms, a non-zero residual circulation will be induced. Climatologically, this
 circulation consists of upwelling in the tropics and poleward and downward
-motion in the extratropics; a pattern known as the Brewer-Dobson circulation. It
-is observed that this circulation is strongest in the winter hemisphere due to
-the fact that more planetary waves can propagate and break in the winter
-westerly flow than the summer easterly flow (due to the Charney-Drazin
-criterion). Furthermore, during periods of enhanced wave breaking the residual
-circulation accelerates and there is more decent and adiabatic heating at high
-latitudes. This is important in the physical understanding of sudden
-stratospheric warming events, described in Section \ref{sec:strat-sudd-warm}.
+motion in the extratropics; a pattern which forms a significant part of the
+Brewer-Dobson circulation\footnote{Strictly, the Brewer-Dobson circulation
+  represents the meridional transport of tracers, and so also involves two-way
+  mixing.}. The downward motion near the poles can be easily seen from Equation
+\ref{eq:zonal_momentum} in the steady case; since $\overline{v}^*$ must become
+small near the poles (by conservation of mass), and
+$\partial\overline{u}/\partial z > 0$ in the polar vortex, if
+$\mathbf{\nabla\cdot F} < 0$, then $\overline{w}^*<0$. It is observed that this
+circulation is strongest in the winter hemisphere due to the fact that more
+planetary waves can propagate and break in the winter westerly flow than the
+summer easterly flow (due to the Charney-Drazin criterion). Furthermore, during
+periods of enhanced wave breaking the residual circulation accelerates and there
+is more decent and adiabatic heating at high latitudes. This is important in the
+physical understanding of sudden stratospheric warming events, described in
+Section \ref{sec:strat-sudd-warm}.
 
 
 \subsubsection{Gravity waves}
@@ -379,21 +447,114 @@ westward with height and is centred over Siberia in the lower stratosphere.
 \end{figure}
 
 This different behaviour of split and displaced vortex events is not accounted
-for by the \citet{Matsuno1971} model above, and so may suggest that other
-mechanisms are important in the generation of SSWs. For instance,
+for by the \citet{Matsuno1970, Matsuno1971} model above, and so may suggest that
+other mechanisms are important in the generation of SSWs. For instance,
 \citet{ONeill1988} and \citet{Scott2006} have suggested that SSWs can be
 generated by a cyclone-anticyclone interaction between the Aleutian high and the
 polar vortex. These studies showed that a smaller anticyclone can act to
 significantly distort the polar vortex, although such interactions are greatest
 for circulation ratios higher than are typically found in the polar
-stratosphere. 
+stratosphere. Other studies have suggested that SSWs can arise through the
+resonant excitation of normal modes of the stratosphere by planetary waves
+\citep{Tung1979, Plumb1981, Smith1989}. \citet{Esler2005} and \citet{Esler2006}
+suggested that a relevant mode in the case of split vortex events is the
+barotropic mode of the atmosphere, which may explain the more barotropic nature
+of split vortex events.
 
-Other studies have suggested that SSWs can arise through the resonant excitation
-of normal modes of the stratosphere \citep{Tung1979, Plumb1981} 
+Further weight may be given to these mechanisms which do not rely on strong
+tropospheric forcing by the ocurrence of the 2002 SH SSW, since this forcing is
+much weaker in the SH (several studies of the dynamics of this event can be
+found in the March 2005 special issue of \emph{Journal of Atmospheric
+  Sciences}). Indeed, \citet{Esler2006} provided evidence that this event may
+have been influenced by resonant excitation of the barotropic mode. It should
+also be noted that other studies have suggested that SSWs can occur even in the
+case of no tropospheric stationary forcing \citep{Kushner2005}.
+
+Overall, while significant advances in understanding the dynamics of SSWs have
+been made, several uncertainties remain. While tropospherically-driven wave
+activity is certainly an important factor, the roles (if any) of
+cyclone-anticyclone interactions or resonance are less certain. Moreover, it is
+not clear whether different mechanisms may be more or less important in driving
+split and displaced vortex events.
 
 
 \section{Stratospheric ozone depletion}
+
+The Antarctic ozone is a large region of severely depleted ozone, including the
+near-total loss of ozone in the lower stratosphere, which occurs during the
+austral spring. A similar, but much smaller depletion is observed in the NH
+\citep[e.g.,][]{Manney1996}. Following its discovery by \citet{Farman1985}, a
+chemical and dynamical theory of the ozone hole was rapidly developed which is
+now widely accepted \citep{McElroy1986,Solomon1986}. This theory is summarised
+as follows:
+\begin{enumerate}[i.]
+\item The strong zonal winds of the stratospheric polar vortex act to confine
+  air over the polar regions, with little mixing with midlatitudes
+  \citep{Schoeberl1991}. This results in a region of very cold temperatures
+  which allow the formation of polar stratospheric clouds (PSCs; these require
+  temperatures below approximately 195~K to form).
+\item As sunlight returns to the vortex region in spring, hetrogeneous chemical
+  rections can take place on the surface of PSCs which act to catalytically
+  destroy ozone. The catalysts in these reactions are reactive chlorine and
+  bromine species which largely come from anthropogenic chlorofuorocarbons
+  (CFCs). 
+\item After some time, radiative heating of the stratosphere is sufficient to
+  prevent the formation on PSCs, so ozone depletion halts. This heating is
+  further accelerated by the increased wave breaking in the polar stratosphere
+  which can take place as the vortex weakens (due to the Charney-Drazin
+  criterion) and thereby induce an enhanced residual circulation. Following the
+  final breakdown of the vortex and transition to easterlies (final warming),
+  the ozone-depleted air is mixed to lower latitudes.
+\end{enumerate}
+
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=\textwidth]{figures/chapter-intro/2002_SSW.png}
+ \caption[]{Comparison of the (middle) first split ozone hole on record (2002)
+   and (left) the Antarctic ozone hole at the same time one year earlier (2001)
+   and (right) one year later (2003). The hole is dark blue and magenta. In
+   2001, the ozone layer thinning over Antarctica reached
+   $26.5 \times 10^6~\mathrm{km^2}$ , larger than the size of the entire North
+   American continent. Due to higher Antarctic winter temperatures, the 2002
+   ``hole'' seems to be about 40\% smaller. In 2003, Antarctic winter
+   temperatures returned to normal and the ozone hole returned to its usual
+   state. From \citet{Shepherd2005}.}
+ \label{fig:2002_SSW}
+\end{figure}
+
+Importantly, the stratospheric dynamics described in Section
+\ref{sec:dynam-polar-strat}, play an imporant role in ozone depletion. As
+discussed in Section \ref{sec:planetary-waves}, wave breaking in the
+stratosphere acts to drive a residual circulation, with descent and adiabatic
+warming over the pole. Enhanced descent and warming over the pole acts to
+inhibit the formation of PSCs which are necessary for the heterogeneous chemical
+reactions which cause ozone depletion. 
+
+It is this greater wave activity in the NH then that explains why ozone
+depletion is much greater in the SH. Moreover, it has been demonstrated in
+interannual variability in wave driving (as measured by
+$\mathbf{\nabla\cdot F}$) explains most of the interannual variability of ozone
+depletion through this mechanism \citep{Salby2012}. In the extreme event of
+SSWs, the ozone hole can be severely disrupted. This can be seen in Figure
+\ref{fig:2002_SSW}, where a clear split of the ozone hole is visible during the
+2002 SH SSW, which contrasts with the more zonally symmetric distributions seen
+at the same times in 2001 and 2003. 
+
+\section{Annular modes}
+
+Before discussing 
+
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=0.6\textwidth]{figures/chapter-intro/annular_modes_TW.png}
+ \caption[]{}
+ \label{fig:annular_modes}
+\end{figure}
+
+
 \section{Stratosphere-troposphere coupling}
+\label{sec:strat-trop-coupl}
+
 
 \begin{figure}
  \centering
@@ -416,7 +577,8 @@ of normal modes of the stratosphere \citep{Tung1979, Plumb1981}
 \subsection{Mechanisms}
 \label{sec:mechanisms}
 % Look at Song and Robinson 2004 for basis of mechanisms review
-% Radiative Grise
+% Radiative Grise, Waugh
+
 
 \section{Thesis plan}
 
@@ -433,3 +595,10 @@ of normal modes of the stratosphere \citep{Tung1979, Plumb1981}
 %%% mode: latex
 %%% TeX-master: "thesis"
 %%% End:
+
+
+
+
+
+
+
