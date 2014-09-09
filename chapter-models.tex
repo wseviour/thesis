@@ -15,7 +15,7 @@ are evaluated in the the Intergovernmental Panel on Climate Change (IPCC) Fifth
 Assessment Report (AR5) \citep{Stocker2013}. This change in model stratospheric
 resolution has been largely motivated by an increased understanding of the
 stratosphere's influence on tropospheric climate (discussed in
-\citet{Gerber2012} and Chapters \ref{cha:introduction} and \ref{cha:moments}).
+\citet{Gerber2012} and Chapters \ref{cha:background} and \ref{cha:moments}).
 
 The effect of this greater stratospheric resolution was studied by
 \citet{Charlton-Perez2013}, who compared stratospheric variability between
@@ -787,9 +787,10 @@ where $n_{s}<0$. It is given by
 \end{equation}
 where $N^{2}$ is the static stability, $H$ scale height, $s$ wavenumber, and
 \begin{equation}
-  \overline{q}_{\phi} = 2\Omega\mathrm{cos}\phi - \left[
-    \frac{(\overline{u}\mathrm{cos}\phi)_{\phi}}{a\mathrm{cos}\phi} \right]_{\phi} -
-  \frac{a}{\rho_{0}}\left(\frac{\rho_{0}f^{2}}{N^{2}}\overline{u}_{z}\right)_{z}
+  \overline{q}_{\phi} = 2\Omega\mathrm{cos}\phi - \frac{\partial}{\partial\phi}\left[
+    \frac{1}{a\mathrm{cos}\phi}\frac{\partial}{\partial\phi}(\overline{u}\cos\phi) \right] -
+  \frac{a}{\rho_{0}}\frac{\partial}{\partial
+    z}\left(\frac{\rho_{0}f^{2}}{N^{2}}\frac{\partial\overline{u}}{\partial z}\right)
   \, .
 \end{equation}
 It is therefore apparent that $n_{s}$ is sensitive both to the vertical
