@@ -781,31 +781,31 @@ refractive index, $n_{s}$ \citep{Matsuno1970}, with planetary waves tending to
 propagate towards regions of high $n_{s}$ and becoming evanescent in regions
 where $n_{s}<0$. It is given by
 \begin{equation}
-  n_{s}^{2} = \frac{\overline{q}_{\phi}}{a\overline{u}} -
+  n_{s}^{2} = \frac{1}{a\overline{u}}\frac{\partial\overline{q}}{\partial\phi} -
   \frac{s^{2}}{a^{2}\mathrm{cos}^{2}\phi} - \frac{f^{2}}{4N^{2}H^{2}} \, ,
 \label{eq:refractive_index}
 \end{equation}
 where $N^{2}$ is the static stability, $H$ scale height, $s$ wavenumber, and
 \begin{equation}
-  \overline{q}_{\phi} = 2\Omega\mathrm{cos}\phi - \frac{\partial}{\partial\phi}\left[
+  \frac{\partial\overline{q}}{\partial\phi} = 2\Omega\mathrm{cos}\phi - \frac{\partial}{\partial\phi}\left[
     \frac{1}{a\mathrm{cos}\phi}\frac{\partial}{\partial\phi}(\overline{u}\cos\phi) \right] -
   \frac{a}{\rho_{0}}\frac{\partial}{\partial
     z}\left(\frac{\rho_{0}f^{2}}{N^{2}}\frac{\partial\overline{u}}{\partial z}\right)
   \, .
 \end{equation}
-It is therefore apparent that $n_{s}$ is sensitive both to the vertical
-gradient in static stability and the vertical shear of zonal wind. Using a
-linear primitive equation numerical model, \citet{Chen1992} found a large
-vertical gradient in static stability near the tropopause as well as a strong
-vertical shear of the zonal flow. They found that small changes in these
-quantities have a large effect on $n_{s}$, and therefore that the tropopause
-acts as a ``valve'' for the propagation of planetary waves between the
-troposphere and stratosphere. In a more recent observational study,
-\citet{Grise2010} have confirmed the existence of fine-scale structure in static
-stability near the tropopause. It therefore may be the case that a higher model
-vertical resolution near the tropopause is necessary to capture this structure
-and hence more accurately represent planetary wave propagation from troposphere
-to stratosphere. 
+It is therefore apparent that $n_{s}$ is sensitive both to the vertical gradient
+in static stability ($\partial N^2/\partial z$) and the vertical shear of zonal
+wind ($\partial\overline{u}/\partial z$). Using a linear primitive equation
+numerical model, \citet{Chen1992} found a large vertical gradient in static
+stability near the tropopause as well as a strong vertical shear of the zonal
+flow. They found that small changes in these quantities have a large effect on
+$n_{s}$, and therefore that the tropopause acts as a ``valve'' for the
+propagation of planetary waves between the troposphere and stratosphere. In a
+more recent observational study, \citet{Grise2010} have confirmed the existence
+of fine-scale structure in static stability near the tropopause. It therefore
+may be the case that a higher model vertical resolution near the tropopause is
+necessary to capture this structure and hence more accurately represent
+planetary wave propagation from troposphere to stratosphere.
 
 The fact that there is not a significant relationship between the modal centroid
 latitude and vertical resolution may suggest that wave-2 propagation is more

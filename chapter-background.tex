@@ -32,21 +32,21 @@ with the thermal wind balance relation
 \begin{equation}
 \frac{\partial u_g}{\partial z} = -\frac{R}{fH}\frac{\partial T}{\partial y} \,, 
 \end{equation} 
-where $u_g$ is the geostrophic zonal velocity,
-$u_g = -f^{-1}\partial Z/\partial y$, $Z$ is geopotential height, $f$ is the
-Coriolis parameter, $f=2\Omega\sin\phi$, and $R$ is the specific gas
-constant. Here, a beta-plane geometry is used such that $f=f_0+\beta y$, where
-$f_0=f(\phi_0)$ and $\beta = 2\Omega a^{-1}\cos\phi_0$, $a$ is the Earth's
-radius and $\phi_{0}$ is a reference latitude. $H$ is the scale height given by
-$H = RT_s/g$, where $T_s$ is a reference temperature and $g$ is the acceleration
-due to gravity. This equation relies on hydrostatic and geostrophic
-approximations but is approximately satisfied on seasonal timescales. Hence, the
-meridional temperature gradient decreasing from equator to pole results in a
-region of westerly winds surrounding the pole; this is known as the
-\emph{stratospheric polar vortex}.\footnote{Alternative names for this which
-  often appear in the literature are `polar night jet' or `polar night
-  vortex'. These names are not used here because the vortex persists outside of
-  the polar night.}
+where $u_g$ is the geostrophic zonal velocity\footnote{That is, the zonal wind
+  balanced by pressure gradient forces.}, $u_g = -f^{-1}\partial Z/\partial y$,
+$Z$ is geopotential height, $f$ is the Coriolis parameter, $f=2\Omega\sin\phi$,
+and $R$ is the specific gas constant. Here, a beta-plane geometry is used such
+that $f=f_0+\beta y$, where $f_0=f(\phi_0)$ and
+$\beta = 2\Omega a^{-1}\cos\phi_0$, $a$ is the Earth's radius and $\phi_{0}$ is
+a reference latitude. $H$ is the scale height given by $H = RT_s/g$, where $T_s$
+is a reference temperature and $g$ is the acceleration due to gravity. This
+equation relies on hydrostatic and geostrophic approximations but is
+approximately satisfied on seasonal timescales. Hence, the meridional
+temperature gradient decreasing from equator to pole results in a region of
+westerly winds surrounding the pole; this is known as the \emph{stratospheric
+  polar vortex}.\footnote{Alternative names for this which often appear in the
+  literature are `polar night jet' or `polar night vortex'. These names are not
+  used here because the vortex persists outside of the polar night.}
 
 \begin{figure}
  \centering
@@ -262,7 +262,7 @@ momentum equation becomes
 \frac{\partial\overline{u}}{\partial t} +
 \overline{v}^*\left(\frac{1}{a\cos\phi}\frac{\partial}{\partial\phi}(\overline{u}\cos{\phi})
   - f \right) + \overline{w}^*\frac{\partial\overline{u}}{\partial z} =
-\frac{\mathbf{\nabla \cdot F}}{\rho_oa\cos\phi} + \overline{X}
+\frac{\mathbf{\nabla \cdot F}}{\rho_oa\cos\phi} + \overline{X} \equiv \overline{\mathcal{F}}
 \label{eq:zonal_momentum}
 \end{equation}
 where $\overline{X}$ represents frictional terms and $\mathbf{F}$ is the
@@ -289,18 +289,18 @@ circulation consists of upwelling in the tropics and poleward and downward
 motion in the extratropics; a pattern which forms a significant part of the
 Brewer-Dobson circulation\footnote{Strictly, the Brewer-Dobson circulation
   represents the meridional transport of tracers, and so also involves two-way
-  mixing.}. The downward motion near the poles can be easily seen from Equation
-\ref{eq:zonal_momentum} in the steady case; since $\overline{v}^*$ must become
-small near the poles (by conservation of mass), and
-$\partial\overline{u}/\partial z > 0$ in the polar vortex, if
-$\mathbf{\nabla\cdot F} < 0$, then $\overline{w}^*<0$. It is observed that this
-circulation is strongest in the winter hemisphere due to the fact that more
-planetary waves can propagate and break in the winter westerly flow than the
-summer easterly flow (due to the Charney-Drazin criterion). Furthermore, during
-periods of enhanced wave breaking the residual circulation accelerates and there
-is more decent and adiabatic heating at high latitudes. This is important in the
-physical understanding of sudden stratospheric warming events, described in
-Section \ref{sec:strat-sudd-warm}.
+  mixing (i.e. transport without net transfer of mass).}. The downward motion
+near the poles can be easily seen from Equation \ref{eq:zonal_momentum} in the
+steady case; since $\overline{v}^*$ must become small near the poles (by
+conservation of mass), and $\partial\overline{u}/\partial z > 0$ in the polar
+vortex, if $\mathbf{\nabla\cdot F} < 0$, then $\overline{w}^*<0$. It is observed
+that this circulation is strongest in the winter hemisphere due to the fact that
+more planetary waves can propagate and break in the winter westerly flow than
+the summer easterly flow (due to the Charney-Drazin criterion). Furthermore,
+during periods of enhanced wave breaking the residual circulation accelerates
+and there is more decent and adiabatic heating at high latitudes. This is
+important in the physical understanding of sudden stratospheric warming events,
+described in Section \ref{sec:strat-sudd-warm}.
 
 
 \subsubsection{Gravity waves}
@@ -829,20 +829,20 @@ the next section.
  \label{fig:jung_barkmeijer}
 \end{figure}
 
-\citet{Scaife2005} studied the response of the troposphere to a long-term
-imposed stratospheric trend. They found that when a long term acceleration of
-the stratospheric polar vortex was imposed from the 1960s--1990s, in line with
-observations, their model more faithfully reproduced the long-term trend towards
-a more positive phase of the NAO over this time. It is however, important to
-note that this does not necessarily imply that stratospheric changes were
-driving the trend in reality. 
+This tropospheric response to an imposed torque was shown to also operate on
+long time scales by \citet{Scaife2005}. They found that when a long-term
+acceleration of the stratospheric polar vortex was imposed from the
+1960s--1990s, in line with observations, their model more faithfully reproduced
+the long-term trend towards a more positive phase of the NAO over this time. It
+is however, important to note that this does not necessarily imply that
+stratospheric changes were driving the trend in reality.
 
 In contrast to the studies above, which have calculated the tropospheric
 response to an imposed stratospheric forcing, \citet{Simpson2011} removed the
 stratospheric influence by damping the polar stratosphere to a climatological
 seasonal cycle. In doing so, they found that the effect of the stratosphere is
 to lengthen SAM timescales\footnote{The SAM/NAM timescale is defined as the lag
-  (in days) for the autocorrelation to fall by 1/$e$.} during the austral late
+  (in days) for its autocorrelation to fall by 1/$e$.} during the austral late
 spring/early summer, and to lengthen NAM timescales during the boreal
 winter-spring.
 
@@ -875,32 +875,32 @@ known as `high-top' and `low-top' models respectively \citep{Huebener2007,
   Sigmond2008, Cagnazzo2009, Sassi2010, Scaife2011, Charlton-Perez2013}
 (discussed in greater detail in Section \ref{sec:models_introduction}). These
 have all indicated a more realistic representation of tropospheric variability
-and long-term trends with improved vertical resolution. Additionally, in a case
-study of the cold European winter 2005--2006, \citet{Scaife2008} found increased
-blocking activity in a model with greater stratospheric resolution. On the other
-hand, in a multi-model comparison of blocking, \citet{Anstey2013} found a
-stronger relationship between blocking frequency and
-upper-troposphere/lower-stratosphere vertical resolution than with model lid
-height. A difficulty of such studies is that there are often several differences
-between high- and low-top models besides their vertical resolution (such as
-their parametrisation schemes), so it is difficult to pin down any differences
-between the simulations to a stratospheric influence alone. \citet{Hardiman2012}
-attempted to address this issue by comparing model simulations which differ only
-in their vertical resolution above 15~km. They found the climatology and trends
-of surface temperature to be largely insensitive to the increased vertical
-resolution, although stronger surface anomalies following SSWs and a more
-realistic trend in the NAO were found in the high-top model.
+and long-term trends is achieved with improved vertical
+resolution. Additionally, in a case study of the cold European winter
+2005--2006, \citet{Scaife2008} found increased blocking activity in a model with
+greater stratospheric resolution. On the other hand, in a multi-model comparison
+of blocking, \citet{Anstey2013} found a stronger relationship between blocking
+frequency and upper-troposphere/lower-stratosphere vertical resolution than with
+model lid height. Overall, large biases remain in models' representation of
+blocking. A difficulty of these studies is that there are often several
+differences between high- and low-top models besides their vertical resolution
+(such as their parametrisation schemes), so it is difficult to pin down any
+differences between the simulations to a stratospheric influence
+alone. \citet{Hardiman2012} attempted to address this issue by comparing model
+simulations which differ only in their vertical resolution above 15~km. They
+found the climatology and trends of surface temperature to be largely
+insensitive to the increased vertical resolution, although stronger surface
+anomalies following SSWs and a more realistic trend in the NAO were found in the
+high-top model.
 
 Several studies have investigated the influence of the stratosphere on the skill
-of short-to-medium-range forecasts (also discussed in Section
-\ref{sec:seas-introduction}). These have demonstrated that the stratospheric NAM
-can be used to enhance the prediction of the tropospheric NAM up to a month
-ahead \citep{Baldwin2003a, Charlton2003, Christiansen2005} and that greater
-skill is achieved when forecasts are initialised at the onset of SSWs
-\citep{Sigmond2013}. This further adds to the evidence of a downwards causal
-link from the stratosphere. 
-
-
+of medium-range forecasts (also discussed in Section
+\ref{sec:seas-introduction}). These have demonstrated improvements in the
+medium-range predictive skill of high-top relative to low-top models
+\citep{Marshall2010,Roff2011}, and enhanced predictability when forecasts are
+initialised at the time of anomalously negative stratospheric NAM or SSWs
+\citep{Kuroda2008,Mukougawa2009,Sigmond2013}. These studies therefore further
+indicate a downwards influence of stratospheric variability on the troposphere. 
 
 
 
@@ -912,9 +912,112 @@ link from the stratosphere.
 \subsection{Mechanisms}
 \label{sec:mechanisms}
 
+The results described in the previous two sections provide strong evidence that
+the stratosphere does indeed exert a significant influence on tropospheric
+weather and climate. Even so, may uncertainties about the exact nature of the
+influence remain; observational studies are always open to the criticism that
+they do not demonstrate causality, and modelling studies that they contain large
+model biases or are simulating an unrealistic scenario. A coherent picture of
+stratosphere-troposphere coupling also requires a physical understanding of the
+mechanism by which this takes place. Several such mechanisms have been proposed,
+and are briefly described below:
+
+
 \begin{itemize}
-\item\textbf{Baroclinic instability:} \citep{Wittman2007}
-\item\textbf{PV inversion}
+\item\textbf{Radiative effects:} It is well known that stratospheric
+  (particularly lower-stratospheric) temperature increases following SSWs lead
+  to increasing downwelling longwave radiation entering the troposphere.
+  \citet{Ramanathan1977} argued that this warming could reduce the available
+  potential energy accessible to tropospheric eddy activity. Similarly, the
+  stratospheric cooling associated with ozone depletion leads to a reduction in
+  downwelling longwave radiation entering the troposphere
+  \citep{Forster1997a}. \citet{Grise2009} used a radiative transfer model to
+  asses the impact of these radiation changes, finding a significant impact on
+  surface polar temperatures, although they did not assess the circulation
+  response. Indeed, relatively few studies have assessed the impact of radiative
+  processes in stratosphere-troposphere coupling in the light of more recent
+  observations. Despite this, it is unlikely that radiative effects play a large
+  role in the observed stratosphere-troposphere coupling since relatively
+  realistic coupling can be simulated in a model lacking interactive ozone or a
+  detailed radiation scheme.
+
+\item\textbf{Baroclinic instability:} The growth rate of baroclinic eddies is
+  related to the vertical shear in zonal wind across the troposphere
+  \citep{Eady1949}. Some studies have suggested that lower stratospheric zonal
+  wind anomalies which penetrate into the upper troposphere affect this vertical
+  wind shear, and so the growth of baroclinic eddies \citep{Wittman2007,
+    Chen2008}. Hence, we may expect reduced tropospheric eddy activity at
+  mid-high latitudes following SSWs, due to weaker lower stratosphere/upper
+  troposphere zonal winds. \citet{Scaife2011} also used this relationship to
+  demonstrate that an increase in European winter storminess and equatorward
+  shift in the North Atlantic storm track projected under climate change are
+  consistent with a strengthening and equatorward shift of the stratospheric
+  polar vortex. It is less clear what effect whether the change in baroclinic
+  eddy activity is sufficient to lead to the annular mode signals of the kind
+  shown in Figure \ref{fig:baldwin_dunkerton}, although tropospheric eddies have
+  been demonstrated to be important in driving annular mode variability
+  \citep{Limpasuvan1999}.
+
+\item\textbf{Downward control:} Under steady-state or time-mean conditions, the
+  `downward control' principle of \citet{Haynes1991} allows the streamfunction,
+  $\psi$, of the TEM residual circulation is given by
+  \begin{equation}
+    \psi(\phi,z) =
+    \int_z^{\infty}\left(\frac{\rho_0a\overline{\mathcal{F}}\cos^2\phi}{\partial\overline{m}/\partial\phi}\right)_{\phi=\phi(z')}\mathrm{d}z'\, ,
+  \end{equation}
+  where $\overline{\mathcal{F}}$ is the total wave driving term from Equation
+  \ref{eq:zonal_momentum}, and
+  $\overline{m}=a\cos\phi(\overline{u}+a\Omega\cos\phi)$ is the angular momentum
+  per unit mass. Strictly, the integration is along a line of constant angular
+  momentum, but this is approximated as vertical (an approximation which breaks
+  down near the equator). Hence, it can be seen that under these conditions the
+  residual circulation at a given altitude depends only on the wave drag above
+  that altitude.
+
+  This relation therefore shows that circulation induced by stratospheric wave
+  drag extends to the Earth's surface, although it should be noted above
+  assumptions (particularly steady-state) do not strictly hold in the real
+  atmosphere. \citet{Thompson2006} suggested that this induced residual
+  circulation (or `balanced response') is sufficient to explain the observed
+  stratosphere-troposphere coupling. Others, however, have argued that the
+  observed annular mode-like tropospheric response cannot be generated in the
+  zonal-mean framework of downward control, necessitating feedbacks involving
+  tropospheric eddies \citep{Kushner2004, Song2004}.
+
+
+\item\textbf{Planetary wave reflection}: The critical surface formed in the
+  stratosphere during SSW events acts to reflect upwards-propagating planetary
+  waves, as described in Section
+  \ref{sec:planetary-waves}. \citet{JudithPerlwitz2003} argued that these
+  reflected planetary waves re-enter the troposphere and affect the tropospheric
+  wave structures, leading to the observed tropospheric
+  response. \citet{Shaw2010} have further suggested that strong two-way coupling
+  exists in the presence of both a vertical reflecting surface and a strong
+  meridional PV gradient, which act to create a `wave guide'. 
+
+\item\textbf{Local adjustment to PV anomalies:} Anomalies of PV act to bend
+  isentropic surfaces \citep{Hoskins1985}, as shown in the schematic from
+  \citet{Ambaum2002} (Figure \ref{fig:ambaum_hoskins}). At high latitudes, the
+  tropopause lies approximately on a potential vorticity surface, also the
+  potential temperature of the tropopause will be conserved for adiabatic
+  changes (Section \ref{sec:planetary-waves}). Hence, the tropopause will also
+  bend for a stratospheric potential vorticity anomaly; moving upwards for a
+  positive anomaly, and downwards for a negative anomaly. This deformation
+  of the tropopause induced by a stratospheric PV anomaly will lead to
+  hydrostatic and geostrophic adjustment of the tropospheric column below.  \citep{Hartley1998,
+    Black2002, Ambaum2002}
+
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=0.5\textwidth]{figures/chapter-intro/ambaum_hoskins.png}
+ \caption[Schematic from \citet{Ambaum2002}]{Schematic of the bending of
+   isentropic surfaces (labelled $\theta_0$, $\theta_1$, and $\theta_2$) toward
+   a positive potential vorticity anomaly. The arrows represent winds associated
+   with the potential vorticity anomaly, becoming weaker away from the
+   anomaly. Figure from \citet{Ambaum2002}.}
+ \label{fig:ambaum_hoskins}
+\end{figure}
+
 
 \end{itemize}
 
