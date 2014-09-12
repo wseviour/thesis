@@ -245,7 +245,7 @@ Figure \ref{fig:cats_eyes}.
 A further effect of wave breaking is the induction of a \emph{residual
   circulation}, $[0, \overline{v}^*, \overline{w}^*]$, where $\overline{v}^*$ and
 $\overline{w}^*$ are the transformed Eulerian-mean (TEM) meridional and vertical
-velocities given by
+velocities given in spherical coordinates by
 \begin{equation}
   \overline{v}^* = \overline{v} - \frac{1}{\rho_0}\frac{\partial}{\partial z}
   \left(\frac{\rho_o\overline{v'\theta'}}{\partial\overline{\theta}/{\partial z}}\right) \, , 
@@ -255,9 +255,9 @@ velocities given by
 \left(\frac{\cos\phi\overline{v'\theta'}}{\partial\overline{\theta}/{\partial
       z}}\right) \, ,
 \end{equation}
-which approximate the Lagrangian-mean circulation under time-averaged conditions
-\citep{Andrews1976,Dunkerton1978,Holton1990}. Under the TEM formalism, the zonal
-momentum equation becomes
+which approximates the Lagrangian-mean circulation under time-averaged
+conditions \citep{Andrews1976,Dunkerton1978,Holton1990}. Under the TEM
+formalism, the zonal momentum equation becomes
 \begin{equation}
 \frac{\partial\overline{u}}{\partial t} +
 \overline{v}^*\left(\frac{1}{a\cos\phi}\frac{\partial}{\partial\phi}(\overline{u}\cos{\phi})
@@ -265,8 +265,8 @@ momentum equation becomes
 \frac{\mathbf{\nabla \cdot F}}{\rho_oa\cos\phi} + \overline{X} \equiv \overline{\mathcal{F}}
 \label{eq:zonal_momentum}
 \end{equation}
-where $\overline{X}$ represents frictional terms and $\mathbf{F}$ is the
-Eliassen-Palm (EP) flux with components
+where $\overline{X}$ represents frictional terms and $\mathbf{F}=[0,F^\phi,F^z]$
+is the Eliassen-Palm (EP) flux with components
 \begin{equation}
 F^\phi = \rho_0a\cos\phi\left(\frac{\partial\overline{u}}{\partial
     z}\frac{\overline{v'\theta'}}{\partial\overline{\theta}/\partial z} -
@@ -282,7 +282,7 @@ $\mathbf{F}$ can be interpreted as the flux of wave activity
 represents a dissipation of wave activity, as is the case in wave breaking. It
 can be seen that for a steady zonal flow ($\partial\overline{u}/\partial t = 0$)
 in the absence of wave driving ($\mathbf{\nabla\cdot F} = 0$) or friction
-($\overline{X} = 0$), a solution of Equation (\ref{eq:zonal_momentum}) is
+($\overline{X} = 0$), a solution of Equation \ref{eq:zonal_momentum} is
 $\overline{v}^*=0, \overline{w}^*=0$.  However, in the presence of these forcing
 terms, a non-zero residual circulation will be induced. Climatologically, this
 circulation consists of wave-driven poleward and downward motion in the
