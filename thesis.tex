@@ -80,7 +80,7 @@
 
 %this baselineskip gives sufficient line spacing for an examiner to easily
 %markup the thesis with comments
-\baselineskip=22pt plus1pt % originally 18pt - WS
+%\baselineskip=22pt plus1pt % originally 18pt - WS
 
 %set the number of sectioning levels that get number and appear in the contents
 \setcounter{secnumdepth}{3}
@@ -93,11 +93,13 @@
 \include{abstract}          % include the abstract
 \include{acronyms}
 
+
+
 %\begin{romanpages}          % start roman page numbering
 \tableofcontents            % generate and include a table of contents
-%\listoffigures              % generate and include a list of figures
+\listoffigures              % generate and include a list of figures
 %\end{romanpages}            % end roman page numbering
-
+\baselineskip=22pt plus1pt % originally 18pt - WS
 %now include the files of latex for each of the chapters etc
 \include{chapter-intro}
 \include{chapter-background}
