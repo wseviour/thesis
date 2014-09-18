@@ -23,7 +23,7 @@ as the relationship between dynamics and polar stratospheric ozone depletion
 \label{sec:dynam-polar-strat}
 
 
-\subsection{Zonal mean circulation}
+\subsection{Zonal-mean circulation}
 
 Each winter the polar region descends into a polar night and the stratosphere
 cools by infrared radiation to space. This sets up a strong equator-to-pole
@@ -106,8 +106,7 @@ stratosphere, as described in the next section.
 
 Large-scale Rossby or planetary waves\footnote{Here, as is common in the
   stratospheric literature, ``wave'' is taken to mean any deviation from the
-  zonal-mean state which not necessarily a physical structure in the usual
-  meaning of the term.} play a vital
+  zonal-mean state.} play a vital
 role in the dynamics of the extratropical stratosphere. They mostly enter the
 stratosphere from the troposphere, where they are forced, for example, by air
 flow around topography, latent heat release, or nonlinear evolution of
@@ -199,9 +198,10 @@ found for more complex background states \citep{Andrews1987}.
 An important consequence of the Charney-Drazin criterion for stratospheric flow
 is that the strength of the stratospheric polar vortices shown in Figures
 \ref{fig:zmzw_zmT_clim} and \ref{fig:zmzw_NH_SH} is often sufficient to exclude
-all but the lowest wavenumbers (typically zonal wavenumbers 1--3) from
-propagating upwards from the troposphere. Hence the length-scale of typical
-stratospheric zonal asymmetries is much larger than that of the troposphere.
+all but the lowest wavenumbers (typically zonal wavenumbers 1--3; hereafter
+referred to as `wave-$n$') from propagating upwards from the troposphere. Hence
+the length-scale of typical stratospheric zonal asymmetries is much larger than
+that of the troposphere.
 
 \bigskip When planetary waves reach a \emph{critical surface}, where propagation
 is prohibited (for instance, a region where $\overline{u} = c$), the above
@@ -274,7 +274,7 @@ F^\phi = \rho_0a\cos\phi\left(\frac{\partial\overline{u}}{\partial
 \end{equation}
 \begin{equation}
 F^z =
-\rho_0a\cos\phi\left(\left[f-\frac{1}{a\cos\phi}\frac{\partial}{\partial\phi}(\overline{u}\cos\phi)\right]\frac{\overline{v'\theta'}}{\partial\theta/\partial
+\rho_0a\cos\phi\left(\left[f-\frac{1}{a\cos\phi}\frac{\partial}{\partial\phi}(\overline{u}\cos\phi)\right]\frac{\overline{v'\theta'}}{\partial\overline{\theta}/\partial
       z} - \overline{w'u'}\right) \, .
 \end{equation}
 $\mathbf{F}$ can be interpreted as the flux of wave activity
@@ -383,7 +383,7 @@ flow. However, it has been observed that SSWs generally occur as either a split
 or displacement of the vortex, mostly depending (though not exclusively; see
 Section \ref{sec:moments-introduction}, \citep{Waugh1997}) on whether wave-2 or
 wave-1 activity is dominant. An example of each of these events is shown in
-Figure \ref{fig:charlton_polvani_ssw}. \citet{Charlton2007a} and
+Figure \ref{fig:charlton_polvani_ssw}. \citet{Charlton2007} and
 \citet{Matthewman2009} studied the dynamics of these two types of events in
 reanalysis data and noted some differences. Most significantly, split vortex
 events were observed to occur near-barotropically, with two smaller vortices
@@ -398,7 +398,7 @@ lower stratosphere.
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-intro/charlton_polvani_SSW.pdf}
  \caption[Examples of a split and displaced vortex event from
- \citet{Charlton2007a}]{Polar stereographic plot of geopotential height
+ \citet{Charlton2007}]{Polar stereographic plot of geopotential height
    (contours) on the 10~hPa pressure surface. Contour interval is 0.4~km, and
    shading shows potential vorticity greater than
    $4.0 \times 10^{-6} \mathrm{K~kg^1~m^2~s^{-1}}$. (a) A vortex displacement
@@ -748,13 +748,13 @@ magnitudes in the stratosphere, have very different signatures in the
 troposphere \citep[e.g.,][]{Baldwin2001a,Tomassini2012} (See also the two events
 shown in Figure \ref{fig:baldwin_dunkerton}). This issue was addressed by
 \citet{Nakagawa2006} and \citet{Mitchell2013}, who compared tropospheric
-anomalies following SSWs dominated by wavenumer-1/wavenumber-2 activity and
-displaced/split vortex events respectively (these two classifications are
-related but not identical: e.g., \citet{Waugh1997}, Section
+anomalies following SSWs dominated by wave-1/wave-2 activity and displaced/split
+vortex events respectively (these two classifications are related but not
+identical: e.g., \citet{Waugh1997}, Section
 \ref{sec:moments-introduction}). These studies found stronger stratospheric
-anomalies following wavenumber-2/split vortex SSWs than following
-wavenumer-1/displaced vortex SSWs.\footnote{Using the method developed in
-  Chapter \ref{cha:moments}, of the two weak vortex events illustrated in Figure
+anomalies following wave-2/split vortex SSWs than following wave-1/displaced
+vortex SSWs.\footnote{Using the method developed in Chapter \ref{cha:moments},
+  of the two weak vortex events illustrated in Figure
   \ref{fig:baldwin_dunkerton}, the first is identified as a displaced vortex
   event and the second as a split vortex event. Their tropospheric NAM may
   therefore be expected to be different, although no firm conclusions should be
@@ -767,7 +767,7 @@ appears not to descend below the tropopause even though its stratospheric
 magnitude is greater. \citet{Mitchell2013} went on to link these different NAM
 signals to an increase in high-latitude blocking following split vortex events,
 and a weaker blocking signal following displaced vortex events. On the other
-hand \citet{Charlton2007a}, using a different classification method, found
+hand \citet{Charlton2007}, using a different classification method, found
 little difference in the tropospheric signals following split and displaced
 vortex events. This discrepancy between these studies highlights the importance
 of the classification method of split and displaced vortex events (or of
@@ -1028,7 +1028,7 @@ and are briefly described below:
 
   \begin{figure}
     \centering
-    \noindent\includegraphics[width=0.5\textwidth]{figures/chapter-intro/ambaum_hoskins.png}
+    \noindent\includegraphics[width=0.4\textwidth]{figures/chapter-intro/ambaum_hoskins.png}
     \caption[Schematic from \citet{Ambaum2002}]{Schematic of the bending of
       isentropic surfaces (labelled $\theta_0$, $\theta_1$, and $\theta_2$)
       toward a positive potential vorticity anomaly. The arrows represent winds

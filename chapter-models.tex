@@ -392,24 +392,21 @@ observations, where not all split vortex events are dominated by wave-2 activity
 \subsection{Wave diagnostics}
 
 Given the common bias among the CMIP5 models towards low aspect ratios, it might
-be suspected that the models have too little zonal wavenumber-2 activity,
-relative to wavenumber-1. The relative magnitudes of the two stratospheric
-planetary waves are diagnosed using the following method. The Fourier transform
-of the 60$^{\circ}$N, 10~hPa geopotential height field over all longitudes is
-calculated for each day during DJFM. The modulus of the first and second Fourier
-components then represent the magnitudes of wavenumer-1 and wavenumber-2
-activity respectively for each day. In order to determine the climatological
-modal wave activity, the resulting distributions of daily wave activity are
-fitted with a GEV distribution using maximum-likelihood estimation, and the peak
-of that distribution determined, as in the previous section. A GEV distribution
-was found to be a good fit for the distributions of each model. As previously,
-this method has the advantage of determining the `most-likely' wave amplitude,
-and unlike the mean it is not affected by large extreme values. 
+be suspected that the models have too little wave-2 activity. The relative
+magnitudes of wave-1 and wave-2 planetary waves are diagnosed using the same
+method described in Appendix \ref{sec:comp-zonal-wave}. In order to determine
+the climatological wave activity for each model, the resulting distributions of
+daily wave amplitides were fitted with a GEV distribution using
+maximum-likelihood estimation, and the peak of that distribution determined, as
+in the previous section. A GEV distribution was found to be a good fit for the
+distributions of each model. As previously, this method has the advantage of
+determining the `most-likely' wave amplitude, and unlike the mean it is not
+affected by large extreme values.
 
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/CMIP5_waves_nolegend.pdf}
- \caption[CMIP5 wave diagnostics]{(a) Ratio of zonal wavenumer-2 to wavenumber-1
+ \caption[CMIP5 wave diagnostics]{(a) Ratio of zonal wavenumer-2 to wave-1
    amplitude, calculated from the DJFM daily geopotential height field at
    60$^{\circ}$N, 10~hPa. Amplitudes are calculated from the peak of a GEV
    distribution fitted to the relevant histogram. (b) Ratio of wave amplitudes
@@ -421,16 +418,16 @@ and unlike the mean it is not affected by large extreme values.
  \label{fig:cmip5_waves}
 \end{figure}
 
-The resulting ratios of wavenumber-2 to wavenumber-1 amplitude for each of the
+The resulting ratios of wave-2 to wave-1 amplitude for each of the
 CMIP5 models and ERA are shown in Figure \ref{fig:cmip5_waves}(a). ERA is seen
 to lie approximately in the middle of the models; 7 models have a greater ratio,
 and 6 models lesser. The same ratio of wave amplitude was calculated by
 \citet{Butchart2011} for the CCMVal-2 models. They found a bias towards a
-relative lack of wavenumber-2 activity, with 13 of 17 models having a lower
+relative lack of wave-2 activity, with 13 of 17 models having a lower
 ratio than reanalysis. The current results show that this bias is not present
 among the high-top CMIP5 ensemble, and so the bias towards low aspect ratio
-cannot be attributed to a relative lack of wavenumber-2 activity (this is also
-true of the absolute value of wavenumber-2 amplitude, in which 5 of 13 models
+cannot be attributed to a relative lack of wave-2 activity (this is also
+true of the absolute value of wave-2 amplitude, in which 5 of 13 models
 have a lower value than ERA).
 
 Comparing Figures \ref{fig:cmip5_waves}(a) and
@@ -439,13 +436,10 @@ lowest ratio of wave amplitudes (CMCC-CESM) also has the lowest aspect ratio,
 while the model with the highest ratio (IPSL-CM5B-LR) has the highest aspect
 ratio. However, across all models the amplitudes of the individual wavenumbers
 are not significantly correlated with either the modal aspect ratio or the
-centroid latitude. This suggests that wavenumber-1 activity does not exclusively
-affect centroid latitude, nor wavenumber-2 exclusively affect aspect ratio, as
-was found by \citet{Waugh1997}\footnote{The wavnumber-3 amplitude is not
-  analysed here, but is on average 13\% of the wavenumber-1
-  amplitude. Wavenumber-3 activity also has an effect on the shape of the
-  vortex, which may further explain the lack of a one-to-one mapping between
-  wave and moment diagnostics.}. Rather, it is the relative wave amplitudes that
+centroid latitude. This suggests that wave-1 activity does not exclusively
+affect centroid latitude, nor wave-2 exclusively affect aspect ratio, as was
+found by \citet{Waugh1997} and discussed in Appendix
+\ref{sec:comp-zonal-wave}. Rather, it is the relative wave amplitudes that
 affect the relative aspect ratio and centroid latitude climatologies. This is
 demonstrated in Figure \ref{fig:cmip5_waves}(b), which shows the ratio of wave
 amplitudes against the ratio of aspect ratio to centroid latitude. In order that
@@ -463,6 +457,10 @@ wave amplitudes and moment diagnostics, the ratio of wave amplitudes strongly
 determines the relative climatology of the moment diagnostics.
 
 
+% \footnote{The wavnumber-3 amplitude is not analysed
+%   here, but is on average 13\% of the wave-1 amplitude. Wave-3 activity also has
+%   an effect on the shape of the vortex, which may further explain the lack of a
+%   one-to-one mapping between wave and moment diagnostics.}
 
 \section{Stratosphere-troposphere coupling}
 \subsection{Zonal-mean response to displaced and split vortex events}
@@ -810,13 +808,14 @@ resolutions respectively (calculated using a two-tailed $t$-test). However,
 these relationships appear quite nonlinear, with aspect ratio being relatively
 more sensitive to changes in resolution when the resolution is coarse (high
 $\mathrm{d}z$) and less sensitive when the resolution is finer (low
-$\mathrm{d}z$) . This can be addressed by instead calculating the Spearman's
-rank correlations. These are $-0.60$ ($p=96.9\%$) and $-0.75$ ($p=99.7\%$) for
-vertical resolutions over 5-15~km and 15-30~km respectively, therefore
-indicating more statistically significant relationships. However, because the
-two measures of vertical resolution are themselves correlated ($r=0.79$), it is
-difficult to interpret which of the two regions (if any) has the largest impact
-on the modal aspect ratio.
+$\mathrm{d}z$). This can be addressed by instead calculating the Spearman's rank
+correlations, which test the monotonicity of the relationships. These are
+$-0.60$ ($p=96.9\%$) and $-0.75$ ($p=99.7\%$) for vertical resolutions over
+5-15~km and 15-30~km respectively, therefore indicating more statistically
+significant relationships. However, because the two measures of vertical
+resolution are themselves correlated ($r=0.79$), it is difficult to interpret
+which of the two regions (if any) has the largest impact on the modal aspect
+ratio.
 
 \begin{figure}
  \centering
@@ -911,13 +910,13 @@ planetary wave propagation from troposphere to stratosphere.
 % planetary wave propagation from troposphere to stratosphere.
 
 The fact that there is not a significant relationship between the modal centroid
-latitude and vertical resolution may suggest that wavenumber-2 propagation is
-more sensitive to vertical resolution than wavenumber-1. Indeed, it might be
+latitude and vertical resolution may suggest that wave-2 propagation is
+more sensitive to vertical resolution than wave-1. Indeed, it might be
 expected that wave-2 propagation is more sensitive to near-tropopause resolution
 because the `window' for permissible wave-2 propagation is narrower
 (\citet{Charney1961}; Equation \ref{eq:charney-drazin}), meaning smaller
-differences in vertical gradients are required to exclude wavenumber-2
-propagation than wavenumber-1 propagation. However, no significant correlations
+differences in vertical gradients are required to exclude wave-2
+propagation than wave-1 propagation. However, no significant correlations
 are found among the CMIP5 models between vertical resolution and wave amplitudes
 (using the measures shown in Figure \ref{fig:cmip5_waves}).
 
@@ -968,12 +967,12 @@ tropospheric anomalies following SSWs represent the NAM
 On the other hand, \citet{Ambaum2001} suggested that the NAO paradigm is a more
 physically relevant measure of NH variability than the NAM. They found that MSLP
 anomalies over the North Atlantic and Pacific are not significantly correlated
-and argued that that the annular NAM pattern is a statistical
-artifact. \citet{Huth2006} also showed that principal component analysis favours
-the NAO as the more physically relevant mode of variability. Furthermore,
-\citet{Ambaum2002} found that changes in North Pacific tropospheric subtropical
-and polar jets are much less correlated with the strength of the stratospheric
-polar vortex than are the North Atlantic jets.
+(also shown by \citet{Deser2000}) and argued that that the annular NAM pattern
+is a statistical artifact. \citet{Huth2006} also showed that principal component
+analysis favours the NAO as the more physically relevant mode of
+variability. Furthermore, \citet{Ambaum2002} found that changes in North Pacific
+tropospheric subtropical and polar jets are much less correlated with the
+strength of the stratospheric polar vortex than are the North Atlantic jets.
 
 Under the significant assumption that the CMIP5 models can accurately represent
 the physics underlying these modes of variability (the investigation of which is
@@ -1047,7 +1046,7 @@ this investigation are as follows:
 has been found in the average state of the stratospheric polar vortex. Some
 models have a vortex which is too equatorward, while others too poleward. The
 majority of models have a vortex which is too circularly symmetric. The relative
-magnitudes of wavenumber-1 and wavenumber-2 activity to a large extent determine
+magnitudes of wave-1 and wave-2 activity to a large extent determine
 these biases, although there is no one-to-one relationship between wavenumbers
 and the aspect ratio or centroid latitude of the vortex. 
 

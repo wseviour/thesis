@@ -74,28 +74,28 @@ these two contours have a circulation ratio of 2:1 or lower the event is
 classified as a split, and all other events are automatically classed as
 displacements. 
 
-Both Fourier decomposition of the zonal wave structure and the method of
-\citet{Charlton2007} rely on an Eulerian framework, with fields analysed at a
-fixed spatial location. \citet{Waugh1997} first applied two-dimensional moment
-diagnostics (otherwise known as elliptical diagnostics) to the stratospheric
-polar vortex to provide an alternative semi-Lagrangian (or vortex-oriented)
-framework. These diagnostics are calculated by fitting an ellipse to a contour
-and then determining its properties such as the centre, orientation, aspect
-ratio, and area (a further diagnostic, excess kurtosis--a measure of the
-`peakedness' of the distribution--was introduced by \citet{Matthewman2009}). This
-allows the movement and elongation of the vortex to be
-quantified. \citet{Waugh1997} also compared these diagnostics to the traditional
-Fourier decomposition. He showed that wave 1 and 2 amplitudes relate most
-strongly to the displacement and elongation of the vortex respectively, however,
-these relationships were not found to be strong, with correlations of daily
-values less than 0.5. These weak relationships were attributed to the fact that
-planetary wave propagation can be affected by changes in the meridional PV
-gradient, even if the vortex shape and location are fixed. Furthermore, the wave
-1 amplitude depends to some extent on the elongation of the vortex as well as
-the location of the centre (and similarly for the wave 2 amplitude). He
-concluded that it is difficult to extract quantitative information about the
-shape and location of the vortex based on wave amplitudes alone, highlighting
-the advantages of the moment diagnostics.
+Both Fourier decomposition of the zonal wave structure and the method of CP07
+rely on an Eulerian framework, with fields analysed at a fixed spatial
+location. \citet{Waugh1997} first applied two-dimensional moment diagnostics
+(otherwise known as elliptical diagnostics) to the stratospheric polar vortex to
+provide an alternative semi-Lagrangian (or vortex-oriented) framework. These
+diagnostics are calculated by fitting an ellipse to a contour and then
+determining its properties such as the centre, orientation, aspect ratio, and
+area (a further diagnostic, excess kurtosis--a measure of the `peakedness' of
+the distribution--was introduced by \citet{Matthewman2009}). This allows the
+movement and elongation of the vortex to be quantified. \citet{Waugh1997} also
+compared these diagnostics to the traditional Fourier decomposition. He showed
+that wave-1 and 2 amplitudes relate most strongly to the displacement and
+elongation of the vortex respectively, however, these relationships were not
+found to be strong, with correlations of daily values less than 0.5. These weak
+relationships were attributed to the fact that planetary wave propagation can be
+affected by changes in the meridional PV gradient, even if the vortex shape and
+location are fixed. Furthermore, the wave-1 amplitude depends to some extent on
+the elongation of the vortex as well as the location of the centre (and
+similarly for the wave-2 amplitude). He concluded that it is difficult to
+extract quantitative information about the shape and location of the vortex
+based on wave amplitudes alone, highlighting the advantages of the moment
+diagnostics.
 
 \citet{Hannachi2010} then applied a hierarchical clustering algorithm to daily
 values of the area, centroid latitude, and aspect ratio diagnostics and found
@@ -169,7 +169,7 @@ using the new method and discusses potential mechanisms behind any differences.
 % provide a description of the location of the polar vortex itself, which
 % theoretical arguments suggest may be important for understanding
 % stratosphere-troposphere coupling \citep{Ambaum2002}. In an improvement to these
-% traditional SSW definitions, \citet{Charlton2007a} (hereafter CP07) introduced a
+% traditional SSW definitions, \citet{Charlton2007} (hereafter CP07) introduced a
 % classification in which a split vortex event is identified when two vortices
 % with a circulation ratio of 2:1 or higher are present, and all other SSWs are
 % automatically classed as displaced vortex events. However, they maintained the
@@ -375,9 +375,11 @@ number of calculations during split vortex events. Hence, we calculate single
 moment diagnostics even when the vortex has split, but bear in mind that these
 may not represent the properties of any real vortex. 
 
-Code for the calculation of moment diagnostics using the method described
-in this section is available from
-\url{https://github.com/wseviour/vortex-moments}.
+Code for the calculation of moment diagnostics using the method described in
+this section is available from
+\url{https://github.com/wseviour/vortex-moments}. Additionally, a comparison of
+aspect ratio and centroid latitude with zonal wavenumber amplitudes is given in
+Appendix \ref{sec:comp-zonal-wave}.
 
 \begin{figure}
  \centering
@@ -402,7 +404,7 @@ number of years entering the analysis (ERA-40 runs only to 2002), as well as to
 compare results from the more recent ERA-Interim with previous studies using
 only ERA-40, such as \citet{Charlton2007} and \citet{Mitchell2013}.
 
-ERA-Interim is similar to ERA-40 but uses ECMWF’s operational four-dimensional
+ERA-Interim is similar to ERA-40 but uses ECMWF's operational four-dimensional
 variational data assimilation system (4D-Var) as opposed to the 3D-Var system
 used in ERA-40. It also has higher horizontal and vertical resolution, improved
 humidity analysis, model physics, data quality control, bias handling and other
@@ -766,14 +768,14 @@ centroid latitude in the two weeks following the onset date of split and
 displaced vortex events respectively. Almost all of the split vortex events show
 two clearly separated vortices or a pinched vortex shape, which is approximately
 symmetrical about the North Pole. Two exceptions are Figures
-\ref{fig:gph_all_events_splits} (a) and (k), in which the vortex is highly
+\ref{fig:gph_all_events_splits}(a) and (k), in which the vortex is highly
 elliptical but not clearly split. Figure \ref{fig:gph_all_events_splits}(n)
 shows an event with a highly elliptical vortex that is also somewhat displaced
 from the pole, indicating that it has some displaced nature. The majority of
 split vortex events are seen to occur along the $90^{\circ}$E-$90^{\circ}$W
 axis, in line with the climatological wave-2 pattern \citep{Andrews1987}. Figure
 \ref{fig:gph_all_events_splits}(h) shows an exception to this, with an
-orientation orthogonal to the majority of events. 
+orientation orthogonal to the majority of events.
 
 The displacement events mostly show a smaller and weaker vortex, owing to the
 fact that they are more common later in winter (see Figure
@@ -1170,21 +1172,82 @@ simulations in the next chapter.
 \pagebreak
 
 \begin{subappendices}
-\section{Comparison to zonal wave diagnostics}
+\section{Comparison with zonal wave amplitudes}
+\label{sec:comp-zonal-wave}
+
+Many studies have characterised startospheric polar variability by its zonal
+wave structure
+\citep[e.g,][]{Randel1988,Yoden1999,Nakagawa2006,K.Coughlin2009}. It is
+therefore instructive to compare this wave analysis with the moment diagnostics
+developed in this chapter. Here this is carried out for the displaced and split
+vortex events shown in Figures \ref{fig:displaced_ellipse} and
+\ref{fig:split_ellipse} respectively. A similar comparison was shown by
+\citet{Waugh1997} and \citet{Waugh1999}, and the results here are consistent
+with their findings.
+
+Zonal wavenumber decomposition is carried out by taking the Fourier transform of
+the 60$^{\circ}$N, 10~hPa geopotential height field over all longitudes. The
+amplitude of wave-$n$ on a given day is then given by the modulus of the $n$th
+Fourier component on that day. In ERA data, the amplitude of DJFM wave-2 is, on
+average, about 30\% that of wave-1, and wave-3 13\% of wave-1, indicating a
+Charney-Drazin filtering of zonal wavenumbers, as discussed in Section
+\ref{sec:planetary-waves}.
+
+The correlation of geopotential height-derived daily aspect ratio and the wave-2
+amplitude over DJFM is 0.30 and that of centroid latitude and wave-1 amplitude
+$-0.22$, both of which are statistically significant. These relationships are
+illustrated in the examples of split and displaced vortex events in Figure
+\ref{fig:wave_moments_ts}. In the case of the 1979 split vortex event the wave-2
+amplitude peaks approximately 5 days before the peak of the aspect ratio. Wave-2
+amplitude is also more variabile than aspect ratio in early winter, although the
+two are correlated at this time. In the case of the 2006 displaced vortex event,
+the difference is even greater. The wave-1 amplitude peaks about three weeks
+before the centroid latitude, and is actually anomalously small at the peak of
+centroid latitude. Before and after the event, the wave-1 amplitude and centroid
+latitude are highly correlated.
+
+The physical reasons for these differences of wave and moment diagnostics are
+investigated in Figure \ref{fig:wave_moments_vortex}. This compares the vortex
+structure at the peak wave amplitude and peak aspect ratio/centroid latitude for
+the two events. For the 1979 split vortex event, the vortex appears split at
+both times but there is a greater separation between the vortices at the time
+of maximum aspect ratio. The wave-2 amplitude is greatest at the earlier time,
+however, because the vortices (particularly the eastern vortex) are
+stronger. Similarly for the 2006 event, at the time of maximum wave-1 amplitude
+the vortex is not displaced far from its average position but its strength
+means that the wave-1 amplitude is greater than the much more displaced vortex
+found later. Generally, the sensitivity of wave amplitudes to vortex strength
+means that wave amplitdes may actually decline during periods of intense wave
+breaking due to the weakening of the vortex, even if that vortex is
+significantly distorted. 
+
+Overall, these results show that as the vortex departs from zonal symmetry
+linear wave theory breaks down and changes in the wave-1 and wave-2 amplitudes
+cannot be simply interpreted as changes in the postition and elongation of the
+vortex respectively.
 
 
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/waves_moments_ts.pdf}
- \caption[]{}
- \label{fig:}
+ \caption[Wave amplitude and moment diagnostic timeseries.]{(a) Aspect ratio
+   (solid line) and wave-2 amplitude (dashed line) over the winter
+   1978-1979. (b) Centroid latitude (solid line) and wave-1 amplitude (dashed
+   line) over the winter 2005-2006. Centroid latitude is expressed as its
+   deviation from the North Pole.}
+ \label{fig:wave_moments_ts}
 \end{figure}
 
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/wave_moment_vortices.pdf}
- \caption[]{}
- \label{fig:}
+ \caption[Comparison of vortex at maximum of moment diagnostics and wave
+ amplitudes.]{10~hPa geopotential height on the day of maximum wave-2 amplitude
+   (a) and maximum aspect ratio (b) for the 1979 split vortex event; and maximum
+   wave-1 amplitude (c) and minimum centroid latitude (d) for the 2006 displaced
+   vortex event. The vortex edge contour, equivalent ellipse, and centroid
+   latitude are shown as Figure \ref{fig:displaced_ellipse}.}
+ \label{fig:wave_moments_vortex}
 \end{figure}
 
 \end{subappendices}
