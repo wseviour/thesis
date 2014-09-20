@@ -128,6 +128,53 @@ initial conditions in seasonal forecast systems.
 The work presented in this thesis has raised a number of questions, and
 motivated future investigations. Some of these ideas are discussed below:
 
+\bigskip\noindent\textbf{Systematic variation of model resolution.} It was shown
+in Figure \ref{fig:aspect_vert_res} that among CMIP5 models their appears to be
+a relationship between the average aspect ratio of the stratospheric polar
+vortex and vertical resolution, particularly in the
+upper-troposphere/lower-stratosphere. Although this relationship is backed up by
+the physical understanding of the influence fine-scale vertical structure on
+planetary wave propagation in this region, it is not highly statistically
+significant. Furthermore, the relationship does not hold when models of the same
+family but different resolution are compared. These issues could be resolved by
+performing a series of model integrations in which only the vertical resolution
+is changed. The climatology of the stratospheric polar vortex would be studied
+for each integration, and it could be determined if this relationship holds. If
+it does, it could then be found at which point the vertical resolution is
+sufficient for a relatively realistic average vortex state, which would be
+valuable for modelling centres. Such a study need not be highly computationally
+expensive since it involves studying the mean state (rather than extremes such
+as SSWs), so relatively few years need to be simulated. 
+
+
+\bigskip\noindent\textbf{The 2002 Southern Hemisphere SSW.} The possibility of
+an incresed likelihood of the 2002 SH SSW up to two months in advance was
+suggested in Chapter \ref{cha:seas}. It is unclear, however, what factors
+influence this predictability. It would therefore be interesting to carry out an
+investigation in which possible influences are systematically changed. For
+instance, the 2002 hindcasts could be re-run with an opposite phase of the QBO,
+different tropical Pacific or Southern Ocean SSTs, or different polar
+stratospheric initial conditions. The change in forecasts of the stratospheric
+polar vortex could then be analysed, indicating which factors are most
+important. It is likely that there would be some difficulty in imposing these
+different initial conditions consistently. Furthermore, such an investigation is
+likely to be quite computationally expensive as it is likely that many ensemble
+members will be needed in order for a sufficient number of SSWs to be
+simulated. 
+
+\bigskip\noindent\textbf{Influence of interactive chemistry on seasonal forecast
+  skill.} The seasonal forecast system analysed in Chapter \ref{cha:seas} did
+not include interactive chemistry, with ozone concentrations set to a
+climatology. It is therefore unable to capture the feedback between ozone
+concentrations and the stratospheric circulation, or zonal asymmetries in
+ozone. \citet{Waugh2009} have suggested that such asymmetries could have a
+significant impact on tropospheric climate. This motivates an investigation as
+to whether improved stratospheric or tropospheric forecasts may be achieved by
+including interactive chemistry in a seasonal forecast system. Such a chemistry
+scheme is likely to be expensive, so the investigation should determine which
+reactions have the most impact on forecast skill.  
+
+
 \bigskip\noindent\textbf{Decadal variability.} Looking by eye at the events
 detected in Chapter \ref{cha:moments}, it appears that they cluster in time. For
 instance, there are 10 events in the 1970s, but only 4 in the 1990s. Figure
@@ -165,23 +212,7 @@ generated.
     range of the randomly shuffled events.}\label{fig:decadal}
 \end{figure}
 
-\bigskip\noindent\textbf{Systematic variation of model resolution.} It was shown
-in Figure \ref{fig:aspect_vert_res} that among CMIP5 models their appears to be
-a relationship between the average aspect ratio of the stratospheric polar
-vortex and vertical resolution, particularly in the
-upper-troposphere/lower-stratosphere. Although this relationship is backed up by
-the physical understanding of the influence fine-scale vertical structure on
-planetary wave propagation in this region, it is not highly statistically
-significant. Furthermore, the relationship does not hold when models of the same
-family but different resolution are compared. These issues could be resolved by
-performing a series of model integrations in which only the vertical resolution
-is changed. The climatology of the stratospheric polar vortex would be studied
-for each integration, and it could be determined if this relationship holds. If
-it does, it could then be found at which point the vertical resolution is
-sufficient for a relatively realistic average vortex state, which would be
-valuable for modelling centres. Such a study need not be highly computationally
-expensive since it involves studying the mean state (rather than extremes such
-as SSWs), so relatively few years need to be simulated. 
+
 
 \bigskip\noindent\textbf{??Time scale of stratosphere-troposphere coupling.} In
 this thesis it has been demonstrated that split vortex events occur
@@ -211,32 +242,6 @@ stratosphere and troposphere.
 \end{figure}
 
 
-\bigskip\noindent\textbf{The 2002 Southern Hemisphere SSW.} The possibility of
-an incresed likelihood of the 2002 SH SSW up to two months in advance was
-suggested in Chapter \ref{cha:seas}. It is unclear, however, what factors
-influence this predictability. It would therefore be interesting to carry out an
-investigation in which possible influences are systematically changed. For
-instance, the 2002 hindcasts could be re-run with an opposite phase of the QBO,
-different tropical Pacific or Southern Ocean SSTs, or different polar
-stratospheric initial conditions. The change in forecasts of the stratospheric
-polar vortex could then be analysed, indicating which factors are most
-important. It is likely that there would be some difficulty in imposing these
-different initial conditions consistently. Furthermore, such an investigation is
-likely to be quite computationally expensive as it is likely that many ensemble
-members will be needed in order for a sufficient number of SSWs to be
-simulated. 
-
-\bigskip\noindent\textbf{Influence of interactive chemistry on seasonal forecast
-  skill.} The seasonal forecast system analysed in Chapter \ref{cha:seas} did
-not include interactive chemistry, with ozone concentrations set to a
-climatology. It is therefore unable to capture the feedback between ozone
-concentrations and the stratospheric circulation, or zonal asymmetries in
-ozone. \citet{Waugh2009} have suggested that such asymmetries could have a
-significant impact on tropospheric climate. This motivates an investigation as
-to whether improved stratospheric or tropospheric forecasts may be achieved by
-including interactive chemistry in a seasonal forecast system. Such a chemistry
-scheme is likely to be expensive, so the investigation should determine which
-reactions have the most impact on forecast skill.  
 
 
 
