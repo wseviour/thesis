@@ -101,7 +101,7 @@ be available for these models in the CMIP5 archive
 (\url{http://pcmdi3.llnl.gov/esgcet/home.htm}). These models are listed in Table
 \ref{tab:models}. It can be seen that 12 of the 13 models have an uppermost
 level which is in the upper mesosphere (70-80~km), but CanESM2 has a
-significantly lower lid which is very close to the stratopause.
+significantly lower lid which lies close to the stratopause.
 
 Historical simulations have been used throughout this analysis. These include
 observed climate forcings, such as from greenhouse gasses, ozone depletion,
@@ -112,12 +112,12 @@ simulations end at 2005). Limiting the model simulation analysis to the same
 period as reanalysis may be important becasue several studies have suggested
 that external forcing, such as volcanic eruptions and solar variability, has a
 significant impact on stratospheric variability
-\citep[e.g.,][]{Robock2000,Gray2010}. In order to achieve the
-largest possible ensemble size, all available ensemble members have been used
-for each model, which leads to different numbers of years entering the ensemble
-from different models. This does, however, necessitate that any results
-appearing in the ensemble mean should also be checked against the results from
-each individual model to ensure that it is not biased by a particular model.
+\citep[e.g.,][]{Robock2000,Gray2010}. In order to achieve the largest possible
+ensemble size, all available ensemble members have been used for each model,
+which leads to different numbers of years entering the ensemble from different
+models. This does, however, necessitate that any results appearing in the
+ensemble mean should also be checked for consistency among the models to ensure
+that it is not biased by a particular model.
 
 \begin{table}
 \small
@@ -195,12 +195,12 @@ well replicated by most of the models, although CanESM2 has a significantly
 different shape, with the high aspect ratio/equatorward centroid latitude being
 more common. 
 
-No clear consistent biases among models emerge from this analysis. CanESM2 has a
-modal centroid latitude which is about $5^{\circ}$ too far equatorward compared
-to ERA. Contrastingly, GFDL-CM3 has a modal centroid latitude about
-$2.5^{\circ}$ more poleward than observed. CMCC-CESM displays a clear bias in
-the aspect ratio, with a distribution much less skewed towards high values than
-in reanalysis.
+It can be seen from this analysis that there are a range of biases among
+models. CanESM2 has a modal centroid latitude which is about $5^{\circ}$ too far
+equatorward compared to ERA. Contrastingly, GFDL-CM3 has a modal centroid
+latitude about $2.5^{\circ}$ more poleward than observed. CMCC-CESM displays a
+clear bias in the aspect ratio, with a distribution much less skewed towards
+high values than in reanalysis.
 
 The winter seasonal cycle of aspect ratio and centroid a latitude in the CMIP5
 models is shown in Figure \ref{fig:cmip5_moments_stats_seas}. For the mean
@@ -257,16 +257,16 @@ second-lowest frequency in the present study). This similarity between
 \citet{Charlton-Perez2013} and the present study indicates that the close
 relationship between moment diagnostics-defined events and SSWs defined by
 zonal-mean zonal wind, as described in Chapter \ref{cha:moments}, also holds for
-climate models (although this is not explicitly studied here).
+climate models.
 
 As well as the large differences in the total frequency of displaced and split
 vortex events, it can be seen in Figure \ref{fig:cmip5_events_bar_stacked} that
 the ratio of frequencies of these events varies significantly between
 models. For instance CanESM2 and CMCC-CESM simulate almost entirely displaced
 vortex events, while IPSL-CM5B-LR and GFDL-CM3 simulate almost entirely split
-vortex events. In the multi-model mean (MMM) these biases largely cancel, to
-give a approximately equal ratio of displaced to split vortex events, which is
-in agreement with reanalysis.
+vortex events. In the multi-model mean (MMM) these biases largely cancel to give
+an approximately equal ratio of displaced to split vortex events, which is in
+agreement with reanalysis.
 
 The seasonal distribution of these displaced and split vortex events is
 illustrated in Figure \ref{fig:cmip5_events_seasonal}. Some models (CMCC-CMS,
@@ -295,8 +295,8 @@ latitude. Unlike the mean, this quantity is not affected by extreme values and
 it represents the most likely state of the vortex. The peak can be estimated by
 the maximum value of a histogram, however this introduces significant random
 errors and is sensitive to the selection of bin size. A more accurate estimation
-of the mode can be made by fitting the aspect ratio and centroid latitude with a
-theoretical distribution and then finding the peak of that
+of the mode can be made by fitting the aspect ratio and centroid latitude with
+an analytic distribution and then finding the peak of that
 distribution. Following \citet{Mitchell2011}, we fit the aspect ratio with a
 generalised extreme value (GEV) distribution of the form
 \begin{equation}
@@ -400,7 +400,7 @@ daily wave amplitides were fitted with a GEV distribution using
 maximum-likelihood estimation, and the peak of that distribution determined, as
 in the previous section. A GEV distribution was found to be a good fit for the
 distributions of each model. As previously, this method has the advantage of
-determining the `most-likely' wave amplitude, and unlike the mean it is not
+determining the most-likely wave amplitude, and unlike the mean it is not
 affected by large extreme values.
 
 \begin{figure}
@@ -432,8 +432,7 @@ have a lower value than ERA).
 
 Comparing Figures \ref{fig:cmip5_waves}(a) and
 \ref{fig:cmip5_moments_scatter}(a), it can be seen that the model with the
-lowest ratio of wave amplitudes (CMCC-CESM) also has the lowest aspect ratio,
-while the model with the highest ratio (IPSL-CM5B-LR) has the highest aspect
+lowest ratio of wave amplitudes (CMCC-CESM) also has the lowest aspect
 ratio. However, across all models the amplitudes of the individual wavenumbers
 are not significantly correlated with either the modal aspect ratio or the
 centroid latitude. This suggests that wave-1 activity does not exclusively
@@ -450,8 +449,8 @@ deviation from the pole (this makes the correlation positive, but does not
 affect its magnitude). The correlation between the ratio of wave amplitudes to
 moment diagnostics is 0.70, which is statistically significant at the 95\%
 level. Moreover, if the two outliers (CanESM2 and GFDL-CM3, which were shown to
-have an unrealistic polar vortex climatology [Figure
-\ref{fig:cmip5_moments_stats}]) are removed the correlation becomes much greater
+have an unrealistic polar vortex climatology (Figure
+\ref{fig:cmip5_moments_stats})) are removed the correlation becomes much greater
 ($r=0.95$). Hence, although there is no one-to-one mapping between individual
 wave amplitudes and moment diagnostics, the ratio of wave amplitudes strongly
 determines the relative climatology of the moment diagnostics.
@@ -476,8 +475,8 @@ representation of geopotential height which is below ground level; some allow
 negative values, while others set this as an undefined value. This introduces
 significant errors in the calculation of a climatology and anomalies at levels
 where the geopotential height is occasionally below ground level. Polar cap $Z$
-is highly correlated with the NAM (calculated from zonal mean $Z$ according to
-the method of \citet{Baldwin2009}) over the levels shown in Figure
+is highly correlated ($r>0.95$) with the NAM (calculated from zonal mean $Z$
+according to the method of \citet{Baldwin2009}) over the levels shown in Figure
 \ref{fig:cmip5_dripping_paint}. \citet{Kushner2010} also demonstrated composites
 of the NAM and polar cap $Z$ following SSWs to be very similar. Indeed,
 comparing Figures \ref{fig:cmip5_dripping_paint} (a) and (b) with Figure
@@ -615,9 +614,9 @@ particularly following split vortex events. The reason for this difference is
 that the model also shows relatively strong positive North Pacific anomalies,
 that to some extent cancel the North Atlantic anomalies in the polar cap
 average. Such an effect would also be seen in the NAM, even if calculated from
-non zonally-averaged $Z$, since the surface NAM pattern (the leading EOF of
-MSLP) has centres of action of the same sign in the North Atlantic and North
-Pacific \citep[e.g.,][]{Ambaum2001}.
+non zonally-averaged $Z$, since the surface NAM pattern has centres of action of
+the same sign in the North Atlantic and North Pacific
+\citep[e.g.,][]{Ambaum2001}.
 
 A robust difference found between MSLP anomalies following split and displaced
 vortex events in almost all models and the multi-model mean is that anomalies
