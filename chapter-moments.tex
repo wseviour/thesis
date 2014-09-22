@@ -110,9 +110,9 @@ resulted in significant surface anomalies, while anomalies associated with
 displaced vortex events do not descend far below the tropopause. This is in
 agreement with \citet{Nakagawa2006} who found tropospheric anomalies to be
 larger following SSWs with dominant wave 2 amplitude, however, it contrasts with
-\citet{Charlton2007}, who found little difference in the tropospheric impact of
-split and displaced vortex events. This highlights the potential importance of
-the method of classification of split and displaced vortex events in any study.
+CP07, who found little difference in the tropospheric impact of split and
+displaced vortex events. This highlights the potential importance of the method
+of classification of split and displaced vortex events in any study.
 
 In this chapter we wish to develop a method for the classification of split and
 displaced vortex events with the following properties:
@@ -606,7 +606,9 @@ algorithms are given below:
  data set are required. A disadvantage is that it requires multiple nearest
  neighbour searches during each iteration, and so may not be scalable to large
  data sets. In Figure \ref{fig:clusters}(b) the number of clusters was
- determined to be four. 
+ determined to be four (because the fourth cluster is very small it is not
+ easily visible in Figure \ref{fig:clusters}(b), but represents points with high
+ aspect ratio).
 
 \item \textbf{Hierarchical} clustering proceeds by calculating a series of
   nested clusters. To begin with, all data points are considered each as a
@@ -1176,12 +1178,11 @@ simulations in the next chapter.
 \label{sec:comp-zonal-wave}
 
 Many studies have characterised startospheric polar variability by its zonal
-wave structure
-\citep[e.g,][]{Randel1988,Yoden1999,Nakagawa2006,K.Coughlin2009}. It is
-therefore instructive to compare this wave analysis with the moment diagnostics
-developed in this chapter. Here this is carried out for the displaced and split
-vortex events shown in Figures \ref{fig:displaced_ellipse} and
-\ref{fig:split_ellipse} respectively. A similar comparison was shown by
+wave structure \citep[e.g,][]{Randel1988,Yoden1999,Nakagawa2006,Bancala2012}. It
+is therefore instructive to compare this wave analysis with the moment
+diagnostics developed in this chapter. Here this is carried out for the
+displaced and split vortex events shown in Figures \ref{fig:displaced_ellipse}
+and \ref{fig:split_ellipse} respectively. A similar comparison was shown by
 \citet{Waugh1997} and \citet{Waugh1999}, and the results here are consistent
 with their findings.
 
@@ -1206,20 +1207,27 @@ before the centroid latitude, and is actually anomalously small at the peak of
 centroid latitude. Before and after the event, the wave-1 amplitude and centroid
 latitude are highly correlated.
 
-The physical reasons for these differences of wave and moment diagnostics are
-investigated in Figure \ref{fig:wave_moments_vortex}. This compares the vortex
-structure at the peak wave amplitude and peak aspect ratio/centroid latitude for
-the two events. For the 1979 split vortex event, the vortex appears split at
-both times but there is a greater separation between the vortices at the time
-of maximum aspect ratio. The wave-2 amplitude is greatest at the earlier time,
-however, because the vortices (particularly the eastern vortex) are
-stronger. Similarly for the 2006 event, at the time of maximum wave-1 amplitude
-the vortex is not displaced far from its average position but its strength
-means that the wave-1 amplitude is greater than the much more displaced vortex
-found later. Generally, the sensitivity of wave amplitudes to vortex strength
-means that wave amplitdes may actually decline during periods of intense wave
-breaking due to the weakening of the vortex, even if that vortex is
-significantly distorted. 
+A result of these differences is that not all split vortex events are defined as
+``wave-2 warmings'' and not all displaced vortex events as ``wave-1
+warmings''. For example, the split vortex events with onset dates 1973-2-7,
+1987-12-10, and 1999-2-24 are classified as wave-1 warmings by
+\citet{Bancala2012}. However, the structure of the vortex appears clearly split
+in these three examples (see Figures \ref{fig:gph_all_events_splits} (g), (l)
+and (m)), highlighting the differences in these classifications. 
+
+The physical reasons for these differences are investigated in Figure
+\ref{fig:wave_moments_vortex}. This compares the vortex structure at the peak
+wave amplitude and peak aspect ratio/centroid latitude for the two events. For
+the 1979 split vortex event, the vortex appears split at both times but there is
+a greater separation between the vortices at the time of maximum aspect
+ratio. The wave-2 amplitude is greatest at the earlier time, however, because
+the vortices (particularly the eastern vortex) are stronger. Similarly for the
+2006 event, at the time of maximum wave-1 amplitude the vortex is not displaced
+far from its average position but its strength means that the wave-1 amplitude
+is greater than the much more displaced vortex found later. Generally, the
+sensitivity of wave amplitudes to vortex strength means that wave amplitdes may
+actually decline during periods of intense wave breaking due to the weakening of
+the vortex, even if that vortex is significantly distorted.
 
 Overall, these results show that as the vortex departs from zonal symmetry
 linear wave theory breaks down and changes in the wave-1 and wave-2 amplitudes
