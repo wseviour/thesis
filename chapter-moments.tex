@@ -117,10 +117,10 @@ of classification of split and displaced vortex events in any study.
 In this chapter we wish to develop a method for the classification of split and
 displaced vortex events with the following properties:
 \begin{enumerate}
-\item Based on vortex moment diagnostics.
-\item Can be easily applied to a range of data sets, including climate model
+\item It is based on vortex moment diagnostics.
+\item It can be easily applied to a range of data sets, including climate model
   simulations.
-\item Computationally inexpensive. 
+\item It is computationally inexpensive. 
 \end{enumerate}
 The motivation for the use of moment diagnostics includes their advantages in
 quantifying the shape and location of the vortex, as noted above. This, in turn,
@@ -367,13 +367,16 @@ the PV field into two regions along the minor axis of the equivalent ellipse and
 re-calculated moment diagnostics for the vortices in these regions separately. 
 
 In this study we do not make use of the excess kurtosis or calculate separate
-diagnostics for split vortices for two reasons. First, as a 4th order diagnostic
-it is a highly skewed variable, making its use in event classification
-problematic (this was also found by \citet{Hannachi2010}). Second, this
-procedure is more computationally expensive, requiring about three times the
-number of calculations during split vortex events. Hence, we calculate single
-moment diagnostics even when the vortex has split, but bear in mind that these
-may not represent the properties of any real vortex. 
+diagnostics for split vortices for three reasons. First, as a 4th order
+diagnostic it is a highly skewed variable, making its use in event
+classification problematic (this was also found by
+\citet{Hannachi2010}). Second, this procedure is more computationally expensive,
+requiring about three times the number of calculations during split vortex
+events. Third, kurtosis is highly sensitive to horizontal resolution
+\citep{Mitchell2011}, and so may not be a suitable diagnostic in the comparison
+of climate models with different resolutions. Hence, we calculate single moment
+diagnostics even when the vortex has split, but bear in mind that these may not
+represent the properties of any real vortex.
 
 Code for the calculation of moment diagnostics using the method described in
 this section is available from
@@ -404,15 +407,15 @@ number of years entering the analysis (ERA-40 runs only to 2002), as well as to
 compare results from the more recent ERA-Interim with previous studies using
 only ERA-40, such as \citet{Charlton2007} and \citet{Mitchell2013}.
 
-ERA-Interim is similar to ERA-40 but uses ECMWF's operational four-dimensional
-variational data assimilation system (4D-Var) as opposed to the 3D-Var system
-used in ERA-40. It also has higher horizontal and vertical resolution, improved
-humidity analysis, model physics, data quality control, bias handling and other
-improvements as noted in \citet{Simmons2007}. The majority of observational data
-for the stratosphere entering both reanalyses is from radiosonde and satellite
+ERA-Interim is similar to ERA-40 but uses a four-dimensional variational data
+assimilation system (4D-Var) as opposed to the 3D-Var system used in ERA-40. It
+also has higher horizontal and vertical resolution, improved humidity analysis,
+model physics, data quality control, bias handling and other improvements as
+noted in \citet{Simmons2007}. The majority of observational data for the
+stratosphere entering both reanalyses are from radiosonde and satellite
 measurements. It is important to note that in the pre-satellite era (1958-1971)
 observations in the stratosphere were much more sparse, leading to greater
-errors in reanalyses during this time \citep{Uppala2005}. 
+errors in reanalyses during this time \citep{Uppala2005}.
 
 A number of studies have evaluated the stratospheric circulation in ERA-40 and
 ERA-Interim against other observations or reanalyses. \citet{Randel2004} found
@@ -431,12 +434,11 @@ data is linearly interpolated to the lower resolution ERA-40
 ($1.125^{\circ} \times 1.125^{\circ}$) Gaussian grid. PV is also interpolated
 from pressure levels to the 850~K isentropic surface (which lies close to
 10~hPa), as this quantity has the property of being conserved under adiabatic
-flow. In the calculation of the vortex edge. Both in the calculation of the
-vortex edge (climatological mean $q$ or $Z$ at $60^{\circ}$N/S) and the moment
-diagnostics themselves, no clear jumps were seen between ERA-40 and ERA-Interim
-data sets. As such, the two are considered together with no bias
-corrections. For the remainder of this thesis, this combined ERA-40 and
-ERA-Interim data set is referred to as `ERA'. 
+flow. Both in the calculation of the vortex edge (climatological mean $q$ or $Z$
+at $60^{\circ}$N/S) and the moment diagnostics themselves, no clear jumps were
+seen between ERA-40 and ERA-Interim data sets. As such, the two are considered
+together with no bias corrections. For the remainder of this thesis, this
+combined ERA-40 and ERA-Interim data set is referred to as `ERA'.
 
 
 \subsection{Moment diagnostic calculation}
@@ -541,7 +543,7 @@ in a particular cluster for a number of days.
  \noindent\includegraphics[width=0.7\textwidth]{figures/chapter-moments/clustering.pdf}
  \caption[Clustering algorithms applied to the moment diagnostics.]{Three
    clustering algorithms and a threshold division applied to the moment
-   diagnostics in centroid latitude-aspect ratio space. For the $k$-means and
+   diagnostics in centroid latitude-aspect ratio space. For the $K$-means and
    hierarchical algorithms three clusters were specified. The mean-shift
    algorithm determined the number of clusters to be 4.}
  \label{fig:clusters}
@@ -576,10 +578,11 @@ algorithms are given below:
   clusters, which generally have the aim of finding the best compromise between
   minimising within-cluster variance and maximising between-cluster
   variance. \citet{K.Coughlin2009} applied $K$-means clustering to several
-  variables representing the stratospheric polar vortex. They used a method
-  known as silhouette values \citep{Rousseeuw1987} and determined the ideal
-  number of clusters to be two (representing stable and disturbed vortex
-  states).
+  variables representing the stratospheric polar vortex. They used the method of
+  \emph{silhouette values} \citep{Rousseeuw1987} to determine the ideal number
+  of clusters to be two (representing stable and disturbed vortex
+  states). However, three clusters has been imposed in Figure \ref{fig:clusters}
+  in order to attempt to indentify stable, split, and displaced states.
 
 
 \item \textbf{Mean-shift} clustering aims to discover `blobs' in a data set. It
@@ -615,15 +618,15 @@ algorithms are given below:
   separate cluster and then at each iteration the nearest two clusters are
   merged. There are a number of methods to identify the distance between
   clusters when those clusters consist of more than one member. Following
-  \citet{Hannachi2010} the \emph{complete-linkage} method; defining the distance
-  as the largest distance between members in the two groups. As with the
-  $K$-means clustering, the number of clusters desired must be pre-determined,
-  otherwise the algorithm will run to completion with a single cluster
-  consisting of all data points. Again, many methods exist to determine the
-  optimum number of clusters. \citet{Hannachi2010} used the gap statistic method
-  \citep{Tibshirani2001} with vortex area, centroid latitude, and aspect ratio
-  moment diagnostics, and found a slight preference for three clusters. As such,
-  three clusters are used in Figure \ref{fig:clusters}(c).
+  \citet{Hannachi2010} the \emph{complete-linkage} method is used here, defining
+  the distance as the largest distance between members in the two groups. As
+  with the $K$-means clustering, the number of clusters desired must be
+  pre-determined, otherwise the algorithm will run to completion with a single
+  cluster consisting of all data points. Again, many methods exist to determine
+  the optimum number of clusters. \citet{Hannachi2010} used the gap statistic
+  method \citep{Tibshirani2001} with vortex area, centroid latitude, and aspect
+  ratio moment diagnostics, and found a slight preference for three clusters. As
+  such, three clusters are used in Figure \ref{fig:clusters}(c).
 
 \end{enumerate}
 
@@ -655,17 +658,93 @@ not sensitive to the exact choice of threshold. They were chosen to give a
 similar frequency of split and displaced vortex events (identified using the
 method below) as CP07 and M13. 
 
-\citet{Mitchell2011} found that the aspect ratio and centroid latitude follow an
-extreme value distribution \citep{Cole} and it is noted that both thresholds
-chosen here lie beyond the extreme value thresholds of their respective
-distributions (these were found to be 2.3 for aspect ratio and $72^{\circ}$N for
-centroid latitude). Some theoretical motivation for the aspect ratio threshold
-can also be provided by the theoretical stability of an idealised elliptical
-vortex. \citet{Love1893} found that the Kirchoff ellipse (an elliptical patch of
-uniform vorticity in a quiescent fluid) is linearly unstable if the aspect ratio
-exceeds 3. The aspect ratio threshold of 2.4 used here lies below this limit,
-and so under this idealised model it might expect that some split vortex events
-do not display a full separation into two vortices.
+\citet{Mitchell2011} found that above certain thresholds the aspect ratio and
+centroid latitude follow a generalised Pareto distribution, which is used to
+model extreme values \citep{Cole}. Both thresholds chosen here lie beyond these
+extreme value thresholds of their respective distributions (these were found to
+be 2.3 for aspect ratio and $72^{\circ}$N for centroid latitude). Some
+theoretical motivation for the aspect ratio threshold can also be provided by
+the theoretical stability of an idealised elliptical vortex. \citet{Love1893}
+found that the Kirchoff ellipse (an elliptical patch of uniform vorticity in a
+quiescent fluid) is linearly unstable if the aspect ratio exceeds 3. The aspect
+ratio threshold of 2.4 used here lies below this limit, and so under this
+idealised model it might expect that some split vortex events do not display a
+full separation into two vortices.
+
+Having classified each day into these four groups (split, displaced, mixed, and
+stable), a persistence criterion is introduced in order to identify split and
+displaced vortex \emph{events}. A displaced vortex event requires the centroid
+latitude to remain equatorward of 66$^{\circ}$N for 7 days or more, while a
+split vortex event requires the aspect ratio to remain higher than 2.4 for 7
+days or more. A mixed event is identified if both thresholds are exceeded for 7
+days or more. The onset date is defined as the day that the appropriate
+threshold is first exceeded, and to ensure that no events are counted twice,
+these onset dates are required to be spaced at least 30 days apart, chosen to
+reflect radiative timescales in the lower stratosphere \citep{Newman1997}. Using
+this method with geopotential height data, 17 displaced and 18 split vortex
+events (listed in Table 3.1) are identified over the 52 winters, an average of 7
+per decade (no mixed events were identified). This frequency lies between the
+values of CP07 (6 per decade) and M13 (8 per decade). Although data is
+restricted to DJFM in this analysis, no measures are taken to exclude early
+final warmings which may occur in late March. This is motivated by the fact that
+these are highly dynamically driven events which may have significant impacts on
+the troposphere \citep{Hardiman2011}. The events defined here may therefore
+include some which would traditionally be classed as final warmings (i.e. the
+zonal-mean zonal wind does not return to westerly after the event). For this
+reason, these events are not referred to as SSWs, but simply as split and
+displaced vortex events.
+
+\begin{figure}[htbp]
+ \centering
+ \noindent\includegraphics[width=0.8\textwidth]{figures/chapter-moments/GPH_all_events_splits.pdf}
+ \caption[Geopotential height at the peak of split vortex events.]{10~hPa
+   geopotential height at the peak of each of the 18 split vortex events
+   identified in ERA. The peak is defined as the day with the largest aspect
+   ratio during the two weeks following the onset date. The vortex edge is shown
+   as a thin black contour, the equivalent ellipse the thick black contour and
+   its centroid as a white cross. Data are transformed to cartesian coordinates
+   with a polar stereographic projection.}
+ \label{fig:gph_all_events_splits}
+\end{figure}
+
+\begin{figure}[htbp]
+ \centering
+ \noindent\includegraphics[width=0.8\textwidth]{figures/chapter-moments/GPH_all_events_displs.pdf}
+ \caption[Geopotential height at the peak of displaced vortex events.]{As Figure
+   \ref{fig:gph_all_events_splits} but for the 17 displaced vortex events
+   identified in ERA.}
+ \label{fig:gph_all_events_displs}
+\end{figure}
+
+Figures \ref{fig:gph_all_events_splits} and \ref{fig:gph_all_events_displs} show
+geopotential height at the peak of each of the split and displaced vortex
+events. The peak is defined as the day with the maximum aspect ratio or minimum
+centroid latitude in the two weeks following the onset date of split and
+displaced vortex events respectively. Almost all of the split vortex events show
+two clearly separated vortices or a pinched vortex shape, which is approximately
+symmetrical about the North Pole. Two exceptions are Figures
+\ref{fig:gph_all_events_splits}(a) and (k), in which the vortex is highly
+elliptical but not clearly split. Figure \ref{fig:gph_all_events_splits}(n)
+shows an event with a highly elliptical vortex that is also somewhat displaced
+from the pole, indicating that it has some displaced nature. The majority of
+split vortex events are seen to occur along the $90^{\circ}$E-$90^{\circ}$W
+axis, in line with the climatological wave-2 pattern \citep{Andrews1987}. Figure
+\ref{fig:gph_all_events_splits}(h) shows an exception to this, with an
+orientation orthogonal to the majority of events.
+
+The displacement events mostly show a smaller and weaker vortex, owing to the
+fact that they are more common later in winter (see Figure
+\ref{fig:z_m13_cp07_histogram}). Some events, particularly those occurring in
+late March, are also likely to be events which would traditionally be defined as
+final warmings. It can be seem that the majority of displacement events occur in
+the direction of the 0-90$^{\circ}$E quadrant, again in line with the
+climatological wave-1 pattern. However, there are some exceptions to this, for
+instance Figures \ref{fig:gph_all_events_displs} (c) and (i), which  show a
+westward-displaced vortex. 
+
+
+
+\subsection{Comparison with CP07 and M13}
 
 \begin{table}
   \begin{centering}
@@ -721,82 +800,10 @@ do not display a full separation into two vortices.
   \label{tab:events}
 \end{table}
 
-Having classified each day into these four groups, a persistence criterion is
-introduced in order to identify split and displaced vortex \emph{events}. A
-displaced vortex event requires the centroid latitude to remain equatorward of
-66$^{\circ}$N for 7 days or more, while a split vortex event requires the aspect
-ratio to remain higher than 2.4 for 7 days or more. The onset date is defined as
-the day that the appropriate threshold is first exceeded, and to ensure that no
-events are counted twice, these onset dates are required to be spaced at least
-30 days apart, chosen to reflect radiative timescales in the lower stratosphere
-\citep{Newman1997}. Using this method, 17 displaced and 18 split vortex events
-(listed in Table \ref{tab:events}) are identified over the 52 winters, an
-average of 7 per decade. This frequency lies between the values of CP07 (6 per
-decade) and M13 (8per decade). Although data is restricted to DJFM in this
-analysis, no measures are taken to exclude early final warmings which may occur
-in late March. This is motivated by the fact that these are highly dynamically
-driven events which may have significant impacts on the troposphere
-\citep{Hardiman2011}. The events defined here may therefore include some which
-would traditionally be classed as final warmings (i.e. the zonal-mean zonal wind
-does not return to westerly). For this reason, there events are not referred to
-as SSWs, but simply as split and displaced vortex events.
-
-\begin{figure}[htbp]
- \centering
- \noindent\includegraphics[width=0.8\textwidth]{figures/chapter-moments/GPH_all_events_splits.pdf}
- \caption[Geopotential height at the peak of split vortex events.]{10~hPa
-   geopotential height at the peak of each of the 18 split vortex events
-   identified in ERA. The peak is defined as the day with the largest aspect
-   ratio during the two weeks following the onset date. The vortex edge is shown
-   as a thin black contour, the equivalent ellipse the thick black contour and
-   its centroid as a white cross. Data are transformed to cartesian coordinates
-   with a polar stereographic projection.}
- \label{fig:gph_all_events_splits}
-\end{figure}
-
-\begin{figure}[htbp]
- \centering
- \noindent\includegraphics[width=0.8\textwidth]{figures/chapter-moments/GPH_all_events_displs.pdf}
- \caption[Geopotential height at the peak of displaced vortex events.]{As Figure
-   \ref{fig:gph_all_events_splits} but for the 17 displaced vortex events
-   identified in ERA.}
- \label{fig:gph_all_events_displs}
-\end{figure}
-
-Figures \ref{fig:gph_all_events_splits} and \ref{fig:gph_all_events_displs} show
-geopotential height at the peak of each of the split and displaced vortex
-events. The peak is defined as the day with the maximum aspect ratio or minimum
-centroid latitude in the two weeks following the onset date of split and
-displaced vortex events respectively. Almost all of the split vortex events show
-two clearly separated vortices or a pinched vortex shape, which is approximately
-symmetrical about the North Pole. Two exceptions are Figures
-\ref{fig:gph_all_events_splits}(a) and (k), in which the vortex is highly
-elliptical but not clearly split. Figure \ref{fig:gph_all_events_splits}(n)
-shows an event with a highly elliptical vortex that is also somewhat displaced
-from the pole, indicating that it has some displaced nature. The majority of
-split vortex events are seen to occur along the $90^{\circ}$E-$90^{\circ}$W
-axis, in line with the climatological wave-2 pattern \citep{Andrews1987}. Figure
-\ref{fig:gph_all_events_splits}(h) shows an exception to this, with an
-orientation orthogonal to the majority of events.
-
-The displacement events mostly show a smaller and weaker vortex, owing to the
-fact that they are more common later in winter (see Figure
-\ref{fig:z_m13_cp07_histogram}). Some events, particularly those occurring in
-late March, are also likely to be events which would traditionally be defined as
-final warmings. It can be seem that the majority of displacement events occur in
-the direction of the 0-90$^{\circ}$E quadrant, again in line with the
-climatological wave-1 pattern. However, there are some exceptions to this, for
-instance Figures \ref{fig:gph_all_events_displs} (c) and (i), which  show a
-westward-displaced vortex. 
-
-
-
-\subsection{Comparison with CP07 and M13}
-
 The split and displaced vortex events identified using the above method are now
 compared with those of the CP07 and M13 methods. Table 3.1 identifies those
 events which do not coincide with the events of CP07 and M13, where `coincide'
-is taken to mean events within 10 days and of the same type. Of the 35 events
+indicates events within 10 days and of the same type. Of the 35 events
 identified, 16 were found not to coincide with events of CP07 (10 displacement
 and 6 split). Six events were found not to coincide with those of M13 (3
 displacement and 3 split), although this comparison only covers the 28 events
@@ -821,9 +828,10 @@ attributed the negative values to the presence of a strong, cold vortex prior to
 the event. Zonal-mean zonal wind at $60^{\circ}$N and 10~hPa
 ($\overline{U}_{10}$), averaged over the same period is also shown in Table
 3.1. The majority of events show negative values, in line with the traditional
-wind reversal criterion, although some show positive values. This again may
-result from a strong vortex prior to these events, as well as the fact that the
-current method may detect events with a distorted but strong vortex.
+wind reversal criterion, although some show positive values. Again this results
+from a strong vortex prior to these events, as well as the fact that the new
+method detects some events with a distorted but strong vortex (seen in Figures
+\ref{fig:gph_all_events_splits} and \ref{fig:gph_all_events_displs}).
 
 % Mean values 
 % -----------
@@ -853,7 +861,8 @@ the seasonal distribution of displaced vortex events \citep{Mitchell2011}.
   \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/splits_displacements_histogram.pdf}
   \caption[Seasonal distribution of displaced and split vortex
   events.]{Histogram of the seasonal distribution of displaced and split vortex
-    events, form the current ($Z_{10}$) method, M13 and CP07.}
+    events, from the new geopotential height-based method ($Z_{10}$), M13 and
+    CP07.}
   \label{fig:z_m13_cp07_histogram}
 \end{figure}
 
@@ -861,7 +870,7 @@ Figure \ref{fig:pv_composites_m13_cp07} compares the average shape of the
 stratospheric polar vortex following the split and displaced vortex events
 identified by the three methods. Composites of PV in the mid-stratosphere
 (850~K) are shown averaged 5 days following each event. For the split vortex
-events, the current method ($Z_{10}$) method clearly shows two separated
+events, the new method ($Z_{10}$) method clearly shows two separated
 vortices, one centred over Canada and the other over Siberia. For the M13 events
 the split vortex composite shows the vortex stretched across the same
 $90^{\circ}$W-$90^{\circ}$E line, although not as clearly split, while the
@@ -879,12 +888,12 @@ misdiagnosed split vortex events.
    potential vorticity at the 850~K isentropic surface from the ERA reanalysis
    over 1958-2009. Composites are taken over the 5 days following the onset date
    of split vortex events (a,b,c) and displaced vortex events (d,e,f). The
-   current ($Z_{10}$) method (a,b) is compared with that of M13 (b,e) and CP07
+   new ($Z_{10}$) method (a,b) is compared with that of M13 (b,e) and CP07
    (c,f).}
  \label{fig:pv_composites_m13_cp07}
 \end{figure}
 
-Overall, Figure \ref{fig:pv_composites_m13_cp07} demonstrates that the current
+Overall, Figure \ref{fig:pv_composites_m13_cp07} demonstrates that the new
 method succeeds (in a composite sense) in identifying displaced and split vortex
 events at least as well as the methods of M13 or CP07. When comparing the three
 methods, CP07 is the clear outlier. This is most likely because the CP07
@@ -921,21 +930,21 @@ geopotential height anomalies poleward of $20^{\circ}$N. The anomalies are
 calculated by subtracting the seasonal cycle which has been smoothed with a
 90-day low-pass filter. The daily NAM anomalies are then determined by
 projecting daily geopotential anomalies onto the leading EOF patterns. Finally,
-the NAM is normalised at each level so that the entire time series has unit
-variance.
+the NAM is normalised so that the time series at each level has unit variance.
 
 In agreement with M13, it can be seen that the tropospheric NAM is more negative
 during the 60 days following split vortex events than displaced vortex
 events. Also similar to M13 is the fact the vertical evolution for the two
-events greatly differs, with split vortex events occurring almost instantaneously
-throughout the depth of the atmosphere and displaced vortex taking almost two
-weeks to propagate through the stratosphere. The near-barotropic nature of split
-vortex events suggests that resonant excitation of the barotropic normal mode
-\citep{Esler2005} is an important influence in this case. 
+events greatly differs, with split vortex events occurring almost
+instantaneously throughout the depth of the atmosphere and displaced vortex
+taking almost two weeks to propagate through the stratosphere. The
+near-barotropic nature of split vortex events suggests that resonant excitation
+of the barotropic normal mode \citep{Esler2005} may be an important influence in
+this case.
 % Furthermore, the rapid onset of split vortex events is ... (Love 1893).
 
 The difference in the NAM composites (split minus displaced) is shown in Figure
-\ref{fig:dripping_paint}(c). Statistical significance in this difference is
+\ref{fig:dripping_paint}(c). Statistical significance of this difference is
 calculated with the null hypothesis that there is no difference between the NAM
 response to split and displaced vortex events, and assessed using a two tailed
 bootstrap test with the following procedure:
@@ -949,42 +958,42 @@ bootstrap test with the following procedure:
   $<2.5\%$ or $>97.5\%$ within this distribution, then it can be said to be 95\%
   significant.
 \end{enumerate}
-Some significant differences are seem between the split and displaced vortex
-composites. For instance, a more negative stratospheric NAM is seen to precede
+Some significant differences are seen between the split and displaced vortex
+composites. For instance, a more positive stratospheric NAM is seen to precede
 displaced vortex events, while the dipole in the upper stratospheric and
 tropospheric NAM near lag 0 represents the difference in baroclinicity of the
 two types of event. Some regions of significant differences are seen in the
-tropospheric NAM from 0-60 days, but there are also some regions that are not
-significant. Care must be taken when interpreting the importance of small
-significant regions these may arise by chance, even if no physical relationship
-exists. 
+tropospheric NAM 0-60 days after the event, but there are also some regions that
+are not significant. Care must be taken when interpreting the importance of
+small significant regions these may arise by chance, even if no physical
+relationship exists.
 
 \begin{figure}
  \centering
  \noindent\includegraphics[width=0.7\textwidth]{figures/chapter-moments/nam_difference_sig.pdf}
  \caption[Significance of surface NAM difference following split and displaced
- vortex events.]{Distribution of 0-30 day mean NAM composite differences between
-   split and displaced vortex events, formed by randomly shuffling the labels
-   `split' and `displacement' between events. The 95\% significant region
+ vortex events.]{Distribution of 0-30 day mean surface NAM composite differences
+   between split and displaced vortex events, formed by randomly shuffling the
+   labels `split' and `displacement' between events. The 95\% significant region
    (according to a two-tailed test; i.e. $<2.5$\% and $>97.5$\%) is shaded and
    the true composite difference is at the 94th percentile.}
  \label{fig:nam_comp_diff}
 \end{figure}
 
 The difference in the tropospheric anomalies following split and displaced
-vortex events is tested more robustly by examining surface anomalies averaged
-over the 30 days following onset. This difference is again tested using the
-bootstrap procedure outlined above. The distribution of randomly calculated
-composite differences along with the true composite difference is shown in
-Figure \ref{fig:nam_comp_diff}. It can be seen that the true NAM difference does
-not lie in the 95\% significant region, so the null hypothesis that there is no
-difference between anomalies following split and displaced vortex events cannot
-be rejected. It should be noted that the statistical test here is different to
-that carried out by M13. They tested whether the surface NAM following split and
-displaced vortex events were different from randomly selected winter dates,
-finding that anomalies following splits are, but those following displacements
-are not. They did not, however, test the \emph{difference} between split and
-displaced vortex events. 
+vortex events can be tested more robustly by examining surface anomalies
+averaged over the 30 days following onset. This difference is again tested using
+the bootstrap procedure outlined above. The distribution of randomly calculated
+surface NAM composite differences, and the actual surface NAM composite
+difference are shown in Figure \ref{fig:nam_comp_diff}. It can be seen that the
+true NAM difference does not lie in the 95\% significant region, so the null
+hypothesis that there is no difference between surface NAM anomalies following
+split and displaced vortex events cannot be rejected. It should be noted that
+the statistical test here is different to that carried out by M13. They tested
+whether the surface NAM following split and displaced vortex events were
+different from randomly selected winter dates, finding that anomalies following
+splits are, but those following displacements are not. They did not, however,
+test the \emph{difference} between split and displaced vortex events.
 
 \begin{figure}
  \centering
@@ -992,7 +1001,7 @@ displaced vortex events.
  \caption[Mean sea-level pressure composites for split and displaced vortex
  events.]{Composites of mean sea-level pressure anomalies in the 30 days before
    (a,b) and 30 days after (c,d) the onset dates of displaced (a,c) and split
-   (b,d) vortex events from the $Z_{10}$ method. Data is from the ECMWF
+   (b,d) vortex events from the $Z_{10}$ method. Data are from the ECMWF
    renalyses (1958-2009). Anomalies are calculated for each day and gridpoint
    from the climatology for that day of the year and gridpoint. Grey contours
    indicate regions of greater than 95\% statistical significance according to a
@@ -1000,15 +1009,15 @@ displaced vortex events.
  \label{fig:mslp_composites}
 \end{figure}
 
-The NAM does not provide the full description of surface variability, and so in
-Figure \ref{fig:mslp_composites} composites of MSLP 30 days before and 30 days
-following the onset dates of displaced and split vortex events are
+The surface NAM does not provide the full description of surface variability,
+and so in Figure \ref{fig:mslp_composites} composites of MSLP 30 days before and
+30 days following the onset dates of displaced and split vortex events are
 presented. Statistical significance is calculated against the null hypothesis
 that anomalies before and after split and displaced vortex events are
 indistinguishable from other winter dates. This is again estimated from a
 two-tailed bootstrap test, in which $10~000$ composites of equal size are formed
 from randomly selected winter dates, and the percentile of the true composite
-calculated from this distribution. 
+calculated from this distribution.
 
 The strongest precursor is found for displaced vortex events, with a wave-1
 pattern that is similar to the climatological stationary wave pattern
@@ -1016,10 +1025,18 @@ pattern that is similar to the climatological stationary wave pattern
 stratosphere. However, the strongest anomalies following events occur after
 split vortex events, with a pattern resembling the negative phase of the NAM,
 though with a southern centre of action shifted towards Europe. A further
-difference between the split and displaced vortex composites is that their is a
+difference between the split and displaced vortex composites is that there is a
 more negative MSLP anomaly over Scandinavia and Siberia following displaced
 vortex event. Overall, the main features of Figure \ref{fig:mslp_composites}
 compare very well with the corresponding diagnostics from M13.
+
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/PV_430K.pdf}
+ \caption[]{}
+ \label{fig:430K_PV}
+\end{figure}
+ 
 
 \begin{figure}
  \centering
@@ -1027,10 +1044,10 @@ compare very well with the corresponding diagnostics from M13.
  \caption[Tropopause height composites for split and displaced vortex
  events.]{Composites of tropopause height anomalies averaged 10 days before
    (a,b), 10 days after (c,d) and 10-20 days after displaced and split vortex
-   events. Anomalies are calculated for each day and gridpoint from the
-   climatology for that day of the year and gridpoint. Stippling indicates
-   regions of greater than 95\% statistical significance according to a
-   Monte-Carlo significance test. Grey contours indicate the first EOF of NH
+   events (filled contours). Anomalies are calculated for each day and gridpoint
+   from the climatology for that day of the year and gridpoint. Stippling
+   indicates regions of greater than 95\% statistical significance according to
+   a Monte-Carlo significance test. Grey contours indicate the first EOF of NH
    mean sea-level pressure, which explains 33\% of the variance (dashes
    represent negative values).}
  \label{fig:tropopause_height}
@@ -1040,21 +1057,21 @@ The mechanism of the stratosphere's influence on the troposphere proposed by
 \citet{Ambaum2002} states that changes in the PV near the tropopause affect the
 tropopause height and induce tropospheric anomalies below (more details are
 given in Section \ref{sec:mechanisms}). In order to investigate this mechanism,
-composites of tropopause height over the 10 days before, 10 days after, and
-10-20 days after split and displaced vortex events are shown in Figure
-\ref{fig:tropopause_height}. The measure of tropopause height used is that of
-\citet{Wilcox2012a}, who construct a blended thermal and dynamical
-tropopause. Significance is again calculated using a two-tailed bootstrap test. 
+composites of tropopause height averaged over the 10 days before, 0-10 days
+after, and 10-20 days after split and displaced vortex events are shown in
+Figure \ref{fig:tropopause_height}. The measure of tropopause height used is
+that of \citet{Wilcox2012a}, who construct a blended thermal and dynamical
+tropopause. Significance is again calculated using a two-tailed bootstrap test.
 
 In line with the MSLP anomalies shown in Figure \ref{fig:mslp_composites},
 tropopause height anomalies are seen to be larger prior to displaced vortex
-events, with a wave-1-like structure. Following events, tropopause height
-anomalies are seen to approximately mirror stratospheric PV anomalies (Figure
-\ref{fig:pv_composites_m13_cp07}). That is, following displaced vortex events an
-elevated tropopause is seen over Europe and Scandinavia, with a lowered
-tropopause over Canada, and following split vortex events two regions of
-elevated tropopause are present over Canada and Siberia with a depression
-between. 
+events, with a wave-1-like structure. Following the events, tropopause height
+anomalies are seen to approximately mirror the stratospheric PV anomalies
+(Figure \ref{fig:pv_composites_m13_cp07}). That is, following displaced vortex
+events an elevated tropopause is seen over Europe and Scandinavia, with a
+lowered tropopause over Canada, and following split vortex events two regions of
+elevated tropopause are present over Canada and Siberia with a depression in
+between.
 
 It is possible to quantitatively examine (although only approximately) whether
 these tropopause anomalies are consistent with changes in stratospheric PV
@@ -1079,8 +1096,8 @@ where $T_{\mathrm{trop}}$ is the tropopause temperature. Hence
 \end{equation}
 Using a typical value of the PV change as $\sim 10\%$ (e.g., see Figure
 \ref{fig:pv_composites_m13_cp07}), along with
-$T_{\mathrm{trop}} = 210\mathrm{K}$, gives a change of tropopause height of
-$\Delta h_{\mathrm{trop}} \approx 300\mathrm{m}$, which is indeed approximately
+$T_{\mathrm{trop}} = 210~\mathrm{K}$, gives a change of tropopause height of
+$\Delta h_{\mathrm{trop}} \approx 300~\mathrm{m}$, which is indeed approximately
 in line with the tropopause height anomalies seen in Figure
 \ref{fig:tropopause_height}. This, along with the fact that the pattern in
 tropopause height anomalies approximately mirrors that of stratospheric PV
@@ -1105,9 +1122,6 @@ because the tropopause height field is very noisy. In order to give a more
 detailed analysis a greater number of events would be needed.
 
 
- 
-
-
 \section{Conclusions}
 
 Recent research has demonstrated the need to distinguish between split and
@@ -1125,18 +1139,19 @@ height at 10~hPa. The method is summarised as follows:
 \item Using this contour the centroid latitude and aspect ratio moment
   diagnostics can be calculated.
 \item Events are identified using a threshold criterion: Displaced events are
-  occur if the centroid latitude remains equatorward $66^{\circ}$N for 7
-  days or more. Split events occur if the aspect ratio remains above
-  2.4 for 7 days or more. In order to ensure events are not counted twice, no
-  two events may occur within 30 days.
+  said to occur if the centroid latitude remains equatorward $66^{\circ}$N for 7
+  days or more. Split events are said to occur if the aspect ratio remains above
+  2.4 for 7 days or more. In order to ensure that events are not counted twice,
+  no two events may occur within 30 days.
 \end{enumerate}
-Vortex moment diagnostics derived from geopotential height are highly correlated
-with those derived from PV, although fewer high aspect ratio values are
-seen. The use of geopotential height here is motivated by the fact that it is
-commonly output by climate models, whereas PV is not. However, in cases where PV
-is available (such as in reanalyses) its use is preferable because of its
-quasi-conservative properties and smaller-scale features. The above method can
-be easily adapted to be used with PV-based vortex moments.
+Results show that vortex moment diagnostics derived from geopotential height in
+this way are highly correlated with those derived from PV, although fewer high
+aspect ratio values are seen. The use of geopotential height here is motivated
+by the fact that it is commonly output by climate models, whereas PV is
+not. However, in cases where PV is available (such as in reanalyses) its use is
+preferable because of its quasi-conservative properties and smaller-scale
+features. The above method can be easily adapted for use with PV-based vortex
+moments.
 
 Analysis of the stratosphere following events identified by this method
 demonstrates that it is able to accurately identify split and displaced vortex
@@ -1145,7 +1160,7 @@ half with events identified by CP07. Composite analysis indicates that the
 position of the stratospheric polar vortex following these events is at least as
 extreme as that from the previous methods. 
 
-Having identified these events, their impact on the troposphere is
+Having identified these events, their impact on the troposphere has been
 investigated. Composites of the NAM indicate a more negative surface NAM over
 the month following split vortex events than following displaced vortex
 events. This supports the finding of M13, using a different event identification
@@ -1156,18 +1171,16 @@ significant.
 Anomalies of tropopause height following split and displaced vortex events are
 found to be co-located with stratospheric PV anomalies. They are also of a
 magnitude consistent with being induced by changes in the stratospheric polar
-vortex. Surface anomalies induced by changes in tropopause height may explain
-therefore explain the different surface anomalies following split and displaced
-vortex events. However, it is not possible to draw firm conclusions on this
-because of the relatively small number of events and the noise of the MSLP and
-tropopause height fields.
+vortex. Surface anomalies induced by changes in tropopause height may therefore
+explain the different surface anomalies following split and displaced vortex
+events. However, it is not possible to draw firm conclusions on this because of
+the relatively small number of events and the noise of the MSLP and tropopause
+height fields.
 
 Overall, statistically significant results about the difference in the
 tropospheric response to split and displaced vortex events will require a larger
 number of events. This is achieved through the analysis of climate model
 simulations in the next chapter.  
-
-% ------------------- Copied from 2nd year report --------------%
 
 
 

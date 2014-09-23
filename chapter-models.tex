@@ -6,16 +6,15 @@
 \label{sec:models_introduction}
 
 Over the past decade an increasing number of climate models have included a
-well-resolved stratosphere, with model lids above the stratopause. For example,
-the fifth Coupled Model Intercomparison Project (CMIP5) \citep{Taylor2012}
-includes 15 models with an uppermost level above the stratopause, whereas the
-previous intercomparison project, CMIP3, includes only five
-\citep{Cordero2006}. The CMIP5 model simulations are significant in that they
-are evaluated in the the Intergovernmental Panel on Climate Change (IPCC) Fifth
-Assessment Report (AR5) \citep{Stocker2013}. This change in model stratospheric
-resolution has been largely motivated by an increased understanding of the
-stratosphere's influence on tropospheric climate (discussed in
-\citet{Gerber2012} and Chapters \ref{cha:background} and \ref{cha:moments}).
+well-resolved stratosphere, with model lids above the stratopause. This trend is
+evident in the Coupled Model Intercomparison Projects, CMIP3 and CMIP5
+\citep{Cordero2006, Taylor2012}, which were evaluated in the Intergovernmental
+Panel on Climate Change (IPCC) fourth and fifth Assessment Reports respectively
+\citep{Solomon2007, Stocker2013}. CMIP5 includes 15 models with an uppermost
+level above the stratopause, whereas CMIP3 includes only five. This change in
+model stratospheric resolution has been largely motivated by an increased
+understanding of the stratosphere's influence on tropospheric climate (discussed
+in \citet{Gerber2012} and Chapters \ref{cha:background} and \ref{cha:moments}).
 
 The effect of this greater stratospheric resolution was studied by
 \citet{Charlton-Perez2013}, who compared stratospheric variability between
@@ -25,39 +24,49 @@ models have a weaker and less realistic representation of daily to interannual
 polar stratospheric variability than high-top models, and attributed this to the
 fact that the low-top models simulate fewer SSW events than high-top. This is
 combined with a slightly weaker tropospheric NAM response in the two months
-following SSW events in the low-top compared to high-top models.
+following SSW events in the low-top compared to high-top
+models. \citet{Shaw2014} also found that high-top CMIP5 models have a greater
+frequency of extreme stratospheric planetary wave heat flux events than low-top
+models. They argue that this results in greater biases in the position of the
+Atlantic jet stream position in low-top models.
 
 These results are supported by similar studies which compared natural
 variability in high and low-top versions of the same model. \citet{Cagnazzo2009}
 found that a high-top model gave a more realistic representation of the
 influence of ENSO on the NH extratropical stratosphere. Similarly,
-\citet{Hardiman2012a} showed the influence of the QBO on the extratropics as
-well as decadal trends in the NAO were more realistically simulated by the
-high-top than the low-top model. These differences have again been linked to the
-different simulation of SSW events in high- and low-top models
-\citep{Sassi2010}.
+\citet{Hardiman2012a} showed the influence of the QBO on the tropical
+troposphere well as decadal trends in the NAO were more realistically simulated
+by the high-top than the low-top model. Both \citet{Sassi2010} and
+\citet{Hardiman2012a} also found a more realistic frequency of SSWs and greater
+impact on the troposphere in a high-top model.
 
 Other studies have compared simulations of climate change with high- and low-top
-models. \citet{Huebener2007} linked a increased weakening of the stratospheric
+models. \citet{Huebener2007} linked an increased weakening of the stratospheric
 polar vortex in high-top simulations to a more southward shift of the NH winter
 storm track, which in turn affects trends in North Atlantic temperatures and
 precipitation. \citet{Manzini2014} investigated climate change simulations of
 high- and low-top models in the CMIP5 ensemble. They found that the inter-model
 spread in the simulation of changes of stratospheric polar vortex winds accounts
 for a significant fraction of the inter-model spread of trends in the surface
-NAM under climate change. Interestingly, \citet{Manzini2014} also show that
-global surface temperature trends under climate change (and so climate
-sensitivity) are larger for high-top compared to low-top models. However, when
-comparing pairs of high- and low-top versions of the same (or similar) models,
-little climate sensitivity difference is detected, and they conclude that this
-difference is unlikely to have a physical basis.
+NAM under climate change. 
+
+% Interestingly, \citet{Manzini2014} also show that
+% global surface temperature trends under climate change (and so climate
+% sensitivity) are larger for high-top compared to low-top models. However, when
+% comparing pairs of high- and low-top versions of the same (or similar) models,
+% little climate sensitivity difference is detected, and they conclude that this
+% difference is unlikely to have a physical basis.
 
 Despite these findings about the differences between high- and low-top models,
 it is important to note that a model lid above the stratopause is not a
 sufficient condition for the accurate representation of stratospheric processes
-or stratosphere-troposphere coupling. Indeed, \citet{Charlton-Perez2013} found
-that the frequency of SSWs in high-top CMIP5 models varies widely, from about
-2.5 to 8 events per decade. 
+or stratosphere-troposphere coupling. Several other factors are important, such
+as the parametrisation of gravity waves, resolution of steep PV gradients which
+impact upon planetary wave propagation, and the generation of planetary waves in
+the troposphere. Indeed, \citet{Shaw2014} found a wide range of biases in
+stratospheric heat flux extremes among hig-top models and
+\citet{Charlton-Perez2013} found that the frequency of SSWs in high-top CMIP5
+models varies widely, from about 2.5 to 8 events per decade.
 
 In this chapter we apply the methods developed in Chapter \ref{cha:moments} to
 evaluate the representation of stratospheric polar vortex variability in
@@ -94,14 +103,14 @@ split and displaced vortex events, which was described in Chapter
 \subsection{CMIP5 model simulations}
 
 For this analysis only climate models with a lid height above the stratopause
-are selected from the CMIP5 ensemble. In total, 13 such models were available
-from 8 different modelling centres. Although another two (CESM1-WACCM and
-MIROC-ESM) are listed in the CMIP5 ensemble, appropriate data was not found to
-be available for these models in the CMIP5 archive
-(\url{http://pcmdi3.llnl.gov/esgcet/home.htm}). These models are listed in Table
-\ref{tab:models}. It can be seen that 12 of the 13 models have an uppermost
-level which is in the upper mesosphere (70-80~km), but CanESM2 has a
-significantly lower lid which lies close to the stratopause.
+are selected from the CMIP5 ensemble. In total, 13 such models (listed in Table
+\ref{tab:models}) were available from 8 different modelling centres. Although
+another two (CESM1-WACCM and MIROC-ESM) are listed in the CMIP5 ensemble,
+appropriate data was not found to be available for these models in the CMIP5
+archive (\url{http://pcmdi3.llnl.gov/esgcet/home.htm}). It can be seen that 12
+of the 13 models have an uppermost level which is in the upper mesosphere
+(70-80~km), but CanESM2 has a significantly lower lid which lies close to the
+stratopause.
 
 Historical simulations have been used throughout this analysis. These include
 observed climate forcings, such as from greenhouse gasses, ozone depletion,
@@ -344,7 +353,8 @@ split vortex events can be significantly improved by a more accurate average
 vortex state. Furthermore, while the ERA value for modal centroid latitude lies
 approximately in the middle of that for the CMIP5 models, only two models have a
 larger modal aspect ratio than ERA, indicating that a too circularly-symmetric
-vortex is a common bias among models.
+vortex is a common bias among models. The possible connection between this and
+planetary wave amplitudes is investigated in the next section. 
 
 \begin{figure}
  \centering
@@ -389,7 +399,7 @@ observations, where not all split vortex events are dominated by wave-2 activity
  \label{fig:10hPa_GPH_comp}
 \end{figure}
 
-\subsection{Wave diagnostics}
+\subsection{Planetary wave diagnostics}
 
 Given the common bias among the CMIP5 models towards low aspect ratios, it might
 be suspected that the models have too little wave-2 activity. The relative
@@ -442,8 +452,8 @@ found by \citet{Waugh1997} and discussed in Appendix
 affect the relative aspect ratio and centroid latitude climatologies. This is
 demonstrated in Figure \ref{fig:cmip5_waves}(b), which shows the ratio of wave
 amplitudes against the ratio of aspect ratio to centroid latitude. In order that
-the ratio of moment diagnostics is not biased towards a particular quantinity,
-it is normalised by dividing each of aspect ratio and centroid latitude by their
+the ratio of moment diagnostics is not biased towards a particular quantity, it
+is normalised by dividing each of aspect ratio and centroid latitude by their
 respective standard deviations. The centroid latitude is also expressed as the
 deviation from the pole (this makes the correlation positive, but does not
 affect its magnitude). The correlation between the ratio of wave amplitudes to
@@ -783,10 +793,10 @@ We have demonstrated that there are large differences in the representation of
 the average state of the stratospheric polar vortex among high-top CMIP5
 models. This amounts to an inter-model range in the modal centroid latitude of
 more that 5$^{\circ}$ and in the aspect ratio of 0.12, which corresponds to
-(77\% and 22\% of the ERA standard deviation respectively). Because a similar
-number of models have a poleward as an equatorward centroid latitude bias, the
-multi-model mean is approximately accurate. In contrast, only two of 14 models
-have higher modal aspect ratio than reanalysis.
+(77\% and 22\% of the ERA standard deviation respectively). The multi-model mean
+centroid latitude is approximately in agreement with ERA because a similar
+number of models have an equatorward as a poleward bias. In contrast, only two
+of 14 models have higher modal aspect ratio than reanalysis.
 
 Importantly, we have shown that these biases in the undisturbed state of the
 vortex are closely related to biases in the frequency of split and displaced
@@ -807,14 +817,14 @@ Figure \ref{fig:aspect_vert_res}. Even so, the relatively wide scatter of points
 as well as the small correlation coefficient values indicate that vertical
 resolution fails to account for a substantial fraction of inter-model
 variability in the modal aspect ratio. Indeed, the $p$-values of these
-correlations are 93.8\% and 81.2\% for the 5-15~km and 15-30~km vertical
+correlations are 0.062 and 0.188 for the 5-15~km and 15-30~km vertical
 resolutions respectively (calculated using a two-tailed $t$-test). However,
 these relationships appear quite nonlinear, with aspect ratio being relatively
 more sensitive to changes in resolution when the resolution is coarse (high
 $\mathrm{d}z$) and less sensitive when the resolution is finer (low
 $\mathrm{d}z$). This can be addressed by instead calculating the Spearman's rank
 correlations, which test the monotonicity of the relationships. These are
-$-0.60$ ($p=96.9\%$) and $-0.75$ ($p=99.7\%$) for vertical resolutions over
+$-0.60$ ($p=0.031$) and $-0.75$ ($p=0.003$) for vertical resolutions over
 5-15~km and 15-30~km respectively, therefore indicating more statistically
 significant relationships. However, because the two measures of vertical
 resolution are themselves correlated ($r=0.79$), it is difficult to interpret
