@@ -284,7 +284,9 @@ vortex events being more likely in early winter, and displaced vortex events in
 late winter. Other models, however, have a very different
 distribution of events. CanESM2, CMCC-CESM and MPI-ESM-LR all show little
 seasonal variability in the frequency of events. 
-
+\begin{center}
+\line(1,0){250}
+\end{center}
 
 \begin{figure}
  \centering
@@ -295,19 +297,19 @@ seasonal variability in the frequency of events.
  \label{fig:cmip5_events_seasonal}
 \end{figure}
 
-\bigskip It is now considered how model biases in the climatology of the
-stratospheric polar vortex, discussed in Section \ref{sec:moment-diagnostics},
-affect the frequency of split and displaced vortex events. The climatological
-average state of the vortex is defined by the mode -- the peak of the
-probability distribution function -- of the aspect ratio and centroid
-latitude. Unlike the mean, this quantity is not affected by extreme values and
-it represents the most likely state of the vortex. The peak can be estimated by
-the maximum value of a histogram, however this introduces significant random
-errors and is sensitive to the selection of bin size. A more accurate estimation
-of the mode can be made by fitting the aspect ratio and centroid latitude with
-an analytic distribution and then finding the peak of that
-distribution. Following \citet{Mitchell2011}, we fit the aspect ratio with a
-generalised extreme value (GEV) distribution of the form
+It is now considered how model biases in the climatology of the stratospheric
+polar vortex, discussed in Section \ref{sec:moment-diagnostics}, affect the
+frequency of split and displaced vortex events. The climatological average state
+of the vortex is defined by the mode -- the peak of the probability distribution
+function -- of the aspect ratio and centroid latitude. Unlike the mean, this
+quantity is not affected by extreme values and it represents the most likely
+state of the vortex. The peak can be estimated by the maximum value of a
+histogram, however this introduces significant random errors and is sensitive to
+the selection of bin size. A more accurate estimation of the mode can be made by
+fitting the aspect ratio and centroid latitude with an analytic distribution and
+then finding the peak of that distribution. Following \citet{Mitchell2011}, we
+fit the aspect ratio with a generalised extreme value (GEV) distribution of the
+form
 \begin{equation}
   f(x;\mu,\sigma,\xi) = \frac{a^{(-1/\xi)-1}}{\sigma}\mathrm{e}^{{-a}^{-1/\xi}}
   \, , 
@@ -404,8 +406,8 @@ observations, where not all split vortex events are dominated by wave-2 activity
 Given the common bias among the CMIP5 models towards low aspect ratios, it might
 be suspected that the models have too little wave-2 activity. The relative
 magnitudes of wave-1 and wave-2 planetary waves are diagnosed using the same
-method described in Appendix \ref{sec:comp-zonal-wave}. In order to determine
-the climatological wave activity for each model, the resulting distributions of
+method described in Section \ref{sec:comp-zonal-wave}. In order to determine the
+climatological wave activity for each model, the resulting distributions of
 daily wave amplitides were fitted with a GEV distribution using
 maximum-likelihood estimation, and the peak of that distribution determined, as
 in the previous section. A GEV distribution was found to be a good fit for the
@@ -677,6 +679,9 @@ represent the evolution of split and displaced vortex events through the depth
 of the stratosphere. Again, this result is consistent among the majority of
 models, and so not highly sensitive to the exclusion or inclusion of any
 particular model. 
+\begin{center}
+\line(1,0){250}
+\end{center}
 
 \begin{figure}
  \centering
@@ -698,7 +703,7 @@ particular model.
 \end{figure}
 
 
-\bigskip Figure \ref{fig:cmip5_mslp_diff} shows the split minus displaced vortex
+Figure \ref{fig:cmip5_mslp_diff} shows the split minus displaced vortex
 composite difference for MSLP averaged 0-30 days following onset and the 100~hPa
 $Z$ composite difference averaged 0-10 days following onset, for both ERA and
 the CMIP5 MMM. Statistical significance in the MSLP difference is calculated by
@@ -1054,14 +1059,14 @@ analysed in stratosphere-resolving CMIP5 simulations. The main conclusions of
 this investigation are as follows:
 
 
-\bigskip\noindent\textbf{Models representation of the stratospheric polar vortex and
-  stratosphere-tropsophere coupling.} A wide range of biases among CMIP5 models
-has been found in the average state of the stratospheric polar vortex. Some
-models have a vortex which is too equatorward, while others too poleward. The
-majority of models have a vortex which is too circularly symmetric. The relative
-magnitudes of wave-1 and wave-2 activity to a large extent determine
-these biases, although there is no one-to-one relationship between wavenumbers
-and the aspect ratio or centroid latitude of the vortex. 
+\bigskip\noindent\textbf{Models representation of the stratospheric polar vortex
+  and stratosphere-tropsophere coupling.} A wide range of biases among CMIP5
+models has been found in the average state of the stratospheric polar
+vortex. Some models have a vortex which is too equatorward, while others too
+poleward. The majority of models have a vortex which is too circularly
+symmetric. The relative magnitudes of wave-1 and wave-2 activity to a large
+extent determine these biases, although there is no one-to-one relationship
+between wavenumbers and the aspect ratio or centroid latitude of the vortex.
 
 There is also a wide spread in the frequency of split and displaced vortex
 events, although in the multi-model mean the frequency of these events is in

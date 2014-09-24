@@ -32,10 +32,10 @@ first quantitative definition of SSWs\footnote{In the literature, this is often
   called ``the WMO definition''.} (referred to in that text as ``major
 stratospheric warmings'') using zonal mean quantities as below.
 \begin{quotation}
-``A stratospheric warming can be said to be major if at 10~mb or below the
+\emph{A stratospheric warming can be said to be major if at 10~mb or below the
 latitudinal mean temperature increases poleward from 60 degrees latitude and an
 associated circulation reversal is observed (i.e., mean westerly winds poleward
-of 60$^{\circ}$ latitude are succeeded by mean easterlies in the same area).''
+of 60$^{\circ}$ latitude are succeeded by mean easterlies in the same area).}
 \end{quotation}
 A number of variations of this definition have since appeared in the
 literature. Most commonly, the temperature gradient criterion has been neglected
@@ -216,13 +216,13 @@ their order, $n$, and provide familiar parameters. These are the area under the
 distribution (0th order), mean (1st order), variance (2nd order), skewness (3rd
 order), and kurtosis (4th order), given by
 \begin{equation}
-M_{n} = \int_{S} x^{n}f(x)\mathrm{d}x \, ,
+M_{n} = \int_{S} x^{n}f(x)~\mathrm{d}x \, ,
 \end{equation}
 where $S$ represents the extent of the distribution, $f(x)$, to be integrated
 over. The extension of this for a two-dimensional distribution is
 straightforwardly
 \begin{equation}
-M_{nm} = \iint_{S} x^{n}y^{m}f(x,y)\mathrm{d}x\mathrm{d}y \, ,
+M_{nm} = \iint_{S} x^{n}y^{m}f(x,y)~\mathrm{d}x\mathrm{d}y \, ,
 \label{eq:2D_moment}
 \end{equation}
 where the order of the moment is now defined as $m+n$, meaning it is possible to
@@ -243,8 +243,8 @@ projection
 x = \frac{\cos\lambda\cos\phi}{1 \pm \sin\phi}\, , \quad
 y = \frac{\pm\sin\lambda\cos\phi}{1 \pm \sin\phi}\, , 
 \end{equation}  
-where the positive sign is used in the Northern Hemisphere and negative in the
-Southern Hemisphere.
+where the positive sign is used in the NH and negative in the
+SH.
 
 In order to calculate moment diagnostics for the stratospheric polar vortex we
 must first isolate the vortex region by defining the vortex edge. Different
@@ -268,8 +268,8 @@ transferable to geopotential height. Furthermore, the method of
 the moment diagnostics, so will not know their dates before
 calculation. Instead, we pick a simple definition; PV ($q_{b}$) or geopotential
 height ($Z_{b}$) on the vortex edge is defined as the value of the
-December-March (DJFM) mean at $60^{\circ}$N for the Northern Hemisphere and the
-June-September (JJAS) mean at $60^{\circ}$S for the Southern Hemisphere. This is
+December-March (DJFM) mean at $60^{\circ}$N for the NH and the
+June-September (JJAS) mean at $60^{\circ}$S for the SH. This is
 seen to lie close to contours defined by the above methods, and results are
 insensitive to small changes in the latitude chosen.
 
@@ -313,7 +313,7 @@ In order for higher order moment diagnostics to be useful, the moment equation
 form \citep{Hall2005}. This calculates moments relative to the vortex centroid,
 and is given by
 \begin{equation}
-J_{mn} = \iint_{S} f(x,y)(x-\bar{x})^n(y-\bar{y})^m\mathrm{d}x\mathrm{d}y \, .
+J_{mn} = \iint_{S} f(x,y)(x-\bar{x})^n(y-\bar{y})^m~\mathrm{d}x\mathrm{d}y \, .
 \end{equation}
 Two useful parameters can be derived from the second-order centralised moment
 diagnostics, the vortex orientation, $\psi$ (defined as the angle between the
@@ -364,7 +364,7 @@ This has the property of being negative for a vortex with a ``pinched'' shape,
 zero for a perfectly elliptical vortex, and positive for a vortex with a strong
 central core. When negative kurtosis was detected \citet{Matthewman2009} split
 the PV field into two regions along the minor axis of the equivalent ellipse and
-re-calculated moment diagnostics for the vortices in these regions separately. 
+re-calculated moment diagnostics for the vortices in these regions separately.
 
 In this study we do not make use of the excess kurtosis or calculate separate
 diagnostics for split vortices for three reasons. First, as a 4th order
@@ -382,7 +382,7 @@ Code for the calculation of moment diagnostics using the method described in
 this section is available from
 \url{https://github.com/wseviour/vortex-moments}. Additionally, a comparison of
 aspect ratio and centroid latitude with zonal wavenumber amplitudes is given in
-Appendix \ref{sec:comp-zonal-wave}.
+Section \ref{sec:comp-zonal-wave}.
 
 \begin{figure}
  \centering
@@ -398,7 +398,7 @@ Appendix \ref{sec:comp-zonal-wave}.
 
 \subsection{Reanalysis data}
 \label{sec:reanalysis-data}
-For the analysis in this chapter Northern Hemisphere winter daily-mean data for
+For the analysis in this chapter NH winter daily-mean data for
 December-March (DJFM) are employed from the European Centre for Medium-Range
 Weather Forecasts (ECMWF) reanalyses. The ERA-40 data set \citep{Uppala2005} is
 used from 1958-1978 and ERA-Interim \citep{Dee2011} from 1979-2009. The
@@ -438,7 +438,7 @@ flow. Both in the calculation of the vortex edge (climatological mean $q$ or $Z$
 at $60^{\circ}$N/S) and the moment diagnostics themselves, no clear jumps were
 seen between ERA-40 and ERA-Interim data sets. As such, the two are considered
 together with no bias corrections. For the remainder of this thesis, this
-combined ERA-40 and ERA-Interim data set is referred to as `ERA'.
+combined ERA-40 and ERA-Interim data set is referred to as \emph{ERA}.
 
 
 \subsection{Moment diagnostic calculation}
@@ -448,11 +448,10 @@ In order to calculate the moment diagnostics, the values of PV and geopotential
 height on the vortex edge ($q_b$ and $Z_b$) must first be determined. These are
 the $60^{\circ}$N DJFM/$60^{\circ}$S JJAS mean values of PV at 850~K ($q_{850}$)
 and 10~hPa geopotential height ($Z_{10}$) respectively. They are found to be
-$q_b = 460$~PVU ($\mathrm{1~PVU = 10^{-6}Km^2kg^{-1}s^{-1}}$) and
-$Z_b = 30.2$~km for the Northern Hemisphere, and $q_b = 618$~PVU and
-$Z_b = 29.0$~km for the Southern Hemisphere. Using these values the moment
-diagnostics are calculated from ERA data for 1958--2009 using the method
-described in Section \ref{sec:vort-moment-diagn}.
+$q_b = 460$~PVU ($\mathrm{1~PVU = 10^{-6}~Km^2kg^{-1}s^{-1}}$) and
+$Z_b = 30.2$~km for the NH, and $q_b = 618$~PVU and $Z_b = 29.0$~km for the
+SH. Using these values the moment diagnostics are calculated from ERA data for
+1958--2009 using the method described in Section \ref{sec:vort-moment-diagn}.
 
 As discussed in Section \ref{sec:vort-moment-diagn} the excess kurtosis
 diagnostic is not used in the present analysis. In the interests of simplicity,
@@ -461,12 +460,12 @@ events, and the centroid longitude, orientation and equivalent area are not
 used. The aspect ratio and centroid latitude are the most intuitive diagnostics
 for this purpose, with a high aspect ratio and poleward centroid latitude
 expected during split vortex events, and a low aspect ratio and equatorward
-centroid latitude expected during displaced vortex events. 
+centroid latitude expected during displaced vortex events.
 
 Figure \ref{fig:pv_z_moments_distribution} shows the distributions of these two
-quantities calculated from $q_{850}$ and $Z_{10}$ for the Northern Hemisphere
-vortex. The centroid latitude distributions are almost identical, with a peak
-near $80^{\circ}$N which is in agreement with previous studies
+quantities calculated from $q_{850}$ and $Z_{10}$ for the NH vortex. The
+centroid latitude distributions are almost identical, with a peak near
+$80^{\circ}$N which is in agreement with previous studies
 \citep{Waugh1999,Mitchell2011}. The aspect ratio distributions have a similar
 shape, with a peak at about 1.3, but the PV based diagnostic has a larger
 tail. This is because the PV field contains more small-scale filamentary
@@ -485,7 +484,7 @@ events.
   \includegraphics[width=\textwidth]{figures/chapter-moments/moments_distribution_crop.pdf}
   \caption[NH distributions of $Z_{10}$ and PV-based moment
   diagnostics.]{Distributions of the December-March centroid latitude (a) and
-    aspect ratio (b), of the Northern Hemisphere stratospheric polar vortex over
+    aspect ratio (b), of the NH stratospheric polar vortex over
     1958-2009. Diagnostics are calculated from geopotential height at 10~hPa
     ($Z_{10}$) and potential vorticity at 850~K (PV). Thresholds of
     66$^{\circ}$N in centroid latitude and 2.4 in aspect ratio are used to
@@ -498,30 +497,28 @@ events.
   \includegraphics[width=\textwidth]{figures/chapter-moments/moments_distribution_crop_sh.pdf}
   \caption[SH distributions of $Z_{10}$ and PV-based moment diagnostics.]{As
     Figure \ref{fig:pv_z_moments_distribution} but for moment diagnostics
-    calculated for the Southern Hemisphere stratospheric polar vortex over
+    calculated for the SH stratospheric polar vortex over
     June-September.}
   \label{fig:pv_z_moments_distribution_sh}
 \end{figure}
 
 Figure \ref{fig:pv_z_moments_distribution_sh} shows the same distribution as
-Figure \ref{fig:pv_z_moments_distribution}, but for the Southern Hemisphere
-vortex aspect ratio and centroid latitude. As in the case of the Northern
-Hemisphere, the geopotential height and PV-based distributions have very similar
-shapes, with the PV-based aspect ratio having a slightly larger tail. Comparing
-the Northern and Southern Hemisphere distributions it can be seen that there is
-much less variability in both aspect ratio and centroid latitude in the Southern
-Hemisphere. This is because of the reduced planetary wave propagation into the
-Southern Hemisphere stratosphere, in turn a result of lesser forcing from
-orography and land-sea temperature contrasts. The peak in the Southern
-Hemisphere centroid latitude is at about $86^{\circ}$S; the same as that found
-by \citet{Waugh1999}. 
+Figure \ref{fig:pv_z_moments_distribution}, but for the SH vortex aspect ratio
+and centroid latitude. As in the case of the Northern Hemisphere, the
+geopotential height and PV-based distributions have very similar shapes, with
+the PV-based aspect ratio having a slightly larger tail. Comparing the Northern
+and SH distributions it can be seen that there is much less variability in both
+aspect ratio and centroid latitude in the Southern Hemisphere. This is because
+of the reduced planetary wave propagation into the SH stratosphere, in turn a
+result of lesser forcing from orography and land-sea temperature contrasts. The
+peak in the Southern Hemisphere centroid latitude is at about $86^{\circ}$S; the
+same as that found by \citet{Waugh1999}.
 
-A result of this reduced Southern Hemisphere vortex variability is that only one
-SSW has been observed in the Southern Hemisphere (discussed further in Chapter
-\ref{cha:seas}). The rest of this chapter relates to the classification and
-impacts of split and displaced vortex events and so focuses only on the
-Northern Hemisphere. However, it should be noted that all the methods below can
-also be applied to the Southern Hemisphere.
+A result of this reduced SH vortex variability is that only one SSW has been
+observed in the SH (discussed further in Chapter \ref{cha:seas}). The rest of
+this chapter relates to the classification and impacts of split and displaced
+vortex events and so focuses only on the NH. However, it should be noted that
+all the methods below can also be applied to the SH.
 
 
 \subsection{Event identification}
@@ -582,7 +579,7 @@ algorithms are given below:
   \emph{silhouette values} \citep{Rousseeuw1987} to determine the ideal number
   of clusters to be two (representing stable and disturbed vortex
   states). However, three clusters has been imposed in Figure \ref{fig:clusters}
-  in order to attempt to indentify stable, split, and displaced states.
+  in order to attempt to identify stable, split, and displaced states.
 
 
 \item \textbf{Mean-shift} clustering aims to discover `blobs' in a data set. It
@@ -702,7 +699,7 @@ displaced vortex events.
    identified in ERA. The peak is defined as the day with the largest aspect
    ratio during the two weeks following the onset date. The vortex edge is shown
    as a thin black contour, the equivalent ellipse the thick black contour and
-   its centroid as a white cross. Data are transformed to cartesian coordinates
+   its centroid as a white cross. Data are transformed to Cartesian coordinates
    with a polar stereographic projection.}
  \label{fig:gph_all_events_splits}
 \end{figure}
@@ -748,9 +745,9 @@ westward-displaced vortex.
 
 \begin{table}
   \begin{centering}
-    \begin{tabular}{|l|l|l|l|l|}  \hline
-    No. & Event onset & Event type & $\Delta \mathrm{T}_{10}$ (K) &
-                                                                    $\overline{U}_{10} (\mathrm{m~s^{-1}})$ \\ \hline
+    \begin{tabular}{llcrr}  \hline
+    No. & Event onset & Event type & $\Delta \mathrm{T}_{10}$~(K) &
+                                                                    $\overline{u}_{10}~(\mathrm{m~s^{-1}})$ \\ \hline
     1*  & 1961-3-9    & D          & 10.2       & 2.7 \\
     2*  & 1962-1-30   & S          & 1.9        & 38.9 \\
     3*  & 1962-3-7    & S          & -1.0       & 16.9 \\
@@ -791,8 +788,8 @@ westward-displaced vortex.
       identified from 10~hPa geopotential height data from 1958-2009.
       $\Delta \mathrm{T}_{10}$ represents the mean area-weighted
       $50^{\circ}$-$90^{\circ}$N cap temperature anomaly at 10 hPa calculated 5
-      days either side of the event onset date. $\overline{U}_{10}$ represents
-      $\overline{U}$ at $60^{\circ}$N and 10~hPa averaged over the same
+      days either side of the event onset date. $\overline{u}_{10}$ represents
+      $\overline{u}$ at $60^{\circ}$N and 10~hPa averaged over the same
       period. Asterisks (*) represent those numbers that do not coincide
       (i.e. within 10 days and of the same type) with events defined by CP07 and
       daggers ($\dagger$) events which do not coincide with events of M13.}
@@ -826,7 +823,7 @@ show positive values of $\Delta \mathrm{T}_{10}$ (i.e. warming), four events
 show negative values. All of these events are also identified by M13, and they
 attributed the negative values to the presence of a strong, cold vortex prior to
 the event. Zonal-mean zonal wind at $60^{\circ}$N and 10~hPa
-($\overline{U}_{10}$), averaged over the same period is also shown in Table
+($\overline{u}_{10}$), averaged over the same period is also shown in Table
 3.1. The majority of events show negative values, in line with the traditional
 wind reversal criterion, although some show positive values. Again this results
 from a strong vortex prior to these events, as well as the fact that the new
@@ -866,6 +863,18 @@ the seasonal distribution of displaced vortex events \citep{Mitchell2011}.
   \label{fig:z_m13_cp07_histogram}
 \end{figure}
 
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/pv_composites_colbar_crop.pdf}
+ \caption[PV composites for split and displaced vortex events.]{Composites of
+   potential vorticity at the 850~K isentropic surface from the ERA reanalysis
+   over 1958-2009. Composites are taken over the 5 days following the onset date
+   of split vortex events (a,b,c) and displaced vortex events (d,e,f). The
+   new ($Z_{10}$) method (a,b) is compared with that of M13 (b,e) and CP07
+   (c,f).}
+ \label{fig:pv_composites_m13_cp07}
+\end{figure}
+
 Figure \ref{fig:pv_composites_m13_cp07} compares the average shape of the
 stratospheric polar vortex following the split and displaced vortex events
 identified by the three methods. Composites of PV in the mid-stratosphere
@@ -881,18 +890,6 @@ show a vortex centred over Northern Europe, but this extends most westward in
 the CP07 composite, suggesting that there may be some contamination from
 misdiagnosed split vortex events.
 
-\begin{figure}
- \centering
- \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/pv_composites_colbar_crop.pdf}
- \caption[PV composites for split and displaced vortex events.]{Composites of
-   potential vorticity at the 850~K isentropic surface from the ERA reanalysis
-   over 1958-2009. Composites are taken over the 5 days following the onset date
-   of split vortex events (a,b,c) and displaced vortex events (d,e,f). The
-   new ($Z_{10}$) method (a,b) is compared with that of M13 (b,e) and CP07
-   (c,f).}
- \label{fig:pv_composites_m13_cp07}
-\end{figure}
-
 Overall, Figure \ref{fig:pv_composites_m13_cp07} demonstrates that the new
 method succeeds (in a composite sense) in identifying displaced and split vortex
 events at least as well as the methods of M13 or CP07. When comparing the three
@@ -901,21 +898,95 @@ approach employs a zonal-mean threshold which cannot accurately capture some
 extreme events (as discussed in M13).
 
 
-\section{Influence on the troposphere}
-\label{sec:moments_analysis}
+\subsection{Comparison with zonal wave amplitudes}
+\label{sec:comp-zonal-wave}
+
+Many studies have characterised stratospheric polar variability by its zonal
+wave structure \citep[e.g,][]{Randel1988,Yoden1999,Nakagawa2006,Bancala2012}. It
+is therefore instructive to compare this wave analysis with the moment
+diagnostics developed in this chapter. Here this is carried out for the
+displaced and split vortex events shown in Figures \ref{fig:displaced_ellipse}
+and \ref{fig:split_ellipse} respectively. A similar comparison was shown by
+\citet{Waugh1997} and \citet{Waugh1999}, and the results here are consistent
+with their findings.
+
+Zonal wavenumber decomposition is carried out by taking the Fourier transform of
+the 60$^{\circ}$N, 10~hPa geopotential height field over all longitudes. The
+amplitude of wave-$n$ on a given day is then given by the modulus of the $n$th
+Fourier component on that day. In ERA data, the amplitude of DJFM wave-2 is, on
+average, about 30\% that of wave-1, and wave-3 13\% of wave-1, indicating a
+Charney-Drazin filtering of zonal wavenumbers, as discussed in Section
+\ref{sec:planetary-waves}.
+
+The correlation of geopotential height-derived daily aspect ratio and the wave-2
+amplitude over DJFM is 0.30 and that of centroid latitude and wave-1 amplitude
+$-0.22$, both of which are highly statistically significant. These
+relationships are illustrated in the examples of split and displaced vortex
+events in Figure \ref{fig:wave_moments_ts}. In the case of the 1979 split vortex
+event the wave-2 amplitude peaks approximately 5 days before the peak of the
+aspect ratio. Wave-2 amplitude is also more variable than aspect ratio in early
+winter, although the two are correlated at this time. In the case of the 2006
+displaced vortex event, the difference is even greater. The wave-1 amplitude
+peaks about three weeks before the centroid latitude, and is actually
+anomalously small at the peak of centroid latitude. Before and after the event,
+the wave-1 amplitude and centroid latitude are highly correlated.
+
+A result of these differences is that not all split vortex events are defined as
+wave-2 warmings and not all displaced vortex events as wave-1 warmings. For
+example, the split vortex events with onset dates 1973-2-7, 1987-12-10, and
+1999-2-24 are classified as wave-1 warmings by \citet{Bancala2012}. However, the
+structure of the vortex appears clearly split in these three examples (see
+Figures \ref{fig:gph_all_events_splits} (g), (l) and (m)), highlighting the
+differences in these classifications.
+
+The physical reasons for these differences are investigated in Figure
+\ref{fig:wave_moments_vortex}. This compares the vortex structure at the peak
+wave amplitude and peak aspect ratio/centroid latitude for the two events. For
+the 1979 split vortex event, the vortex appears split at both times but there is
+a greater separation between the vortices at the time of maximum aspect
+ratio. The wave-2 amplitude is greatest at the earlier time, however, because
+the vortices (particularly the eastern vortex) are stronger. Similarly for the
+2006 event, at the time of maximum wave-1 amplitude the vortex is not displaced
+far from its average position but its strength means that the wave-1 amplitude
+is greater than the much more displaced vortex found later. Generally, the
+sensitivity of wave amplitudes to vortex strength means that wave amplitudes may
+actually decline during periods of intense wave breaking due to the weakening of
+the vortex, even if that vortex is significantly distorted.
+
+Overall, these results show that as the vortex departs from zonal symmetry
+linear wave theory breaks down and changes in the wave-1 and wave-2 amplitudes
+cannot be simply interpreted as changes in the position and elongation of the
+vortex respectively.
+
 
 \begin{figure}
  \centering
- \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/dripping_paint.png}
- \caption[NAM composites for split and displaced vortex events.]{Composites of
-   the time-height evolution of the NAM during (a) 17 vortex displacement events
-   and (b) 18 splitting events. (c) shows the difference in these composites,
-   and hashed regions represent those that are 95\% significant according to a
-   two-tailed bootstrap test. Lag 0 is at the onset of an event as measured at
-   10 hPa. Contour intervals are 0.25 and the region between -0.25 and 0.25 is
-   unshaded. Data is from the ECMWF Reanalyses 1958-2009.}
- \label{fig:dripping_paint}
+ \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/waves_moments_ts.pdf}
+ \caption[Wave amplitude and moment diagnostic time series.]{(a) Aspect ratio
+   (solid line) and wave-2 amplitude (dashed line) over the winter
+   1978-1979. (b) Centroid latitude (solid line) and wave-1 amplitude (dashed
+   line) over the winter 2005-2006. Centroid latitude is expressed as its
+   deviation from the North Pole.}
+ \label{fig:wave_moments_ts}
 \end{figure}
+
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/wave_moment_vortices.pdf}
+ \caption[Comparison of vortex at maximum of moment diagnostics and wave
+ amplitudes.]{10~hPa geopotential height on the day of maximum wave-2 amplitude
+   (a) and maximum aspect ratio (b) for the 1979 split vortex event; and maximum
+   wave-1 amplitude (c) and minimum centroid latitude (d) for the 2006 displaced
+   vortex event. The vortex edge contour, equivalent ellipse, and centroid
+   latitude are shown as Figure \ref{fig:displaced_ellipse}.}
+ \label{fig:wave_moments_vortex}
+\end{figure}
+
+
+\section{Stratosphere-troposphere coupling}
+\label{sec:moments_analysis}
+
+\subsection{Tropospheric response}
 
 Having verified that this new method identifies split and displaced vortex
 events as skillfully as previous methods, it is now possible to study their
@@ -931,6 +1002,20 @@ calculated by subtracting the seasonal cycle which has been smoothed with a
 90-day low-pass filter. The daily NAM anomalies are then determined by
 projecting daily geopotential anomalies onto the leading EOF patterns. Finally,
 the NAM is normalised so that the time series at each level has unit variance.
+
+\begin{figure}
+ \centering
+ \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/dripping_paint.png}
+ \caption[NAM composites for split and displaced vortex events.]{Composites of
+   the time-height evolution of the NAM during (a) 17 vortex displacement events
+   and (b) 18 splitting events. (c) shows the difference in these composites,
+   and hashed regions represent those that are 95\% significant according to a
+   two-tailed bootstrap test. Lag 0 is at the onset of an event as measured at
+   10 hPa. Contour intervals are 0.25 and the region between -0.25 and 0.25 is
+   unshaded. Data is from the ECMWF Reanalyses 1958-2009.}
+ \label{fig:dripping_paint}
+\end{figure}
+
 
 In agreement with M13, it can be seen that the tropospheric NAM is more negative
 during the 60 days following split vortex events than displaced vortex
@@ -970,7 +1055,7 @@ relationship exists.
 
 \begin{figure}
  \centering
- \noindent\includegraphics[width=0.7\textwidth]{figures/chapter-moments/nam_difference_sig.pdf}
+ \noindent\includegraphics[width=0.6\textwidth]{figures/chapter-moments/nam_difference_sig.pdf}
  \caption[Significance of surface NAM difference following split and displaced
  vortex events.]{Distribution of 0-30 day mean surface NAM composite differences
    between split and displaced vortex events, formed by randomly shuffling the
@@ -1021,7 +1106,7 @@ calculated from this distribution.
 
 The strongest precursor is found for displaced vortex events, with a wave-1
 pattern that is similar to the climatological stationary wave pattern
-\citep[e.g.][]{Garfinkel2008}, suggesting increased wave-1 propagation into the
+\citep[e.g.,][]{Garfinkel2008}, suggesting increased wave-1 propagation into the
 stratosphere. However, the strongest anomalies following events occur after
 split vortex events, with a pattern resembling the negative phase of the NAM,
 though with a southern centre of action shifted towards Europe. A further
@@ -1030,10 +1115,19 @@ more negative MSLP anomaly over Scandinavia and Siberia following displaced
 vortex event. Overall, the main features of Figure \ref{fig:mslp_composites}
 compare very well with the corresponding diagnostics from M13.
 
+
+
+\subsection{Tropopause response}
+
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/PV_430K.pdf}
- \caption[]{}
+ \caption[Composites of 430~K PV]{Composite of PV anomalies on the 430~K
+   isentropic surface averaged over the 10 days following displaced (a) and
+   split (b) vortex events. DJFM average of 430~K PV (c). Units are PVU and the
+   contour interval is 2~PVU. Data are restricted to the ERA-Interim period
+   (1979-2009), meaning a total of 10 displaced and 10 split vortex events enter
+   the composites. }
  \label{fig:430K_PV}
 \end{figure}
  
@@ -1057,24 +1151,46 @@ The mechanism of the stratosphere's influence on the troposphere proposed by
 \citet{Ambaum2002} states that changes in the PV near the tropopause affect the
 tropopause height and induce tropospheric anomalies below (more details are
 given in Section \ref{sec:mechanisms}). In order to investigate this mechanism,
-composites of tropopause height averaged over the 10 days before, 0-10 days
-after, and 10-20 days after split and displaced vortex events are shown in
-Figure \ref{fig:tropopause_height}. The measure of tropopause height used is
-that of \citet{Wilcox2012a}, who construct a blended thermal and dynamical
-tropopause. Significance is again calculated using a two-tailed bootstrap test.
+composites of PV anomalies at the 430~K isentropic surface (which lies close to
+100~hPa; just above the tropopause), over the 10 days following displaced and
+split vortex events are shown in Figures \ref{fig:430K_PV}(a,b). Data at this
+isentropic level were not available for ERA-40 so these composites are limited
+to the ERA-Interim (1979-2009) period, meaning 10 events of each type enter the
+composites. The shorter 10-day period was chosen to reflect the typical time
+scale for the split or displacement of the vortex, rather than the longer time
+scale taken for the re-formation of the vortex. However, composites taken over
+30 days, as in Figure \ref{fig:mslp_composites}, show similar structure but with
+reduced magnitude (similarly, composites taken over 5 days, as in Figure
+\ref{fig:pv_composites_m13_cp07}, show slightly increased magnitude). In the
+displaced composite case a region of high PV is seen over Siberia and
+Scandinavia, consistent with the movement of the vortex over this region. Note
+that this is shifted further east than the position of the vortex at 850~K
+($\sim 10$~hPa) (Figure \ref{fig:pv_composites_m13_cp07}(d)), again indicating
+the more baroclinic nature of displaced vortex events (this westward tilt with
+height was also found by \citet{Matthewman2009}). The split vortex composite
+shows two regions of raised PV which are approximately co-located with the two
+vortices at 850~K.
+
+Again following the reasoning of \citet{Ambaum2002}, composites of tropopause
+height averaged over the 10 days before, 0-10 days after, and 10-20 days after
+split and displaced vortex events are now shown in Figure
+\ref{fig:tropopause_height} (these composites now use the full ERA (1958-2009)
+data set). The measure of tropopause height used is that of \citet{Wilcox2012a},
+who construct a blended thermal and dynamical tropopause. Significance is again
+calculated using a two-tailed bootstrap test.
 
 In line with the MSLP anomalies shown in Figure \ref{fig:mslp_composites},
 tropopause height anomalies are seen to be larger prior to displaced vortex
 events, with a wave-1-like structure. Following the events, tropopause height
 anomalies are seen to approximately mirror the stratospheric PV anomalies
-(Figure \ref{fig:pv_composites_m13_cp07}). That is, following displaced vortex
-events an elevated tropopause is seen over Europe and Scandinavia, with a
-lowered tropopause over Canada, and following split vortex events two regions of
+(Figure \ref{fig:430K_PV}). That is, following displaced vortex events an
+elevated tropopause is seen over Europe and Scandinavia, with a lowered
+tropopause over Canada, and following split vortex events two regions of
 elevated tropopause are present over Canada and Siberia with a depression in
 between.
 
 It is possible to quantitatively examine (although only approximately) whether
-these tropopause anomalies are consistent with changes in stratospheric PV
+these tropopause anomalies are consistent with the changes in stratospheric PV
 above. Changes in tropopause pressure, $\Delta p_{\mathrm{trop}}$, are related
 to changes in stratospheric PV, $\Delta q$, through
 \begin{equation}
@@ -1094,11 +1210,12 @@ where $T_{\mathrm{trop}}$ is the tropopause temperature. Hence
 \Delta h_{\mathrm{trop}} = \frac{\Delta q}{q}
 \frac{RT_{\mathrm{trop}}}{g(1+\mathrm{Bu})} \, .
 \end{equation}
-Using a typical value of the PV change as $\sim 10\%$ (e.g., see Figure
-\ref{fig:pv_composites_m13_cp07}), along with
-$T_{\mathrm{trop}} = 210~\mathrm{K}$, gives a change of tropopause height of
-$\Delta h_{\mathrm{trop}} \approx 300~\mathrm{m}$, which is indeed approximately
-in line with the tropopause height anomalies seen in Figure
+From Figures \ref{fig:430K_PV}(a,b) a typical 430~K PV anomaly is 2~PVU, and the
+background climatology is approximately 20~PVU (Figure \ref{fig:430K_PV}(c)), so
+$\Delta q/q \approx 0.1$. With a typical value of
+$T_{\mathrm{trop}} = 210~\mathrm{K}$, this then gives a change of tropopause
+height of $\Delta h_{\mathrm{trop}} \approx 300~\mathrm{m}$, which is indeed
+approximately in line with the tropopause height anomalies seen in Figure
 \ref{fig:tropopause_height}. This, along with the fact that the pattern in
 tropopause height anomalies approximately mirrors that of stratospheric PV
 anomalies, suggests that these tropopause height anomalies are induced by
@@ -1169,7 +1286,7 @@ method and extended data set. However, using a bootstrap test the composite
 significant.
 
 Anomalies of tropopause height following split and displaced vortex events are
-found to be co-located with stratospheric PV anomalies. They are also of a
+found to be co-located with lower-stratospheric PV anomalies. They are also of a
 magnitude consistent with being induced by changes in the stratospheric polar
 vortex. Surface anomalies induced by changes in tropopause height may therefore
 explain the different surface anomalies following split and displaced vortex
@@ -1183,95 +1300,6 @@ number of events. This is achieved through the analysis of climate model
 simulations in the next chapter.  
 
 
-
-\pagebreak
-
-\begin{subappendices}
-\section{Comparison with zonal wave amplitudes}
-\label{sec:comp-zonal-wave}
-
-Many studies have characterised startospheric polar variability by its zonal
-wave structure \citep[e.g,][]{Randel1988,Yoden1999,Nakagawa2006,Bancala2012}. It
-is therefore instructive to compare this wave analysis with the moment
-diagnostics developed in this chapter. Here this is carried out for the
-displaced and split vortex events shown in Figures \ref{fig:displaced_ellipse}
-and \ref{fig:split_ellipse} respectively. A similar comparison was shown by
-\citet{Waugh1997} and \citet{Waugh1999}, and the results here are consistent
-with their findings.
-
-Zonal wavenumber decomposition is carried out by taking the Fourier transform of
-the 60$^{\circ}$N, 10~hPa geopotential height field over all longitudes. The
-amplitude of wave-$n$ on a given day is then given by the modulus of the $n$th
-Fourier component on that day. In ERA data, the amplitude of DJFM wave-2 is, on
-average, about 30\% that of wave-1, and wave-3 13\% of wave-1, indicating a
-Charney-Drazin filtering of zonal wavenumbers, as discussed in Section
-\ref{sec:planetary-waves}.
-
-The correlation of geopotential height-derived daily aspect ratio and the wave-2
-amplitude over DJFM is 0.30 and that of centroid latitude and wave-1 amplitude
-$-0.22$, both of which are statistically significant. These relationships are
-illustrated in the examples of split and displaced vortex events in Figure
-\ref{fig:wave_moments_ts}. In the case of the 1979 split vortex event the wave-2
-amplitude peaks approximately 5 days before the peak of the aspect ratio. Wave-2
-amplitude is also more variabile than aspect ratio in early winter, although the
-two are correlated at this time. In the case of the 2006 displaced vortex event,
-the difference is even greater. The wave-1 amplitude peaks about three weeks
-before the centroid latitude, and is actually anomalously small at the peak of
-centroid latitude. Before and after the event, the wave-1 amplitude and centroid
-latitude are highly correlated.
-
-A result of these differences is that not all split vortex events are defined as
-``wave-2 warmings'' and not all displaced vortex events as ``wave-1
-warmings''. For example, the split vortex events with onset dates 1973-2-7,
-1987-12-10, and 1999-2-24 are classified as wave-1 warmings by
-\citet{Bancala2012}. However, the structure of the vortex appears clearly split
-in these three examples (see Figures \ref{fig:gph_all_events_splits} (g), (l)
-and (m)), highlighting the differences in these classifications. 
-
-The physical reasons for these differences are investigated in Figure
-\ref{fig:wave_moments_vortex}. This compares the vortex structure at the peak
-wave amplitude and peak aspect ratio/centroid latitude for the two events. For
-the 1979 split vortex event, the vortex appears split at both times but there is
-a greater separation between the vortices at the time of maximum aspect
-ratio. The wave-2 amplitude is greatest at the earlier time, however, because
-the vortices (particularly the eastern vortex) are stronger. Similarly for the
-2006 event, at the time of maximum wave-1 amplitude the vortex is not displaced
-far from its average position but its strength means that the wave-1 amplitude
-is greater than the much more displaced vortex found later. Generally, the
-sensitivity of wave amplitudes to vortex strength means that wave amplitdes may
-actually decline during periods of intense wave breaking due to the weakening of
-the vortex, even if that vortex is significantly distorted.
-
-Overall, these results show that as the vortex departs from zonal symmetry
-linear wave theory breaks down and changes in the wave-1 and wave-2 amplitudes
-cannot be simply interpreted as changes in the postition and elongation of the
-vortex respectively.
-
-
-\begin{figure}
- \centering
- \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/waves_moments_ts.pdf}
- \caption[Wave amplitude and moment diagnostic timeseries.]{(a) Aspect ratio
-   (solid line) and wave-2 amplitude (dashed line) over the winter
-   1978-1979. (b) Centroid latitude (solid line) and wave-1 amplitude (dashed
-   line) over the winter 2005-2006. Centroid latitude is expressed as its
-   deviation from the North Pole.}
- \label{fig:wave_moments_ts}
-\end{figure}
-
-\begin{figure}
- \centering
- \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/wave_moment_vortices.pdf}
- \caption[Comparison of vortex at maximum of moment diagnostics and wave
- amplitudes.]{10~hPa geopotential height on the day of maximum wave-2 amplitude
-   (a) and maximum aspect ratio (b) for the 1979 split vortex event; and maximum
-   wave-1 amplitude (c) and minimum centroid latitude (d) for the 2006 displaced
-   vortex event. The vortex edge contour, equivalent ellipse, and centroid
-   latitude are shown as Figure \ref{fig:displaced_ellipse}.}
- \label{fig:wave_moments_vortex}
-\end{figure}
-
-\end{subappendices}
 
 
 

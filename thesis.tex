@@ -1,7 +1,6 @@
 \documentclass[12pt]{ociamthesis}  % default square logo 
 %\documentclass[12pt,beltcrest]{ociamthesis} % use old belt crest logo
 %\documentclass[12pt,shieldcrest]{ociamthesis} % use older shield crest logo
-%\usepackage[sc]{mathpazo}
 
 \usepackage[activate={true,nocompatibility},draft,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 % activate={true,nocompatibility} - activate protrusion and expansion
@@ -10,6 +9,10 @@
 % factor=1100 - add 10% to the protrusion amount (default is 1000)
 % stretch=10, shrink=10 - reduce stretchability/shrinkability (default is 20/20)
 
+%%%%%%%%%%%%%%%%%%%%%%%%%% FONTS %%%%%%%%%%%%%%%%%%%%%%%%%
+%Palatino
+%\usepackage[sc]{mathpazo}
+
 % Latin modern
 %\usepackage{lmodern}
 
@@ -17,18 +20,37 @@
 %\usepackage[varg]{txfonts}
 
 % New Century Schoolbook
-%\usepackage{fouriernc}
+\usepackage{fouriernc}
+
+% Utopia
+%\usepackage{fourier}
 
 % bitstream charter
-\usepackage[T1]{fontenc}
-\usepackage[bitstream-charter]{mathdesign}
-
-%\usepackage[displaymath, mathlines]{lineno}
-%\linenumbers
+%\usepackage[T1]{fontenc}
+%\usepackage[bitstream-charter]{mathdesign}
 
 % Linux libertine
 %\usepackage[T1]{fontenc}
 %\usepackage{libertine}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Line numbers
+%\usepackage[displaymath, mathlines]{lineno}
+%\linenumbers
+
+
+% Changing section headings
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\fontsize{16}{19}\scshape}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\fontsize{14}{16}\itshape}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\fontsize{12}{14}\itshape}{\thesubsubsection}{1em}{}
+
+% Paragraph indent larger 
+\setlength{\parindent}{2em}
+
 
 \usepackage[font=small,labelfont=bf]{caption}
 %\usepackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath}
@@ -59,6 +81,7 @@
 \ChNumVar{\Huge} 
 \ChTitleVar{\Large}
 \ChRuleWidth{0.5pt} 
+\ChNameSmallCaps
 \ChNameUpperCase
 
 % This part uses fancyhdr to make nice headers
@@ -108,6 +131,9 @@
 %end the preamble and start the document
 \begin{document}
 
+% less strict wrapping
+\sloppy
+
 %this baselineskip gives sufficient line spacing for an examiner to easily
 %markup the thesis with comments
 %\baselineskip=22pt plus1pt % originally 18pt - WS
@@ -132,8 +158,8 @@
 
 %\end{romanpages}            % end roman page numbering
 %\baselineskip=22pt plus1pt % originally 18pt - WS
-\baselineskip=22pt plus4pt % as HA
-
+%\baselineskip=22pt plus4pt % as HA
+\baselineskip=24pt
 
 %now include the files of latex for each of the chapters etc
 \include{chapter-intro}

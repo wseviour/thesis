@@ -2,7 +2,7 @@
 \label{cha:background}
 
 
-The stratosphere is the layer of the Earth's atmosphere which lies above the
+The stratosphere is the layer of the Earth's atmosphere that lies above the
 troposphere and is bounded by the tropopause below and the stratopause
 above. The height of the tropopause varies from about 15~km in altitude in the
 tropics to 7~km at high latitudes, while the stratopause lies at approximately
@@ -44,9 +44,10 @@ equation relies on hydrostatic and geostrophic approximations but is
 approximately satisfied on seasonal timescales. Hence, the meridional
 temperature gradient results in a region of westerly winds in the winter
 hemisphere, surrounding the pole; this is known as the \emph{stratospheric polar
-  vortex}.\footnote{Alternative names for this which often appear in the
-  literature are `polar night jet' or `polar night vortex'. These names are not
-  used here because the vortex persists outside of the polar night.}
+  vortex}.\footnote{Alternative names for this that often appear in the
+  literature are \emph{polar night jet} or \emph{polar night vortex}. These
+  names are not used here because the vortex persists outside of the polar
+  night.}
 
 \begin{figure}
  \centering
@@ -147,7 +148,7 @@ geostrophic wind for adiabatic flow ($Q=0$), and therefore acts as a tracer.
   is used. This is defined by
 \begin{equation*}
   q = \frac{1}{\rho}\zeta\cdot\nabla\theta \, , 
-\end{equation}
+\end{equation*}
 where
 $\zeta$ is the absolute vorticity. \citet{Charney1962} showed that when the
 quasi-geostrophic approximation is valid
@@ -155,7 +156,7 @@ quasi-geostrophic approximation is valid
 \left(\frac{\partial q}{\partial s}\right)_{\theta=\mathrm{const.}} \approx
 \frac{1}{\rho_0}\frac{\partial \theta_0}{\partial z}\left(\frac{\partial
     q_g}{\partial s}\right)_{z=\mathrm{const.}} \, ,
-\end{equation}
+\end{equation*}
 where $s = t$, $x$ or $y$. Hence, a similar conservation law as for
 $q_g$ applies to $q$, which is conserved on isentropic (e.g., constant
 $\theta$) surfaces.  }
@@ -318,8 +319,11 @@ residual circulation. Their typical length scales are much shorter than can be
 resolved in general circulation models or reanalyses, and so they are usually
 parametrised, appearing as the term $\overline{X}$ in the zonal momentum
 equation (Equation \ref{eq:zonal_momentum}).
+\begin{center}
+\line(1,0){250}
+\end{center}
 
-\bigskip Together, the Charney-Drazin criterion and the effects of planetary and
+Together, the Charney-Drazin criterion and the effects of planetary and
 gravity wave driving on the zonal flow can expain almost all hemispheric
 differences seen in Figures \ref{fig:zmzw_zmT_clim} and \ref{fig:zmzw_NH_SH}:
 Greater topography results in more planetary and gravity wave generation in the
@@ -478,7 +482,7 @@ is summarised as follows:
   \citep{Solomon1986}:
   \begin{equation*}
     \ce{ClONO2 + HCl ->[\ce{PSC}] Cl2 + HNO3}
-  \end{equation}
+  \end{equation*}
 \item As sunlight returns to the vortex region in spring, \ce{Cl2} is rapidly
   photolysed and reacts with oxygen to form \ce{ClO}. This can then
   catalytically destroy ozone through a reaction sequence such as the following
@@ -489,7 +493,7 @@ is summarised as follows:
          ClOO &->[\ce{M}] Cl + O2 \\
          2(Cl + O3 &-> ClO + O2) \\
          $\mathrm{Net:~}$ 2O3 &-> 3O2} 
-  \end{align}
+  \end{align*}
   where $\nu$ is the frequency of light,
   $h$ is Planck's constant, and M a third body (necessary for conservation of
   momentum). Several other reaction sequences are also possible, for instance
@@ -502,7 +506,7 @@ is summarised as follows:
   to form reservior compounds. For instance the reaction
   \begin{equation*}
     \ce{ClO + NO2 ->[\ce{M}] ClONO2}
-  \end{equation}
+  \end{equation*}
   removes \ce{ClO} from the ozone-depleting sequence above. Hence a reduction of
   \ce{NO$_x$} due to PSCs leads to an increase in ozone depletion.
 
@@ -577,7 +581,7 @@ geopotential height, which is therefore less computationally expensive to
 calculate. The annular modes at the surface are also often calculated from mean
 sea-level pressure \citep[e.g.,][]{Gong1999}, where they may also be referred to
 as the Arctic and Antarctic oscillation (although in this thesis, the terms
-`surface NAM/SAM' are used).
+\emph{surface NAM/SAM} are used).
 
 Figure \ref{fig:annular_modes} shows linear regressions of zonal-mean
 geostrophic winds and lower tropospheric geopotential height on the NAM and SAM
@@ -946,145 +950,144 @@ mechanism by which this takes place. Several such mechanisms have been proposed,
 and are briefly described below:
 
 
-\begin{itemize}
-\item\textbf{Radiative effects:} It is well known that stratospheric
-  (particularly lower-stratospheric) temperature increases following SSWs lead
-  to increasing downwelling longwave radiation entering the troposphere.
-  \citet{Ramanathan1977} argued that this warming could reduce the available
-  potential energy accessible to tropospheric eddy activity. Similarly, the
-  stratospheric cooling associated with ozone depletion leads to a reduction in
-  downwelling longwave radiation entering the troposphere
-  \citep{Forster1997a}. \citet{Grise2009} used a radiative transfer model to
-  asses the impact of these radiation changes, finding a significant impact on
-  surface polar temperatures, although they did not assess the circulation
-  response. Indeed, relatively few studies have assessed the impact of radiative
-  processes in stratosphere-troposphere coupling in the light of more recent
-  observations. Despite this, it is unlikely that radiative effects play a large
-  role in the observed stratosphere-troposphere coupling since relatively
-  realistic coupling can be simulated in a model lacking interactive ozone or a
-  detailed radiation scheme.
 
-\item\textbf{Baroclinic instability:} The growth rate of baroclinic eddies is
-  related to the vertical shear in zonal wind throughout the troposphere
-  \citep{Eady1949}. Some studies have suggested that lower stratospheric zonal
-  wind anomalies which penetrate into the upper troposphere affect this vertical
-  wind shear, and so the growth of baroclinic eddies \citep{Wittman2007,
-    Chen2008}. Hence, we may expect reduced tropospheric eddy activity at
-  mid-to-high latitudes following SSWs, due to weaker lower stratosphere/upper
-  troposphere zonal winds. \citet{Scaife2011} also used this relationship to
-  demonstrate that an increase in European winter storminess and equatorward
-  shift in the North Atlantic storm track projected under climate change are
-  consistent with a weakening and equatorward shift of the stratospheric polar
-  vortex. It is less clear whether the change in baroclinic eddy activity is
-  sufficient to lead to the annular mode signals of the kind shown in Figure
-  \ref{fig:baldwin_dunkerton}, although tropospheric eddies have been
-  demonstrated to be important in driving annular mode variability
-  \citep{Limpasuvan1999}.
+\bigskip\noindent\textsc{Radiative effects.} It is well known that stratospheric (particularly
+lower-stratospheric) temperature increases following SSWs lead to increasing
+downwelling longwave radiation entering the troposphere.  \citet{Ramanathan1977}
+argued that this warming could reduce the available potential energy accessible
+to tropospheric eddy activity. Similarly, the stratospheric cooling associated
+with ozone depletion leads to a reduction in downwelling longwave radiation
+entering the troposphere \citep{Forster1997a}. \citet{Grise2009} used a
+radiative transfer model to asses the impact of these radiation changes, finding
+a significant impact on surface polar temperatures, although they did not assess
+the circulation response. Indeed, relatively few studies have assessed the
+impact of radiative processes in stratosphere-troposphere coupling in the light
+of more recent observations. Despite this, it is unlikely that radiative effects
+play a large role in the observed stratosphere-troposphere coupling since
+relatively realistic coupling can be simulated in a model lacking interactive
+ozone or a detailed radiation scheme.
 
-\item\textbf{Downward control:} Under steady-state or time-mean conditions, the
-  `downward control' principle of \citet{Haynes1991} shows that the
-  streamfunction, $\psi$, of the TEM residual circulation is given by
-  \begin{equation}
-    \psi(\phi,z) =
-    \int_z^{\infty}\left(\frac{\rho_0a\overline{\mathcal{F}}\cos^2\phi}{\partial\overline{m}/\partial\phi}\right)_{\phi=\phi(z')}\mathrm{d}z'\, ,
-  \end{equation}
-  where $\overline{\mathcal{F}}$ is the total wave driving term from Equation
-  \ref{eq:zonal_momentum}, and
-  $\overline{m}=a\cos\phi(\overline{u}+a\Omega\cos\phi)$ is the angular momentum
-  per unit mass. Strictly, the integration is along a line of constant angular
-  momentum, but this is approximated as vertical (an approximation which breaks
-  down near the equator). Hence, it can be seen that under these conditions the
-  residual circulation at a given altitude depends only on the wave drag above
-  that altitude.
+\bigskip\noindent\textsc{Baroclinic instability.} The growth rate of baroclinic
+eddies is related to the vertical shear in zonal wind throughout the troposphere
+\citep{Eady1949}. Some studies have suggested that lower stratospheric zonal
+wind anomalies which penetrate into the upper troposphere affect this vertical
+wind shear, and so the growth of baroclinic eddies \citep{Wittman2007,
+  Chen2008}. Hence, we may expect reduced tropospheric eddy activity at
+mid-to-high latitudes following SSWs, due to weaker lower stratosphere/upper
+troposphere zonal winds. \citet{Scaife2011} also used this relationship to
+demonstrate that an increase in European winter storminess and equatorward shift
+in the North Atlantic storm track projected under climate change are consistent
+with a weakening and equatorward shift of the stratospheric polar vortex. It is
+less clear whether the change in baroclinic eddy activity is sufficient to lead
+to the annular mode signals of the kind shown in Figure
+\ref{fig:baldwin_dunkerton}, although tropospheric eddies have been demonstrated
+to be important in driving annular mode variability \citep{Limpasuvan1999}.
 
-  This relation therefore shows that circulation induced by stratospheric wave
-  drag extends to the Earth's surface, although it should be noted that the
-  above assumptions (particularly steady-state) do not strictly hold in the real
-  atmosphere. \citet{Thompson2006} suggested that this induced residual
-  circulation (or `balanced response') is sufficient to explain the observed
-  stratosphere-troposphere coupling. Others, however, have argued that the
-  observed annular mode-like tropospheric response cannot be generated in the
-  zonal-mean framework of downward control, necessitating feedbacks involving
-  tropospheric eddies \citep{Kushner2004, Song2004}.
+\bigskip\noindent\textsc{Downward control.} Under steady-state or time-mean
+conditions, the `downward control' principle of \citet{Haynes1991} shows that
+the streamfunction, $\psi$, of the TEM residual circulation is given by
+\begin{equation}
+  \psi(\phi,z) =
+  \int_z^{\infty}\left(\frac{\rho_0a\overline{\mathcal{F}}\cos^2\phi}{\partial\overline{m}/\partial\phi}\right)_{\phi=\phi(z')}\mathrm{d}z'\, ,
+\end{equation}
+where $\overline{\mathcal{F}}$ is the total wave driving term from Equation
+\ref{eq:zonal_momentum}, and
+$\overline{m}=a\cos\phi(\overline{u}+a\Omega\cos\phi)$ is the angular momentum
+per unit mass. Strictly, the integration is along a line of constant angular
+momentum, but this is approximated as vertical (an approximation which breaks
+down near the equator). Hence, it can be seen that under these conditions the
+residual circulation at a given altitude depends only on the wave drag above
+that altitude.
+
+This relation therefore shows that circulation induced by stratospheric wave
+drag extends to the Earth's surface, although it should be noted that the above
+assumptions (particularly steady-state) do not strictly hold in the real
+atmosphere. \citet{Thompson2006} suggested that this induced residual
+circulation (or `balanced response') is sufficient to explain the observed
+stratosphere-troposphere coupling. Others, however, have argued that the
+observed annular mode-like tropospheric response cannot be generated in the
+zonal-mean framework of downward control, necessitating feedbacks involving
+tropospheric eddies \citep{Kushner2004, Song2004}.
 
 
-\item\textbf{Planetary wave reflection/refraction}: The critical surface formed
-  in the stratosphere during SSW events acts to reflect upward-propagating
-  planetary waves, as described in Section
-  \ref{sec:planetary-waves}. \citet{JudithPerlwitz2003} argued that these
-  reflected planetary waves re-enter the troposphere and affect the tropospheric
-  wave structures, leading to the observed tropospheric
-  response. \citet{Shaw2010} have further suggested that strong two-way coupling
-  exists in the presence of both a vertical reflecting surface and a strong
-  meridional PV gradient, which act to create a wave guide.
+\bigskip\noindent\textsc{Planetary wave reflection/refraction.} The critical
+surface formed
+in the stratosphere during SSW events acts to reflect upward-propagating
+planetary waves, as described in Section
+\ref{sec:planetary-waves}. \citet{JudithPerlwitz2003} argued that these
+reflected planetary waves re-enter the troposphere and affect the tropospheric
+wave structures, leading to the observed tropospheric response. \citet{Shaw2010}
+have further suggested that strong two-way coupling exists in the presence of
+both a vertical reflecting surface and a strong meridional PV gradient, which
+act to create a wave guide.
 
-  Other studies have suggested that it is the refraction of planetary waves
-  at lower levels, in the upper-troposphere/lower stratosphere (UTLS), that is
-  most important for communicating stratospheric anomalies to the surface
-  \citep{Limpasuvan2000,Hartmann2000}. Indeed, \citet{Chen1992} showed that
-  planetary wave propagation is very sensitive to small changes in this region
-  (also discussed by \citet{Haynes2005}). 
+Other studies have suggested that it is the refraction of planetary waves at
+lower levels, in the upper-troposphere/lower stratosphere (UTLS), that is most
+important for communicating stratospheric anomalies to the surface
+\citep{Limpasuvan2000,Hartmann2000}. Indeed, \citet{Chen1992} showed that
+planetary wave propagation is very sensitive to small changes in this region
+(also discussed by \citet{Haynes2005}).
 
-\item\textbf{Local adjustment to PV anomalies:} Under the QG approximation, PV
-  anomalies, $q'$, can be related to geopotential height anomalies, $Z'$,
-  through
-  \begin{equation}
-    q' = \mathcal{L}(Z')\, ,
-  \end{equation}
-  where $\mathcal{L}$ is a linear Laplacian-like operator
-  \citep{Charney1962}. It follows that the geopotential anomalies (and with QG
-  approximations, other dynamical fields) associated with a given PV anomaly can
-  be derived by inverting this operator. The geopotential height anomalies
-  associated with a given PV anomaly can be thought to be localised in that they
-  decay with a typical vertical and horizontal scales $H$ and $L$, which are the
-  scale height and horizontal scale of the QG flow respectively\footnote{It
-    follows from this that PV-inversion is global in the sense that knowledge of
-    the PV field everywhere is needed in order to fully determine the other
-    dynamical fields.}. In the case of lower-stratospheric PV anomalies, their
-  influence may therefore extend to the troposphere. \citet{Hartley1998} and
-  \citet{Black2002} performed such PV-inversions to calculate the tropospheric
-  effect of stratospheric PV anomalies. They found stratospheric PV anomalies to
-  contribute significantly to anomalies at the tropopause, which extend to the
-  Earth's surface.
+\bigskip\noindent\textsc{Local adjustment to PV anomalies.} Under the QG
+approximation, PV anomalies, $q'$, can be related to geopotential height
+anomalies, $Z'$, through
+\begin{equation}
+  q' = \mathcal{L}(Z')\, ,
+\end{equation}
+where $\mathcal{L}$ is a linear Laplacian-like operator \citep{Charney1962}. It
+follows that the geopotential anomalies (and with QG approximations, other
+dynamical fields) associated with a given PV anomaly can be derived by inverting
+this operator. The geopotential height anomalies associated with a given PV
+anomaly can be thought to be localised in that they decay with a typical
+vertical and horizontal scales $H$ and $L$, which are the scale height and
+horizontal scale of the QG flow respectively\footnote{It follows from this that
+  PV-inversion is global in the sense that knowledge of the PV field everywhere
+  is needed in order to fully determine the other dynamical fields.}. In the
+case of lower-stratospheric PV anomalies, their influence may therefore extend
+to the troposphere. \citet{Hartley1998} and \citet{Black2002} performed such
+PV-inversions to calculate the tropospheric effect of stratospheric PV
+anomalies. They found stratospheric PV anomalies to contribute significantly to
+anomalies at the tropopause, which extend to the Earth's surface.
 
-  \begin{figure}
-    \centering
-    \noindent\includegraphics[width=0.4\textwidth]{figures/chapter-intro/ambaum_hoskins.png}
-    \caption[Schematic from \citet{Ambaum2002}]{Schematic of the bending of
-      isentropic surfaces (labelled $\theta_0$, $\theta_1$, and $\theta_2$)
-      toward a positive potential vorticity anomaly. The arrows represent winds
-      associated with the potential vorticity anomaly, becoming weaker away from
-      the anomaly. Figure from \citet{Ambaum2002}.}
-    \label{fig:ambaum_hoskins}
-  \end{figure}
+\begin{figure}
+  \centering
+  \noindent\includegraphics[width=0.4\textwidth]{figures/chapter-intro/ambaum_hoskins.png}
+  \caption[Schematic from \citet{Ambaum2002}]{Schematic of the bending of
+    isentropic surfaces (labelled $\theta_0$, $\theta_1$, and $\theta_2$) toward
+    a positive potential vorticity anomaly. The arrows represent winds
+    associated with the potential vorticity anomaly, becoming weaker away from
+    the anomaly. Figure from \citet{Ambaum2002}.}
+  \label{fig:ambaum_hoskins}
+\end{figure}
 
-  It can be argued that PV-inversion does not constitute a `mechanism' since it
-  is not a time-dependent relationship and does not imply a direction of
-  causality. However, \citet{Ambaum2002} developed a physical mechanism
-  analogous to PV-inversion, as follows. Anomalies of PV act to bend isentropic
-  surfaces \citep{Hoskins1985}, as illustrated in Figure
-  \ref{fig:ambaum_hoskins}. At high latitudes, the tropopause lies approximately
-  on a potential vorticity surface, also the potential temperature of the
-  tropopause will be conserved for adiabatic changes (Section
-  \ref{sec:planetary-waves}). Hence, the tropopause will also bend in the
-  presence of a stratospheric potential vorticity anomaly; moving upwards for a
-  positive anomaly, and downwards for a negative anomaly. This deformation of
-  the tropopause will then lead to hydrostatic and geostrophic adjustment of the
-  tropospheric column below, which can be thought of in terms of the
-  conservation of angular momentum, with a stretched tropospheric column leading
-  to an increase of vorticity and lower pressure. It is therefore be expected
-  that a strengthening of the stratospheric polar vortex would be associated
-  with negative sea-level pressure anomalies over the pole, and a weakening with
-  positive pressure anomalies, which is consistent with the observed annular
-  mode relationships (Section \ref{sec:observ-evid}).
+It can be argued that PV-inversion does not constitute a `mechanism' since it is
+not a time-dependent relationship and does not imply a direction of
+causality. However, \citet{Ambaum2002} developed a physical mechanism analogous
+to PV-inversion, as follows. Anomalies of PV act to bend isentropic surfaces
+\citep{Hoskins1985}, as illustrated in Figure \ref{fig:ambaum_hoskins}. At high
+latitudes, the tropopause lies approximately on a potential vorticity surface,
+also the potential temperature of the tropopause will be conserved for adiabatic
+changes (Section \ref{sec:planetary-waves}). Hence, the tropopause will also
+bend in the presence of a stratospheric potential vorticity anomaly; moving
+upwards for a positive anomaly, and downwards for a negative anomaly. This
+deformation of the tropopause will then lead to hydrostatic and geostrophic
+adjustment of the tropospheric column below, which can be thought of in terms of
+the conservation of angular momentum, with a stretched tropospheric column
+leading to an increase of vorticity and lower pressure. It is therefore be
+expected that a strengthening of the stratospheric polar vortex would be
+associated with negative sea-level pressure anomalies over the pole, and a
+weakening with positive pressure anomalies, which is consistent with the
+observed annular mode relationships (Section \ref{sec:observ-evid}).
 
-  Importantly, \citet{Ambaum2002} noted a stratosphere-leading time-lagged
-  relationship between the strength of the stratospheric polar vortex, the
-  tropopause height and the NAO, with the stratosphere acting to integrate the
-  NAO. This therefore represents a time-dependent and causal mechanism for
-  stratosphere-troposphere coupling.
+Importantly, \citet{Ambaum2002} noted a stratosphere-leading time-lagged
+relationship between the strength of the stratospheric polar vortex, the
+tropopause height and the NAO, with the stratosphere acting to integrate the
+NAO. This therefore represents a time-dependent and causal mechanism for
+stratosphere-troposphere coupling.
+\begin{center}
+\line(1,0){250}
+\end{center}
 
-\end{itemize}
 
 The above list is not exhaustive but represents the most prominent proposed
 mechanisms. It is clear that several of these mechanisms are not mutually
