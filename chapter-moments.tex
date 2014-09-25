@@ -116,12 +116,12 @@ of classification of split and displaced vortex events in any study.
 
 In this chapter we wish to develop a method for the classification of split and
 displaced vortex events with the following properties:
-\begin{enumerate}
+\begin{itemize}
 \item It is based on vortex moment diagnostics.
 \item It can be easily applied to a range of data sets, including climate model
   simulations.
 \item It is computationally inexpensive. 
-\end{enumerate}
+\end{itemize}
 The motivation for the use of moment diagnostics includes their advantages in
 quantifying the shape and location of the vortex, as noted above. This, in turn,
 is desirable because the location of the vortex near the tropopause may be
@@ -485,7 +485,7 @@ events.
   \caption[NH distributions of $Z_{10}$ and PV-based moment
   diagnostics.]{Distributions of the December-March centroid latitude (a) and
     aspect ratio (b), of the NH stratospheric polar vortex over
-    1958-2009. Diagnostics are calculated from geopotential height at 10~hPa
+    1958--2009. Diagnostics are calculated from geopotential height at 10~hPa
     ($Z_{10}$) and potential vorticity at 850~K (PV). Thresholds of
     66$^{\circ}$N in centroid latitude and 2.4 in aspect ratio are used to
     define events, and are indicated by the black vertical lines.}
@@ -551,86 +551,83 @@ than others for certain uses. Here, three different algorithms are applied to
 the moment diagnostics in centroid latitude-aspect ratio space, and their
 outcomes shown in Figure \ref{fig:clusters}(a,b,c). Details of the three
 algorithms are given below:
-\begin{enumerate}[(a)]
-\item \textbf{\textit{K}-means} clustering requires the number of clusters, $K$,
-  to be specified beforehand (in Figure \ref{fig:clusters}, $K=3$). The
-  algorithm begins by randomly selecting $K$ data points to be the centroids of
-  the initial clusters, all other data points are assigned to the cluster with
-  the nearest centroid. Having assigned the initial cluster membership, the
-  algorithm proceeds as follows:
-  \begin{enumerate}[1.]
-    \item Compute the centroids (the vector means), $\mathbf{\overline{x}}_k$
-      of each cluster. 
-    \item Calculate the distance between the current data point, $\mathbf{x}_i$,
-      and each of the $K$ $\mathbf{\overline{x}}_k$s. (Various distance measures
-      can be used; in Figure \ref{fig:clusters}(a), the Euclidean distance is
-      used).
-    \item If $\mathbf{x}_i$ is not in the group with the closest mean then
-      reassign it to that group, otherwise repeat step 2 for $\mathbf{x}_{i+1}$.
-  \end{enumerate}
-  This is repeated until a full cycle through each $\mathbf{x}_i$ produces no
-  reassignments. An advantage of this method is that it is computationally
-  efficient, but the major disadvantage is that the number of clusters must be
-  pre-determined. Several methods exist to estimate the ideal number of
-  clusters, which generally have the aim of finding the best compromise between
-  minimising within-cluster variance and maximising between-cluster
-  variance. \citet{K.Coughlin2009} applied $K$-means clustering to several
-  variables representing the stratospheric polar vortex. They used the method of
-  \emph{silhouette values} \citep{Rousseeuw1987} to determine the ideal number
-  of clusters to be two (representing stable and disturbed vortex
-  states). However, three clusters has been imposed in Figure \ref{fig:clusters}
-  in order to attempt to identify stable, split, and displaced states.
+
+\bigskip\noindent\textbf{(a) \textit{K}-means} clustering requires the number of
+clusters, $K$, to be specified beforehand (in Figure \ref{fig:clusters},
+$K=3$). The algorithm begins by randomly selecting $K$ data points to be the
+centroids of the initial clusters, all other data points are assigned to the
+cluster with the nearest centroid. Having assigned the initial cluster
+membership, the algorithm proceeds as follows:
+\begin{enumerate}[1.]
+\item Compute the centroids (the vector means), $\mathbf{\overline{x}}_k$ of
+  each cluster.
+\item Calculate the qdistance between the current data point, $\mathbf{x}_i$,
+  and each of the $K$ $\mathbf{\overline{x}}_k$s. (Various distance measures can
+  be used; in Figure \ref{fig:clusters}(a), the Euclidean distance is used).
+\item If $\mathbf{x}_i$ is not in the group with the closest mean then reassign
+  it to that group, otherwise repeat step 2 for $\mathbf{x}_{i+1}$.
+\end{enumerate}
+This is repeated until a full cycle through each $\mathbf{x}_i$ produces no
+reassignments. An advantage of this method is that it is computationally
+efficient, but the major disadvantage is that the number of clusters must be
+pre-determined. Several methods exist to estimate the ideal number of clusters,
+which generally have the aim of finding the best compromise between minimising
+within-cluster variance and maximising between-cluster
+variance. \citet{K.Coughlin2009} applied $K$-means clustering to several
+variables representing the stratospheric polar vortex. They used the method of
+\emph{silhouette values} \citep{Rousseeuw1987} to determine the ideal number of
+clusters to be two (representing stable and disturbed vortex states). However,
+three clusters has been imposed in Figure \ref{fig:clusters} in order to attempt
+to identify stable, split, and displaced states.
 
 
-\item \textbf{Mean-shift} clustering aims to discover `blobs' in a data set. It
-  works by updating candidates for centroids to be the mean of the points within
-  a given region. That is, given a candidate centroid $\mathbf{x}_i$ for
-  iteration $t$, the candidate is updated according to
-  \begin{equation}
-    \mathbf{x}^{t+1}_{i} = \mathbf{x}^t_i + \mathbf{m}(\mathbf{x}^t_i) \, ,
-  \end{equation}
- where $\mathbf{m}$ is the mean shift vector. This is calculated as
- \begin{equation}
+\bigskip\noindent\textbf{(b) Mean-shift} clustering aims to discover `blobs' in
+a data set. It works by updating candidates for centroids to be the mean of the
+points within a given region. That is, given a candidate centroid $\mathbf{x}_i$
+for iteration $t$, the candidate is updated according to
+\begin{equation}
+  \mathbf{x}^{t+1}_{i} = \mathbf{x}^t_i + \mathbf{m}(\mathbf{x}^t_i) \, ,
+\end{equation}
+where $\mathbf{m}$ is the mean shift vector. This is calculated as
+\begin{equation}
   \mathbf{m}(\mathbf{x}_i) = \frac{\sum_{\mathbf{x}_j \in N(\mathbf{x}_i)}K(\mathbf{x}_j-\mathbf{x}_i)\mathbf{x}_j}{\sum_{\mathbf{x}_j
       \in N(\mathbf{x}_i)}K(\mathbf{x}_j-\mathbf{x}_i)} \, ,
- \end{equation}
- where $K(\mathbf{x}_j-\mathbf{x}_i)$ is a kernel function which determines the
- weight of nearby points. Typically, and in Figure \ref{fig:clusters}(b), a
- Gaussian kernel is used,
- $K(\mathbf{x}_j-\mathbf{x}_i) = e^{-c\|\mathbf{x}_j-\mathbf{x}_i\|^2}$.
- $N(\mathbf{x}_i)$ represents the set of points for which
- $K(\mathbf{x}_i) \ne 0$. This shifting is repeated until $\mathbf{m}$
- converges. Following this calculation, the candidates are then filtered to
- remove near duplicates. The greatest advantage of this method is that it
- automatically sets the number of clusters, so no prior assumptions about the
- data set are required. A disadvantage is that it requires multiple nearest
- neighbour searches during each iteration, and so may not be scalable to large
- data sets. In Figure \ref{fig:clusters}(b) the number of clusters was
- determined to be four (because the fourth cluster is very small it is not
- easily visible in Figure \ref{fig:clusters}(b), but represents points with high
- aspect ratio).
+\end{equation}
+where $K(\mathbf{x}_j-\mathbf{x}_i)$ is a kernel function which determines the
+weight of nearby points. Typically, and in Figure \ref{fig:clusters}(b), a
+Gaussian kernel is used,
+$K(\mathbf{x}_j-\mathbf{x}_i) = e^{-c\|\mathbf{x}_j-\mathbf{x}_i\|^2}$.
+$N(\mathbf{x}_i)$ represents the set of points for which
+$K(\mathbf{x}_i) \ne 0$. This shifting is repeated until $\mathbf{m}$
+converges. Following this calculation, the candidates are then filtered to
+remove near duplicates. The greatest advantage of this method is that it
+automatically sets the number of clusters, so no prior assumptions about the
+data set are required. A disadvantage is that it requires multiple nearest
+neighbour searches during each iteration, and so may not be scalable to large
+data sets. In Figure \ref{fig:clusters}(b) the number of clusters was determined
+to be four (because the fourth cluster is very small it is not easily visible in
+Figure \ref{fig:clusters}(b), but represents points with high aspect ratio).
 
-\item \textbf{Hierarchical} clustering proceeds by calculating a series of
-  nested clusters. To begin with, all data points are considered each as a
-  separate cluster and then at each iteration the nearest two clusters are
-  merged. There are a number of methods to identify the distance between
-  clusters when those clusters consist of more than one member. Following
-  \citet{Hannachi2010} the \emph{complete-linkage} method is used here, defining
-  the distance as the largest distance between members in the two groups. As
-  with the $K$-means clustering, the number of clusters desired must be
-  pre-determined, otherwise the algorithm will run to completion with a single
-  cluster consisting of all data points. Again, many methods exist to determine
-  the optimum number of clusters. \citet{Hannachi2010} used the gap statistic
-  method \citep{Tibshirani2001} with vortex area, centroid latitude, and aspect
-  ratio moment diagnostics, and found a slight preference for three clusters. As
-  such, three clusters are used in Figure \ref{fig:clusters}(c).
+\bigskip\noindent\textbf{(c) Hierarchical} clustering proceeds by calculating a
+series of nested clusters. To begin with, all data points are considered each as
+a separate cluster and then at each iteration the nearest two clusters are
+merged. There are a number of methods to identify the distance between clusters
+when those clusters consist of more than one member. Following
+\citet{Hannachi2010} the \emph{complete-linkage} method is used here, defining
+the distance as the largest distance between members in the two groups. As with
+the $K$-means clustering, the number of clusters desired must be pre-determined,
+otherwise the algorithm will run to completion with a single cluster consisting
+of all data points. Again, many methods exist to determine the optimum number of
+clusters. \citet{Hannachi2010} used the gap statistic method
+\citep{Tibshirani2001} with vortex area, centroid latitude, and aspect ratio
+moment diagnostics, and found a slight preference for three clusters. As such,
+three clusters are used in Figure \ref{fig:clusters}(c).
 
-\end{enumerate}
 
-Figure \ref{fig:clusters} demonstrates that the three clustering methods produce
-very different results. As well as the size and extent of the clusters, there is
-also disagreement between this and past studies on the optimum number of
-clusters; \citet{K.Coughlin2009} found two clusters using a silhouette values
+\bigskip Figure \ref{fig:clusters} demonstrates that the three clustering methods
+produce very different results. As well as the size and extent of the clusters,
+there is also disagreement between this and past studies on the optimum number
+of clusters; \citet{K.Coughlin2009} found two clusters using a silhouette values
 method, \citet{Hannachi2010} found three clusters using the gap statistic, while
 the mean-shift algorithm applied here produces four clusters. Further
 sensitivity tests were performed by randomly removing 1\% of the data and
@@ -641,7 +638,7 @@ model simulations. The likely reason for this sensitivity is that the data
 itself is not highly clustered; as can be seen in Figure
 \ref{fig:pv_z_moments_distribution} no clear bi-modality is present. Rather, it
 is more appropriate to view the split and displaced vortex states as the tails
-of a distribution rather than distinct clusters or regimes. 
+of a distribution rather than distinct clusters or regimes.
 
 For the reasons above, clustering methods are deemed inappropriate for the
 present study, and a simpler, more robust, thresholds-based method is
@@ -785,7 +782,7 @@ westward-displaced vortex.
     35  & 2009-1-18   & S          & 13.2       & 16.9 \\ \hline
     \end{tabular}
     \caption{A summary table of displaced (D) and split (S) vortex events,
-      identified from 10~hPa geopotential height data from 1958-2009.
+      identified from 10~hPa geopotential height data from 1958--2009.
       $\Delta \mathrm{T}_{10}$ represents the mean area-weighted
       $50^{\circ}$-$90^{\circ}$N cap temperature anomaly at 10 hPa calculated 5
       days either side of the event onset date. $\overline{u}_{10}$ represents
@@ -868,7 +865,7 @@ the seasonal distribution of displaced vortex events \citep{Mitchell2011}.
  \noindent\includegraphics[width=\textwidth]{figures/chapter-moments/pv_composites_colbar_crop.pdf}
  \caption[PV composites for split and displaced vortex events.]{Composites of
    potential vorticity at the 850~K isentropic surface from the ERA reanalysis
-   over 1958-2009. Composites are taken over the 5 days following the onset date
+   over 1958--2009. Composites are taken over the 5 days following the onset date
    of split vortex events (a,b,c) and displaced vortex events (d,e,f). The
    new ($Z_{10}$) method (a,b) is compared with that of M13 (b,e) and CP07
    (c,f).}
@@ -904,9 +901,9 @@ extreme events (as discussed in M13).
 Many studies have characterised stratospheric polar variability by its zonal
 wave structure \citep[e.g,][]{Randel1988,Yoden1999,Nakagawa2006,Bancala2012}. It
 is therefore instructive to compare this wave analysis with the moment
-diagnostics developed in this chapter. Here this is carried out for the
-displaced and split vortex events shown in Figures \ref{fig:displaced_ellipse}
-and \ref{fig:split_ellipse} respectively. A similar comparison was shown by
+diagnostics developed above. Here this is carried out for the displaced and
+split vortex events shown in Figures \ref{fig:displaced_ellipse} and
+\ref{fig:split_ellipse} respectively. A similar comparison was shown by
 \citet{Waugh1997} and \citet{Waugh1999}, and the results here are consistent
 with their findings.
 
@@ -920,14 +917,15 @@ Charney-Drazin filtering of zonal wavenumbers, as discussed in Section
 
 The correlation of geopotential height-derived daily aspect ratio and the wave-2
 amplitude over DJFM is 0.30 and that of centroid latitude and wave-1 amplitude
-$-0.22$, both of which are highly statistically significant. These
-relationships are illustrated in the examples of split and displaced vortex
-events in Figure \ref{fig:wave_moments_ts}. In the case of the 1979 split vortex
-event the wave-2 amplitude peaks approximately 5 days before the peak of the
-aspect ratio. Wave-2 amplitude is also more variable than aspect ratio in early
-winter, although the two are correlated at this time. In the case of the 2006
-displaced vortex event, the difference is even greater. The wave-1 amplitude
-peaks about three weeks before the centroid latitude, and is actually
+$-0.22$, both of which are highly statistically significant. Figure
+\ref{fig:wave_moments_ts} illustrates these relationships for the example split
+and displaced vortex events previously shown in Figures
+\ref{fig:displaced_ellipse} and \ref{fig:split_ellipse} . In the case of the
+1979 split vortex event the wave-2 amplitude peaks approximately 5 days before
+the peak of the aspect ratio. Wave-2 amplitude is also more variable than aspect
+ratio in early winter, although the two are correlated at this time. In the case
+of the 2006 displaced vortex event, the difference is even greater. The wave-1
+amplitude peaks about three weeks before the centroid latitude, and is actually
 anomalously small at the peak of centroid latitude. Before and after the event,
 the wave-1 amplitude and centroid latitude are highly correlated.
 
@@ -1012,7 +1010,7 @@ the NAM is normalised so that the time series at each level has unit variance.
    and hashed regions represent those that are 95\% significant according to a
    two-tailed bootstrap test. Lag 0 is at the onset of an event as measured at
    10 hPa. Contour intervals are 0.25 and the region between -0.25 and 0.25 is
-   unshaded. Data is from the ECMWF Reanalyses 1958-2009.}
+   unshaded. Data is from the ECMWF Reanalyses 1958--2009.}
  \label{fig:dripping_paint}
 \end{figure}
 
@@ -1087,7 +1085,7 @@ test the \emph{difference} between split and displaced vortex events.
  events.]{Composites of mean sea-level pressure anomalies in the 30 days before
    (a,b) and 30 days after (c,d) the onset dates of displaced (a,c) and split
    (b,d) vortex events from the $Z_{10}$ method. Data are from the ECMWF
-   renalyses (1958-2009). Anomalies are calculated for each day and gridpoint
+   renalyses (1958--2009). Anomalies are calculated for each day and gridpoint
    from the climatology for that day of the year and gridpoint. Grey contours
    indicate regions of greater than 95\% statistical significance according to a
    bootstrap significance test.}
@@ -1126,7 +1124,7 @@ compare very well with the corresponding diagnostics from M13.
    isentropic surface averaged over the 10 days following displaced (a) and
    split (b) vortex events. DJFM average of 430~K PV (c). Units are PVU and the
    contour interval is 2~PVU. Data are restricted to the ERA-Interim period
-   (1979-2009), meaning a total of 10 displaced and 10 split vortex events enter
+   (1979--2009), meaning a total of 10 displaced and 10 split vortex events enter
    the composites. }
  \label{fig:430K_PV}
 \end{figure}
@@ -1175,7 +1173,7 @@ Again following the reasoning of \citet{Ambaum2002}, composites of tropopause
 height averaged over the 10 days before, 0-10 days after, and 10-20 days after
 split and displaced vortex events are now shown in Figure
 \ref{fig:tropopause_height} (these composites now use the full ERA (1958-2009)
-data set). The measure of tropopause height used is that of \citet{Wilcox2012a},
+data set). The measure of tropopause height used is that of \citet{Wilcox2012},
 who construct a blended thermal and dynamical tropopause. Significance is again
 calculated using a two-tailed bootstrap test.
 
