@@ -498,9 +498,9 @@ persistence of initial anomalies. In fact, there is a negative correlation
 between $\overline{u}$ on 9th August, when the last ensemble member is
 initialised, and the SON mean ($r=-0.54$). Hence, a persistence forecast would
 be negatively correlated with observed values. This relationship may be
-consistent with ideas of a pre-conditioning of the polar vortex
-\citep[e.g.,][]{McIntyre1983}. The standard deviation of all GloSea5 ensemble
-members is $7.5~\mathrm{m~s^{-1}}$ and that of ERA-Interim is
+consistent with ideas of a pre-conditioning of the polar vortex \citep[e.g.,][
+Section \ref{sec:strat-sudd-warm}]{McIntyre1983}. The standard deviation of all
+GloSea5 ensemble members is $7.5~\mathrm{m~s^{-1}}$ and that of ERA-Interim is
 $9.7~\mathrm{m~s^{-1}}$ indicating that the GloSea5 ensemble spread may be too
 small. However, there are large uncertainties in these values due to the short
 hindcast period and the large 2002 anomaly.
@@ -906,11 +906,12 @@ results mean that individual ensemble members have a smaller predictable signal
 than observations. This effect was recently discussed by \citet{Eade2014}, who
 proposed a rescaling of the ensemble mean to have the same variance as the
 predictable component of the observed variance (which can be estimated by
-$\sigma^2_{obs}r^2$, where $\sigma^2_{obs}$ is the observed variance). However,
-this procedure is most applicable to forecasts where the scaling can be
-determined from hindcasts, so that information from the observations does not
-enter the forecasts themselves. Furthermore, this rescaling does not affect
-correlation skill scores, and so it is not applied in the current analysis.
+$\sigma^2_{\mathrm{obs}}r^2$, where $\sigma^2_{\mathrm{obs}}$ is the observed
+variance). However, this procedure is most applicable to forecasts where the
+scaling can be determined from hindcasts, so that information from the
+observations does not enter the forecasts themselves. Furthermore, this
+rescaling does not affect correlation skill scores, and so it is not applied in
+the current analysis.
 
 \begin{figure}[t]
   \centering
@@ -935,12 +936,12 @@ value for a given sample size calculated. This variation of correlation skill
 with ensemble size for both the SON mean SAM and stratospheric polar vortex
 winds is shown in Figure \ref{fig:corr_ens_size_sh}. These curves closely follow
 the theoretical relationship of \citet{Murphy1990}, which relies only on the
-mean correlation between pairs of ensemble members, $\langle r_{mm} \rangle$,
+mean correlation between pairs of ensemble members, $\langle r_{\mathrm{mm}} \rangle$,
 and the mean correlation between individual ensemble members and observations,
-$\langle r_{mo} \rangle$, given by
+$\langle r_{\mathrm{mo}} \rangle$, given by
 \begin{equation}
-r = \frac{\langle r_{mo} \rangle \sqrt{n}}{\sqrt{1+(n-1)\langle r_{mm} \rangle}}
-\, .
+  r = \frac{\langle r_{\mathrm{mo}} \rangle \sqrt{n}}{\sqrt{1+(n-1)\langle r_{\mathrm{mm}} \rangle}}
+  \, .
 \end{equation} 
 These curves are shown in Figure \ref{fig:corr_ens_size_sh}, along with their
 asymptote for an infinite sized ensemble. This shows that the stratospheric
@@ -1099,7 +1100,7 @@ the longer period. This is shown to be the case below.
 We use the monthly Southern Oscillation Index (MSLP difference between Darwin
 and Tahiti, which is highly correlated with the Ni\~no-4 index) data obtained
 from the Australian Bureau of Meteorology
-\url{http://www.bom.gov.au/climate/current/soihtm1.shtml}, and a station-based
+(\url{http://www.bom.gov.au/climate/current/soihtm1.shtml}), and a station-based
 SAM index from the British Antarctic Survey \citep{Marshall2003}. For the
 1996-2009 hindcast period we find the correlation of June-July SOI with Oct-Nov
 SAM to be $r=0.63$. For 1979-2010 (the ERA-Interim period) $r=0.32$. In order to

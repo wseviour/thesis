@@ -15,7 +15,7 @@ in climate model simulations.
 
 It has been further shown that a simple threshold-based method can be applied to
 the vortex moment diagnostics in order to indentify split and displaced vortex
-events. The events identified in this way coincide to a large extent with events
+events. The majority of events identified in this way coincide with events
 defined by other methods, and capture equally extreme vortex states.
 
 \paragraph{The stratospheric polar vortex in climate models.} The first
@@ -127,10 +127,10 @@ systems.
 The work presented in this thesis has raised a number of questions, and
 motivated future investigations. Some of these ideas are discussed below:
 
-\paragraph{Systematic variation of model resolution.} It was shown in Figure
-\ref{fig:aspect_vert_res} that among CMIP5 models their appears to be a
-relationship between the average aspect ratio of the stratospheric polar vortex
-and vertical resolution, particularly in the
+\paragraph{How does vertical resolution affect models' representation of the
+  stratosphere?} It was shown in Figure \ref{fig:aspect_vert_res} that among
+CMIP5 models their appears to be a relationship between the average aspect ratio
+of the stratospheric polar vortex and vertical resolution, particularly in the
 upper-troposphere/lower-stratosphere. Although this relationship is backed up by
 the physical understanding of the influence fine-scale vertical structure on
 planetary wave propagation in this region, it is not highly statistically
@@ -146,22 +146,22 @@ expensive since it involves studying the mean state (rather than extremes such
 as SSWs), so relatively few years need to be simulated.
 
 
-\paragraph{The 2002 Southern Hemisphere SSW.} The possibility of an incresed
-likelihood of the 2002 SH SSW up to two months in advance was suggested in
-Chapter \ref{cha:seas}. It is unclear, however, what factors influence this
-predictability. It would therefore be interesting to carry out an investigation
-in which possible influences are systematically changed. For instance, the 2002
-hindcasts could be re-run with an opposite phase of the QBO, different tropical
-Pacific or Southern Ocean SSTs, or different polar stratospheric initial
-conditions. The change in forecasts of the stratospheric polar vortex could then
-be analysed, indicating which factors are most important. It is likely that
-there would be some difficulty in imposing these different initial conditions
-consistently. Furthermore, such an investigation is likely to be quite
-computationally expensive as it is likely that many ensemble members will be
-needed in order for a sufficient number of SSWs to be simulated.
+\paragraph{What caused the anomalous 2002 Southern Hemisphere?} The possibility
+of an incresed likelihood of the 2002 SH SSW up to two months in advance was
+suggested in Chapter \ref{cha:seas}. It is unclear, however, what factors
+influence this predictability. It would therefore be interesting to carry out an
+investigation in which possible influences are systematically changed. For
+instance, the 2002 hindcasts could be re-run with an opposite phase of the QBO,
+different tropical Pacific or Southern Ocean SSTs, or different polar
+stratospheric initial conditions. The change in forecasts of the stratospheric
+polar vortex could then be analysed, indicating which factors are most
+important. It is likely that there would be some difficulty in imposing these
+different initial conditions consistently. Furthermore, such an investigation is
+likely to be quite computationally expensive as it is likely that many ensemble
+members will be needed in order for a sufficient number of SSWs to be simulated.
 
-\paragraph{Influence of interactive chemistry on seasonal forecast skill.} The
-seasonal forecast system analysed in Chapter \ref{cha:seas} did not include
+\paragraph{Would interactive ozone chemistry improve seasonal forecast skill?}
+The seasonal forecast system analysed in Chapter \ref{cha:seas} did not include
 interactive chemistry, with ozone concentrations set to a climatology. It is
 therefore unable to capture the feedback between ozone concentrations and the
 stratospheric circulation, or zonal asymmetries in ozone. \citet{Waugh2009} have
@@ -173,9 +173,9 @@ the investigation should determine which reactions have the most impact on
 forecast skill.
 
 
-\paragraph{Decadal variability.} Looking by eye at the events detected in
-Chapter \ref{cha:moments}, it appears that they cluster in time. For instance,
-there are 10 events in the 1970s, but only 4 in the 1990s. Figure
+\paragraph{Is there decadal variability in SSWs?} Looking by eye at the events
+detected in Chapter \ref{cha:moments}, it appears that they cluster in time. For
+instance, there are 10 events in the 1970s, but only 4 in the 1990s. Figure
 \ref{fig:decadal} shows an attempt to analyse whether this decadal variability
 is statistically significant. It shows (solid black line) the frequency of given
 numbers of split/displaced vortex events within a 10-year moving window
@@ -210,6 +210,8 @@ generated.
 \end{figure}
 
 
+\paragraph{NAM or NAO?}
+
 
 \paragraph{??Time scale of stratosphere-troposphere coupling.} In this thesis it
 has been demonstrated that split vortex events occur barotropically, suggesting
@@ -238,6 +240,34 @@ relevence of the modes and coherence between the stratosphere and troposphere.
 \end{figure}
 
 
+\section{Personal outlook}
+
+The Earth's atmosphere contains complex three-dimensional variability that is
+both difficult to conceptualise and to visualise. Historically, because of a
+relative lack of data and computing power, this has restricted our understanding
+of this variabiliy to simplified metrics such as the zonal mean wind, Fourier
+decomposition, or the annular modes. However, as our resources have increased
+there has been a clear trend towards the development of more complex diagnostic
+tools, such as feature tracking algorithms or empirical mode decomposition. I
+hope that the moment diagnostic tools and their application developed in this
+thesis contributes towards this trend.
+
+Numerous studies over the past decade have demonstrated a more realistic climate
+and improved weather forecasts can be achieved using models which resolve the
+stratosphere. This has proved persuasive to modelling centres, and although
+there is still some way to go, I believe it is now a matter of time before
+almost all weather and climate prediction models include a stratosphere. Much of
+the work in this thesis has reaffirmed the importance of the stratosphere in
+surface weather and climate (although providing a more detailed
+picture). However, we have also clearly seen that a ``high-top'' is not a
+sufficient condition for a realistic stratosphere. The next major challenge for
+the stratospheric community is to identify where limited computing resources
+should be best spent in simulating the stratosphere; is vertical resolution near
+the tropopause most important? Or horizontal resolution to resolve steep PV
+gradients near the vortex edge? Or are gravity wave parametrisations the largest
+source of error? It is likely that different factors will affect different
+aspects of stratospheric variability, and so we must choose which to
+prioritise. 
 
 
 
