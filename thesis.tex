@@ -2,8 +2,13 @@
 %\documentclass[12pt,beltcrest]{ociamthesis} % use old belt crest logo
 %\documentclass[12pt,shieldcrest]{ociamthesis} % use older shield crest logo
 
-\usepackage[activate={true,nocompatibility},draft,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+%\usepackage[activate={true,nocompatibility},draft,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+%\DisableLigatures[T]{encoding = *, family = * }
 % activate={true,nocompatibility} - activate protrusion and expansion
+\usepackage{microtype}
+\DisableLigatures[T]{}
+
+
 % final - enable microtype; use "draft" to disable
 % tracking=true, kerning=true, spacing=true - activate these techniques
 % factor=1100 - add 10% to the protrusion amount (default is 1000)
@@ -11,12 +16,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% FONTS %%%%%%%%%%%%%%%%%%%%%%%%%
 %Palatino
-\usepackage[sc]{mathpazo}
-\renewcommand{\normalsize}{\fontsize{11.7pt}{13pt}\selectfont}
-
+%\usepackage[sc]{mathpazo}
+%\renewcommand{\normalsize}{\fontsize{11.7pt}{13pt}\selectfont}
+%\usepackage[light]{kpfonts}
 
 % Latin modern
 %\usepackage{lmodern}
+
 
 % Times
 %\usepackage[varg]{txfonts}
@@ -25,11 +31,11 @@
 %\usepackage{fouriernc}
 
 % Minion pro
-%\usepackage{MnSymbol}
-%\usepackage[mathlf,textlf,minionint]{MinionPro}
+\usepackage{MnSymbol}
+\usepackage[mathlf,textlf,minionint]{MinionPro}
 % - use below for mix of text and maths numbers
 %%\usepackage[mathlf,minionint]{MinionPro}
-%\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}
 %\usepackage{textcomp}
 
 % Utopia
@@ -37,7 +43,7 @@
 
 % bitstream charter
 %\usepackage[T1]{fontenc} 
-\usepackage[latin1]{inputenc}
+%\usepackage[latin1]{inputenc}
 %\usepackage[bitstream-charter]{mathdesign}
 %\usepackage[urw-garamond]{mathdesign}
 
