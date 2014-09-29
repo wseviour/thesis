@@ -12,9 +12,10 @@ evident in the Coupled Model Intercomparison Projects, CMIP3 and CMIP5
 Panel on Climate Change (IPCC) fourth and fifth Assessment Reports respectively
 \citep{Solomon2007, Stocker2013}. CMIP5 includes 15 models with an uppermost
 level above the stratopause, whereas CMIP3 includes only five. This change in
-model stratospheric resolution has been largely motivated by an increased
-understanding of the stratosphere's influence on tropospheric climate (discussed
-in \citet{Gerber2012} and Chapters \ref{cha:background} and \ref{cha:moments}).
+models' representation of the stratosphere has been largely motivated by an
+increased understanding of the stratosphere's influence on tropospheric climate
+(discussed in \citet{Gerber2012} and Chapters \ref{cha:background} and
+\ref{cha:moments}).
 
 The effect of this greater stratospheric resolution was studied by
 \citet{Charlton-Perez2013}, who compared stratospheric variability between
@@ -113,12 +114,12 @@ of the 13 models have an uppermost level which is in the upper mesosphere
 stratopause.
 
 Historical simulations have been used throughout this analysis. These include
-observed climate forcings, such as from greenhouse gasses, ozone depletion,
+observed climate forcings, such as from greenhouse gases, ozone depletion,
 land-use change, tropospheric and stratospheric aerosols and solar
 variability. The simulation period considered is limited to 1958-2005, so that
 it coincides with the ERA-40/ERA-Interim reanalysis period (CMIP5 historical
 simulations end at 2005). Limiting the model simulation analysis to the same
-period as reanalysis may be important becasue several studies have suggested
+period as reanalysis may be important because several studies have suggested
 that external forcing, such as volcanic eruptions and solar variability, has a
 significant impact on stratospheric variability
 \citep[e.g.,][]{Robock2000,Gray2010}. In order to achieve the largest possible
@@ -167,10 +168,10 @@ MRI-ESM1       & 1 & 80.6    & 48     & 107          & 0.88         & 1.87 \\ \h
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/moments_stats1.pdf}
  \caption[Distributions of moment diagnostics for the CMIP5
- models.]{Distributions of centroid latitude and aspect ratio for the ERA (grey
-   lines) (a) and the CMIP5 models (red lines). Joint distributions are shown
-   with a logarithmic scale such that red squares represent the densest
-   regions.}
+ models.]{Distributions of centroid latitude ($y$-axis) and aspect ratio
+   ($x$-axis) for the ERA (grey lines; panel (a)) and the CMIP5 models (red
+   lines). Joint distributions are shown with a logarithmic scale such that red
+   squares represent the densest regions.}
  \label{fig:cmip5_moments_stats}
 \end{figure}
 
@@ -220,8 +221,8 @@ these biases are not strongly seasonally dependent. On the other hand, the large
 equatorward bias in the CanESM2 mean centroid latitude is much larger in
 December and early January than later in winter. The 95th percentile of aspect
 ratio is lower than reanalysis for the majority of models throughout the season,
-indicating that models have, on average, too little variability in aspect ratio
- 
+indicating that models have, on average, too little variability in their aspect
+ratio.
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/moments_seasonal_stats.pdf}
@@ -260,13 +261,13 @@ models agrees well with the equivalent SSW frequency calculated by
 \citet{Charlton-Perez2013}, who identified events based on the reversal of
 zonal-mean zonal wind at 60$^{\circ}$N and 10~hPa. They also found HadGEM2-CC to
 have the highest frequency of events within the CMIP5 ensemble, while MRI-CGCM3
-is the model with the lowest frequency of SSWs in their study (excluding GFDL-CM3
-and MRI-ESM1 which \citet{Charlton-Perez2013} did not analyse, MRI-CGCM3 is the
-second-lowest frequency in the present study). This similarity between
-\citet{Charlton-Perez2013} and the present study indicates that the close
-relationship between moment diagnostics-defined events and SSWs defined by
-zonal-mean zonal wind, as described in Chapter \ref{cha:moments}, also holds for
-climate models.
+is the high-top model with the lowest frequency of SSWs in their study
+(excluding GFDL-CM3 and MRI-ESM1, which \citet{Charlton-Perez2013} did not
+analyse, from the comparison, MRI-CGCM3 becomes the second-lowest frequency in
+the present study). This similarity between \citet{Charlton-Perez2013} and the
+present study indicates that the close relationship between moment
+diagnostics-defined events and SSWs defined by zonal-mean zonal wind, as
+described in Chapter \ref{cha:moments}, also holds for climate models.
 
 As well as the large differences in the total frequency of displaced and split
 vortex events, it can be seen in Figure \ref{fig:cmip5_events_bar_stacked} that
@@ -311,7 +312,7 @@ then finding the peak of that distribution. Following \citet{Mitchell2011}, we
 fit the aspect ratio with a generalised extreme value (GEV) distribution of the
 form
 \begin{equation}
-  f(x;\mu,\sigma,\xi) = \frac{a^{(-1/\xi)-1}}{\sigma}\mathrm{e}^{{-a}^{-1/\xi}}
+  f(x;\mu,\sigma,\xi) = \frac{a^{(-1/\xi)-1}}{\sigma}e^{{-a}^{-1/\xi}}
   \, , 
 \end{equation}
 with
@@ -324,8 +325,8 @@ parameters are determined using the method of maximum-likelihood estimation
 \citep{Wilks}. This method is also used to fit a Gaussian distribution of the
 form
 \begin{equation}
-f(x;\mu,\sigma) = \frac{1}{\sigma\sqrt{2\pi}} \left(
-  -\frac{(x-\mu)^2}{2\sigma^{2}} \right) \, ,
+f(x;\mu,\sigma) = \frac{1}{\sigma\sqrt{2\pi}} e^{
+  -\frac{(x-\mu)^2}{2\sigma^{2}}} \, , 
 \end{equation}
 where $\mu$ determines the position of the peak along the $x$-axis and $\sigma$
 is the standard deviation, to the cube of the centroid latitude, and then the
@@ -361,8 +362,7 @@ planetary wave amplitudes is investigated in the next section.
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/CMIP5_moments_scatter.pdf}
- \caption[Comparison of moment diagnostics and frequency of split and displaced
- vortex events.]{Comparison of the DJFM mean aspect ratio with frequency of
+ \caption[Comparison of moment diagnostics and event frequency]{Comparison of the DJFM mean aspect ratio with frequency of
    split vortex events (a) and DJFM mean centroid latitude with frequency of
    displaced vortex events (b) in the CMIP5 ensemble and ERA. Linear best fits
    and the correlation coefficients for all the models are also shown.}
@@ -393,11 +393,11 @@ observations, where not all split vortex events are dominated by wave-2 activity
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/10hPa_GPH_composites.pdf}
- \caption[Composites of 10~hPa $Z$ at the onset date split and displaced vortex
- events in the CMIP5 models.]{Composites of 10~hPa $Z$ at the onset date of
-   split (S) and displaced (D) vortex events in ERA (a,b) and the CMIP5
-   models. The number of events entering the composite and their type are
-   shown in the title of each plot. The contour interval is 0.3~km.}
+ \caption[Composites of 10~hPa $Z$ at the onset of split and displaced vortex
+ events]{Composites of 10~hPa $Z$ at the onset date of split (S) and displaced
+   (D) vortex events in ERA (a,b) and the CMIP5 models. The number of events
+   entering the composite and their type are shown in the title of each
+   plot. The contour interval is 0.3~km.}
  \label{fig:10hPa_GPH_comp}
 \end{figure}
 
@@ -408,7 +408,7 @@ be suspected that the models have too little wave-2 activity. The relative
 magnitudes of wave-1 and wave-2 planetary waves are diagnosed using the same
 method described in Section \ref{sec:comp-zonal-wave}. In order to determine the
 climatological wave activity for each model, the resulting distributions of
-daily wave amplitides were fitted with a GEV distribution using
+daily wave amplitudes were fitted with a GEV distribution using
 maximum-likelihood estimation, and the peak of that distribution determined, as
 in the previous section. A GEV distribution was found to be a good fit for the
 distributions of each model. As previously, this method has the advantage of
@@ -430,17 +430,17 @@ affected by large extreme values.
  \label{fig:cmip5_waves}
 \end{figure}
 
-The resulting ratios of wave-2 to wave-1 amplitude for each of the
-CMIP5 models and ERA are shown in Figure \ref{fig:cmip5_waves}(a). ERA is seen
-to lie approximately in the middle of the models; 7 models have a greater ratio,
-and 6 models lesser. The same ratio of wave amplitude was calculated by
+The resulting ratios of wave-2 to wave-1 amplitude for each of the CMIP5 models
+and ERA are shown in Figure \ref{fig:cmip5_waves}(a). ERA is seen to lie
+approximately in the middle of the models; 7 models have a greater ratio, and 6
+models lesser. The same ratio of wave amplitude was calculated by
 \citet{Butchart2011} for the CCMVal-2 models. They found a bias towards a
-relative lack of wave-2 activity, with 13 of 17 models having a lower
-ratio than reanalysis. The current results show that this bias is not present
-among the high-top CMIP5 ensemble, and so the bias towards low aspect ratio
-cannot be attributed to a relative lack of wave-2 activity (this is also
-true of the absolute value of wave-2 amplitude, in which 5 of 13 models
-have a lower value than ERA).
+relative lack of wave-2 activity, with 13 of 17 models having a lower ratio than
+reanalysis. The current results show that this bias is not present among the
+high-top CMIP5 ensemble, and so the bias towards low aspect ratio cannot be
+attributed to a relative lack of wave-2 activity (this is also true of the
+absolute value of wave-2 amplitude, in which only 5 of 13 models have a lower
+value than ERA).
 
 Comparing Figures \ref{fig:cmip5_waves}(a) and
 \ref{fig:cmip5_moments_scatter}(a), it can be seen that the model with the
@@ -522,9 +522,9 @@ stronger, in closer agreement with reanalysis.
 As well as these large inter-model differences, there are also some consistent
 features among models. Almost all models show a barotropic onset to split vortex
 events, with anomalies occurring at the same time throughout the depth of the
-atmosphere. In contrast, displaced vortex events apprear more baroclinic, with
+atmosphere. In contrast, displaced vortex events appear more baroclinic, with
 onset occurring first near the uppermost level. This is consistent with the
-difference found in reanalysis, indicating that this is likley to be a robust
+difference found in reanalysis, indicating that this is likely to be a robust
 difference between the response to split and displaced vortex events. These
 features are also apparent in the multi-model mean (MMM) (Figures
 \ref{fig:cmip5_dripping_paint} C and D). This mean is calculated so as to give
@@ -559,13 +559,12 @@ to be very consistent among models.
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/mslp_composites.pdf}
- \caption[MSLP composites following splits and displacements in the CMIP5
- models]{Composites of mean sea-level pressure anomalies averaged 0-30 days
-   following split (S) and displaced (D) vortex events in the CMIP5
-   ensemble. Also shown are the ERA composite (a,b) and the multi-model mean
-   (C,D). The multi-model mean is calculated as to give each event an equal
-   weighting. The number of events entering each composite is shown in the
-   title.}
+ \caption[MSLP following split and displaced vortex events]{Composites of mean
+   sea-level pressure anomalies averaged 0-30 days following split (S) and
+   displaced (D) vortex events in the CMIP5 ensemble. Also shown are the ERA
+   composite (a,b) and the multi-model mean (C,D). The multi-model mean is
+   calculated as to give each event an equal weighting. The number of events
+   entering each composite is shown in the title.}
  \label{fig:cmip5_mslp_comp}
 \end{figure}
 
@@ -669,17 +668,17 @@ demonstrated by \citet{Matthewman2009}).
 
 In the split minus displaced vortex difference, the majority of models show a
 large positive region over Russia and Eastern Europe and a negative region
-centred over northern Canada. The positive region over Siberia has a minimum,
-which is negative in some cases, located near $90^{\circ}$E, which is consistent
-with the position of minimum in the split vortex composite. It can be seen that
-the multi-model mean difference (Figure \ref{fig:cmip5_100hPa_comp} (S)) is
-remarkably similar to the reanalysis difference (Figure
+centred over northern Canada. The positive region over Siberia has a relative
+minimum, located near $90^{\circ}$E (and in some cases it is negative), which is
+consistent with the position of minimum in the split vortex composite. It can be
+seen that the multi-model mean difference (Figure \ref{fig:cmip5_100hPa_comp}
+(S)) is remarkably similar to the reanalysis difference (Figure
 \ref{fig:cmip5_100hPa_comp}), both in terms of the location and magnitude of
 anomalies. This suggests that the CMIP5 models, on average, realistically
 represent the evolution of split and displaced vortex events through the depth
 of the stratosphere. Again, this result is consistent among the majority of
 models, and so not highly sensitive to the exclusion or inclusion of any
-particular model. 
+particular model.
 \begin{center}
 \line(1,0){250}
 \end{center}
@@ -712,9 +711,9 @@ a two-tailed bootstrap test with the null hypothesis that the anomalies
 following split and displaced vortex events are populations from the same
 probability distribution. The following procedure is used:
 \begin{enumerate}
-\item All events are grouped together and selected from them, with replacement,
-  are two random subsets which are equal in size to the total number of split
-  and displaced vortex events respectively.
+\item All events are grouped together two random subsets are selected from them,
+  with replacement. These are equal in size to the total number of split and
+  displaced vortex events respectively.
 \item The difference of the averages of these two subsets is taken.
 \item The above is repeated 5000 times to form a distribution of random
   composite differences.
@@ -870,10 +869,10 @@ among those tested.
 It is interesting to note, however, that \citet{Anstey2013} found vertical
 resolution among CMIP5 models to correlate with increased NH winter blocking
 frequency (although, as with this study, the relationship did not hold in
-compating models from the same family). They found the strongest relationship to
+comparing models from the same family). They found the strongest relationship to
 be with UTLS vertical resolution (i.e. over the 5-15~km region). Since blocking
 events are known to be closely linked to stratospheric variability (as discussed
-in Sections \ref{sec:observ-evid} and \ref{sec:modelling-evidence}, the
+in Sections \ref{sec:observ-evid} and \ref{sec:modelling-evidence}), the
 combination of the present study with \citet{Anstey2013} may suggest that UTLS
 vertical resolution is an important factor in the representation of
 stratosphere-troposphere coupling.
@@ -882,19 +881,33 @@ There is also some physical motivation for the importance of UTLS vertical
 resolution in the representation of stratosphere-troposphere coupling because of
 the sensitivity of planetary wave propagation to vertical gradients in this
 region. This sensitivity can be measured by the quasi-geostrophic refractive
-index, $n_{s}$ \citep{Matsuno1970}, with planetary waves tending to propagate
+index, $n_{s}$ \citep{Matsuno1970}, given by
+\begin{equation}
+  n_{s}^{2} = \frac{1}{a\overline{u}}\frac{\partial\overline{q}}{\partial\phi} -
+  \frac{s^{2}}{a^{2}\mathrm{cos}^{2}\phi} - \frac{f^{2}}{4N^{2}H^{2}} \, ,
+\label{eq:refractive_index}
+\end{equation}
+where $s$ is the zonal wavenumber, and
+\begin{equation}
+  \frac{\partial\overline{q}}{\partial\phi} = 2\Omega\mathrm{cos}\phi - \frac{\partial}{\partial\phi}\left[
+    \frac{1}{a\mathrm{cos}\phi}\frac{\partial}{\partial\phi}(\overline{u}\cos\phi) \right] -
+  \frac{a}{\rho_{0}}\frac{\partial}{\partial
+    z}\left(\frac{\rho_{0}f^{2}}{N^{2}}\frac{\partial\overline{u}}{\partial z}\right)
+  \, .
+\end{equation}
+The refractive index is significant because planetary waves tending to propagate
 towards regions of high $n_{s}$ and becoming evanescent in regions where
-$n_{s}<0$. $n_{s}$ depends both on the the vertical gradient in static stability
-($\partial N^2/\partial z$) and the vertical shear of zonal wind
-($\partial\overline{u}/\partial z$). Using a linear primitive equation numerical
-model, \citet{Chen1992} found a large vertical gradient in static stability near
-the tropopause as well as a strong vertical shear of the zonal flow. They found
-that small changes in these quantities have a large effect on $n_{s}$, and
-therefore that the tropopause acts as a ``valve'' for the propagation of
-planetary waves between the troposphere and stratosphere. In a more recent
-observational study, \citet{Grise2010} have confirmed the existence of
-fine-scale structure in static stability near the tropopause. It therefore may
-be the case that a higher model vertical resolution near the tropopause is
+$n_{s}<0$. It can be seen that $n_{s}$ depends both on the the vertical gradient
+in static stability ($\partial N^2/\partial z$) and the vertical shear of zonal
+wind ($\partial\overline{u}/\partial z$). Using a linear primitive equation
+numerical model, \citet{Chen1992} found a large vertical gradient in static
+stability near the tropopause as well as a strong vertical shear of the zonal
+flow. They found that small changes in these quantities have a large effect on
+$n_{s}$, and therefore that the tropopause acts as a ``valve'' for the
+propagation of planetary waves between the troposphere and stratosphere. In a
+more recent observational study, \citet{Grise2010} have confirmed the existence
+of fine-scale structure in static stability near the tropopause. It therefore
+may be the case that a higher model vertical resolution near the tropopause is
 necessary to capture this structure and hence more accurately represent
 planetary wave propagation from troposphere to stratosphere.
 
@@ -912,7 +925,7 @@ planetary wave propagation from troposphere to stratosphere.
 %   \frac{a}{\rho_{0}}\frac{\partial}{\partial
 %     z}\left(\frac{\rho_{0}f^{2}}{N^{2}}\frac{\partial\overline{u}}{\partial z}\right)
 %   \, .
-% \end{equation
+% \end{equation}
 
 % It is therefore apparent that $n_{s}$ is sensitive both to the vertical gradient
 % in static stability ($\partial N^2/\partial z$) and the vertical shear of zonal
@@ -1060,7 +1073,7 @@ analysed in stratosphere-resolving CMIP5 simulations. The main conclusions of
 this investigation are as follows:
 
 
-\paragraph{Models representation of the stratospheric polar vortex and
+\paragraph{Model representation of the stratospheric polar vortex and
   stratosphere-tropsophere coupling.} A wide range of biases among CMIP5 models
 has been found in the average state of the stratospheric polar vortex. Some
 models have a vortex which is too equatorward, others too poleward. The majority
@@ -1077,7 +1090,7 @@ events, although in the multi-model mean the frequency of these events is in
 agreement with observations. Importantly, biases in the average state of the
 vortex have been shown to relate closely to biases in the frequency of split and
 displaced vortex events. Hence an improvement in the average state of the vortex
-is likely to lead to an improvent in the representation of extremes.
+is likely to lead to an improvement in the representation of extremes.
 
 Almost all models accurately simulate the more barotropic nature of split vortex
 events compared to displaced vortex events. MSLP anomalies following these
