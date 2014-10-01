@@ -122,10 +122,11 @@ systems.
 
 %\end{enumerate}
 
-\section{Extensions of this work}
+\section{Limitations and further investigations}
 
-The work presented in this thesis has raised a number of questions, and
-motivated future investigations. Some of these ideas are discussed below:
+The work presented in this thesis has raised a number of questions, and its
+limitations have motivated future investigations. Some of these ideas are
+discussed below:
 
 \paragraph{What is required for a realistic stratosphere?} Several studies over
 the past decade have demonstrated a more realistic climate and improved weather
@@ -169,7 +170,7 @@ reduced, then this could act as a recommended resolution for modelling centres.
 this thesis has focussed on developing an increased understanding of the spatial
 stucture of stratosphere-troposphere coupling. However, the mechanisms discussed
 have retained the traditional temporal chain of causation of the form: \emph{A
-  causes B; B casues C; etc.}. In the real, chaotic atmosphere, it is unlikely
+  causes B; B casues C} etc.. In the real, chaotic atmosphere, it is unlikely
 that such a simple mechanism exists. A new approach to understanding
 stratosphere-troposphere coupling could focus on the synchronisation of modes of
 variability. Indeed, we have seen here that such modes may be important because
@@ -209,14 +210,17 @@ degree, so the modes need not be perfectly periodic. As such, it is more
 applicable to time series of finite length and with a pronounced seasonal
 variability, such as is seen in the atmosphere. Figure \ref{fig:emd} shows an
 example of EMD applied to NH polar-cap average geopotential height. It can be
-seen that the technique identifies different timescales of variability, and that
-these modes occasionally appear coherent through the stratosphere and
-troposphere. Further investigations could be carried out to analyse the physical
-relevance of the modes and to quantify synchronisation between the stratosphere
-and troposphere. Also, given the results in this thesis which suggest the NAO is
-a more relevant metric than the NAM in stratosphere-troposphere coupling, it may
-be more appropriate to study local rather than hemispheric modes of variability
-in the troposphere.
+seen that the technique identifies different time scale, quasi-periodic modes of
+variability, and that these modes occasionally appear coherent through the
+stratosphere and troposphere. Closer inspection also reveals mode~2 to be more
+baroclinic than mode~1, consistent with \citet{Thompson2014} who found their
+periodic baroclinic mode to have a longer time scale than the barotropic mode
+(although this analysis was for the SH). Further investigations could be carried
+out to analyse the physical relevance of the modes and to quantify
+synchronisation between the stratosphere and troposphere. Also, given the
+results in this thesis which suggest the NAO is a more relevant metric than the
+NAM in stratosphere-troposphere coupling, it may be more appropriate to study
+local rather than hemispheric modes of variability in the troposphere.
 
 \begin{figure}[t]
   \centering
@@ -229,21 +233,26 @@ in the troposphere.
 
 
 \paragraph{What factors influence seasonal forecast skill?} In Chapter
-\ref{cha:seas} tropospheric seasonal forecast skill was attributed to the 
+\ref{cha:seas} an increase tropospheric seasonal forecast skill was attributed
+to the influence of the stratosphere through analysis of a statistical
+forecast. As previously discussed, this method has the disadvantage that it
+cannot rule out a third factor which separately influences both the stratosphere
+and troposphere (it was shown that ENSO can be ruled out as such a factor, but
+it would be impossible to consider all potential influences). A more robust
+understanding of the factors influencing seasonal forecast skill can be gained
+by performing a series of hindcasts in which these factors are systematically
+changed.
 
-\paragraph{What caused the anomalous 2002 Southern Hemisphere?} The possibility
-of an increased likelihood of the 2002 SH SSW up to two months in advance was
-suggested in Chapter \ref{cha:seas}. It is unclear, however, what factors
-influence this predictability. It would therefore be interesting to carry out an
-investigation in which possible influences are systematically changed. For
-instance, the 2002 hindcasts could be re-run with an opposite phase of the QBO,
-different tropical Pacific or Southern Ocean SSTs, or different polar
-stratospheric initial conditions. The change in forecasts of the stratospheric
-polar vortex could then be analysed, indicating which factors are most
-important. It is likely that there would be some difficulty in imposing these
-different initial conditions consistently. Furthermore, such an investigation is
-likely to be quite computationally expensive as it is likely that many ensemble
-members will be needed in order for a sufficient number of SSWs to be simulated.
+An interesting case study for this investigation would the 2002 austral spring,
+since it was shown that the anomalous nature of this season was, to some degree,
+captured two months in advance. For instance, the 2002 hindcasts could be re-run
+with an opposite phase of the QBO, different tropical Pacific or Southern Ocean
+SSTs, or different polar stratospheric initial conditions. The change in
+forecasts of the stratospheric polar vortex and the surface SAM could then be
+analysed, indicating which factors are most important. The main difficulty in
+this ivestigation would probably come in imposing these different initial
+conditions in a physically consistent manner (e.g., conserving angular
+momentum).
 
 \paragraph{Would interactive ozone chemistry improve seasonal forecast skill?}
 The seasonal forecast system analysed in Chapter \ref{cha:seas} did not include
@@ -251,11 +260,11 @@ interactive chemistry, with ozone concentrations set to a climatology. It is
 therefore unable to capture the feedback between ozone concentrations and the
 stratospheric circulation, or zonal asymmetries in ozone. \citet{Waugh2009}
 suggested that such asymmetries could have a significant impact on tropospheric
-climate. This motivates an investigation as to whether improved stratospheric or
-tropospheric forecasts may be achieved by including interactive chemistry in a
-seasonal forecast system. Such a chemistry scheme is likely to be expensive, so
-the investigation should determine which reactions have the most impact on
-forecast skill.
+climate. This motivates an additional investigation as to whether improved
+stratospheric or tropospheric forecasts may be achieved by including interactive
+chemistry in a seasonal forecast system. Such a chemistry scheme is likely to be
+expensive, so the investigation should determine which reactions have the most
+impact on forecast skill.
 
 
 % \paragraph{Is there decadal variability in SSWs?} Looking by eye at the events
