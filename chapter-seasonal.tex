@@ -43,10 +43,10 @@ September 2002 \citep{Roscoe2005}.
 As discussed in Section \ref{sec:strat-sudd-warm}, the rarity of SSWs in the SH
 is a result of less dynamical forcing from vertically propagating planetary
 waves in the SH relative to the NH stratosphere. This reduced dynamical forcing
-also means that anomalies in the Antarctic stratosphere persist for longer than
-those in the Arctic \citep{Simpson2011}. Hence, the SH stratospheric circulation
-may be predictable on longer time scales, and thus more useful for seasonal
-forecasts despite the lack of SSWs. Indeed, \citet{Thompson2005} and
+also means that anomalies in the Antarctic lower stratosphere persist for longer
+than those in the Arctic \citep{Simpson2011}. Hence, the SH stratospheric
+circulation may be predictable on longer time scales, and thus more useful for
+seasonal forecasts despite the lack of SSWs. Indeed, \citet{Thompson2005} and
 \citet{Son2013a} have found that smaller-amplitude variations in the Antarctic
 stratospheric polar vortex are followed by coherent temperature and pressure
 anomalies at the Earth's surface which resemble the Southern Annular Mode (SAM)
@@ -158,20 +158,20 @@ observations of ozone concentrations, and this assimilation has been
 demonstrated to be in close agreement with independent satellite data
 \citep{Dragani2011}
 
-In this chapter, hindcasts are anaysed for two seasons; December--February (DJF)
-for prediction of the Northern Hemisphere winter stratospheric polar vortex, and
-September--November (SON) for the Southern Hemisphere. The SON season is chosen
-because it represents the time of maximum SH ozone depletion and stratospheric
-polar vortex variability. For SON a 15-member ensemble of hindcasts was run for
-each year in the period 1996--2009, while for the DJF analysis a longer
-24-member ensemble is available for the winters 1992/1993--2011/2012. The
-hindcast length is approximately four months from three separate start dates
-spaced two weeks apart and centered on 1st August (SON) or 1st November (DJF),
-with an equal number of members initialised on each start date. Members
-initialised on the same start date differ only by stochastic parameterisation of
-model physics, using the Stochastic Kinetic Energy Backscatter v2
-\citep[SKEB;][]{Bowler2009} scheme. Details of the hindcast runs for these two
-seasons are summarised in Table \ref{tab:seas_runs}.
+In this chapter, hindcasts are analysed for two seasons; December--February
+(DJF) for prediction of the Northern Hemisphere winter stratospheric polar
+vortex, and September--November (SON) for the Southern Hemisphere. The SON
+season is chosen because it represents the time of maximum SH ozone depletion
+and stratospheric polar vortex variability. For SON a 15-member ensemble of
+hindcasts was run for each year in the period 1996--2009, while for the DJF
+analysis a longer 24-member ensemble is available for the winters
+1992/1993--2011/2012. The hindcast length is approximately four months from
+three separate start dates spaced two weeks apart and centered on 1st August
+(SON) or 1st November (DJF), with an equal number of members initialised on each
+start date. Members initialised on the same start date differ only by stochastic
+parameterisation of model physics, using the Stochastic Kinetic Energy
+Backscatter v2 \citep[SKEB;][]{Bowler2009} scheme. Details of the hindcast runs
+for these two seasons are summarised in Table \ref{tab:seas_runs}.
 
 \begin{table}
 \centering
@@ -187,12 +187,12 @@ seasons are summarised in Table \ref{tab:seas_runs}.
 \end{table}
 
 It should be noted that the 20-year, 20-member ensemble hindcasts of DJF were
-extended from a 14-year, 15-member ensemble, the same as as the SON
+extended from a 14-year, 15-member ensemble, the same as the SON
 hindcasts. These extended simulations are, however, slightly shorter than the
 original ensemble; ending at the beginning of March rather than the beginning of
 April. This therefore limits our analysis of the full ensemble so as not to
 include March. Furthermore, some variables were not produced by the extended DJF
-ensemble and so the original sorter ensemble must be used in some cases, which
+ensemble and so the original shorter ensemble must be used in some cases, which
 is made clear in the text where necessary.
 
 \begin{figure}[p] \vspace*{-3cm} \centering
@@ -613,7 +613,7 @@ from the respective climatologies of GloSea5 and ERA-Interim. The ERA-Interim
 SAM index calculated in this way is also highly correlated with other measures
 of the SAM, such as the station-based index of \citet{Marshall2003}. The GloSea5
 hindcast skill for the prediction of the seasonal (SON) mean SAM index is shown
-in Figure \ref{fig:sam_ts} . The correlation of the GloSea5 ensemble mean and
+in Figure \ref{fig:sam_ts}. The correlation of the GloSea5 ensemble mean and
 ERA-Interim is 0.64, which is statistically significant at the 95\% level, and
 has a 95\% confidence interval of (0.18,0.92) confirming skillful prediction of
 the SAM at 1 month average lead times. This is similar to the value for the
@@ -825,10 +825,11 @@ forecasts of the North Pacific, so that the North Pacific and North Atlantic
 \citet{MacLachlan2014} found GloSea5 forecasts of DJF surface temperatures to
 have similar skill in the North Atlantic and North Pacific, as well as the
 surface NAM to have similar skill as the NAO. Therefore, the reason for the
-relative lack of skill in hindcasts of the NH stratospheric polar vortex remains
-unknown. This does, however, suggest that the source of skilful DJF NAO
-hindcasts in GloSea5 is unlikely to be of tropospheric origin, and other model
-improvements such as the increased ocean resolution may be more important.
+relative lack of skill in hindcasts of the NH stratospheric polar vortex, and
+whether more skilful forecasts would be possible, remains unknown. This does,
+however, suggest that the source of skilful DJF NAO hindcasts in GloSea5 is
+unlikely to be of stratospheric origin, and other model improvements such as the
+increased ocean resolution may be more important.
 
 
 \subsection{Southern Hemisphere}
@@ -1000,15 +1001,15 @@ and radiative from December-February.
 
 \begin{figure}[p] \vspace*{-3cm} \centering
    \noindent\includegraphics[width=\textwidth]{figures/chapter-seasonal/lag_height_corr_obs.pdf}
- \caption[Lag-height correlation of $Z'$ at 10~hPa and 1000~hPa.]{Correlation of
-   ERA-Interim (1979--2010) Z' at 10~hPa, 70~hPa, and 1000~hPa with Z' at other
-   times and lags. Values are smoothed with a 30-day running mean before
-   correlations are calculated, and colours represent correlations that are 95\%
-   significant from zero according to a bootstrap test.}
+   \caption[Lag-height correlation of $Z'$ at 10~hPa and 1000~hPa.]{Correlation
+     of ERA-Interim (1979--2010) $Z'$ at 10~hPa, 70~hPa, and 1000~hPa with $Z'$
+     at other times and lags. Values are smoothed with a 30-day running mean
+     before correlations are calculated, and colours represent correlations that
+     are 95\% significant from zero according to a bootstrap test.}
  \label{fig:lag_height_corr_obs}
 \end{figure}
 
-The time depedency of SH stratosphere-troposphere coupling is further
+The time dependency of SH stratosphere-troposphere coupling is further
 investigated in Figure \ref{fig:lag_height_corr_obs}. This shows lag-height
 correlations of polar cap $Z'$ in the mid-stratosphere (10~hPa),
 lower-stratosphere (70~hPa) and surface (1000~hPa) at the first of each month
@@ -1055,13 +1056,13 @@ is unlikely to be influenced by the stratosphere and may be attributable to
 other model improvements.
 
 On the other hand, skillful prediction of the interannual variability of the
-spring Antarctic stratospheric polar vortex at seasonal lead times. This
-includes capturing an increased likelihood of the 2002 SSW which is the most
-extreme year in the ensemble mean and has the only ensemble member in 14 years
-which simulates a SSW (although another is close to simulating a SSW in
-1997). Because this variability is observed to be closely correlated with
-Antarctic column ozone amounts, we are able to perform skillful predictions of
-interannual variability in Antarctic ozone depletion.
+spring Antarctic stratospheric polar vortex was found at seasonal lead
+times. This includes capturing an increased likelihood of the 2002 SSW which is
+the most extreme year in the GloSea5 ensemble mean and has the only ensemble
+member in 14 years which simulates a SSW (although another is close to
+simulating a SSW in 1997). Because this variability is observed to be closely
+correlated with Antarctic column ozone amounts, we are able to perform skillful
+predictions of interannual variability in Antarctic ozone depletion.
 
 We also find significant skill in hindcasts of the spring mean SAM index.  By
 studying the variation of this skill with time and height, we suggest that this
