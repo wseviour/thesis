@@ -42,8 +42,8 @@
 %\usepackage{fourier}
 
 % bitstream charter
-%\usepackage[T1]{fontenc} 
-\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc} 
+%\usepackage[latin1]{inputenc}
 \usepackage[bitstream-charter]{mathdesign}
 %\usepackage[urw-garamond]{mathdesign}
 
@@ -155,7 +155,7 @@
 \college{Linacre College}  %your college
 %\renewcommand{\submittedtext}{Draft compiled on:}
 \degree{Doctor of Philosophy}     %the degree
-\degreedate{\today}         %the degree date
+\degreedate{October 2014}         %the degree date
 
 %end the preamble and start the document
 \begin{document}
@@ -177,11 +177,11 @@
 %\include{acknowlegements}   % include an acknowledgements.tex file
 \include{abstract}          % include the abstract
 
-
+\baselineskip=14pt plus4pt % as HA
 
 %\begin{romanpages}          % start roman page numbering
 \tableofcontents            % generate and include a table of contents
-\listoffigures              % generate and include a list of figures
+%\listoffigures              % generate and include a list of figures
 
 \include{acronyms}
 
