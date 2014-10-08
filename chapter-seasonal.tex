@@ -101,7 +101,7 @@ polar vortices using a set of hindcasts (or historical re-forecasts) from a new
 operational seasonal forecast system with a fully stratosphere-resolving general
 circulation model. The system accurately simulates the climatology of the NH
 stratospheric polar vortex including the aspect ratio and centroid
-latitude. However, we find it does not skilfully predict the winter mean vortex
+latitude. However, we find it does not skillfully predict the winter mean vortex
 strength, the occurence of SSWs, or split and displaced vortex events. On the
 other hand, we find significant skill in the prediction of the Antarctic
 stratospheric polar vortex up to four months in advance, including for the 2002
@@ -195,7 +195,7 @@ include March. Furthermore, some variables were not produced by the extended DJF
 ensemble and so the original shorter ensemble must be used in some cases, which
 is made clear in the text where necessary.
 
-\begin{figure}[p] \vspace*{-3cm} \centering
+\begin{figure}[p] \centering  %\vspace*{-3cm}
    \noindent\includegraphics[width=\textwidth]{figures/chapter-seasonal/zm_winds_nh_poststamp_all_gs.pdf}
    \caption[Timeseries of $\overline{u}$ at 60$^{\circ}$N, 10~hPa, for all
    GloSea5 ensemble members.]{Timeseries of zonal-mean zonal wind in the Arctic
@@ -206,7 +206,7 @@ is made clear in the text where necessary.
    \label{fig:nh_poststamp}
 \end{figure}
 
-\begin{figure}[p] \vspace*{-3cm} \centering
+\begin{figure}[p] \centering
   \noindent\includegraphics[width=\textwidth]{figures/chapter-seasonal/zm_winds_sh_poststamp_gs.pdf}
   \caption[Timeseries of $\overline{u}$ at 60$^{\circ}$S, 10~hPa, for all
   GloSea5 ensemble members.]{As figure \ref{fig:nh_poststamp} but for the
@@ -314,7 +314,7 @@ tests \citep{Wilks}.
 
 Although no significant skill is found in the prediction of the seasonal mean
 strength of the stratospheric polar vortex, it might nonetheless be the case
-that skilful predictions of SSW events can be made. This is assessed using
+that skillful predictions of SSW events can be made. This is assessed using
 receiver operating characteristic (ROC) curves, a standard method in forecast
 evaluation, particularly of binary events \citep[e.g.,][]{Wilks}. In order to
 calculate the ROC curve, the following procedure is followed:
@@ -328,7 +328,7 @@ calculate the ROC curve, the following procedure is followed:
   predicted but none occurred (``false alarm rate''). 
 \item Repeat the steps 2-3 for a range of thresholds from 0-100\%.
 \end{enumerate}
-In a skilful system the ROC curve should indicate a higher hit rate than false
+In a skillful system the ROC curve should indicate a higher hit rate than false
 alarm rate, bending towards the upper left corner of the graph, while a random
 forecast will pass along the 1-1 line. 
 
@@ -809,25 +809,25 @@ by the full dynamical model.
 % Mention NH result surprising - perhaps less skill in Pacific?
 
 The fact that hindcasts of the NH stratospheric polar vortex have been shown to
-be less skilful than those of the SH is not unexpected because of the much
+be less skillful than those of the SH is not unexpected because of the much
 greater dynamical variability and chaotic nature of the NH. Indeed, previous
 studies have not found SSWs to be predictable (in a deterministic sense) beyond
 about two weeks \citep{Marshall2010,Taguchi2014}. However, given the fact that
-the GloSea5 hindcasts have been shown to produce skilful predictions of the DJF
+the GloSea5 hindcasts have been shown to produce skillful predictions of the DJF
 NAO \citep{Scaife2013}, it is perhaps surprising that somewhat greater skill was
 not found in Section \ref{sec:north-hemisph-result}. Even if the vortex was to
 respond passively to NAO variability, a greater degree of skill might be
 expected.
 
-A possible explanation for this may be that GloSea5 does not produce skilful
+A possible explanation for this may be that GloSea5 does not produce skillful
 forecasts of the North Pacific, so that the North Pacific and North Atlantic
 `destructively interfere' in their infuence on the stratosphere. However,
 \citet{MacLachlan2014} found GloSea5 forecasts of DJF surface temperatures to
 have similar skill in the North Atlantic and North Pacific, as well as the
 surface NAM to have similar skill as the NAO. Therefore, the reason for the
 relative lack of skill in hindcasts of the NH stratospheric polar vortex, and
-whether more skilful forecasts would be possible, remains unknown. This does,
-however, suggest that the source of skilful DJF NAO hindcasts in GloSea5 is
+whether more skillful forecasts would be possible, remains unknown. This does,
+however, suggest that the source of skillful DJF NAO hindcasts in GloSea5 is
 unlikely to be of stratospheric origin, and other model improvements such as the
 increased ocean resolution may be more important.
 
@@ -926,7 +926,7 @@ the current analysis.
     test.}\label{fig:corr_ens_size_sh}
 \end{figure}
 
-Given the above result, it might be expected that more skilful predictions could
+Given the above result, it might be expected that more skillful predictions could
 be obtained with a larger ensemble size. To illustrate the variation of hindcast
 skill with ensemble size we systematically sample smaller sets of forecasts from
 the full 15 members for each year, following the method of
@@ -1032,7 +1032,7 @@ GloSea5 does not contain interactive ozone chemistry, so the radiative effects
 of ozone variability will not be captured by the model. This may explain, to
 some extent, the reduced skill in the prediction of DJF SAM compared to the SON
 SAM, since the predictable effects of the stratosphere on the troposphere are
-not captured during DJF. Consequently, more skilful forecasts of the DJF SAM may
+not captured during DJF. Consequently, more skillful forecasts of the DJF SAM may
 be possible with a model including interactive ozone chemistry. 
 
 
@@ -1050,7 +1050,7 @@ winter (DJF) and SH for the austral spring (SON), with forcasts initialised at a
 No statistically significant skill was found in the prediction of the seasonal
 mean strength of the NH stratospheric polar vortex, or the occurrence of SSWs,
 split or displaced vortex events. This result may be surprising given that the
-same system produces skilful hindcasts of the winter NAO, which is known to
+same system produces skillful hindcasts of the winter NAO, which is known to
 influence the polar stratosphere. It does, however, suggest that this NAO skill
 is unlikely to be influenced by the stratosphere and may be attributable to
 other model improvements.
@@ -1110,14 +1110,14 @@ different correlations are not a result of random variability.
 
 To test whether this is the case, we use a bootstrap test which randomly samples
 (with replacement) 14 years of detrended SAM and SOI from 1979-2013, and
-calculates the correlation. Figure \ref{fig:sam_soi_corr} shows a histogram of
-these correlations along with the 1996-2009 correlation. The 1996-2009 value is
-not inconsistent with random variability at the 95\% level for either a one- or
-two-tailed test. Therefore we conclude that the SAM/SOI correlation is not
-statistically significantly greater for 1996-2009. As such the 1996-2009
-correlation is a marginal distribution of 1979-2013 so we include the longer
-ERA-Interim period in our analysis to provide a more robust measure of sources
-of predictability. 
+calculates the correlation for each sample. Figure \ref{fig:sam_soi_corr} shows
+a histogram of these correlations along with the 1996-2009 correlation. The
+1996-2009 value is not inconsistent with random variability at the 95\% level
+for either a one- or two-tailed test. Therefore we conclude that the SAM/SOI
+correlation is not statistically significantly greater for 1996-2009. As such
+the 1996-2009 correlation is a marginal distribution of 1979-2013 so we include
+the longer ERA-Interim period in our analysis to provide a more robust measure
+of sources of predictability.
 
 For completeness we include a figure with the same analysis limited to
 1996--2009 in this appendix (Figure \ref{fig:lag_height_short}). Similar
