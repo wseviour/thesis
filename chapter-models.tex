@@ -148,7 +148,7 @@ MPI-ESM-MR     & 3 & 80.6    & 95     & 268          & 0.65         & 0.68      
 MRI-CGCM3      & 1 & 80.6    & 48     & 107          & 0.88         & 1.87          \\
 MRI-ESM1       & 1 & 80.6    & 48     & 107          & 0.88         & 1.87 \\ \hline 
 \end{tabular}
-\caption[CMIP5 model parameters.]{Parameters of the CMIP5 models studied in this
+\caption[CMIP5 model parameters]{Parameters of the CMIP5 models studied in this
   chapter. Where the model lid is defined in terms of a pressure, its height was
   estimated using $z=-H\mathrm{ln}(p/p_{0})$ with $H=7$~km and
   $p_{0}=1000$~hPa. Following \citet{Anstey2013}, horizontal resolution, d$h$, 
@@ -168,8 +168,8 @@ MRI-ESM1       & 1 & 80.6    & 48     & 107          & 0.88         & 1.87 \\ \h
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/moments_stats1.pdf}
  \caption[Distributions of moment diagnostics for the CMIP5
- models.]{Distributions of centroid latitude ($y$-axis) and aspect ratio
-   ($x$-axis) for the ERA (grey lines; panel (a)) and the CMIP5 models (red
+ models]{Distributions of centroid latitude ($y$-axis) and aspect ratio
+   ($x$-axis) for the ERA (grey lines and panel (a)) and the CMIP5 models (red
    lines). Joint distributions are shown with a logarithmic scale such that red
    squares represent the densest regions.}
  \label{fig:cmip5_moments_stats}
@@ -228,7 +228,7 @@ ratio.
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/moments_seasonal_stats.pdf}
  \caption[Seasonal cycle of moment diagnostics in the CMIP5 models]{Seasonal
    cycle of aspect ratio and centroid latitude in ERA (black) and the CMIP5
-   models (colours). Thick lines represent the mean and thin lines the 95th or
+   models (colours). Thick lines represent the mean and thin lines the 95th and
    5th percentile for aspect ratio and centroid latitude respectively.}
  \label{fig:cmip5_moments_stats_seas}
 \end{figure}
@@ -294,7 +294,7 @@ seasonal variability in the frequency of events.
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/events_seasonal.pdf}
  \caption[Seasonal distribution of splits and displacements in the CMIP5
  models]{Seasonal distribution of the occurrence of split and displaced vortex
-   events in ERA (a) and the CMIP5 models.}
+   events in ERA (a) and the CMIP5 models (b-n).}
  \label{fig:cmip5_events_seasonal}
 \end{figure}
 
@@ -541,8 +541,9 @@ to be very consistent among models.
  \caption[NAM composites for splits and displacements in the CMIP5
  models]{Composites of normalised polar cap averaged $Z$ anomalies following
    split and displaced vortex events in ERA (a,b), the CMIP5 models, and the
-   multi-model mean (C,D). Numbers in the upper right of each plot represent the
-   number of events entering the composite.}
+   multi-model mean (MMM) (C,D). The multi-model mean is calculated so as to
+   give each event an equal weighting. Numbers in the upper right of each plot
+   represent the number of events entering the composite.}
  \label{fig:cmip5_dripping_paint}
 \end{figure}
 
@@ -562,7 +563,7 @@ to be very consistent among models.
  \caption[MSLP following split and displaced vortex events]{Composites of mean
    sea-level pressure anomalies averaged 0-30 days following split (S) and
    displaced (D) vortex events in the CMIP5 ensemble. Also shown are the ERA
-   composite (a,b) and the multi-model mean (C,D). The multi-model mean is
+   composite (a,b) and the multi-model mean (MMM) (C,D). The multi-model mean is
    calculated as to give each event an equal weighting. The number of events
    entering each composite is shown in the title.}
  \label{fig:cmip5_mslp_comp}
@@ -763,7 +764,7 @@ mechanisms of stratosphere-troposphere coupling are discussed in Section
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/mslp_diff.png}
  \caption[Difference of MSLP following split and displaced vortex
- events.]{Difference (split minus displacement) of composites of mean sea-level
+ events]{Difference (split minus displacement) of composites of mean sea-level
    pressure averaged 0-30 days following split (S) and displaced (D) vortex
    events in ERA and the CMIP5 ensemble. Stippling indicates regions that are
    $>$95\% significant according to a two-tailed bootstrap test. Grey contours
@@ -785,7 +786,7 @@ mechanisms of stratosphere-troposphere coupling are discussed in Section
 %  \centering
 %  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/scatter_matrix.pdf}
 %  \caption[Relationship between model resolution and moment diagnostics in the
-%  CMIP5 models.]{Relationship between model resolution, moment diagnostics, and
+%  CMIP5 models]{Relationship between model resolution, moment diagnostics, and
 %    stratosphere-troposphere coupling in the CMIP5 models. Model resolution is
 %    shown as horizontal resolution ($\mathrm{d}h$), vertical resolution
 %    ($\mathrm{d}z$) over 5-15~km and 15-30~km, and aspect ratio
@@ -839,10 +840,9 @@ ratio.
 \begin{figure}
  \centering
  \noindent\includegraphics[width=\textwidth]{figures/chapter-models/aspect_ratio_resolution.pdf}
- \caption[Vertical resolution and modal aspect ratio.]{Correlation between modal aspect ratio and
-   model vertical resolution over two regions (5-15~km and
-   15-30~km). Correlations, $r$, are shown along with the $p$-value calculated by a
-   bootstrap test with null hypothesis $r=0$.}
+ \caption[Vertical resolution and modal aspect ratio]{Correlation between modal
+   aspect ratio and model vertical resolution over two regions: 5-15~km (a) and
+   15-30~km (b). Correlations, $r$, for the linear best fit, are shown.}
  \label{fig:aspect_vert_res}
 \end{figure}
 
