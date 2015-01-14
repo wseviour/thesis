@@ -74,7 +74,7 @@ polar stratosphere is also approximately $20$~K colder in the SH than the NH.
 
 \begin{figure}
  \centering
- \noindent\includegraphics[width=\textwidth]{figures/chapter-intro/zmzw_NH_SH.pdf}
+ \noindent\includegraphics[width=\textwidth]{figures/chapter-intro/zmzw_NH_SH_fix.pdf}
  \caption[Comparison of NH and SH polar vortex seasonal cycle]{Seasonal cycle
    of NH (a) and SH (b) polar vortex strength, measured by $\overline{u}$ at
    60$^{\circ}$N/S, 10~hPa. The annual mean is shown in a thick black line and
@@ -178,10 +178,13 @@ condition:
 \end{equation}
 which is known as the \emph{Charney-Drazin criterion} after
 \citet{Charney1961}. Here, $c$ is the wave's zonal phase speed, $k$ and $l$ are
-the zonal and meridional wavenumbers respectively, and $\varepsilon = f_0^2/N^2$,
-where $N^2 = H^{-1}Re^{-\kappa z/H}\partial\theta_0/\partial z$ is the static
-stability. In the case of waves whose phase is stationary with respect to the
-ground ($c=0$), this simplifies to
+the zonal and meridional wavenumbers respectively, and
+$\varepsilon = f_0^2/N^2$, where
+$N^2 = H^{-1}Re^{-\kappa z/H}\partial\theta_0/\partial z$ is the static
+stability. $H$ is the pressure scale height, $H=RT_s/g$, where $g$ is the
+acceleration due to gravity and $T_s$ is a reference temperature. In the case of
+waves whose phase is stationary with respect to the ground ($c=0$), this
+simplifies to
 \begin{equation}
 0 < \overline{u} < \overline{u}_c\, . 
 \label{eq:charney-drazin}
@@ -287,13 +290,15 @@ in the absence of wave driving ($\mathbf{\nabla\cdot F} = 0$) or friction
 $\overline{v}^*=0, \overline{w}^*=0$.  However, in the presence of these forcing
 terms, a non-zero residual circulation will be induced. Climatologically, this
 circulation consists of wave-driven poleward and downward motion in the
-extratropics which is balanced by upwelling in the tropics; a pattern which
-forms a significant part of the Brewer-Dobson circulation\footnote{Strictly, the
+extratropics which is balanced by upwelling in the tropics. This diabatic
+circulation (i.e., the transport of mass accross isentropic surfaces) forms a
+significant part of the Brewer-Dobson circulation\footnote{Strictly, the
   Brewer-Dobson circulation represents the meridional transport of tracers, and
-  so also involves two-way mixing (i.e. transport without net transfer of mass)
-  \citep{Hall1994}.}. The downward motion near the poles can be easily seen from
-Equation \ref{eq:zonal_momentum} in the steady case; since $\overline{v}^*$ must
-become small near the poles (by conservation of mass), and
+  so also involves two-way isentropic mixing (i.e. transport without net
+  transfer of mass), which is an adiabatic process \citep{Hall1994}.}. The
+downward motion near the poles can be easily seen from Equation
+\ref{eq:zonal_momentum} in the steady case; since $\overline{v}^*$ must become
+small near the poles (by conservation of mass), and
 $\partial\overline{u}/\partial z > 0$ in the polar vortex, if
 $\mathbf{\nabla\cdot F} < 0$, then $\overline{w}^*<0$. It is observed that this
 circulation is strongest in the winter hemisphere due to the fact that more
@@ -576,7 +581,7 @@ necessary to introduce the concept of the annular modes which are often analysed
 in studies on this topic (as well as in this thesis). The northern and southern
 annular modes (NAM and SAM) are the leading modes of large-scale variability in
 the two hemispheres
-\citep{Baldwin1999,Thompson2000a,Thompson2000,Limpasuvan1999,Limpasuvan2000}. They
+\citep{Thompson1998,Baldwin1999,Thompson2000a,Thompson2000,Limpasuvan1999,Limpasuvan2000}. They
 are commonly defined to be the leading empirical orthogonal function
 (EOF)\footnote{EOFs are the eigenvectors of the spatially weighted covariance
   matrix of a variable. EOF analysis is also known as principal component
@@ -618,8 +623,8 @@ pattern. Indeed, the surface NAM and NAO have been observed to be highly
 correlated \citep{Ambaum2001}. This has led to some debate as to whether the NAM
 represents a physical mode of variability of which the NAO is just a regional
 manifestation, or whether the NAM is simply a statistical artifact of more
-regional variability. This point is addressed in Section
-\ref{sec:meas-strat-trop}.
+regional variability \citep[e.g.,][]{Deser2000,Wallace2002}. This point is
+addressed in Section \ref{sec:meas-strat-trop}.
 
 % Mention recent thompson 2014 and baroclinic mode etc. 
 \begin{figure}
@@ -772,7 +777,7 @@ shown in Figure \ref{fig:baldwin_dunkerton}). This issue was addressed by
 anomalies following SSWs dominated by wave-1/wave-2 activity and displaced/split
 vortex events respectively (these two classifications are related but not
 identical; see \citet{Waugh1997}, Section \ref{sec:comp-zonal-wave}). These
-studies found stronger stratospheric anomalies following wave-2/split vortex
+studies found stronger tropospheric anomalies following wave-2/split vortex
 SSWs than following wave-1/displaced vortex SSWs.\footnote{Using the method
   developed in Chapter \ref{cha:moments}, of the two weak vortex events
   illustrated in Figure \ref{fig:baldwin_dunkerton}, the first is identified as
@@ -1068,16 +1073,16 @@ not a time-dependent relationship and does not imply a direction of
 causality. However, \citet{Ambaum2002} developed a physical mechanism analogous
 to PV-inversion, as follows. Anomalies of PV act to bend isentropic surfaces
 \citep{Hoskins1985}, as illustrated in Figure \ref{fig:ambaum_hoskins}. At high
-latitudes, the tropopause lies approximately on a potential vorticity surface,
-also the potential temperature of the tropopause will be conserved for adiabatic
-changes (Section \ref{sec:planetary-waves}). Hence, the tropopause will also
-bend in the presence of a stratospheric potential vorticity anomaly; moving
-upwards for a positive anomaly, and downwards for a negative anomaly. This
-deformation of the tropopause will then lead to hydrostatic and geostrophic
-adjustment of the tropospheric column below, which can be thought of in terms of
-the conservation of angular momentum, with a stretched tropospheric column
-leading to an increase of vorticity and lower pressure. It is therefore be
-expected that a strengthening of the stratospheric polar vortex would be
+latitudes, the tropopause lies approximately on a potential vorticity surface
+\citep{Hoerling1991}, also the potential temperature of the tropopause will be
+conserved for adiabatic changes (Section \ref{sec:planetary-waves}). Hence, the
+tropopause will also bend in the presence of a stratospheric potential vorticity
+anomaly; moving upwards for a positive anomaly, and downwards for a negative
+anomaly. This deformation of the tropopause will then lead to hydrostatic and
+geostrophic adjustment of the tropospheric column below, which can be thought of
+in terms of the conservation of angular momentum, with a stretched tropospheric
+column leading to an increase of vorticity and lower pressure. It is therefore
+be expected that a strengthening of the stratospheric polar vortex would be
 associated with negative sea-level pressure anomalies over the pole, and a
 weakening with positive pressure anomalies, which is consistent with the
 observed annular mode relationships (Section \ref{sec:observ-evid}).

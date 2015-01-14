@@ -1,0 +1,61 @@
+#+TITLE: Viva notes 
+
+* What is the hypothesis?
+1. We can learn about the mechanisms behind strat-trop coupling by studying the
+  tropospheric response to different types of SSW. 
+2. The stratosphere lends predictability to seasonal forecasts. 
+
+
+* Main results
+- Mechanisms for SSWs :: Almost all models (and obs) show splits occurring more
+     barotropically. This is consistent with the idea that they are caused by
+     resonance of the barotropic mode, not the Matsuno mechanism. 
+- Strat-trop mechanisms :: Consistent differences found in surface response to
+     split and displaced vortex events. This is consistent with the Amabum &
+     Hoskins 2002 mechanism, but not some other mechanisms.
+- NAM vs NAO :: Models show a much more consistent North Atlantic response than
+                NAM response. This suggests that studying only the NAM may hide
+                some important details. 
+
+* Caveats
+- The majority of models have too little blocking in NA region. May mask
+  split/displ difference in this region?
+
+
+* Recommendations to operational centres
+- To get frequency of split/displaced vortex events right, just need to get the
+  average position of the vortex right. Meaning only a few years need to be
+  simulated.
+- Accurate initial conditions of SH polar vortex are important for seasonal
+  forecasts.
+- May be important to improve UTLS vertical resolution for improved stratosphere. 
+
+* Future ideas?
+- Mechanisms for dynamical control of ozone ::  Important for future ozone
+     changes, because if dynamical (i.e. through BDC) will remain the same in
+     future, but if chemical will change. Model simulations where you can turn
+     on and off the relevant chemical reactions. 
+- Causes of SAM trends :: SAM trends often attributed to ozone depletion, but
+     tropical upper troposphere might be important too. Models disagree quite
+     a bit about this. Perform a study where these a systmatically varied in
+     different models. 
+- Radiocarbon model :: Model explicitly radiocarbon. Inter-hemispheric
+     differences may indicate changes in SAM or stratospheric circulation. Can
+     learn about past climate regimes and possible changes to carbon cycle. 
+
+
+
+* Papers to bring
+- Waugh 1997
+- CP07
+- M13
+- Seviour et al., 2012, 2013, 2014
+- Maclachlan et al 2014
+
+* General things to revise
+- QBO mechanism (Lindzen)
+- Planetary waves
+- What is meant by resonance
+- What are EOFs
+- What is an adjoint method
+- QG approximation

@@ -543,7 +543,8 @@ in a particular cluster for a number of days.
    clustering algorithms and a threshold division applied to the moment
    diagnostics in centroid latitude-aspect ratio space. For the $K$-means and
    hierarchical algorithms three clusters were specified. The mean-shift
-   algorithm determined the number of clusters to be 4.}
+   algorithm determined the number of clusters to be 4. Colours are used only to
+   distinguish members of different clusters.}
  \label{fig:clusters}
 \end{figure}
 
@@ -562,9 +563,9 @@ membership, the algorithm proceeds as follows:
 \begin{enumerate}[1.]
 \item Compute the centroids (the vector means), $\mathbf{\overline{x}}_k$ of
   each cluster.
-\item Calculate the qdistance between the current data point, $\mathbf{x}_i$,
-  and each of the $K$ $\mathbf{\overline{x}}_k$s. (Various distance measures can
-  be used; in Figure \ref{fig:clusters}(a), the Euclidean distance is used).
+\item Calculate the distance between the current data point, $\mathbf{x}_i$, and
+  each of the $K$ $\mathbf{\overline{x}}_k$s. (Various distance measures can be
+  used; in Figure \ref{fig:clusters}(a), the Euclidean distance is used).
 \item If $\mathbf{x}_i$ is not in the group with the closest mean then reassign
   it to that group, otherwise repeat step 2 for $\mathbf{x}_{i+1}$.
 \end{enumerate}
@@ -625,21 +626,25 @@ moment diagnostics, and found a slight preference for three clusters. As such,
 three clusters are used in Figure \ref{fig:clusters}(c).
 
 
-\bigskip Figure \ref{fig:clusters} demonstrates that the three clustering methods
-produce very different results. As well as the size and extent of the clusters,
-there is also disagreement between this and past studies on the optimum number
-of clusters; \citet{K.Coughlin2009} found two clusters using a silhouette values
-method, \citet{Hannachi2010} found three clusters using the gap statistic, while
-the mean-shift algorithm applied here produces four clusters. Further
-sensitivity tests were performed by randomly removing 1\% of the data and
-re-calculating the clustering. It was found that very different clusters were
-calculated with this small alteration to the data, suggesting that these
-clusterings may not be robust if applied to different data sets, such as climate
-model simulations. The likely reason for this sensitivity is that the data
-itself is not highly clustered; as can be seen in Figure
-\ref{fig:pv_z_moments_distribution} no clear bi-modality is present. Rather, it
-is more appropriate to view the split and displaced vortex states as the tails
-of a distribution rather than distinct clusters or regimes.
+\bigskip Figure \ref{fig:clusters} demonstrates that the three clustering
+methods produce very different results. While the $K$-means clustering produces
+clusters approximately representing stable (blue), split (green), and displaced
+(red) vortex states, this distinction is less clear for other methods such as
+mean-shift. As well as the size and extent of the clusters, there is also
+disagreement between this and past studies on the optimum number of clusters;
+\citet{K.Coughlin2009} found two clusters using a silhouette values method,
+\citet{Hannachi2010} found three clusters using the gap statistic, while the
+mean-shift algorithm applied here produces four clusters. Further sensitivity
+tests were performed by randomly removing 1\% of the data and re-calculating the
+clustering. It was found that very different clusters were calculated with this
+small alteration to the data, suggesting that these clusterings may not be
+robust if applied to different data sets, such as climate model simulations. The
+likely reason for this sensitivity is that the data itself is not highly
+clustered; as can be seen in Figure \ref{fig:pv_z_moments_distribution} no clear
+bi-modality is present. Rather, it is more appropriate to view the split and
+displaced vortex states as the tails of a distribution rather than distinct
+clusters or regimes. Consequently, no physical significance is ascribed to the
+clusters displayed in Figure \ref{fig:clusters}. 
 
 For the reasons above, clustering methods are deemed inappropriate for the
 present study, and a simpler, more robust, thresholds-based method is
