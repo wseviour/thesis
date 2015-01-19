@@ -339,12 +339,13 @@ f(x;\mu,\sigma) = \frac{1}{\sigma\sqrt{2\pi}} e^{
 where $\mu$ determines the position of the peak along the $x$-axis and $\sigma$
 is the standard deviation, to the cube of the centroid latitude, and then the
 cube root taken to return the original distribution (this is carried out because
-an analytic distribution does not fit the unscaled centroid
-latitude). \citet{Mitchell2011} found that these distributions accurately fit
-the histograms of centroid latitude and aspect ratio in reanalysis data, apart
-from the extreme tails of the distribution. Qualitative inspection of the
-distribution for each model confirms that they also provide a similarly good fit
-to each of the model's histograms.
+an analytic distribution does not fit the unscaled centroid latitude). The use
+of these distributions is statistically, rather tham physically
+motivated. \citet{Mitchell2011} found them to accurately fit the histograms of
+centroid latitude and aspect ratio in reanalysis data, apart from the extreme
+tails of the distribution. Qualitative inspection of the distribution for each
+model confirms that they also provide a similarly good fit to each of the
+model's histograms.
 
 Figure \ref{fig:cmip5_moments_scatter} shows the relationship between the modal
 aspect ratio and centroid latitude and frequency of split and displaced vortex
@@ -530,18 +531,23 @@ stronger, in closer agreement with reanalysis.
 As well as these large inter-model differences, there are also some consistent
 features among models. Almost all models show a barotropic onset to split vortex
 events, with anomalies occurring at the same time throughout the depth of the
-atmosphere. In contrast, displaced vortex events appear more baroclinic, with
-onset occurring first near the uppermost level. This is consistent with the
-difference found in reanalysis, indicating that this is likely to be a robust
-difference between the response to split and displaced vortex events. These
-features are also apparent in the multi-model mean (MMM) (Figures
-\ref{fig:cmip5_dripping_paint} C and D). This mean is calculated so as to give
-each event an equal weight (rather than each model), and so does not give undue
-weight to models with only a small number of events. On the other hand this does
-mean that greater weight is given to models with more ensemble members and more
-events (almost one third of all displaced vortex events come from CanESM2), but
-the difference in baroclinicity of split and displaced vortex events is observed
-to be very consistent among models.
+atmosphere. This lends weight to the idea that resonant excitation of the
+barotropic mode (Section \ref{sec:strat-sudd-warm}, \citet{Esler2005}) plays a
+significant role in the occurrence of split vortex events. In contrast,
+displaced vortex events appear more baroclinic, with onset occurring first near
+the uppermost level, consistent with the wave-driven mechanism proposed by
+\citet{Matsuno1970,Matsuno1971} (see Section \ref{sec:strat-sudd-warm}). The
+same difference in baroclinicity is found in reanalysis, indicating that it is
+likely to be a robust difference. These features are also apparent in the
+multi-model mean (MMM) (Figures \ref{fig:cmip5_dripping_paint} C and D). This
+mean is calculated so as to give each event an equal weight (rather than each
+model), and so does not give undue weight to models with only a small number of
+events. On the other hand this does mean that greater weight is given to models
+with more ensemble members and more events (almost one third of all displaced
+vortex events come from CanESM2), but the difference in baroclinicity of split
+and displaced vortex events is observed to be very consistent among models.
+
+
 
 \begin{figure}
  \centering
