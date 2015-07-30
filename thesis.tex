@@ -1,3 +1,4 @@
+
 \documentclass[12pt]{ociamthesis}  % default square logo 
 %\documentclass[12pt,beltcrest]{ociamthesis} % use old belt crest logo
 %\documentclass[12pt,shieldcrest]{ociamthesis} % use older shield crest logo
@@ -145,7 +146,7 @@
 \bibliographystyle{agufull08}
 %input macros (i.e. write your own macros file called mymacros.tex 
 %and uncomment the next line)
-%\include{mymacros}
+%\nclude{mymacros}
 
 %\usepackage{setspace}
 %\doublespacing
@@ -176,9 +177,10 @@
 
 
 \maketitle                  % create a title page from the preamble info
-%\include{dedication}        % include a dedication.tex file
-%\include{acknowlegements}   % include an acknowledgements.tex file
+%\nclude{dedication}        % include a dedication.tex file
 \include{abstract}          % include the abstract
+\include{acknowledgements}   % include an acknowledgements.tex file
+
 
 \baselineskip=14pt plus4pt % as HA
 
@@ -208,8 +210,8 @@
 
 %now enable appendix numbering format and include any appendices
 %\appendix
-%\include{appendix1}
-%\include{appendix2}
+%\nclude{appendix1}
+%\nclude{appendix2}
 
 
 \baselineskip=14pt plus4pt % as HA
