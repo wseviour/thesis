@@ -643,10 +643,10 @@ small alteration to the data, suggesting that these clusterings may not be
 robust if applied to different data sets, such as climate model simulations. The
 likely reason for this sensitivity is that the data itself is not highly
 clustered; as can be seen in Figure \ref{fig:pv_z_moments_distribution} no clear
-bi-modality is present. Rather, it is more appropriate to view the split and
+bimodality is present. Rather, it is more appropriate to view the split and
 displaced vortex states as the tails of a distribution rather than distinct
 clusters or regimes. Consequently, no physical significance is ascribed to the
-clusters displayed in Figure \ref{fig:clusters}. 
+clusters displayed in Figure \ref{fig:clusters}.
 
 For the reasons above, clustering methods are deemed inappropriate for the
 present study, and a simpler, more robust, thresholds-based method is
@@ -909,7 +909,12 @@ method succeeds (in a composite sense) in identifying displaced and split vortex
 events at least as well as the methods of M13 or CP07. When comparing the three
 methods, CP07 is the clear outlier. This is most likely because the CP07
 approach employs a zonal-mean threshold which cannot accurately capture some
-extreme events (as discussed in M13).
+extreme events. For instance, the CP07 method will not capture those events with
+a distorted but strong vortex, that still have a westerly zonal mean
+wind. Furthermore, the CP07 method defines displacements by default, if the
+criterion for a split is not reached, rather than defining both explicitly as in
+the present method. Further comparison between moment-based diagnostics and the
+CP07 method is given in M13.
 
 
 \subsection{Comparison with zonal wave amplitudes}
@@ -934,9 +939,9 @@ Charney-Drazin filtering of zonal wavenumbers, as discussed in Section
 
 The correlation of geopotential height-derived daily aspect ratio and the wave-2
 amplitude over DJFM is 0.30 and that of centroid latitude and wave-1 amplitude
-$-0.22$, both of which are statistically significant at the 99\% level. Figure
-\ref{fig:wave_moments_ts} illustrates these relationships for the example split
-and displaced vortex events previously shown in Figures
+is $-0.22$, both of which are statistically significant at the 99\%
+level. Figure \ref{fig:wave_moments_ts} illustrates these relationships for the
+example split and displaced vortex events previously shown in Figures
 \ref{fig:displaced_ellipse} and \ref{fig:split_ellipse} . In the case of the
 1979 split vortex event the wave-2 amplitude peaks approximately 5 days before
 the peak of the aspect ratio. Wave-2 amplitude is also more variable than aspect
@@ -1168,14 +1173,14 @@ tropopause height and induce tropospheric anomalies below (more details are
 given in Section \ref{sec:mechanisms}). In order to investigate this mechanism,
 composites of PV anomalies at the 430~K isentropic surface (which lies close to
 100~hPa, just above the tropopause), over the 10 days following displaced and
-split vortex events are shown in Figures \ref{fig:430K_PV}(a,b). Data at this
-isentropic level were not available for ERA-40 so these composites are limited
-to the ERA-Interim (1979-2009) period, meaning 10 events of each type enter the
-composites. The shorter 10-day period was chosen to reflect the typical time
-scale for the split or displacement of the vortex, rather than the longer time
-scale taken for the re-formation of the vortex. However, composites taken over
-30 days, as in Figure \ref{fig:mslp_composites}, show similar structure but with
-reduced magnitude (similarly, composites taken over 5 days, as in Figure
+split vortex events are shown in Figures \ref{fig:430K_PV}(a,b). Here,
+composites are limited to the ERA-Interim (1979-2009) period, meaning 10 events
+of each type enter the composites. The shorter 10-day period was chosen to
+reflect the typical time scale for the split or displacement of the vortex,
+rather than the longer time scale taken for the re-formation of the
+vortex. However, composites taken over 30 days, as in Figure
+\ref{fig:mslp_composites}, show similar structure but with reduced magnitude
+(similarly, composites taken over 5 days, as in Figure
 \ref{fig:pv_composites_m13_cp07}, show slightly increased magnitude). In the
 displaced composite case a region of high PV is seen over Siberia and
 Scandinavia, consistent with the movement of the vortex over this region. Note
